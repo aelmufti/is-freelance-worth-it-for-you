@@ -46,7 +46,7 @@ export function ResultCard({
           </span>
         ) : best ? (
           <span className="border-2 border-ink bg-white px-2 text-xs font-extrabold text-ink">
-            ★ MEILLEUR NET
+            ★ MEILLEUR NET ESTIMÉ
           </span>
         ) : (
           <span className="text-xs font-extrabold opacity-80">#{rank}</span>
