@@ -7,6 +7,7 @@ import { Podium } from "./components/Results";
 import { BreakEvenChart, CompareBars } from "./components/Charts";
 import { ProsCons } from "./components/ProsCons";
 import { MentionsLegales } from "./components/MentionsLegales";
+import { CookieBanner, useGaConsent } from "./components/CookieConsent";
 import { SectionTitle, euro } from "./components/ui";
 
 const SOURCES: Array<{ label: string; url: string }> = [
@@ -44,6 +45,7 @@ export default function App() {
   const [input, setInput] = useState<SimulationInput>(DEFAULT_INPUT);
   const [params, setParams] = useState<FiscalParams>(DEFAULT_PARAMS);
   const [showLegal, setShowLegal] = useState(false);
+  const consent = useGaConsent();
 
   const results = useMemo(() => calcAll(input, params), [input, params]);
   const best = useMemo(
@@ -185,7 +187,7 @@ export default function App() {
       </main>
 
       <footer className="border-t-[3px] border-ink bg-ink px-4 py-6 text-center text-xs font-extrabold uppercase tracking-[0.12em] text-white">
-        <div>FREELANCE.SIMULATEUR — gratuit, open, sans cookies</div>
+        <div>FREELANCE.SIMULATEUR — gratuit, open, sans compte</div>
         <div className="mt-3">
           Fait par{" "}
           <a
@@ -197,7 +199,7 @@ export default function App() {
             ALI EL MUFTI
           </a>
         </div>
-        <div className="mt-3">
+        <div className="mt-3 flex justify-center gap-4">
           <button
             type="button"
             onClick={() => setShowLegal(true)}
@@ -205,10 +207,24 @@ export default function App() {
           >
             Mentions légales
           </button>
+          <button
+            type="button"
+            onClick={() => consent.reset()}
+            className="text-[10px] font-bold uppercase tracking-[0.12em] underline decoration-1 underline-offset-2 opacity-60 hover:opacity-100"
+          >
+            Gérer les cookies
+          </button>
         </div>
       </footer>
 
       {showLegal && <MentionsLegales onClose={() => setShowLegal(false)} />}
+      {consent.choice === null && (
+        <CookieBanner
+          onAccept={() => consent.decide("granted")}
+          onRefuse={() => consent.decide("denied")}
+          onShowLegal={() => setShowLegal(true)}
+        />
+      )}
     </div>
   );
 }
