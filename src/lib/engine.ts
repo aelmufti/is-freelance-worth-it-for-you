@@ -110,10 +110,14 @@ export function calcMicro(input: SimulationInput, p: FiscalParams): StatutResult
 }
 
 // ------------------------------------------------------- TNS (EI / EURL)
-/** Cotisations TNS 2026 : assiette unique = revenu × (1 − 26 %), barème simplifié. */
-export function cotisationsTns(revenu: number, p: FiscalParams): number {
-  if (revenu <= 0) return 0;
-  const assiette = revenu * (1 - p.tnsAbattementAssiette);
+/**
+ * Cotisations TNS 2026 (réforme de l'assiette unique) : calculées sur le
+ * revenu AVANT cotisations, diminué d'un abattement de 26 %.
+ * Barème calibré sur le moteur officiel URSSAF (cf. scripts/compare-urssaf.ts).
+ */
+export function cotisationsTns(revenuAvantCotisations: number, p: FiscalParams): number {
+  if (revenuAvantCotisations <= 0) return 0;
+  const assiette = revenuAvantCotisations * (1 - p.tnsAbattementAssiette);
   const pass = PASS_2026;
 
   const retraiteBase =
@@ -123,31 +127,37 @@ export function cotisationsTns(revenu: number, p: FiscalParams): number {
     Math.min(assiette, p.tnsRetraiteCompSeuil) * p.tnsRetraiteCompT1 +
     Math.max(0, Math.min(assiette, 4 * pass) - p.tnsRetraiteCompSeuil) *
       p.tnsRetraiteCompT2;
-  const maladie = assiette * p.tnsMaladie;
+
+  // Maladie : taux progressif, plein à partir de 110 % du PASS
+  const maladie =
+    assiette * p.tnsMaladie * Math.min(1, assiette / (1.1 * pass));
+  const ij = Math.min(assiette, 5 * pass) * p.tnsIndemnitesJournalieres;
   const invalidite = Math.min(assiette, pass) * p.tnsInvaliditeDeces;
-  const allocations = assiette * p.tnsAllocFamiliales;
+
+  // Allocations familiales : 0 sous 110 % du PASS, progressif jusqu'à 140 %
+  const tauxFamille =
+    assiette < 1.1 * pass
+      ? 0
+      : assiette > 1.4 * pass
+        ? p.tnsAllocFamiliales
+        : (p.tnsAllocFamiliales * (assiette - 1.1 * pass)) / (0.3 * pass);
+  const allocations = assiette * tauxFamille;
+
   const csg = assiette * p.tnsCsgCrds;
   const cfp = pass * p.tnsCfp;
 
-  return retraiteBase + retraiteComp + maladie + invalidite + allocations + csg + cfp;
+  return (
+    retraiteBase + retraiteComp + maladie + ij + invalidite + allocations + csg + cfp
+  );
 }
 
-/**
- * En réalité les cotisations sont calculées sur le revenu APRÈS cotisations
- * (problème circulaire) — résolu par itération.
- */
+/** Réforme 2026 : plus de circularité, l'assiette part du revenu avant cotisations. */
 function tnsDepuisEnveloppe(enveloppe: number, p: FiscalParams): {
   remuneration: number;
   cotisations: number;
 } {
-  let remuneration = enveloppe * 0.72;
-  for (let i = 0; i < 30; i++) {
-    const cot = cotisationsTns(remuneration, p);
-    const next = enveloppe - cot;
-    if (Math.abs(next - remuneration) < 0.5) break;
-    remuneration = next;
-  }
-  return { remuneration, cotisations: enveloppe - remuneration };
+  const cotisations = cotisationsTns(enveloppe, p);
+  return { remuneration: enveloppe - cotisations, cotisations };
 }
 
 // ---------------------------------------------------------------- EI (IR)
@@ -156,11 +166,9 @@ export function calcEi(input: SimulationInput, p: FiscalParams): StatutResult {
   const enveloppe = Math.max(0, ca - input.fraisPro);
   const { remuneration, cotisations } = tnsDepuisEnveloppe(enveloppe, p);
 
-  // Une partie de la CSG (2,4 pts sur 9,7) n'est pas déductible de l'IR.
+  // Une partie de la CSG (2,9 pts sur 9,7) n'est pas déductible de l'IR.
   const csgNonDeductible =
-    remuneration > 0
-      ? remuneration * (1 - p.tnsAbattementAssiette) * 0.029
-      : 0;
+    enveloppe > 0 ? enveloppe * (1 - p.tnsAbattementAssiette) * 0.029 : 0;
   const imposable = Math.max(0, remuneration + csgNonDeductible);
   const ir = impotActivite(imposable, input, p);
 
@@ -210,8 +218,7 @@ export function calcEurl(input: SimulationInput, p: FiscalParams): StatutResult 
     );
   }
 
-  const csgNonDeductible =
-    remuneration * (1 - p.tnsAbattementAssiette) * 0.029;
+  const csgNonDeductible = envRemu * (1 - p.tnsAbattementAssiette) * 0.029;
   const ir = impotActivite(Math.max(0, remuneration + csgNonDeductible), input, p);
 
   const netAnnuel =

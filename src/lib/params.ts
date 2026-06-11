@@ -46,9 +46,10 @@ export interface FiscalParams {
   tnsRetraiteCompT1: number;
   tnsRetraiteCompT2: number;
   tnsRetraiteCompSeuil: number;
-  tnsMaladie: number;
+  tnsMaladie: number; // taux plein, progressif jusqu'à 110 % du PASS
+  tnsIndemnitesJournalieres: number; // plafonné à 5 PASS
   tnsInvaliditeDeces: number;
-  tnsAllocFamiliales: number;
+  tnsAllocFamiliales: number; // taux plein, progressif entre 110 % et 140 % du PASS
   tnsCsgCrds: number;
   tnsCfp: number;
 
@@ -106,19 +107,20 @@ export const DEFAULT_PARAMS: FiscalParams = {
   tnsRetraiteCompT2: 0.091,
   tnsRetraiteCompSeuil: 43000,
   tnsMaladie: 0.065,
+  tnsIndemnitesJournalieres: 0.005,
   tnsInvaliditeDeces: 0.013,
-  tnsAllocFamiliales: 0.0,
+  tnsAllocFamiliales: 0.031,
   tnsCsgCrds: 0.097,
   tnsCfp: 0.0025,
 
-  sasuPatronales: 0.45,
-  sasuSalariales: 0.22,
+  sasuPatronales: 0.405,
+  sasuSalariales: 0.215,
   portagePatronales: 0.45,
-  portageSalariales: 0.22,
+  portageSalariales: 0.215,
   portageFraisGestion: 0.07,
   csgNonDeductible: 0.029,
 
-  cdiSalariales: 0.25,
+  cdiSalariales: 0.218,
   cdiPatronales: 0.42,
 };
 
