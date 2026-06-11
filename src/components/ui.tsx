@@ -112,9 +112,9 @@ export function SliderField({
 }) {
   return (
     <div>
-      <div className="mb-1 flex items-center justify-between gap-2">
+      <div className="mb-1 flex flex-wrap items-center justify-between gap-x-2 gap-y-1">
         <FieldLabel>{label}</FieldLabel>
-        <span className="flex shrink-0">
+        <span className="flex max-w-full shrink-0">
           <input
             type="number"
             value={Number.isFinite(value) ? value : 0}
@@ -123,9 +123,9 @@ export function SliderField({
               const v = Number(e.target.value);
               if (Number.isFinite(v)) onChange(v);
             }}
-            className="w-20 border-2 border-ink bg-white px-1 py-0.5 text-right text-xs font-extrabold"
+            className="w-16 min-w-0 border-2 border-ink bg-white px-1 py-0.5 text-right text-xs font-extrabold"
           />
-          <span className="flex items-center border-2 border-l-0 border-ink bg-primary px-1.5 text-[10px] font-extrabold uppercase text-white">
+          <span className="flex items-center border-2 border-l-0 border-ink bg-primary px-1 text-[10px] font-extrabold uppercase text-white">
             {unit}
           </span>
         </span>
