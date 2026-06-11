@@ -189,7 +189,7 @@ export default function App() {
         <div className="mt-3">
           Fait par{" "}
           <a
-            href="https://aelm.dev"
+            href="https://aelm.dev?utm_source=freelance-simulateur&utm_medium=referral&utm_campaign=footer"
             target="_blank"
             rel="noreferrer"
             className="brutal-press inline-block border-2 border-white bg-primary px-2 py-0.5 text-white"

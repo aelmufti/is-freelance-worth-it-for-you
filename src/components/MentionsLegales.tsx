@@ -57,7 +57,12 @@ export function MentionsLegales({ onClose }: { onClose: () => void }) {
             </li>
             <li>
               — Site personnel :{" "}
-              <a href="https://aelm.dev" target="_blank" rel="noreferrer" className="underline decoration-2">
+              <a
+                href="https://aelm.dev?utm_source=freelance-simulateur&utm_medium=referral&utm_campaign=mentions-legales"
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-2"
+              >
                 aelm.dev
               </a>
             </li>
