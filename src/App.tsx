@@ -206,7 +206,12 @@ export default function App() {
               </p>
               <p>
                 <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Hébergeur</span>{" "}
-                Voir les informations d'hébergement sur aelm.dev.
+                Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723,
+                États-Unis —{" "}
+                <a href="https://vercel.com" target="_blank" rel="noreferrer" className="underline decoration-2">
+                  vercel.com
+                </a>
+                .
               </p>
               <p>
                 <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Données & cookies</span>{" "}
