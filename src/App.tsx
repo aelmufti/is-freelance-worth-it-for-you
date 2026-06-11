@@ -174,7 +174,18 @@ export default function App() {
       </main>
 
       <footer className="border-t-[3px] border-ink bg-ink px-4 py-6 text-center text-xs font-extrabold uppercase tracking-[0.12em] text-white">
-        FREELANCE.SIMULATEUR — gratuit, open, sans tracking
+        <div>FREELANCE.SIMULATEUR — gratuit, open, sans tracking</div>
+        <div className="mt-3">
+          Fait par{" "}
+          <a
+            href="https://aelm.dev"
+            target="_blank"
+            rel="noreferrer"
+            className="brutal-press inline-block border-2 border-white bg-primary px-2 py-0.5 text-white"
+          >
+            AELM.DEV
+          </a>
+        </div>
       </footer>
     </div>
   );
