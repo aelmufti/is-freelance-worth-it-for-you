@@ -70,9 +70,6 @@ export default function App() {
             <span className="border-2 border-ink bg-tag-green px-2 py-0.5 text-xs font-extrabold uppercase tracking-[0.12em] text-white">
               Taux 2026
             </span>
-            <span className="border-2 border-ink bg-white px-2 py-0.5 text-xs font-extrabold uppercase tracking-[0.12em]">
-              Vos données restent dans votre navigateur
-            </span>
           </div>
           <h1 className="anim-up max-w-4xl text-4xl font-extrabold uppercase leading-tight tracking-tight md:text-6xl">
             Freelance ou CDI&nbsp;:
