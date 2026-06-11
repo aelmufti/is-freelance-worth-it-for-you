@@ -88,7 +88,7 @@ export default function App() {
         <section className="anim-pop">
           <div className="border-[3px] border-ink bg-ink p-5 text-white shadow-brutal-lg md:p-6">
             <div className="text-xs font-extrabold uppercase tracking-[0.12em] opacity-70">
-              Verdict avec vos paramètres
+              Estimation avec vos paramètres — indicatif, pas un conseil
             </div>
             <div className="mt-1 text-xl font-extrabold uppercase tracking-tight md:text-3xl">
               {best.id === "cdi" ? (
