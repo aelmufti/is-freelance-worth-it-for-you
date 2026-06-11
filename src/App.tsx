@@ -69,7 +69,7 @@ export default function App() {
               Taux 2026
             </span>
             <span className="border-2 border-ink bg-white px-2 py-0.5 text-xs font-extrabold uppercase tracking-[0.12em]">
-              Aucune donnée collectée
+              Vos données restent dans votre navigateur
             </span>
           </div>
           <h1 className="anim-up max-w-4xl text-4xl font-extrabold uppercase leading-tight tracking-tight md:text-6xl">
@@ -185,7 +185,7 @@ export default function App() {
       </main>
 
       <footer className="border-t-[3px] border-ink bg-ink px-4 py-6 text-center text-xs font-extrabold uppercase tracking-[0.12em] text-white">
-        <div>FREELANCE.SIMULATEUR — gratuit, open, sans tracking</div>
+        <div>FREELANCE.SIMULATEUR — gratuit, open, sans cookies</div>
         <div className="mt-3">
           Fait par{" "}
           <a

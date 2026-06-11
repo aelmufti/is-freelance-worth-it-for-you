@@ -94,9 +94,17 @@ export function MentionsLegales({ onClose }: { onClose: () => void }) {
             serveurs.
           </p>
           <p>
-            <span className="uppercase">Cookies :</span> ce site n'utilise
-            aucun cookie de ciblage publicitaire ni outil de mesure
-            d'audience.
+            <span className="uppercase">Cookies :</span> ce site ne dépose
+            aucun cookie, ni publicitaire ni de mesure d'audience.
+          </p>
+          <p>
+            <span className="uppercase">Mesure d'audience :</span> des
+            statistiques de fréquentation agrégées et anonymes (pages vues,
+            pays, type d'appareil) sont collectées via Vercel Analytics, un
+            outil sans cookie ni identifiant individuel, qui ne permet pas de
+            suivre les visiteurs d'un site à l'autre ni de les identifier. À
+            ce titre, il est exempté de consentement préalable au sens des
+            lignes directrices de la CNIL sur les traceurs.
           </p>
 
           <Titre>5. Limitation de responsabilité</Titre>
