@@ -166,10 +166,74 @@ export default function App() {
             ⚠ Simulation indicative, à jour des principaux taux 2026 (barème IR
             sur revenus 2025, PFU 31,4 %, réforme de l'assiette TNS). Elle ne
             remplace pas un expert-comptable : CFE, plafonnement du quotient
-            familial, mutuelle obligatoire, prévoyance et cas particuliers ne
-            sont pas tous modélisés. Aucune donnée n'est envoyée : tout est
-            calculé dans votre navigateur.
+            familial, réduction générale de cotisations, mutuelle obligatoire,
+            prévoyance et cas particuliers ne sont pas tous modélisés. Aucune
+            donnée n'est envoyée : tout est calculé dans votre navigateur.
           </p>
+          <p className="mt-2 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
+            ✓ Contrôle qualité : nos résultats sont comparés automatiquement au
+            moteur de calcul open source « modele-social » qui équipe
+            mon-entreprise.urssaf.fr (écarts inférieurs à 2 % sur les cas
+            testés). Cette démarche est purement technique : ce site est
+            indépendant et n'est ni édité, ni approuvé, ni soutenu par
+            l'URSSAF ou toute autre administration.
+          </p>
+        </section>
+
+        {/* MENTIONS LÉGALES */}
+        <section className="border-[3px] border-ink bg-white p-5 shadow-brutal">
+          <h3 className="text-sm font-extrabold uppercase tracking-[0.12em]">
+            Mentions légales & avertissements
+          </h3>
+          <div className="mt-3 grid gap-4 text-[11px] font-bold md:grid-cols-2">
+            <div className="space-y-2">
+              <p>
+                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Éditeur</span>{" "}
+                Ali El Mufti —{" "}
+                <a href="https://aelm.dev" target="_blank" rel="noreferrer" className="underline decoration-2">
+                  aelm.dev
+                </a>{" "}
+                (contact via le site).
+              </p>
+              <p>
+                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Hébergeur</span>{" "}
+                Voir les informations d'hébergement sur aelm.dev.
+              </p>
+              <p>
+                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Données</span>{" "}
+                Ce site ne collecte aucune donnée personnelle, ne dépose aucun
+                cookie et n'utilise aucun traceur. Les calculs sont exécutés
+                exclusivement dans votre navigateur.
+              </p>
+              <p>
+                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Marques</span>{" "}
+                URSSAF, CIPAV et les autres noms cités appartiennent à leurs
+                titulaires respectifs et ne sont mentionnés qu'à titre
+                informatif, sans affiliation ni partenariat.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <p>
+                <span className="border-2 border-ink bg-tag-red px-1 uppercase text-white">Pas un conseil</span>{" "}
+                Les informations et résultats fournis ont une vocation
+                exclusivement informative et pédagogique. Ils ne constituent
+                ni un conseil fiscal, comptable, juridique, social ou en
+                investissement, ni une recommandation personnalisée au sens
+                de la réglementation. Pour toute décision (choix de statut,
+                création de société, option fiscale…), consultez un
+                expert-comptable ou un avocat.
+              </p>
+              <p>
+                <span className="border-2 border-ink bg-tag-red px-1 uppercase text-white">Responsabilité</span>{" "}
+                Malgré le soin apporté, l'exactitude, l'exhaustivité et
+                l'actualité des résultats ne sont pas garanties : la
+                législation évolue et chaque situation est particulière.
+                L'éditeur ne saurait être tenu responsable des décisions
+                prises ou non prises sur la base de cet outil, ni des
+                éventuels dommages directs ou indirects en résultant.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
 
