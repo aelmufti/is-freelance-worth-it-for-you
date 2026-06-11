@@ -33,7 +33,7 @@ export function MainForm({
           min={150}
           max={1500}
           step={10}
-          format={(v) => `${v} €/j`}
+          unit="€/j"
         />
         <div className="grid grid-cols-2 gap-3">
           <SliderField
@@ -42,7 +42,7 @@ export function MainForm({
             onChange={(v) => set("joursParMois", v)}
             min={5}
             max={22}
-            format={(v) => `${v} j`}
+            unit="j"
           />
           <SliderField
             label="Mois facturés / an"
@@ -50,7 +50,7 @@ export function MainForm({
             onChange={(v) => set("moisFactures", v)}
             min={6}
             max={12}
-            format={(v) => `${v} mois`}
+            unit="mois"
           />
         </div>
         <NumberField
@@ -107,7 +107,7 @@ export function MainForm({
           min={25000}
           max={150000}
           step={1000}
-          format={(v) => euro(v)}
+          unit="€/an"
         />
 
         <h3 className="pt-2 text-sm font-extrabold uppercase tracking-[0.12em]">
@@ -153,7 +153,7 @@ export function MainForm({
           min={0}
           max={100}
           step={5}
-          format={(v) => `${v} % rému / ${100 - v} % dividendes`}
+          unit="% rému"
         />
         <NumberField
           label="Capital social EURL"
@@ -189,7 +189,7 @@ export function AdvancedParams({
       min={0}
       max={max}
       step={0.1}
-      format={(v) => `${v.toFixed(1).replace(".", ",")} %`}
+      unit="%"
     />
   );
 

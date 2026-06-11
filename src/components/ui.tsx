@@ -100,7 +100,7 @@ export function SliderField({
   min,
   max,
   step = 1,
-  format,
+  unit,
 }: {
   label: string;
   value: number;
@@ -108,19 +108,31 @@ export function SliderField({
   min: number;
   max: number;
   step?: number;
-  format: (v: number) => string;
+  unit: string;
 }) {
   return (
     <div>
-      <div className="mb-1 flex items-center justify-between">
+      <div className="mb-1 flex items-center justify-between gap-2">
         <FieldLabel>{label}</FieldLabel>
-        <span className="border-2 border-ink bg-primary px-2 text-xs font-extrabold text-white">
-          {format(value)}
+        <span className="flex shrink-0">
+          <input
+            type="number"
+            value={Number.isFinite(value) ? value : 0}
+            step={step}
+            onChange={(e) => {
+              const v = Number(e.target.value);
+              if (Number.isFinite(v)) onChange(v);
+            }}
+            className="w-20 border-2 border-ink bg-white px-1 py-0.5 text-right text-xs font-extrabold"
+          />
+          <span className="flex items-center border-2 border-l-0 border-ink bg-primary px-1.5 text-[10px] font-extrabold uppercase text-white">
+            {unit}
+          </span>
         </span>
       </div>
       <input
         type="range"
-        value={value}
+        value={Math.min(max, Math.max(min, value))}
         min={min}
         max={max}
         step={step}
