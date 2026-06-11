@@ -45,7 +45,10 @@ export function MentionsLegales({ onClose }: { onClose: () => void }) {
 
         <div className="space-y-3 p-5 text-xs font-bold leading-relaxed">
           <Titre>1. Éditeur du site</Titre>
-          <p>Ce site est édité à titre personnel par :</p>
+          <p>
+            Le site <span className="font-extrabold">freelance-ou-cdi.fr</span>{" "}
+            est édité à titre personnel par :
+          </p>
           <ul className="list-none space-y-1">
             <li>— Nom et prénom : Ali El Mufti</li>
             <li>— Adresse de résidence : {VILLE_EDITEUR}</li>

@@ -187,7 +187,7 @@ export default function App() {
       </main>
 
       <footer className="border-t-[3px] border-ink bg-ink px-4 py-6 text-center text-xs font-extrabold uppercase tracking-[0.12em] text-white">
-        <div>FREELANCE.SIMULATEUR — gratuit, open, sans compte</div>
+        <div>FREELANCE-OU-CDI.FR — gratuit, open, sans compte</div>
         <div className="mt-3">
           Fait par{" "}
           <a
