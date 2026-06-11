@@ -183,54 +183,114 @@ export default function App() {
         {/* MENTIONS LÉGALES */}
         <section className="border-[3px] border-ink bg-white p-5 shadow-brutal">
           <h3 className="text-sm font-extrabold uppercase tracking-[0.12em]">
-            Mentions légales & avertissements
+            Mentions légales & conditions d'utilisation
           </h3>
+          <p className="mt-2 text-[11px] font-bold opacity-70">
+            L'accès à ce site et son utilisation valent acceptation pleine et
+            entière des présentes conditions. Si vous ne les acceptez pas,
+            veuillez ne pas utiliser ce site.
+          </p>
           <div className="mt-3 grid gap-4 text-[11px] font-bold md:grid-cols-2">
             <div className="space-y-2">
               <p>
                 <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Éditeur</span>{" "}
-                Ali El Mufti —{" "}
+                Site édité à titre personnel et non professionnel par Ali El
+                Mufti, directeur de la publication —{" "}
                 <a href="https://aelm.dev" target="_blank" rel="noreferrer" className="underline decoration-2">
                   aelm.dev
                 </a>{" "}
-                (contact via le site).
+                (contact via le site). Service entièrement gratuit, sans
+                publicité, sans contrepartie et sans création de compte :
+                aucune relation contractuelle, commerciale ou de conseil n'est
+                établie entre l'éditeur et l'utilisateur.
               </p>
               <p>
                 <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Hébergeur</span>{" "}
                 Voir les informations d'hébergement sur aelm.dev.
               </p>
               <p>
-                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Données</span>{" "}
-                Ce site ne collecte aucune donnée personnelle, ne dépose aucun
-                cookie et n'utilise aucun traceur. Les calculs sont exécutés
-                exclusivement dans votre navigateur.
+                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Données & cookies</span>{" "}
+                Ce site ne collecte, ne stocke et ne transmet aucune donnée
+                personnelle, ne dépose aucun cookie et n'utilise aucun traceur
+                ni outil de mesure d'audience. Les valeurs saisies sont
+                traitées exclusivement dans votre navigateur et ne quittent
+                jamais votre appareil.
               </p>
               <p>
-                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Marques</span>{" "}
-                URSSAF, CIPAV et les autres noms cités appartiennent à leurs
-                titulaires respectifs et ne sont mentionnés qu'à titre
-                informatif, sans affiliation ni partenariat.
+                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Indépendance</span>{" "}
+                Ce site est strictement indépendant. Il n'est ni édité, ni
+                approuvé, ni soutenu, ni contrôlé par l'URSSAF, la DGFiP,
+                France Travail ou toute autre administration ou organisme
+                public ou privé. URSSAF, CIPAV et les autres marques ou noms
+                cités appartiennent à leurs titulaires respectifs et ne sont
+                mentionnés qu'à titre strictement informatif, sans affiliation,
+                partenariat ni parrainage d'aucune sorte.
+              </p>
+              <p>
+                <span className="border-2 border-ink bg-tag-yellow px-1 uppercase">Propriété & liens</span>{" "}
+                Les contenus de ce site sont fournis « en l'état ». Les liens
+                vers des sites tiers sont proposés à titre de commodité ;
+                l'éditeur n'exerce aucun contrôle sur ces sites et décline
+                toute responsabilité quant à leur contenu, leur exactitude ou
+                leur disponibilité.
               </p>
             </div>
             <div className="space-y-2">
               <p>
-                <span className="border-2 border-ink bg-tag-red px-1 uppercase text-white">Pas un conseil</span>{" "}
-                Les informations et résultats fournis ont une vocation
-                exclusivement informative et pédagogique. Ils ne constituent
-                ni un conseil fiscal, comptable, juridique, social ou en
-                investissement, ni une recommandation personnalisée au sens
-                de la réglementation. Pour toute décision (choix de statut,
-                création de société, option fiscale…), consultez un
-                expert-comptable ou un avocat.
+                <span className="border-2 border-ink bg-tag-red px-1 uppercase text-white">Information, pas conseil</span>{" "}
+                Ce site est un outil de simulation générique à vocation
+                exclusivement informative et pédagogique. Les informations et
+                résultats affichés sont des estimations théoriques fondées sur
+                des hypothèses simplifiées et des paramètres saisis par
+                l'utilisateur. Ils ne constituent en aucun cas un conseil ou
+                une consultation de nature fiscale, comptable, juridique,
+                sociale, patrimoniale ou en investissement, ni une
+                recommandation personnalisée, ni une incitation à choisir un
+                statut ou à réaliser une opération quelconque. L'éditeur
+                n'exerce aucune profession réglementée du chiffre, du droit ou
+                du conseil et ne fournit aucune prestation individualisée.
+              </p>
+              <p>
+                <span className="border-2 border-ink bg-tag-red px-1 uppercase text-white">Aucune garantie</span>{" "}
+                Malgré le soin apporté et la confrontation régulière des
+                résultats à des références publiques, l'éditeur ne garantit
+                ni l'exactitude, ni l'exhaustivité, ni l'actualité des
+                informations et résultats, qui peuvent comporter des erreurs,
+                des omissions ou des approximations. La législation et les
+                taux évoluent constamment et chaque situation individuelle
+                comporte des spécificités qu'un outil générique ne peut pas
+                prendre en compte.
+              </p>
+              <p>
+                <span className="border-2 border-ink bg-tag-red px-1 uppercase text-white">Vos obligations</span>{" "}
+                Avant toute décision (choix ou changement de statut, création
+                ou fermeture de société, option fiscale ou sociale, démission,
+                investissement…), l'utilisateur s'engage à vérifier les
+                informations auprès des sources officielles
+                (service-public.fr, urssaf.fr, impots.gouv.fr) et à consulter
+                un professionnel habilité (expert-comptable, avocat). Les
+                résultats de ce simulateur ne sauraient fonder, à eux seuls,
+                une quelconque décision.
               </p>
               <p>
                 <span className="border-2 border-ink bg-tag-red px-1 uppercase text-white">Responsabilité</span>{" "}
-                Malgré le soin apporté, l'exactitude, l'exhaustivité et
-                l'actualité des résultats ne sont pas garanties : la
-                législation évolue et chaque situation est particulière.
-                L'éditeur ne saurait être tenu responsable des décisions
-                prises ou non prises sur la base de cet outil, ni des
-                éventuels dommages directs ou indirects en résultant.
+                L'utilisation du site s'effectue sous la seule responsabilité
+                de l'utilisateur. Dans toute la mesure permise par la loi, la
+                responsabilité de l'éditeur ne saurait être engagée à raison
+                de l'utilisation ou de l'impossibilité d'utiliser le site, des
+                décisions prises ou non prises sur la base des résultats
+                affichés, ni d'aucun dommage direct ou indirect (notamment
+                perte de revenus, redressement, pénalités, perte de droits ou
+                d'opportunité) susceptible d'en résulter. La présente clause
+                ne s'applique pas aux cas où la loi interdit de limiter la
+                responsabilité (faute lourde, dol, dommages corporels).
+              </p>
+              <p>
+                <span className="border-2 border-ink bg-tag-red px-1 uppercase text-white">Droit applicable</span>{" "}
+                Les présentes mentions sont régies par le droit français.
+                Elles peuvent être modifiées à tout moment ; la version
+                publiée sur cette page prévaut. Si l'une de ces clauses était
+                jugée nulle, les autres conserveraient leur plein effet.
               </p>
             </div>
           </div>
