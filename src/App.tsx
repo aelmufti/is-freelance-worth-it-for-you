@@ -183,7 +183,7 @@ export default function App() {
             rel="noreferrer"
             className="brutal-press inline-block border-2 border-white bg-primary px-2 py-0.5 text-white"
           >
-            AELM.DEV
+            ALI EL MUFTI
           </a>
         </div>
       </footer>
