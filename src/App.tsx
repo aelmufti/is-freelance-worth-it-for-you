@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { DEFAULT_INPUT, DEFAULT_PARAMS } from "./lib/params";
 import type { FiscalParams, SimulationInput } from "./lib/params";
 import { calcAll } from "./lib/engine";
+import type { StatutId } from "./lib/engine";
 import { IS_PRERENDER } from "./lib/prerender";
 import { AdvancedParams, MainForm } from "./components/Form";
 import { Podium } from "./components/Results";
@@ -67,6 +68,7 @@ export default function App() {
   const [input, setInput] = useState<SimulationInput>(DEFAULT_INPUT);
   const [params, setParams] = useState<FiscalParams>(DEFAULT_PARAMS);
   const [showLegal, setShowLegal] = useState(false);
+  const [focusStatuts, setFocusStatuts] = useState<StatutId[] | null>(null);
   const consent = useGaConsent();
 
   // Les graphiques recharts mesurent leur conteneur et utilisent des
@@ -148,7 +150,11 @@ export default function App() {
         {/* SIMULATEUR */}
         <section className="grid gap-6 lg:grid-cols-[380px_1fr]">
           <div className="space-y-6">
-            <MainForm input={input} setInput={setInput} />
+            <MainForm
+              input={input}
+              setInput={setInput}
+              onFocusStatuts={setFocusStatuts}
+            />
             <AdvancedParams
               params={params}
               setParams={setParams}
@@ -156,7 +162,7 @@ export default function App() {
             />
           </div>
           <div className="space-y-6">
-            <Podium results={results} />
+            <Podium results={results} focusStatuts={focusStatuts} />
           </div>
         </section>
 

@@ -3,7 +3,11 @@
 import Engine from "publicodes";
 import rules from "modele-social";
 import { DEFAULT_PARAMS, DEFAULT_INPUT } from "../src/lib/params";
-import { cotisationsTns } from "../src/lib/engine";
+import {
+  cotisationsTns,
+  cotisationsSalarialesPrivees,
+  cotisationsFonctionnaire,
+} from "../src/lib/engine";
 import { impotFoyer } from "../src/lib/ir";
 
 const p = DEFAULT_PARAMS;
@@ -110,16 +114,71 @@ for (const totale of [50000, 90000]) {
   ligne(`Coût total ${fmt(totale)} → net`, offNet, brut * (1 - p.sasuSalariales));
 }
 
-console.log("\n=== CDI CADRE — brut → net avant impôt / coût employeur ===");
+for (const cadre of [true, false]) {
+  console.log(
+    `\n=== CDI ${cadre ? "CADRE" : "NON-CADRE"} — brut → net avant impôt / coût employeur ===`,
+  );
+  for (const brut of [30000, 40000, 55000, 80000, 120000]) {
+    const situation = {
+      "salarié . contrat": "'CDI'",
+      "salarié . contrat . statut cadre": cadre ? "oui" : "non",
+      "salarié . contrat . salaire brut": `${brut} €/an`,
+      // Pas de complémentaire santé dans notre modèle (montant forfaitaire, pas un taux)
+      "salarié . cotisations . prévoyances . santé . montant": "0 €/mois",
+    };
+    const offNet = urssaf(
+      situation,
+      "salarié . rémunération . net . à payer avant impôt",
+    );
+    ligne(
+      `Brut ${fmt(brut)} → net`,
+      offNet,
+      brut - cotisationsSalarialesPrivees(brut, cadre, p),
+    );
+    const offCout = urssaf(situation, "salarié . coût total employeur");
+    ligne(`Brut ${fmt(brut)} → coût employeur`, offCout, brut * (1 + p.cdiPatronales));
+  }
+}
+
+console.log(
+  "\n=== POURQUOI on diffère des convertisseurs forfaitaires (ex. salaire-brut-en-net.fr : non-cadre -22 %, cadre -25 %, fonction publique -17 %) ===",
+);
 for (const brut of [40000, 55000, 80000]) {
   const situation = {
     "salarié . contrat": "'CDI'",
     "salarié . contrat . statut cadre": "oui",
     "salarié . contrat . salaire brut": `${brut} €/an`,
+    "salarié . cotisations . prévoyances . santé . montant": "0 €/mois",
   };
-  const offNet = urssaf(situation, "salarié . rémunération . net . à payer avant impôt");
-  ligne(`Brut ${fmt(brut)} → net`, offNet, brut * (1 - p.cdiSalariales));
-  const offCout = urssaf(situation, "salarié . coût total employeur");
-  ligne(`Brut ${fmt(brut)} → coût employeur`, offCout, brut * (1 + p.cdiPatronales));
+  const offNet = urssaf(
+    situation,
+    "salarié . rémunération . net . à payer avant impôt",
+  );
+  const nous = brut - cotisationsSalarialesPrivees(brut, true, p);
+  const forfait = brut * (1 - 0.25);
+  console.log(
+    `Cadre brut ${fmt(brut)} :`.padEnd(28),
+    `URSSAF ${fmt(offNet)}`.padEnd(18),
+    `nous ${fmt(nous)} (${(((nous - offNet) / offNet) * 100).toFixed(1)} %)`.padEnd(26),
+    `forfait -25 % ${fmt(forfait)} (${(((forfait - offNet) / offNet) * 100).toFixed(1)} %)`,
+  );
+}
+
+console.log("\n=== FONCTIONNAIRE — vérification sur les taux service-public.fr (F468) ===");
+// Pension civile 11,10 % du traitement indiciaire ; RAFP 5 % des primes
+// (plafonnées à 20 % du TI) ; CSG 9,2 % + CRDS 0,5 % sur 98,25 % du brut.
+for (const brut of [30000, 55000, 80000]) {
+  const partPrimes = 0.2;
+  const ti = brut * (1 - partPrimes);
+  const primes = brut * partPrimes;
+  const attendu =
+    ti * 0.111 +
+    Math.min(primes, ti * 0.2) * 0.05 +
+    brut * 0.9825 * (0.092 + 0.005);
+  ligne(
+    `Brut ${fmt(brut)} (primes 20 %) → cotisations`,
+    attendu,
+    cotisationsFonctionnaire(brut, partPrimes, p),
+  );
 }
 

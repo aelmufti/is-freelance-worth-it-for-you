@@ -10,7 +10,7 @@ export const STATUT_COLORS: Record<StatutId, string> = {
   cdi: "#0d0d0d",
 };
 
-const TEXT_ON: Record<StatutId, string> = {
+export const TEXT_ON: Record<StatutId, string> = {
   micro: "#0d0d0d",
   ei: "#fff",
   eurl: "#fff",
@@ -23,15 +23,19 @@ export function ResultCard({
   r,
   best,
   rank,
+  spotlight = "none",
 }: {
   r: StatutResult;
   best: boolean;
   rank: number;
+  spotlight?: "none" | "on" | "off";
 }) {
   return (
     <Card
       lift
-      className={`anim-up flex flex-col ${r.eligible ? "" : "opacity-60"}`}
+      className={`anim-up flex flex-col transition-all duration-150 ${r.eligible ? "" : "opacity-60"} ${
+        spotlight === "off" ? "opacity-30" : ""
+      } ${spotlight === "on" ? "-translate-y-1 shadow-brutal-lg" : ""}`}
     >
       <div
         className="flex items-center justify-between border-b-[3px] border-ink px-4 py-2"
@@ -60,7 +64,7 @@ export function ResultCard({
           <span className="text-sm font-bold opacity-70"> net/mois</span>
         </div>
         <div className="text-xs font-bold opacity-70">
-          {`${euro(r.netAnnuel)} net/an après impôt — ${(r.tauxRestitution * 100).toFixed(0)} % du ${r.id === "cdi" ? "coût employeur" : "CA"} conservé`}
+          {`${euro(r.netAnnuel)} net/an après impôt — ${(r.tauxRestitution * 100).toFixed(0)} % du ${r.baseLabel ?? "CA"} conservé`}
         </div>
 
         {/* Barre de répartition */}
@@ -124,7 +128,13 @@ export function ResultCard({
   );
 }
 
-export function Podium({ results }: { results: StatutResult[] }) {
+export function Podium({
+  results,
+  focusStatuts = null,
+}: {
+  results: StatutResult[];
+  focusStatuts?: StatutId[] | null;
+}) {
   const sorted = [...results]
     .filter((r) => r.eligible)
     .sort((a, b) => b.netAnnuel - a.netAnnuel);
@@ -134,7 +144,18 @@ export function Podium({ results }: { results: StatutResult[] }) {
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {results.map((r, i) => (
         <div key={r.id} style={{ animationDelay: `${(i * 50) / 1000}s` }} className="anim-up">
-          <ResultCard r={r} best={r.id === bestId} rank={rank.get(r.id) ?? 0} />
+          <ResultCard
+            r={r}
+            best={r.id === bestId}
+            rank={rank.get(r.id) ?? 0}
+            spotlight={
+              focusStatuts === null
+                ? "none"
+                : focusStatuts.includes(r.id)
+                  ? "on"
+                  : "off"
+            }
+          />
         </div>
       ))}
     </div>

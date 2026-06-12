@@ -6,6 +6,7 @@ export const PASS_2026 = 48060; // plafond annuel de la Sécurité sociale (4 00
 export type ActiviteMicro = "bnc" | "bic-service" | "bic-vente";
 export type CaisseRetraite = "regime-general" | "cipav";
 export type SituationFamiliale = "celibataire" | "couple";
+export type StatutSalarie = "cadre" | "non-cadre" | "fonctionnaire";
 
 export interface FiscalParams {
   // Barème IR 2026 (revenus 2025) : [seuil bas, taux]
@@ -61,9 +62,24 @@ export interface FiscalParams {
   portageFraisGestion: number; // % du CA
   csgNonDeductible: number; // % du brut réintégré au net imposable
 
-  // CDI (cadre)
-  cdiSalariales: number;
+  // Salarié du privé — part salariale détaillée
+  // Sources : urssaf.fr (taux secteur privé, màj 01/01/2026) et agirc-arrco.fr
+  salVieillessePlaf: number; // 6,90 % dans la limite du PASS
+  salVieillesseDeplaf: number; // 0,40 % sur la totalité
+  salCsgCrds: number; // CSG 9,2 % + CRDS 0,5 %
+  salCsgAssiette: number; // 98,25 % du brut, dans la limite de 4 PASS
+  agircT1: number; // retraite complémentaire, jusqu'à 1 PASS
+  agircT2: number; // de 1 à 8 PASS
+  cegT1: number;
+  cegT2: number;
+  cetSalarie: number; // si brut > PASS
+  apecSalarie: number; // cadres uniquement, jusqu'à 4 PASS
   cdiPatronales: number;
+
+  // Fonctionnaire — part agent (service-public.fr fiche F468)
+  fonctPensionCivile: number; // 11,10 % du traitement indiciaire brut
+  fonctRafp: number; // 5 % des primes
+  fonctRafpPlafondPrimes: number; // primes retenues dans la limite de 20 % du TI
 }
 
 export const DEFAULT_PARAMS: FiscalParams = {
@@ -120,8 +136,21 @@ export const DEFAULT_PARAMS: FiscalParams = {
   portageFraisGestion: 0.07,
   csgNonDeductible: 0.029,
 
-  cdiSalariales: 0.218,
+  salVieillessePlaf: 0.069,
+  salVieillesseDeplaf: 0.004,
+  salCsgCrds: 0.097,
+  salCsgAssiette: 0.9825,
+  agircT1: 0.0315,
+  agircT2: 0.0864,
+  cegT1: 0.0086,
+  cegT2: 0.0108,
+  cetSalarie: 0.0014,
+  apecSalarie: 0.00024,
   cdiPatronales: 0.42,
+
+  fonctPensionCivile: 0.111,
+  fonctRafp: 0.05,
+  fonctRafpPlafondPrimes: 0.2,
 };
 
 export interface SimulationInput {
@@ -135,6 +164,10 @@ export interface SimulationInput {
   revenuConjoint: number; // revenu net imposable annuel du conjoint
 
   cdiBrutAnnuel: number;
+  statutSalarie: StatutSalarie;
+  partPrimes: number; // fonctionnaire : part des primes/indemnités dans le brut, 0..1
+  pasManuel: boolean; // utiliser un taux de prélèvement à la source saisi
+  tauxPas: number; // taux PAS personnalisé (fiche de paie), 0..0.43
 
   activite: ActiviteMicro;
   caisse: CaisseRetraite;
@@ -156,6 +189,10 @@ export const DEFAULT_INPUT: SimulationInput = {
   revenuConjoint: 0,
 
   cdiBrutAnnuel: 55000,
+  statutSalarie: "cadre",
+  partPrimes: 0.2,
+  pasManuel: false,
+  tauxPas: 0,
 
   activite: "bnc",
   caisse: "regime-general",

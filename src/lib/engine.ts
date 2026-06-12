@@ -1,6 +1,6 @@
 import type { FiscalParams, SimulationInput } from "./params";
 import { caAnnuel, PASS_2026, partsFiscales } from "./params";
-import { abattementSalaire, impotActivite } from "./ir";
+import { abattementSalaire, impotActivite, impotFoyer } from "./ir";
 
 export type StatutId = "micro" | "ei" | "eurl" | "sasu" | "portage" | "cdi";
 
@@ -20,6 +20,7 @@ export interface StatutResult {
   netMensuel: number;
   tauxRestitution: number;
   eligible: boolean;
+  baseLabel?: string; // dénominateur du taux de restitution (défaut : "CA")
   details: LigneDetail[];
   warnings: string[];
 }
@@ -321,31 +322,147 @@ export function calcPortage(input: SimulationInput, p: FiscalParams): StatutResu
 }
 
 // ---------------------------------------------------------------- CDI
+/**
+ * Cotisations salariales du privé, ligne par ligne.
+ * Sources : urssaf.fr « Taux de cotisations - Secteur privé » (màj 01/01/2026)
+ * et agirc-arrco.fr (retraite complémentaire).
+ */
+export function cotisationsSalarialesPrivees(
+  brut: number,
+  cadre: boolean,
+  p: FiscalParams,
+): number {
+  const pass = PASS_2026;
+  const t1 = Math.min(brut, pass);
+  const t2 = Math.max(0, Math.min(brut, 8 * pass) - pass);
+
+  const vieillesse = t1 * p.salVieillessePlaf + brut * p.salVieillesseDeplaf;
+  const retraiteComp = t1 * (p.agircT1 + p.cegT1) + t2 * (p.agircT2 + p.cegT2);
+  const cet = brut > pass ? (t1 + t2) * p.cetSalarie : 0;
+  const apec = cadre ? Math.min(brut, 4 * pass) * p.apecSalarie : 0;
+
+  // CSG/CRDS : assiette de 98,25 % du brut dans la limite de 4 PASS, 100 % au-delà
+  const baseCsg =
+    Math.min(brut, 4 * pass) * p.salCsgAssiette + Math.max(0, brut - 4 * pass);
+  const csgCrds = baseCsg * p.salCsgCrds;
+
+  return vieillesse + retraiteComp + cet + apec + csgCrds;
+}
+
+/**
+ * Cotisations « part agent » d'un fonctionnaire (service-public.fr, fiche F468) :
+ * pension civile sur le traitement indiciaire, RAFP sur les primes
+ * (plafonnées à 20 % du traitement), CSG/CRDS sur l'ensemble.
+ */
+export function cotisationsFonctionnaire(
+  brut: number,
+  partPrimes: number,
+  p: FiscalParams,
+): number {
+  const traitement = brut * (1 - partPrimes);
+  const primes = brut * partPrimes;
+
+  const pension = traitement * p.fonctPensionCivile;
+  const rafp =
+    Math.min(primes, traitement * p.fonctRafpPlafondPrimes) * p.fonctRafp;
+  const baseCsg =
+    Math.min(brut, 4 * PASS_2026) * p.salCsgAssiette +
+    Math.max(0, brut - 4 * PASS_2026);
+  const csgCrds = baseCsg * p.salCsgCrds;
+
+  return pension + rafp + csgCrds;
+}
+
 export function calcCdi(input: SimulationInput, p: FiscalParams): StatutResult {
   const brut = input.cdiBrutAnnuel;
-  const net = brut * (1 - p.cdiSalariales);
-  const cotisations = brut * p.cdiSalariales;
+  const fonctionnaire = input.statutSalarie === "fonctionnaire";
 
-  const imposable = abattementSalaire(net + brut * p.csgNonDeductible, p);
-  const ir = impotActivite(imposable, input, p);
+  const cotisations = fonctionnaire
+    ? cotisationsFonctionnaire(brut, input.partPrimes, p)
+    : cotisationsSalarialesPrivees(brut, input.statutSalarie === "cadre", p);
+  const net = brut - cotisations;
+
+  // Net imposable (avant déduction de 10 %) : net versé + CSG/CRDS non déductible
+  const netImposable = net + brut * p.csgNonDeductible;
+
+  // Taux de prélèvement à la source du foyer (CGI art. 204 H, BOI-IR-PAS-20-20-10) :
+  // IR du foyer / revenus nets imposables AVANT la déduction de 10 %.
+  const conjointImposable =
+    input.situation === "couple" ? Math.max(0, input.revenuConjoint) : 0;
+  const irFoyer = impotFoyer(
+    conjointImposable + abattementSalaire(netImposable, p),
+    input,
+    p,
+  );
+  const assiettePas = netImposable + conjointImposable;
+  const tauxPasBareme = assiettePas > 0 ? irFoyer / assiettePas : 0;
+  const fmtPct = (t: number) => (t * 100).toFixed(1).replace(".", ",");
+
+  let ir: number;
+  let labelIr: string;
+  if (input.pasManuel) {
+    // Retenue à la source = taux saisi × salaire net imposable (CGI art. 204 H)
+    ir = netImposable * Math.max(0, input.tauxPas);
+    labelIr = `Prélèvement à la source (taux saisi ${fmtPct(input.tauxPas)} %)`;
+  } else {
+    ir = impotActivite(abattementSalaire(netImposable, p), input, p);
+    labelIr = `Impôt sur le revenu (taux PAS ≈ ${fmtPct(tauxPasBareme)} %)`;
+  }
+
+  const labels: Record<string, string> = {
+    cadre: "CDI (CADRE)",
+    "non-cadre": "CDI (NON-CADRE)",
+    fonctionnaire: "FONCTIONNAIRE",
+  };
+
+  const warnings: string[] = [];
+  if (fonctionnaire) {
+    warnings.push(
+      `Hypothèse : primes/indemnités = ${String(Math.round(input.partPrimes * 100))} % du brut. Pension civile 11,10 % sur le traitement indiciaire, RAFP 5 % sur les primes (source : service-public.fr).`,
+    );
+  }
+  if (input.pasManuel) {
+    warnings.push(
+      `Taux PAS saisi : l'impôt définitif est régularisé après la déclaration annuelle (estimation au barème 2026 du foyer : ${fmtPct(tauxPasBareme)} %).`,
+    );
+  }
+
+  if (fonctionnaire) {
+    return finalise({
+      id: "cdi",
+      label: labels[input.statutSalarie],
+      ca: brut,
+      cotisations,
+      impots: ir,
+      fraisDivers: 0,
+      netAnnuel: net - ir,
+      baseLabel: "brut",
+      details: [
+        { label: "Traitement brut + primes", value: brut },
+        { label: "Pension civile, RAFP, CSG-CRDS", value: -cotisations },
+        { label: labelIr, value: -ir },
+      ],
+      warnings,
+    });
+  }
 
   const coutEmployeur = brut * (1 + p.cdiPatronales);
-
   return finalise({
     id: "cdi",
-    label: "CDI (CADRE)",
+    label: labels[input.statutSalarie],
     ca: coutEmployeur,
     cotisations: cotisations + brut * p.cdiPatronales,
     impots: ir,
     fraisDivers: 0,
     netAnnuel: net - ir,
+    baseLabel: "coût employeur",
     details: [
       { label: "Coût total employeur", value: coutEmployeur },
       { label: "Salaire brut", value: brut },
       { label: "Cotisations salariales", value: -cotisations },
-      { label: "Impôt sur le revenu", value: -ir },
+      { label: labelIr, value: -ir },
     ],
-    warnings: [],
+    warnings,
   });
 }
 
