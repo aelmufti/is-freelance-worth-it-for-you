@@ -10,13 +10,14 @@
 // rendre la page interactive.
 import { spawn } from "node:child_process";
 import { chromium } from "playwright";
-import { writeFileSync, readFileSync } from "node:fs";
+import { writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dir, "..");
 const distHtml = resolve(root, "dist", "index.html");
+const templateOut = resolve(root, "prerendered.html");
 
 const PORT = 4321;
 const URL = `http://localhost:${PORT}/?__prerender=1`;
@@ -65,13 +66,15 @@ try {
 
   await browser.close();
 
-  // 3. Écrire le résultat — on conserve la balise <link rel="manifest"> etc.
-  // d'origine, qu'on retrouve déjà via `page.evaluate(outerHTML)`.
+  // 3. Écrire le résultat dans dist/ ET sauvegarder une copie à la racine
+  // pour qu'elle soit committée. La version committée sera réutilisée par
+  // scripts/apply-prerender.ts sur Vercel (sans avoir besoin de Chromium).
   writeFileSync(distHtml, html);
-  const orig = readFileSync(distHtml, "utf8");
+  writeFileSync(templateOut, html);
   console.log(
-    `✓ dist/index.html prérendu (${(orig.length / 1024).toFixed(1)} KB)`,
+    `✓ dist/index.html prérendu (${(html.length / 1024).toFixed(1)} KB)`,
   );
+  console.log(`✓ prerendered.html sauvegardé pour les builds Vercel`);
 } finally {
   preview.kill();
 }

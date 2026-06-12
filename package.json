@@ -22,10 +22,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && tsx scripts/ensure-chromium.ts && tsx scripts/og-image.ts && tsx scripts/apple-icon.ts && tsx scripts/prerender.ts",
+    "build": "tsc -b && vite build && tsx scripts/apply-prerender.ts",
     "preview": "vite preview",
     "test": "vitest run",
-    "compare": "tsx scripts/compare-urssaf.ts"
+    "compare": "tsx scripts/compare-urssaf.ts",
+    "prerender:capture": "tsc -b && vite build && tsx scripts/ensure-chromium.ts && tsx scripts/og-image.ts && tsx scripts/apple-icon.ts && tsx scripts/prerender.ts"
   },
   "name": "freelance-vs-cdi",
   "private": true,
