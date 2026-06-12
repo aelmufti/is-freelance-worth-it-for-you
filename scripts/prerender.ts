@@ -47,7 +47,7 @@ try {
 
   // 2. Récupérer le HTML rendu
   console.log("→ rendu de la page avec Playwright…");
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ args: ["--no-sandbox"] });
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   await page.goto(URL, { waitUntil: "networkidle" });
   // Laisser une frame à React pour finir de monter

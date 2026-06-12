@@ -2,6 +2,10 @@
 // Ouvre une page Playwright sur un HTML inline néo-brutaliste et la capture.
 // Usage : npx tsx scripts/og-image.ts
 import { chromium } from "playwright";
+
+// chromium-headless-shell est suffisant pour nos screenshots et est ~3× plus
+// léger à télécharger que le binaire complet.
+const browser_args = ["--no-sandbox"];
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
@@ -60,7 +64,7 @@ const html = `<!doctype html>
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const out = resolve(__dirname, "..", "public", "og.png");
 
-const browser = await chromium.launch();
+const browser = await chromium.launch({ args: browser_args });
 const page = await browser.newPage({
   viewport: { width: 1200, height: 630 },
   deviceScaleFactor: 1,

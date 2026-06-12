@@ -11,7 +11,7 @@ body{width:180px;height:180px;background:hsl(220 76% 46%);display:flex;align-ite
 const __dir = dirname(fileURLToPath(import.meta.url));
 const out = resolve(__dir, "..", "public", "apple-touch-icon.png");
 
-const b = await chromium.launch();
+const b = await chromium.launch({ args: ["--no-sandbox"] });
 const p = await b.newPage({ viewport: { width: 180, height: 180 }, deviceScaleFactor: 1 });
 await p.setContent(html, { waitUntil: "networkidle" });
 writeFileSync(out, await p.screenshot({ type: "png" }));

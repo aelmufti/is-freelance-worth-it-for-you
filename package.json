@@ -12,6 +12,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.7.0",
     "modele-social": "^10.0.1",
+    "playwright": "^1.60.0",
     "publicodes": "^1.10.1",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
@@ -21,11 +22,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && tsx scripts/og-image.ts && tsx scripts/apple-icon.ts && tsx scripts/prerender.ts",
+    "build": "tsc -b && vite build && tsx scripts/ensure-chromium.ts && tsx scripts/og-image.ts && tsx scripts/apple-icon.ts && tsx scripts/prerender.ts",
     "preview": "vite preview",
     "test": "vitest run",
     "compare": "tsx scripts/compare-urssaf.ts"
   },
   "name": "freelance-vs-cdi",
-  "private": true
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
 }
