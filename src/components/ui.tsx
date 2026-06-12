@@ -30,7 +30,8 @@ export function Badge({
   return (
     <span
       className="inline-block border-2 border-ink px-2 py-0.5 text-xs font-extrabold uppercase tracking-[0.06em]"
-      style={{ background: color, color: textColor }}
+      style={{ backgroundColor: color, color: textColor }}
+      suppressHydrationWarning
     >
       {children}
     </span>
@@ -191,7 +192,8 @@ export function Toggle({
     >
       <span
         className="flex h-6 w-6 shrink-0 items-center justify-center border-2 border-ink text-sm font-extrabold text-white"
-        style={{ background: checked ? "var(--color-accent)" : "#fff" }}
+        style={{ backgroundColor: checked ? "var(--color-accent)" : "#fff" }}
+        suppressHydrationWarning
       >
         {checked ? "✓" : ""}
       </span>
@@ -205,10 +207,21 @@ export function Toggle({
   );
 }
 
-export const euro = (v: number) =>
-  Math.round(v).toLocaleString("fr-FR") + " €";
+// Formatage déterministe : on contrôle nous-mêmes le séparateur de
+// milliers pour éviter les divergences entre l'ICU Node (prerender) et
+// l'ICU Chromium (hydration), qui produisent des espaces différents
+// (U+0020, U+00A0, U+202F selon les versions).
+function formatNombre(n: number): string {
+  const s = String(Math.round(Math.abs(n)));
+  let out = "";
+  for (let i = 0; i < s.length; i++) {
+    if (i > 0 && (s.length - i) % 3 === 0) out += " ";
+    out += s[i];
+  }
+  return out;
+}
+
+export const euro = (v: number) => formatNombre(v) + " €";
 
 export const euroSigne = (v: number) =>
-  (v > 0 ? "+" : v < 0 ? "−" : "") +
-  Math.abs(Math.round(v)).toLocaleString("fr-FR") +
-  " €";
+  (v > 0 ? "+" : v < 0 ? "−" : "") + formatNombre(v) + " €";

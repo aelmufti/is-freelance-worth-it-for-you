@@ -35,7 +35,8 @@ export function ResultCard({
     >
       <div
         className="flex items-center justify-between border-b-[3px] border-ink px-4 py-2"
-        style={{ background: STATUT_COLORS[r.id], color: TEXT_ON[r.id] }}
+        style={{ backgroundColor: STATUT_COLORS[r.id], color: TEXT_ON[r.id] }}
+        suppressHydrationWarning
       >
         <span className="text-sm font-extrabold uppercase tracking-[0.06em]">
           {r.label}
@@ -49,7 +50,7 @@ export function ResultCard({
             ★ MEILLEUR NET ESTIMÉ
           </span>
         ) : (
-          <span className="text-xs font-extrabold opacity-80">#{rank}</span>
+          <span className="text-xs font-extrabold opacity-80">{`#${rank}`}</span>
         )}
       </div>
 
@@ -59,9 +60,7 @@ export function ResultCard({
           <span className="text-sm font-bold opacity-70"> net/mois</span>
         </div>
         <div className="text-xs font-bold opacity-70">
-          {euro(r.netAnnuel)} net/an après impôt —{" "}
-          {(r.tauxRestitution * 100).toFixed(0)} % du{" "}
-          {r.id === "cdi" ? "coût employeur" : "CA"} conservé
+          {`${euro(r.netAnnuel)} net/an après impôt — ${(r.tauxRestitution * 100).toFixed(0)} % du ${r.id === "cdi" ? "coût employeur" : "CA"} conservé`}
         </div>
 
         {/* Barre de répartition */}
@@ -69,15 +68,19 @@ export function ResultCard({
           <div
             className="h-full"
             style={{
-              background: STATUT_COLORS[r.id],
-              width: `${Math.max(0, r.tauxRestitution * 100)}%`,
+              backgroundColor: STATUT_COLORS[r.id],
+              width: `${Math.max(0, r.tauxRestitution * 100).toFixed(2)}%`,
             }}
             title="Net"
+            suppressHydrationWarning
           />
           <div
             className="h-full bg-muted"
             style={{
-              width: `${Math.min(100, 100 - Math.max(0, r.tauxRestitution * 100))}%`,
+              width: `${Math.min(
+                100,
+                100 - Math.max(0, r.tauxRestitution * 100),
+              ).toFixed(2)}%`,
             }}
             title="Prélèvements + frais"
           />
@@ -111,7 +114,7 @@ export function ResultCard({
                 key={w}
                 className="border-2 border-ink bg-tag-offwhite px-2 py-1 text-[11px] font-bold"
               >
-                ⚠ {w}
+                {`⚠ ${w}`}
               </div>
             ))}
           </div>
@@ -130,7 +133,7 @@ export function Podium({ results }: { results: StatutResult[] }) {
   return (
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {results.map((r, i) => (
-        <div key={r.id} style={{ animationDelay: `${i * 0.05}s` }} className="anim-up">
+        <div key={r.id} style={{ animationDelay: `${(i * 50) / 1000}s` }} className="anim-up">
           <ResultCard r={r} best={r.id === bestId} rank={rank.get(r.id) ?? 0} />
         </div>
       ))}

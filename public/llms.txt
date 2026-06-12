@@ -1,0 +1,30 @@
+# freelance-ou-cdi.fr
+
+> Simulateur gratuit qui compare votre revenu net en freelance (micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial) à votre revenu net en CDI cadre. Taux 2026 (barème impôt sur le revenu, flat tax 31,4 %, réforme assiette unique TNS). Calculs validés contre le moteur officiel URSSAF (modele-social). Aucune donnée collectée.
+
+Le simulateur prend en entrée un TJM (taux journalier moyen), un nombre de jours facturés par mois, un foyer fiscal (situation, parts, revenu du conjoint) et un salaire CDI de comparaison. Il calcule pour chacun des six statuts : le chiffre d'affaires, les cotisations sociales, l'impôt sur le revenu (et l'IS et la flat tax le cas échéant), le revenu net mensuel et annuel, et le seuil de TJM à partir duquel ce statut bat le CDI fourni.
+
+## Outil principal
+
+- [Simulateur freelance vs CDI 2026](https://freelance-ou-cdi.fr/) : page unique, calcul instantané, tous les statuts en parallèle, tous les paramètres modifiables.
+
+## Données et hypothèses
+
+- [Code source du moteur fiscal](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/src/lib/engine.ts)
+- [Tous les taux 2026 utilisés](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/src/lib/params.ts)
+- [Tests de validation contre le moteur URSSAF](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/tests/urssaf.test.ts)
+
+## Sources officielles
+
+- [economie.gouv.fr — cotisations micro-entreprise](https://www.economie.gouv.fr/entreprises/gerer-sa-micro-entreprise/micro-entreprises-quel-est-le-montant-de-vos-cotisations-sociales)
+- [economie.gouv.fr — barème de l'impôt sur le revenu](https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mon-impot-sur-le-revenu/comment-calculer-votre-impot-dapres-le-bareme-de-limpot-sur-le-revenu)
+- [service-public.fr — évolution du PFU (flat tax 31,4 %)](https://entreprendre.service-public.gouv.fr/actualites/A18796)
+- [urssaf.fr — réforme de l'assiette des indépendants](https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/reforme-cotisations-independants.html)
+
+## Auteur
+
+- Ali El Mufti — [aelm.dev](https://aelm.dev) — projet personnel indépendant, open source (MIT).
+
+## Citation et reproduction
+
+Le contenu peut être cité et reproduit librement. Mentionner la source (freelance-ou-cdi.fr) est apprécié mais non obligatoire. Le simulateur n'a aucune affiliation avec l'URSSAF ou toute autre administration.

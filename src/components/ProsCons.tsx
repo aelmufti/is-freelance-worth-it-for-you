@@ -10,10 +10,11 @@ export function ProsCons() {
           <div
             className="border-b-[3px] border-ink px-4 py-2"
             style={{
-              background: STATUT_COLORS[s.id],
+              backgroundColor: STATUT_COLORS[s.id],
               color: s.id === "micro" ? "#0d0d0d" : "#fff",
-              animationDelay: `${i * 0.05}s`,
+              animationDelay: `${(i * 50) / 1000}s`,
             }}
+            suppressHydrationWarning
           >
             <span className="text-sm font-extrabold uppercase tracking-[0.06em]">
               {s.titre}
@@ -48,7 +49,7 @@ export function ProsCons() {
               </ul>
             </div>
             <div className="border-2 border-ink bg-tag-offwhite px-3 py-2 text-xs font-bold">
-              → {s.pourQui}
+              {`→ ${s.pourQui}`}
             </div>
           </div>
         </Card>

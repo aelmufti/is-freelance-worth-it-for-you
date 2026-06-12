@@ -21,7 +21,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && tsx scripts/og-image.ts && tsx scripts/apple-icon.ts && tsx scripts/prerender.ts",
     "preview": "vite preview",
     "test": "vitest run",
     "compare": "tsx scripts/compare-urssaf.ts"

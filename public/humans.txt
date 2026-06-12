@@ -1,0 +1,15 @@
+/* TEAM */
+Conception, code, design : Ali El Mufti
+Site : https://aelm.dev
+GitHub : https://github.com/aelmufti
+
+/* SITE */
+Stack : React 19, TypeScript, Tailwind v4, Vite, Recharts
+Validation : publicodes + modele-social (URSSAF)
+Hébergeur : Vercel
+Standards : HTML5, WCAG 2.2, Schema.org, Open Graph
+Doctype : modèle néo-brutaliste, JetBrains Mono, palette plate haute contraste.
+
+/* MERCI */
+À l'équipe mon-entreprise.urssaf.fr pour leur moteur open source,
+sans lequel la validation des chiffres serait impossible.

@@ -2,38 +2,250 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FREELANCE.SIMULATEUR — Micro / EURL / SASU / Portage vs CDI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#F7F5EF" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Freelance ou CDI 2026 : simulateur de revenu net (micro, SASU, EURL)</title>
     <meta
       name="description"
-      content="Simulateur gratuit 2026 : comparez micro-entreprise, EURL, SASU, portage salarial et CDI. Cotisations, impôt sur le revenu, net mensuel et seuil de rentabilité."
+      content="Simulateur gratuit 2026 : comparez votre net en micro-entreprise, EURL, SASU, portage salarial et CDI. Cotisations, impôt sur le revenu, flat tax 31,4 % et seuil de rentabilité TJM, calculs validés URSSAF."
+    />
+    <meta
+      name="keywords"
+      content="simulateur freelance, freelance ou CDI, TJM, micro-entreprise, EURL, SASU, portage salarial, taux 2026, flat tax, charges sociales freelance, impôt freelance, comparer statut freelance"
     />
     <meta name="author" content="Ali El Mufti" />
-    <link rel="author" href="https://aelm.dev" />
+    <meta name="generator" content="Vite + React" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+
     <link rel="canonical" href="https://freelance-ou-cdi.fr/" />
+    <link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/" />
+    <link rel="author" href="https://aelm.dev" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="freelance-ou-cdi.fr" />
     <meta property="og:url" content="https://freelance-ou-cdi.fr/" />
-    <meta property="og:title" content="Freelance ou CDI : combien il vous reste vraiment" />
+    <meta
+      property="og:title"
+      content="Freelance ou CDI : combien il vous reste vraiment (2026)"
+    />
     <meta
       property="og:description"
-      content="Simulateur gratuit 2026 : micro-entreprise, EURL, SASU, portage salarial vs CDI. Net après cotisations et impôt, seuil de rentabilité TJM."
+      content="Simulateur gratuit comparant micro, EURL, SASU, portage et CDI. Net après cotisations et impôt, calculs validés contre le moteur URSSAF."
     />
     <meta property="og:locale" content="fr_FR" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Freelance ou CDI : combien il vous reste vraiment" />
+    <meta property="og:image" content="https://freelance-ou-cdi.fr/og.png" />
+    <meta property="og:image:secure_url" content="https://freelance-ou-cdi.fr/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Capture du simulateur freelance vs CDI 2026"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://freelance-ou-cdi.fr/" />
+    <meta
+      name="twitter:title"
+      content="Freelance ou CDI : combien il vous reste vraiment (2026)"
+    />
     <meta
       name="twitter:description"
-      content="Simulateur gratuit 2026 : micro-entreprise, EURL, SASU, portage salarial vs CDI. Net après cotisations et impôt, seuil de rentabilité TJM."
+      content="Comparez micro, EURL, SASU, portage et CDI en net après cotisations et impôt. Taux 2026 validés URSSAF."
     />
+    <meta name="twitter:image" content="https://freelance-ou-cdi.fr/og.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Capture du simulateur freelance vs CDI 2026"
+    />
+
+    <!-- PWA-ish -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Freelance ou CDI" />
+    <meta name="application-name" content="Freelance ou CDI" />
+
+    <!-- Performance hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Données structurées Schema.org : WebApplication + Person + WebSite + FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://freelance-ou-cdi.fr/#website",
+            "url": "https://freelance-ou-cdi.fr/",
+            "name": "freelance-ou-cdi.fr",
+            "inLanguage": "fr-FR",
+            "publisher": { "@id": "https://freelance-ou-cdi.fr/#person" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://freelance-ou-cdi.fr/#app",
+            "name": "Freelance ou CDI : simulateur de revenu 2026",
+            "alternateName": "Simulateur freelance vs CDI",
+            "url": "https://freelance-ou-cdi.fr/",
+            "applicationCategory": "FinanceApplication",
+            "applicationSubCategory": "Tax Calculator",
+            "operatingSystem": "Any (web)",
+            "browserRequirements": "Requires JavaScript",
+            "inLanguage": "fr-FR",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR"
+            },
+            "featureList": [
+              "Comparaison micro-entreprise, EI au réel, EURL, SASU, portage salarial et CDI",
+              "Barème impôt sur le revenu 2026",
+              "Flat tax 31,4 % et impôt sur les sociétés",
+              "Réforme assiette unique TNS 2026",
+              "Seuil de TJM équivalent au CDI",
+              "Calculs validés contre le moteur officiel URSSAF",
+              "Aucune donnée collectée — calculs dans le navigateur"
+            ],
+            "author": { "@id": "https://freelance-ou-cdi.fr/#person" },
+            "publisher": { "@id": "https://freelance-ou-cdi.fr/#person" },
+            "softwareVersion": "1.0",
+            "datePublished": "2026-06-11",
+            "license": "https://opensource.org/licenses/MIT"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://freelance-ou-cdi.fr/#person",
+            "name": "Ali El Mufti",
+            "url": "https://aelm.dev",
+            "sameAs": ["https://aelm.dev", "https://github.com/aelmufti"]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://freelance-ou-cdi.fr/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "À partir de quel TJM le freelance devient-il plus rentable qu'un CDI ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pour un CDI à 55 000 € brut/an (3 048 €/mois net après impôt), un freelance en EI au réel ou en micro-entreprise dépasse ce seuil dès environ 300 €/jour, à raison de 18 jours facturés par mois sur 11 mois. Le seuil monte à environ 405 €/jour en SASU et 435 €/jour en portage salarial, car ces statuts supportent des cotisations plus lourdes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quel statut juridique choisir pour devenir freelance en 2026 ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sous 70 000 € de CA avec peu de frais, la micro-entreprise reste imbattable. Au-delà ou avec des frais réels importants, l'EI au réel ou l'EURL deviennent plus avantageuses. La SASU s'impose pour optimiser via dividendes (flat tax 31,4 %). Le portage salarial est le seul à ouvrir droit au chômage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quelle différence entre micro-entreprise, EURL et SASU ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La micro-entreprise est un régime simplifié (cotisations forfaitaires, abattement automatique) sous plafond (83 600 € en services). L'EURL est une société à associé unique : gérant TNS, cotisations modérées (≈ 45 %). La SASU est une société à président assimilé salarié : charges élevées (≈ 75-80 %) compensées par les dividendes à flat tax 31,4 %."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Comment fonctionne la flat tax (PFU) en 2026 ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Depuis le 1er janvier 2026, le PFU est passé de 30 % à 31,4 % : 12,8 % d'impôt sur le revenu + 18,6 % de prélèvements sociaux (CSG passée de 9,2 % à 10,6 %). S'applique aux dividendes, intérêts, plus-values mobilières et crypto-actifs. Option pour le barème progressif possible."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Combien faut-il facturer en freelance pour gagner autant qu'en CDI ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Règle de poche : multipliez votre net CDI par 1,6 à 1,8 pour obtenir le CA freelance équivalent. Pour 3 000 €/mois net en CDI, comptez 5 000-5 500 €/mois de CA freelance, soit un TJM d'environ 300 € sur 17-18 jours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Le portage salarial est-il rentable en 2026 ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Le portage conserve ~50 % du CA en net : frais de gestion 5-10 %, cotisations patronales ≈ 45 % et salariales ≈ 21 %. En contrepartie, seul statut freelance ouvrant droit à l'assurance chômage et à la retraite complète du régime général."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qu'est-ce qui change avec la réforme TNS 2026 ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "À partir d'avril 2026, base unique pour cotisations et CSG-CRDS : revenu professionnel brut diminué d'un abattement forfaitaire de 26 %. Pas de hausse globale des prélèvements, mais droits retraite améliorés. Concerne EI au réel et gérants d'EURL ; pas les micro-entrepreneurs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quel est le plafond de la micro-entreprise en 2026 ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Plafonds 2026 : 83 600 € pour les prestations de services, 203 100 € pour la vente de marchandises. Franchise de TVA sous 37 500 € (services) ou 85 000 € (vente). Dépassement deux années consécutives = bascule automatique vers l'EI au réel."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div
+        style="
+          font-family: ui-monospace, Menlo, Consolas, monospace;
+          max-width: 720px;
+          margin: 2rem auto;
+          padding: 1.5rem;
+          border: 3px solid #0d0d0d;
+          background: #fff;
+        "
+      >
+        <h1 style="font-weight: 900; text-transform: uppercase">
+          Freelance ou CDI : combien il vous reste vraiment
+        </h1>
+        <p>
+          Ce simulateur compare le revenu net en micro-entreprise, EI au réel,
+          EURL, SASU, portage salarial et CDI cadre, après cotisations sociales
+          ET impôt sur le revenu — au taux 2026.
+        </p>
+        <p>
+          Le simulateur interactif nécessite JavaScript. Activez-le pour
+          paramétrer votre TJM, vos jours facturés et votre foyer fiscal, et
+          voir le seuil à partir duquel chaque statut bat votre CDI.
+        </p>
+        <p>
+          <strong>Calculs validés</strong> contre le moteur de calcul officiel
+          de l'URSSAF (modele-social, mon-entreprise.urssaf.fr) — écarts
+          inférieurs à 2 % en régime courant.
+        </p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

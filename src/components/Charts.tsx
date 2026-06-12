@@ -181,7 +181,7 @@ export function BreakEvenChart({
           <div
             key={s.id}
             className="border-2 border-ink px-2 py-1 text-center"
-            style={{ background: "var(--color-tag-offwhite)" }}
+            style={{ backgroundColor: "var(--color-tag-offwhite)" }}
           >
             <div
               className="text-[10px] font-extrabold uppercase tracking-[0.06em]"

@@ -1,11 +1,33 @@
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { DEFAULT_INPUT, DEFAULT_PARAMS } from "./lib/params";
 import type { FiscalParams, SimulationInput } from "./lib/params";
 import { calcAll } from "./lib/engine";
+import { IS_PRERENDER } from "./lib/prerender";
 import { AdvancedParams, MainForm } from "./components/Form";
 import { Podium } from "./components/Results";
-import { BreakEvenChart, CompareBars } from "./components/Charts";
 import { ProsCons } from "./components/ProsCons";
+
+// Chargement paresseux des graphiques : recharts ~400 KB déplacé dans un
+// chunk séparé. Côté SEO/GEO, ces graphes sont décoratifs — les chiffres
+// importants sont déjà dans le podium et la FAQ.
+const CompareBars = lazy(() =>
+  import("./components/Charts").then((m) => ({ default: m.CompareBars })),
+);
+const BreakEvenChart = lazy(() =>
+  import("./components/Charts").then((m) => ({ default: m.BreakEvenChart })),
+);
+
+function ChartFallback({ label }: { label: string }) {
+  return (
+    <div className="border-[3px] border-ink bg-white p-4 shadow-brutal">
+      <div className="text-sm font-extrabold uppercase tracking-[0.06em]">
+        {label}
+      </div>
+      <div className="mt-3 h-40 border-2 border-ink bg-tag-offwhite" aria-hidden="true" />
+    </div>
+  );
+}
+import { Faq } from "./components/Faq";
 import { MentionsLegales } from "./components/MentionsLegales";
 import { CookieBanner, useGaConsent } from "./components/CookieConsent";
 import { SectionTitle, euro } from "./components/ui";
@@ -47,6 +69,14 @@ export default function App() {
   const [showLegal, setShowLegal] = useState(false);
   const consent = useGaConsent();
 
+  // Les graphiques recharts mesurent leur conteneur et utilisent des
+  // identifiants SVG dynamiques — incompatibles avec l'hydration. On les
+  // monte uniquement côté client après hydration pour éviter les mismatches.
+  const [chartsReady, setChartsReady] = useState(false);
+  useEffect(() => {
+    if (!IS_PRERENDER) setChartsReady(true);
+  }, []);
+
   const results = useMemo(() => calcAll(input, params), [input, params]);
   const best = useMemo(
     () =>
@@ -60,6 +90,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen">
+      {/* Skip link pour navigation clavier */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-ink focus:bg-tag-yellow focus:px-3 focus:py-1.5 focus:text-xs focus:font-extrabold focus:uppercase"
+      >
+        Aller au contenu
+      </a>
       {/* HERO */}
       <header className="tech-grid border-b-[3px] border-ink">
         <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
@@ -84,7 +121,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl space-y-12 px-4 py-10">
+      <main id="main-content" className="mx-auto max-w-7xl space-y-12 px-4 py-10">
         {/* VERDICT */}
         <section className="anim-pop">
           <div className="border-[3px] border-ink bg-ink p-5 text-white shadow-brutal-lg md:p-6">
@@ -93,21 +130,17 @@ export default function App() {
             </div>
             <div className="mt-1 text-xl font-extrabold uppercase tracking-tight md:text-3xl">
               {best.id === "cdi" ? (
-                <>À ce niveau, le CDI reste plus rentable.</>
+                "À ce niveau, le CDI reste plus rentable."
               ) : (
                 <>
-                  {best.label} : {euro(best.netMensuel)}/mois net, soit{" "}
-                  <span className="bg-tag-green px-2 text-white">
-                    +{euro(deltaCdi / 12)}/mois
-                  </span>{" "}
-                  vs votre CDI
+                  <span>{`${best.label} : ${euro(best.netMensuel)}/mois net, soit `}</span>
+                  <span className="bg-tag-green px-2 text-white">{`+${euro(deltaCdi / 12)}/mois`}</span>
+                  <span>{" vs votre CDI"}</span>
                 </>
               )}
             </div>
             <div className="mt-2 text-xs font-bold opacity-70">
-              CDI de référence : {euro(cdi.netMensuel)}/mois net après impôt —
-              sans compter chômage, congés payés et retraite, à pondérer selon
-              votre aversion au risque.
+              {`CDI de référence : ${euro(cdi.netMensuel)}/mois net après impôt — sans compter chômage, congés payés et retraite, à pondérer selon votre aversion au risque.`}
             </div>
           </div>
         </section>
@@ -132,16 +165,42 @@ export default function App() {
           <SectionTitle>
             <span className="highlight">Comparaison</span> visuelle
           </SectionTitle>
-          <CompareBars results={results} />
-          <BreakEvenChart input={input} params={params} />
+          {chartsReady && (
+            <Suspense fallback={<ChartFallback label="Comparaison" />}>
+              <CompareBars results={results} />
+            </Suspense>
+          )}
+          {chartsReady && (
+            <Suspense fallback={<ChartFallback label="Seuil de rentabilité TJM" />}>
+              <BreakEvenChart input={input} params={params} />
+            </Suspense>
+          )}
+          {!chartsReady && (
+            <>
+              <ChartFallback label="Net mensuel après impôt, par statut" />
+              <ChartFallback label="Seuil de rentabilité TJM" />
+            </>
+          )}
         </section>
 
         {/* AVANTAGES / INCONVÉNIENTS */}
-        <section>
+        <section aria-labelledby="statuts-title">
           <SectionTitle>
-            Statuts : <span className="highlight">forces & faiblesses</span>
+            <span id="statuts-title">
+              Statuts : <span className="highlight">forces & faiblesses</span>
+            </span>
           </SectionTitle>
           <ProsCons />
+        </section>
+
+        {/* FAQ */}
+        <section aria-labelledby="faq-title">
+          <SectionTitle>
+            <span id="faq-title">
+              Questions <span className="highlight">fréquentes</span>
+            </span>
+          </SectionTitle>
+          <Faq />
         </section>
 
         {/* SOURCES + DISCLAIMER */}
@@ -158,7 +217,7 @@ export default function App() {
                   rel="noreferrer"
                   className="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
                 >
-                  ▸ {s.label}
+                  {`▸ ${s.label}`}
                 </a>
               </li>
             ))}
@@ -200,6 +259,7 @@ export default function App() {
             rel="noreferrer"
             className="brutal-press mt-3 inline-flex items-center gap-2 border-2 border-white bg-tag-yellow px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.06em] text-ink shadow-brutal-sm"
             style={{ boxShadow: "3px 3px 0 0 #E5E5E5" }}
+            suppressHydrationWarning
           >
             <svg
               width="14"
@@ -216,7 +276,7 @@ export default function App() {
 
         <div>FREELANCE-OU-CDI.FR — gratuit, open, sans compte</div>
         <div className="mt-3">
-          Fait par{" "}
+          <span>{"Fait par "}</span>
           <a
             href="https://aelm.dev?utm_source=freelance-simulateur&utm_medium=referral&utm_campaign=footer"
             target="_blank"
@@ -245,7 +305,7 @@ export default function App() {
       </footer>
 
       {showLegal && <MentionsLegales onClose={() => setShowLegal(false)} />}
-      {consent.choice === null && (
+      {consent.visible && (
         <CookieBanner
           onAccept={() => consent.decide("granted")}
           onRefuse={() => consent.decide("denied")}

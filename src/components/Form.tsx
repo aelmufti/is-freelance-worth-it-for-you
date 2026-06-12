@@ -62,7 +62,7 @@ export function MainForm({
         />
         <div className="border-2 border-ink bg-tag-offwhite px-3 py-2 text-center">
           <span className="text-xs font-extrabold uppercase tracking-[0.06em] opacity-70">
-            CA annuel —{" "}
+            {"CA annuel — "}
           </span>
           <span className="text-lg font-extrabold">{euro(caAnnuel(input))}</span>
         </div>

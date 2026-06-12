@@ -25,13 +25,20 @@ export function MentionsLegales({ onClose }: { onClose: () => void }) {
     <div
       className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/60 p-4 md:p-10"
       onClick={onClose}
+      role="presentation"
     >
       <div
         className="anim-pop w-full max-w-3xl border-[3px] border-ink bg-card shadow-brutal-xl"
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="legal-title"
       >
         <div className="flex items-center justify-between border-b-[3px] border-ink bg-tag-yellow px-4 py-2">
-          <span className="text-sm font-extrabold uppercase tracking-[0.12em]">
+          <span
+            id="legal-title"
+            className="text-sm font-extrabold uppercase tracking-[0.12em]"
+          >
             Mentions légales
           </span>
           <button
@@ -53,13 +60,13 @@ export function MentionsLegales({ onClose }: { onClose: () => void }) {
             <li>— Nom et prénom : Ali El Mufti</li>
             <li>— Adresse de résidence : {VILLE_EDITEUR}</li>
             <li>
-              — Contact d'administration :{" "}
+              <span>{"— Contact d'administration : "}</span>
               <a href="mailto:alielmufti25@gmail.com" className="underline decoration-2">
                 alielmufti25@gmail.com
               </a>
             </li>
             <li>
-              — Site personnel :{" "}
+              <span>{"— Site personnel : "}</span>
               <a
                 href="https://aelm.dev?utm_source=freelance-simulateur&utm_medium=referral&utm_campaign=mentions-legales"
                 target="_blank"

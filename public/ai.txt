@@ -1,0 +1,11 @@
+# ai.txt — Permissions d'usage du contenu par les systèmes d'IA
+# https://site.spawning.ai/ai-txt
+
+User-Agent: *
+Allow: /
+Disallow:
+
+# Le contenu de ce site est intentionnellement public et pédagogique.
+# Il est autorisé à être indexé, cité, résumé et utilisé par les systèmes
+# d'IA génératifs, y compris pour répondre à des questions d'utilisateurs.
+# La mention de la source (https://freelance-ou-cdi.fr) est appréciée.

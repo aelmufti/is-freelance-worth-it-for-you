@@ -47,14 +47,14 @@ export function calcMicro(input: SimulationInput, p: FiscalParams): StatutResult
   const eligible = ca <= plafond;
   if (!eligible) {
     warnings.push(
-      `CA (${Math.round(ca).toLocaleString("fr-FR")} €) > plafond micro de ${plafond.toLocaleString("fr-FR")} € : ce statut n'est pas accessible à ce niveau de revenu.`,
+      `CA (${String(Math.round(ca))} €) > plafond micro de ${String(plafond)} € : ce statut n'est pas accessible à ce niveau de revenu.`,
     );
   }
   const seuilTva =
     input.activite === "bic-vente" ? p.microSeuilTvaVente : p.microSeuilTvaService;
   if (ca > seuilTva) {
     warnings.push(
-      `CA > ${seuilTva.toLocaleString("fr-FR")} € : TVA à facturer (sans impact sur le net si clients professionnels).`,
+      `CA > ${String(seuilTva)} € : TVA à facturer (sans impact sur le net si clients professionnels).`,
     );
   }
 
@@ -75,7 +75,7 @@ export function calcMicro(input: SimulationInput, p: FiscalParams): StatutResult
     const rfrParPart = beneficeImposable / partsFiscales(input);
     if (rfrParPart > p.vflPlafondRfrParPart) {
       warnings.push(
-        `Versement libératoire : revenu fiscal par part estimé > ${p.vflPlafondRfrParPart.toLocaleString("fr-FR")} €, vous n'y êtes probablement pas éligible.`,
+        `Versement libératoire : revenu fiscal par part estimé > ${String(p.vflPlafondRfrParPart)} €, vous n'y êtes probablement pas éligible.`,
       );
     }
   } else {
