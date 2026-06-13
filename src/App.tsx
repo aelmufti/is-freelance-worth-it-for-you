@@ -29,6 +29,7 @@ function ChartFallback({ label }: { label: string }) {
   );
 }
 import { Faq } from "./components/Faq";
+import { BreakEvenTable } from "./components/BreakEvenTable";
 import { MentionsLegales } from "./components/MentionsLegales";
 import { CookieBanner, useGaConsent } from "./components/CookieConsent";
 import { SectionTitle, euro } from "./components/ui";
@@ -187,6 +188,17 @@ export default function App() {
               <ChartFallback label="Seuil de rentabilité TJM" />
             </>
           )}
+        </section>
+
+        {/* TABLEAU TJM BREAK-EVEN — asset citable (SEO longue traîne + GEO) */}
+        <section aria-labelledby="breakeven-title" id="tjm-equivalent-cdi">
+          <SectionTitle>
+            <span id="breakeven-title">
+              À partir de quel <span className="highlight">TJM</span> le
+              freelance bat le CDI ?
+            </span>
+          </SectionTitle>
+          <BreakEvenTable />
         </section>
 
         {/* AVANTAGES / INCONVÉNIENTS */}
