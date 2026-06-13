@@ -8,4 +8,25 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/simulateur-portage-salarial/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/simulateur-portage-salarial/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/simulateur-portage-salarial/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/simulateur-sasu/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/simulateur-sasu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/simulateur-sasu/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/simulateur-micro-entreprise/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/simulateur-micro-entreprise/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/simulateur-micro-entreprise/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -1,33 +1,21 @@
-// Applique le HTML prérendu (committé dans le repo) sur le dist/ fraîchement
-// produit par vite, en remplaçant les références d'assets (les hashes vite
-// changent à chaque build).
+// Applique le HTML prérendu (committé) sur le dist/ fraîchement produit par
+// vite, pour CHAQUE route, en remplaçant les références d'assets (les hashes
+// vite changent à chaque build).
 //
-// Cette étape est volontairement sans Chromium : elle tourne en pur Node,
-// donc s'exécute identique en local et sur Vercel.
-//
-// La capture initiale du prerender se fait en local via
-// `npm run prerender:capture` (qui utilise Playwright et écrit prerendered.html).
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+// Sans Chromium : pur Node, identique en local et sur Vercel. La capture
+// initiale se fait en local via `npm run prerender:capture` (Playwright), qui
+// écrit prerendered.html + prerendered/<slug>.html.
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { PAGES } from "../src/lib/pages";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dir, "..");
-const TEMPLATE = resolve(root, "prerendered.html");
-const DIST = resolve(root, "dist", "index.html");
+const DIST = resolve(root, "dist");
+const FRESH = resolve(DIST, "index.html");
 
-if (!existsSync(TEMPLATE)) {
-  console.warn(
-    "⚠ Pas de prerendered.html — dist/index.html reste un shell SPA vide.\n" +
-      "  Lancez `npm run prerender:capture` puis commitez prerendered.html.",
-  );
-  process.exit(0);
-}
-
-const fresh = readFileSync(DIST, "utf8");
-const template = readFileSync(TEMPLATE, "utf8");
-
-// Extraire les références d'assets fraîches générées par vite
+const fresh = readFileSync(FRESH, "utf8");
 const newScript = fresh.match(
   /<script[^>]+src="\/assets\/index-[^"]+\.js"[^>]*><\/script>/,
 )?.[0];
@@ -40,17 +28,42 @@ if (!newScript || !newCssLink) {
   process.exit(1);
 }
 
-// Remplacer les références d'assets dans le template par les fraîches
-let out = template.replace(
-  /<script[^>]+src="\/assets\/index-[^"]+\.js"[^>]*><\/script>/g,
-  newScript,
-);
-out = out.replace(
-  /<link[^>]+href="\/assets\/index-[^"]+\.css"[^>]*>/g,
-  newCssLink,
-);
+function templatePath(slug: string): string {
+  return slug
+    ? resolve(root, "prerendered", `${slug}.html`)
+    : resolve(root, "prerendered.html");
+}
 
-writeFileSync(DIST, out);
-console.log(
-  `✓ Prerender appliqué (${(out.length / 1024).toFixed(1)} KB) — assets à jour`,
-);
+function distPath(slug: string): string {
+  return slug
+    ? resolve(DIST, slug, "index.html")
+    : resolve(DIST, "index.html");
+}
+
+let applied = 0;
+for (const page of PAGES) {
+  const tpl = templatePath(page.slug);
+  if (!existsSync(tpl)) {
+    console.warn(
+      `⚠ Pas de prerender pour « ${page.slug || "home"} » (${tpl}) — route ignorée. ` +
+        "Lancez `npm run prerender:capture` puis commitez.",
+    );
+    continue;
+  }
+  let out = readFileSync(tpl, "utf8");
+  out = out.replace(
+    /<script[^>]+src="\/assets\/index-[^"]+\.js"[^>]*><\/script>/g,
+    newScript,
+  );
+  out = out.replace(
+    /<link[^>]+href="\/assets\/index-[^"]+\.css"[^>]*>/g,
+    newCssLink,
+  );
+  const dest = distPath(page.slug);
+  mkdirSync(dirname(dest), { recursive: true });
+  writeFileSync(dest, out);
+  applied++;
+  console.log(`✓ ${page.slug || "home"} (${(out.length / 1024).toFixed(1)} KB)`);
+}
+
+console.log(`✓ Prerender appliqué sur ${applied}/${PAGES.length} route(s) — assets à jour`);

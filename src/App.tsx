@@ -33,6 +33,8 @@ import { BreakEvenTable } from "./components/BreakEvenTable";
 import { MentionsLegales } from "./components/MentionsLegales";
 import { CookieBanner, useGaConsent } from "./components/CookieConsent";
 import { SectionTitle, euro } from "./components/ui";
+import { PAGES, pageUrl } from "./lib/pages";
+import type { StatutPage } from "./lib/pages";
 
 const SOURCES: Array<{ label: string; url: string }> = [
   {
@@ -65,12 +67,19 @@ const SOURCES: Array<{ label: string; url: string }> = [
   },
 ];
 
-export default function App() {
-  const [input, setInput] = useState<SimulationInput>(DEFAULT_INPUT);
+export default function App({ page }: { page: StatutPage }) {
+  const [input, setInput] = useState<SimulationInput>(() => ({
+    ...DEFAULT_INPUT,
+    ...page.inputOverrides,
+  }));
   const [params, setParams] = useState<FiscalParams>(DEFAULT_PARAMS);
   const [showLegal, setShowLegal] = useState(false);
-  const [focusStatuts, setFocusStatuts] = useState<StatutId[] | null>(null);
+  const [focusStatuts, setFocusStatuts] = useState<StatutId[] | null>(
+    page.statut ? [page.statut] : null,
+  );
   const consent = useGaConsent();
+  const isStatutPage = Boolean(page.statut);
+  const canonicalUrl = pageUrl(page);
 
   // Les graphiques recharts mesurent leur conteneur et utilisent des
   // identifiants SVG dynamiques — incompatibles avec l'hydration. On les
@@ -103,6 +112,21 @@ export default function App() {
       {/* HERO */}
       <header className="tech-grid border-b-[3px] border-ink">
         <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+          {isStatutPage && (
+            <nav
+              aria-label="Fil d'Ariane"
+              className="anim-left mb-3 text-xs font-bold uppercase tracking-[0.12em] opacity-70"
+            >
+              <a
+                href="/"
+                className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+              >
+                Accueil
+              </a>
+              <span aria-hidden="true">{" / "}</span>
+              <span>{page.breadcrumb}</span>
+            </nav>
+          )}
           <div className="anim-left mb-4 flex flex-wrap gap-2">
             <span className="border-2 border-ink bg-tag-yellow px-2 py-0.5 text-xs font-extrabold uppercase tracking-[0.12em]">
               100 % gratuit
@@ -111,15 +135,19 @@ export default function App() {
               Taux 2026
             </span>
           </div>
-          <h1 className="anim-up max-w-4xl text-4xl font-extrabold uppercase leading-tight tracking-tight md:text-6xl">
-            Freelance ou CDI&nbsp;:
-            <br />
-            <span className="highlight">combien il vous reste vraiment</span>
-          </h1>
+          {isStatutPage ? (
+            <h1 className="anim-up max-w-4xl text-4xl font-extrabold uppercase leading-tight tracking-tight md:text-6xl">
+              {page.h1}
+            </h1>
+          ) : (
+            <h1 className="anim-up max-w-4xl text-4xl font-extrabold uppercase leading-tight tracking-tight md:text-6xl">
+              Freelance ou CDI&nbsp;:
+              <br />
+              <span className="highlight">combien il vous reste vraiment</span>
+            </h1>
+          )}
           <p className="anim-up mt-4 max-w-2xl text-sm font-bold opacity-70 md:text-base">
-            Micro-entreprise, EI au réel, EURL, SASU, portage salarial — net
-            après cotisations ET impôt sur le revenu, comparé à votre CDI.
-            Barème IR 2026, flat tax 31,4 %, réforme TNS incluse.
+            {page.intro}
           </p>
         </div>
       </header>
@@ -166,6 +194,22 @@ export default function App() {
             <Podium results={results} focusStatuts={focusStatuts} />
           </div>
         </section>
+
+        {/* CONTENU ÉDITORIAL — unique par page statut (anti-doorway) */}
+        {page.sections.length > 0 && (
+          <div className="space-y-10">
+            {page.sections.map((s) => (
+              <section key={s.heading} aria-label={s.heading}>
+                <SectionTitle>{s.heading}</SectionTitle>
+                <div className="max-w-3xl space-y-3 text-sm font-bold leading-relaxed md:text-base">
+                  {s.paragraphs.map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        )}
 
         {/* GRAPHIQUES */}
         <section className="space-y-6">
@@ -218,7 +262,7 @@ export default function App() {
               Questions <span className="highlight">fréquentes</span>
             </span>
           </SectionTitle>
-          <Faq />
+          <Faq items={page.faq} canonicalUrl={canonicalUrl} />
         </section>
 
         {/* SOURCES + DISCLAIMER */}
@@ -291,6 +335,28 @@ export default function App() {
             Mettre une étoile sur GitHub
           </a>
         </div>
+
+        <nav
+          aria-label="Simulateurs par statut"
+          className="mx-auto mb-6 max-w-xl normal-case tracking-normal"
+        >
+          <div className="text-sm font-extrabold uppercase tracking-[0.06em]">
+            Simulateurs par statut
+          </div>
+          <ul className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-bold">
+            {PAGES.map((p) => (
+              <li key={p.slug}>
+                <a
+                  href={p.slug ? `/${p.slug}/` : "/"}
+                  aria-current={p.slug === page.slug ? "page" : undefined}
+                  className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                >
+                  {p.slug ? p.breadcrumb : "Accueil"}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div>FREELANCE-OU-CDI.FR — gratuit, open, sans compte</div>
         <div className="mt-3">
