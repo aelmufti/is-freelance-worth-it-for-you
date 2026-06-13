@@ -1,18 +1,60 @@
 // Questions/réponses pensées pour le SEO (longue traîne) et le GEO
 // (extractibles par les LLMs en réponse à des requêtes d'utilisateurs).
 // Chaque réponse est autosuffisante — un LLM peut la citer sans lire le reste.
+//
+// Les chiffres de simulation (net CDI, seuils de TJM, multiplicateurs) sont
+// CALCULÉS par le moteur sur le scénario par défaut : impossible qu'ils
+// divergent de ce qu'affiche le simulateur.
+
+import { DEFAULT_INPUT, DEFAULT_PARAMS } from "../lib/params";
+import {
+  calcCdi,
+  calcEi,
+  calcMicro,
+  calcPortage,
+  calcSasu,
+  tjmEquivalentCdi,
+} from "../lib/engine";
 
 export interface FaqItem {
   question: string;
   answer: string;
 }
 
+// Scénario de référence = valeurs par défaut du simulateur :
+// CDI cadre 55 000 € brut/an, célibataire sans enfant, 18 j × 11 mois,
+// 3 000 € de frais professionnels par an.
+const p = DEFAULT_PARAMS;
+const ref = DEFAULT_INPUT;
+
+const fmt = (n: number) => {
+  const s = String(Math.round(n));
+  return s.length > 3 ? `${s.slice(0, -3)} ${s.slice(-3)}` : s;
+};
+
+const netCdiAnnuel = calcCdi(ref, p).netAnnuel;
+const netCdiMois = fmt(netCdiAnnuel / 12);
+
+const seuilTjm = (calc: typeof calcMicro): number => {
+  const tjm = tjmEquivalentCdi(ref, p, calc);
+  // Arrondi à 5 € — précision affichable sans fausse exactitude
+  return tjm === null ? NaN : Math.round(tjm / 5) * 5;
+};
+const tjmMicro = seuilTjm(calcMicro);
+const tjmEi = seuilTjm(calcEi);
+const tjmSasu = seuilTjm(calcSasu);
+const tjmPortage = seuilTjm(calcPortage);
+
+const joursAnnuels = ref.joursParMois * ref.moisFactures;
+const mult = (tjm: number) =>
+  ((tjm * joursAnnuels) / netCdiAnnuel).toFixed(1).replace(".", ",");
+
 export const FAQ: FaqItem[] = [
   {
     question:
       "À partir de quel TJM le freelance devient-il plus rentable qu'un CDI ?",
     answer:
-      "Pour un CDI à 55 000 € brut/an (3 048 €/mois net après impôt), un freelance en EI au réel ou en micro-entreprise dépasse ce seuil dès environ 300 €/jour, à raison de 18 jours facturés par mois sur 11 mois. Le seuil monte à environ 405 €/jour en SASU et 435 €/jour en portage salarial, car ces statuts supportent des cotisations plus lourdes. Ces valeurs sont calculées au taux 2026, hors avantages CDI non monétaires (chômage, congés, retraite complémentaire).",
+      `Pour un CDI de cadre à 55 000 € brut/an (${netCdiMois} €/mois net après impôt), un freelance dépasse ce revenu dès environ ${String(tjmMicro)} €/jour en micro-entreprise (BNC) ou ${String(tjmEi)} €/jour en EI au réel, à raison de 18 jours facturés par mois sur 11 mois et 3 000 € de frais professionnels annuels. Le seuil monte à environ ${String(tjmSasu)} €/jour en SASU et ${String(tjmPortage)} €/jour en portage salarial, car ces statuts supportent des cotisations plus lourdes. Valeurs calculées au taux 2026 par ce simulateur (moteur validé contre le calculateur officiel URSSAF), hors avantages CDI non monétaires (chômage, congés payés, retraite complémentaire).`,
   },
   {
     question: "Quel statut juridique choisir pour devenir freelance en 2026 ?",
@@ -33,7 +75,7 @@ export const FAQ: FaqItem[] = [
     question:
       "Combien faut-il facturer en freelance pour gagner autant qu'en CDI ?",
     answer:
-      "Règle de poche : il faut multiplier votre salaire net mensuel CDI par environ 1,6 à 1,8 pour obtenir le chiffre d'affaires freelance équivalent. Pour 3 000 €/mois net en CDI, comptez 5 000 à 5 500 €/mois de CA freelance, soit un TJM d'environ 300 € sur 17-18 jours facturés. Le multiplicateur exact dépend du statut : 1,6× en EI/EURL TNS, 1,8× en SASU, jusqu'à 2,2× en portage. Ce simulateur calcule le seuil précis pour votre situation.",
+      `Règle de poche issue de ce simulateur : multipliez votre net annuel CDI par environ ${mult(tjmMicro)} en micro-entreprise, ${mult(tjmEi)} en EI/EURL, ${mult(tjmSasu)} en SASU et jusqu'à ${mult(tjmPortage)} en portage salarial pour obtenir le chiffre d'affaires annuel équivalent. Exemple : pour ${netCdiMois} €/mois net en CDI (55 000 € brut), il faut facturer environ ${fmt(tjmMicro * ref.joursParMois)} €/mois en micro ou ${fmt(tjmEi * ref.joursParMois)} €/mois en EI sur 11 mois, soit un TJM de ${String(tjmMicro)} à ${String(tjmEi)} € à 18 jours facturés par mois. Le simulateur calcule le seuil précis pour votre situation.`,
   },
   {
     question:

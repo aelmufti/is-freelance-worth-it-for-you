@@ -87,7 +87,7 @@
       rel="stylesheet"
     />
 
-    <!-- Données structurées Schema.org : WebApplication + Person + WebSite + FAQPage -->
+    <!-- Données structurées Schema.org : WebApplication + Person + WebSite (FAQPage générée par l'app depuis src/data/faq.ts) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -138,76 +138,6 @@
             "name": "Ali El Mufti",
             "url": "https://aelm.dev",
             "sameAs": ["https://aelm.dev", "https://github.com/aelmufti"]
-          },
-          {
-            "@type": "FAQPage",
-            "@id": "https://freelance-ou-cdi.fr/#faq",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "À partir de quel TJM le freelance devient-il plus rentable qu'un CDI ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Pour un CDI à 55 000 € brut/an (3 048 €/mois net après impôt), un freelance en EI au réel ou en micro-entreprise dépasse ce seuil dès environ 300 €/jour, à raison de 18 jours facturés par mois sur 11 mois. Le seuil monte à environ 405 €/jour en SASU et 435 €/jour en portage salarial, car ces statuts supportent des cotisations plus lourdes."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Quel statut juridique choisir pour devenir freelance en 2026 ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sous 70 000 € de CA avec peu de frais, la micro-entreprise reste imbattable. Au-delà ou avec des frais réels importants, l'EI au réel ou l'EURL deviennent plus avantageuses. La SASU s'impose pour optimiser via dividendes (flat tax 31,4 %). Le portage salarial est le seul à ouvrir droit au chômage."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Quelle différence entre micro-entreprise, EURL et SASU ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "La micro-entreprise est un régime simplifié (cotisations forfaitaires, abattement automatique) sous plafond (83 600 € en services). L'EURL est une société à associé unique : gérant TNS, cotisations modérées (≈ 45 %). La SASU est une société à président assimilé salarié : charges élevées (≈ 75-80 %) compensées par les dividendes à flat tax 31,4 %."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Comment fonctionne la flat tax (PFU) en 2026 ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Depuis le 1er janvier 2026, le PFU est passé de 30 % à 31,4 % : 12,8 % d'impôt sur le revenu + 18,6 % de prélèvements sociaux (CSG passée de 9,2 % à 10,6 %). S'applique aux dividendes, intérêts, plus-values mobilières et crypto-actifs. Option pour le barème progressif possible."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Combien faut-il facturer en freelance pour gagner autant qu'en CDI ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Règle de poche : multipliez votre net CDI par 1,6 à 1,8 pour obtenir le CA freelance équivalent. Pour 3 000 €/mois net en CDI, comptez 5 000-5 500 €/mois de CA freelance, soit un TJM d'environ 300 € sur 17-18 jours."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Le portage salarial est-il rentable en 2026 ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Le portage conserve ~50 % du CA en net : frais de gestion 5-10 %, cotisations patronales ≈ 45 % et salariales ≈ 21 %. En contrepartie, seul statut freelance ouvrant droit à l'assurance chômage et à la retraite complète du régime général."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Qu'est-ce qui change avec la réforme TNS 2026 ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "À partir d'avril 2026, base unique pour cotisations et CSG-CRDS : revenu professionnel brut diminué d'un abattement forfaitaire de 26 %. Pas de hausse globale des prélèvements, mais droits retraite améliorés. Concerne EI au réel et gérants d'EURL ; pas les micro-entrepreneurs."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Quel est le plafond de la micro-entreprise en 2026 ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Plafonds 2026 : 83 600 € pour les prestations de services, 203 100 € pour la vente de marchandises. Franchise de TVA sous 37 500 € (services) ou 85 000 € (vente). Dépassement deux années consécutives = bascule automatique vers l'EI au réel."
-                }
-              }
-            ]
           }
         ]
       }

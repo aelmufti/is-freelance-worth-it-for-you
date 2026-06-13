@@ -1,10 +1,27 @@
 import { useState } from "react";
 import { FAQ } from "../data/faq";
 
+// JSON-LD généré depuis les mêmes données que l'affichage : toujours synchrone.
+const FAQ_JSON_LD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://freelance-ou-cdi.fr/#faq",
+  inLanguage: "fr-FR",
+  mainEntity: FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+});
+
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <div className="space-y-3">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: FAQ_JSON_LD }}
+      />
       {FAQ.map((item, i) => {
         const expanded = open === i;
         const id = `faq-${i}`;
