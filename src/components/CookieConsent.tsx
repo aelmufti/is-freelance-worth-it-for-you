@@ -33,17 +33,17 @@ function loadGa() {
 }
 
 export function useGaConsent() {
-  // Lecture en useEffect (et non en initialState) : sinon le HTML prerendu
-  // (cookie inconnu) ne correspondrait pas à l'état client réel et
-  // l'hydration React s'effondrerait.
-  const [hydrated, setHydrated] = useState(false);
+  // État initial « aucun choix » — identique au prerender ET au premier rendu
+  // client, donc le bandeau est présent dès le HTML statique (affichage
+  // immédiat, sans attendre l'hydration) sans casser l'hydration. L'effet ne
+  // fait que MASQUER le bandeau a posteriori pour les visiteurs ayant déjà
+  // choisi (bref flash acceptable), et charger GA s'ils avaient accepté.
   const [choice, setChoice] = useState<Choice>(null);
 
   useEffect(() => {
     if (IS_PRERENDER) return;
     const stored = localStorage.getItem(STORAGE_KEY) as Choice;
-    setChoice(stored);
-    setHydrated(true);
+    if (stored) setChoice(stored);
   }, []);
 
   useEffect(() => {
@@ -51,9 +51,7 @@ export function useGaConsent() {
   }, [choice]);
 
   return {
-    // tant qu'on n'est pas hydraté, on considère « aucun choix »
-    // mais on n'affiche pas le bandeau pour ne pas flasher
-    visible: hydrated && choice === null,
+    visible: choice === null,
     choice,
     decide(v: Exclude<Choice, null>) {
       localStorage.setItem(STORAGE_KEY, v);
@@ -77,45 +75,52 @@ export function CookieBanner({
 }) {
   return (
     <div
-      className="anim-up fixed inset-x-0 bottom-0 z-40 p-3 md:p-4"
+      id="consent-overlay"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overscroll-contain p-4 bg-ink/40 backdrop-blur-md"
       role="dialog"
-      aria-modal="false"
+      aria-modal="true"
       aria-labelledby="consent-title"
       aria-describedby="consent-desc"
     >
-      <div className="mx-auto max-w-3xl border-[3px] border-ink bg-card p-4 shadow-brutal-lg">
+      <div className="anim-pop w-full max-w-md border-[3px] border-ink bg-card p-5 shadow-brutal-lg">
         <div
           id="consent-title"
-          className="text-xs font-extrabold uppercase tracking-[0.12em]"
+          className="text-sm font-extrabold uppercase tracking-[0.12em]"
         >
           🍪 Cookies de mesure d'audience
         </div>
-        <p id="consent-desc" className="mt-1 text-xs font-bold opacity-80">
+        {/* Texte en un seul nœud (pas de <span>/<button> inline ni {" "}) :
+            le mur est dans le HTML prérendu, donc il DOIT s'hydrater sans
+            mismatch #418 — voir le même piège corrigé sur BreakEvenTable. */}
+        <p
+          id="consent-desc"
+          className="mt-2 text-xs font-bold leading-relaxed opacity-80"
+        >
           Avec votre accord, nous utilisons Google Analytics pour mesurer la
-          fréquentation du site (cookies <span className="font-extrabold">_ga</span>).
-          Vos saisies dans le simulateur ne sont jamais concernées : elles ne
-          quittent pas votre navigateur. Vous pouvez changer d'avis à tout
-          moment via « Gérer les cookies » en bas de page.{" "}
-          <button
-            type="button"
-            onClick={onShowLegal}
-            className="underline decoration-2"
-          >
-            En savoir plus
-          </button>
+          fréquentation du site (cookies _ga). Vos saisies dans le simulateur
+          ne sont jamais concernées : elles ne quittent pas votre navigateur.
+          Vous pouvez changer d'avis à tout moment via « Gérer les cookies » en
+          bas de page.
         </p>
-        <div className="mt-3 flex flex-wrap gap-3">
+        <button
+          type="button"
+          onClick={onShowLegal}
+          className="mt-2 text-xs font-bold underline decoration-2"
+        >
+          En savoir plus
+        </button>
+        <div className="mt-4 flex gap-3">
           <button
             type="button"
             onClick={onAccept}
-            className="brutal-press border-2 border-ink bg-accent px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.06em] text-ink shadow-brutal-sm"
+            className="brutal-press flex-1 border-2 border-ink bg-accent px-4 py-2 text-xs font-extrabold uppercase tracking-[0.06em] text-ink shadow-brutal-sm"
           >
             Accepter
           </button>
           <button
             type="button"
             onClick={onRefuse}
-            className="brutal-press border-2 border-ink bg-white px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.06em] shadow-brutal-sm"
+            className="brutal-press flex-1 border-2 border-ink bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.06em] shadow-brutal-sm"
           >
             Refuser
           </button>
