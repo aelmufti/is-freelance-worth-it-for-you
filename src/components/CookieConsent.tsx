@@ -9,6 +9,7 @@ type Choice = "granted" | "denied" | null;
 declare global {
   interface Window {
     dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -21,11 +22,14 @@ function loadGa() {
   document.head.appendChild(s);
 
   window.dataLayer = window.dataLayer || [];
-  function gtag(...args: unknown[]) {
-    window.dataLayer!.push(args);
-  }
-  gtag("js", new Date());
-  gtag("config", GA_ID);
+  // Forme canonique : gtag pousse l'objet `arguments`, PAS un array via rest.
+  // Avec un array, gtag.js ne traite pas la commande `config` → le pageview
+  // (/g/collect) n'est jamais envoyé et GA reste vide malgré le consentement.
+  window.gtag = function gtag() {
+    window.dataLayer!.push(arguments);
+  };
+  window.gtag("js", new Date());
+  window.gtag("config", GA_ID);
 }
 
 export function useGaConsent() {
