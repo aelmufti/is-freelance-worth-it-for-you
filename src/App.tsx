@@ -310,8 +310,7 @@ export default function App({ page }: { page: StatutPage }) {
           </div>
           <p className="mt-1 text-xs font-bold opacity-80">
             Le code est entièrement public et gratuit. Si l'outil vous a été
-            utile, une étoile sur GitHub me fait grave plaisir et m'aide à le
-            faire connaître.
+            utile, une étoile sur GitHub m'aide beaucoup à le faire connaître.
           </p>
           <a
             href="https://github.com/aelmufti/is-freelance-worth-it-for-you"
