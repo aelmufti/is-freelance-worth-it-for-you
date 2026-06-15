@@ -22,19 +22,114 @@ export interface StatutResult {
   eligible: boolean;
   baseLabel?: string; // dénominateur du taux de restitution (défaut : "CA")
   details: LigneDetail[];
+  // Avantages salarié estimés (titres-resto, transport, mutuelle) — indicatif,
+  // EXCLU de netAnnuel / tauxRestitution pour ne pas polluer les chiffres validés.
+  avantages: number;
+  avantagesDetails: LigneDetail[];
   warnings: string[];
 }
 
 function finalise(
-  r: Omit<StatutResult, "netMensuel" | "tauxRestitution" | "eligible"> & {
+  r: Omit<
+    StatutResult,
+    "netMensuel" | "tauxRestitution" | "eligible" | "avantages" | "avantagesDetails"
+  > & {
     eligible?: boolean;
+    avantages?: number;
+    avantagesDetails?: LigneDetail[];
   },
 ): StatutResult {
   return {
     ...r,
     eligible: r.eligible ?? true,
+    avantages: r.avantages ?? 0,
+    avantagesDetails: r.avantagesDetails ?? [],
     netMensuel: r.netAnnuel / 12,
     tauxRestitution: r.ca > 0 ? r.netAnnuel / r.ca : 0,
+  };
+}
+
+// ----------------------------------------------- AVANTAGES SALARIÉ (indicatif)
+/**
+ * Valeur nette des avantages en nature financés par l'employeur (CDI privé) :
+ * titres-resto (part patronale exonérée) + transport (50 % exonéré) + mutuelle
+ * (part employeur, IMPOSABLE → on déduit le surcoût d'IR). Hors net validé.
+ */
+function avantagesCdi(
+  input: SimulationInput,
+  p: FiscalParams,
+  netImposable: number,
+): { total: number; details: LigneDetail[] } {
+  if (!input.avantagesEstimes) return { total: 0, details: [] };
+  const trTitre = Math.max(
+    0,
+    Math.min(input.trValeurFaciale * input.trPartPatronale, p.trPlafondExo),
+  );
+  const tr = trTitre * Math.max(0, input.joursTravaillesCdi);
+  const transport = Math.max(0, input.transportAnnuel) * p.transportTauxPriseEnCharge;
+  const mut = Math.max(0, input.mutuelleEmployeurAnnuel);
+
+  const irBase = impotActivite(abattementSalaire(netImposable, p), input, p);
+  const irAvecMut = impotActivite(abattementSalaire(netImposable + mut, p), input, p);
+  const mutNet = mut - Math.max(0, irAvecMut - irBase);
+
+  const details: LigneDetail[] = [];
+  if (tr > 0)
+    details.push({
+      label: `Titres-resto — part patronale (${String(Math.round(input.joursTravaillesCdi))} j)`,
+      value: tr,
+    });
+  if (transport > 0)
+    details.push({ label: "Transport — 50 % exonéré", value: transport });
+  if (mutNet > 0)
+    details.push({ label: "Mutuelle employeur — net d'impôt", value: mutNet });
+
+  return { total: tr + transport + mutNet, details };
+}
+
+/**
+ * En portage, ces avantages sont AUTO-FINANCÉS depuis le CA : le gain réel n'est
+ * pas la valeur faciale mais les cotisations + l'impôt évités en routant ce
+ * montant via des canaux exonérés plutôt qu'en salaire.
+ */
+function avantagesPortage(
+  input: SimulationInput,
+  p: FiscalParams,
+  baseImposable: number,
+): { total: number; details: LigneDetail[] } {
+  if (!input.avantagesEstimes) return { total: 0, details: [] };
+  const nbTitres = Math.max(0, input.joursParMois * input.moisFactures);
+  const trTitre = Math.max(
+    0,
+    Math.min(input.trValeurFaciale * input.trPartPatronale, p.trPlafondExo),
+  );
+  const totalExo =
+    trTitre * nbTitres +
+    Math.max(0, input.transportAnnuel) * p.transportTauxPriseEnCharge +
+    Math.max(0, input.mutuelleEmployeurAnnuel);
+  if (totalExo <= 0) return { total: 0, details: [] };
+
+  // Ce que totalExo rapporterait s'il était salarisé (puis − IR marginal).
+  const brut = totalExo / (1 + p.portagePatronales);
+  const net = brut * (1 - p.portageSalariales);
+  const imposableBlock = net + brut * p.csgNonDeductible;
+  const irBase = impotActivite(abattementSalaire(baseImposable, p), input, p);
+  const irAvec = impotActivite(
+    abattementSalaire(baseImposable + imposableBlock, p),
+    input,
+    p,
+  );
+  const irBlock = Math.max(0, irAvec - irBase);
+  const gain = Math.max(0, totalExo - (net - irBlock));
+
+  return {
+    total: gain,
+    details: [
+      {
+        label: "Économie cotisations + impôt (titres-resto, transport, mutuelle)",
+        value: gain,
+      },
+    ],
   };
 }
 
@@ -300,6 +395,16 @@ export function calcPortage(input: SimulationInput, p: FiscalParams): StatutResu
   const imposable = abattementSalaire(net + brut * p.csgNonDeductible, p);
   const ir = impotActivite(imposable, input, p);
 
+  const av = avantagesPortage(input, p, net + brut * p.csgNonDeductible);
+  const warnings = [
+    "Le portage ouvre droit au chômage et à la retraite du régime général — un filet de sécurité que les autres statuts n'offrent pas.",
+  ];
+  if (av.total > 0) {
+    warnings.push(
+      "Avantages auto-financés : en portage, titres-resto, transport et mutuelle sont payés depuis votre CA. La valeur affichée est l'économie de cotisations et d'impôt, pas un cadeau de l'employeur.",
+    );
+  }
+
   return finalise({
     id: "portage",
     label: "PORTAGE SALARIAL",
@@ -308,6 +413,8 @@ export function calcPortage(input: SimulationInput, p: FiscalParams): StatutResu
     impots: ir,
     fraisDivers: fraisGestion + input.fraisPro,
     netAnnuel: net - ir,
+    avantages: av.total,
+    avantagesDetails: av.details,
     details: [
       { label: "Chiffre d'affaires", value: ca },
       { label: `Frais de gestion (${(p.portageFraisGestion * 100).toFixed(0)} %)`, value: -fraisGestion },
@@ -315,9 +422,7 @@ export function calcPortage(input: SimulationInput, p: FiscalParams): StatutResu
       { label: "Cotisations (salariales + patronales)", value: -cotisations },
       { label: "Impôt sur le revenu", value: -ir },
     ],
-    warnings: [
-      "Le portage ouvre droit au chômage et à la retraite du régime général — un filet de sécurité que les autres statuts n'offrent pas.",
-    ],
+    warnings,
   });
 }
 
@@ -446,6 +551,7 @@ export function calcCdi(input: SimulationInput, p: FiscalParams): StatutResult {
     });
   }
 
+  const av = avantagesCdi(input, p, netImposable);
   const coutEmployeur = brut * (1 + p.cdiPatronales);
   return finalise({
     id: "cdi",
@@ -455,6 +561,8 @@ export function calcCdi(input: SimulationInput, p: FiscalParams): StatutResult {
     impots: ir,
     fraisDivers: 0,
     netAnnuel: net - ir,
+    avantages: av.total,
+    avantagesDetails: av.details,
     baseLabel: "coût employeur",
     details: [
       { label: "Coût total employeur", value: coutEmployeur },

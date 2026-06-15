@@ -292,6 +292,69 @@ export function MainForm({
         </Group>
 
         <Group
+          title="▙ Avantages salarié (estimation)"
+          statuts={["cdi", "portage"]}
+          headerColor={STATUT_COLORS.portage}
+          headerText={TEXT_ON.portage}
+          focus={focus}
+        >
+          <Toggle
+            label="Estimer mes avantages en nature"
+            hint="Titres-resto, transport et mutuelle — affichés à part, hors net validé"
+            checked={input.avantagesEstimes}
+            onChange={(v) => set("avantagesEstimes", v)}
+          />
+          {input.avantagesEstimes && (
+            <>
+              <div className="grid grid-cols-2 gap-3">
+                <NumberField
+                  label="Valeur faciale du titre-resto"
+                  value={input.trValeurFaciale}
+                  onChange={(v) => set("trValeurFaciale", Math.max(0, v))}
+                  step={0.5}
+                  suffix="€"
+                />
+                <SliderField
+                  label="Part patronale du titre"
+                  value={Math.round(input.trPartPatronale * 100)}
+                  onChange={(v) => set("trPartPatronale", v / 100)}
+                  min={50}
+                  max={60}
+                  step={1}
+                  unit="%"
+                />
+              </div>
+              <NumberField
+                label="Jours travaillés / an (CDI)"
+                value={input.joursTravaillesCdi}
+                onChange={(v) => set("joursTravaillesCdi", Math.max(0, Math.round(v)))}
+                step={1}
+                suffix="j"
+              />
+              <NumberField
+                label="Abonnement transport / an"
+                value={input.transportAnnuel}
+                onChange={(v) => set("transportAnnuel", Math.max(0, v))}
+                step={100}
+                suffix="€"
+              />
+              <NumberField
+                label="Mutuelle — part employeur / an"
+                value={input.mutuelleEmployeurAnnuel}
+                onChange={(v) => set("mutuelleEmployeurAnnuel", Math.max(0, v))}
+                step={60}
+                suffix="€"
+              />
+              <p className="text-[11px] font-bold opacity-60">
+                Le portage réutilise vos jours facturés ci-dessus pour les
+                titres-resto, et valorise l'économie de charges (avantages
+                auto-financés depuis le CA).
+              </p>
+            </>
+          )}
+        </Group>
+
+        <Group
           title="▙ Micro-entreprise"
           statuts={["micro"]}
           headerColor={STATUT_COLORS.micro}
@@ -430,6 +493,14 @@ export function AdvancedParams({
             suffix="€"
           />
           {pct("ACRE : part exonérée", "acreReduction", 100)}
+          {pct("Transport : part prise en charge", "transportTauxPriseEnCharge", 100)}
+          <NumberField
+            label="Plafond exonération titre-resto"
+            value={params.trPlafondExo}
+            onChange={(v) => set("trPlafondExo", v)}
+            step={0.1}
+            suffix="€"
+          />
           <button
             type="button"
             onClick={() => setParams(defaults)}

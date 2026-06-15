@@ -111,6 +111,32 @@ export function ResultCard({
           </tbody>
         </table>
 
+        {r.avantages > 0 && (
+          <div className="mt-3 border-2 border-dashed border-ink bg-tag-offwhite px-3 py-2">
+            <div className="flex items-baseline justify-between gap-2">
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.06em] opacity-70">
+                + Avantages salarié (indicatif)
+              </span>
+              <span className="text-sm font-extrabold">
+                {`+ ${euro(r.avantages / 12)}/mois`}
+              </span>
+            </div>
+            <table className="mt-1 w-full text-[11px]">
+              <tbody>
+                {r.avantagesDetails.map((d) => (
+                  <tr key={d.label}>
+                    <td className="py-0.5 pr-2 opacity-70">{d.label}</td>
+                    <td className="py-0.5 text-right font-bold">{euroSigne(d.value)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div className="mt-1 text-[10px] font-bold opacity-60">
+              Hors net validé — non compté dans le classement ni le seuil de TJM.
+            </div>
+          </div>
+        )}
+
         {r.warnings.length > 0 && (
           <div className="mt-2 space-y-1">
             {r.warnings.map((w) => (

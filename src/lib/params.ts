@@ -62,6 +62,10 @@ export interface FiscalParams {
   portageFraisGestion: number; // % du CA
   csgNonDeductible: number; // % du brut réintégré au net imposable
 
+  // Avantages salarié (CDI / portage) — exonérations 2026
+  trPlafondExo: number; // plafond d'exonération de la part patronale par titre-resto (€)
+  transportTauxPriseEnCharge: number; // part de l'abonnement transport prise en charge (exonérée)
+
   // Salarié du privé — part salariale détaillée
   // Sources : urssaf.fr (taux secteur privé, màj 01/01/2026) et agirc-arrco.fr
   salVieillessePlaf: number; // 6,90 % dans la limite du PASS
@@ -136,6 +140,9 @@ export const DEFAULT_PARAMS: FiscalParams = {
   portageFraisGestion: 0.07,
   csgNonDeductible: 0.029,
 
+  trPlafondExo: 7.32, // LFSS 2026
+  transportTauxPriseEnCharge: 0.5, // prise en charge employeur obligatoire
+
   salVieillessePlaf: 0.069,
   salVieillesseDeplaf: 0.004,
   salCsgCrds: 0.097,
@@ -176,6 +183,14 @@ export interface SimulationInput {
 
   capitalSocial: number; // EURL : seuil des 10 % pour les dividendes
   partRemuneration: number; // EURL/SASU : part de l'enveloppe versée en rémunération (vs dividendes), 0..1
+
+  // Avantages salarié (CDI / portage) — estimation optionnelle, hors net validé
+  avantagesEstimes: boolean;
+  trValeurFaciale: number; // valeur faciale d'un titre-restaurant (€)
+  trPartPatronale: number; // part patronale du titre, 0,5..0,6
+  joursTravaillesCdi: number; // nombre de titres-resto / an en CDI (jours travaillés)
+  transportAnnuel: number; // coût annuel de l'abonnement transport (€)
+  mutuelleEmployeurAnnuel: number; // part employeur de la mutuelle (€/an)
 }
 
 export const DEFAULT_INPUT: SimulationInput = {
@@ -201,6 +216,13 @@ export const DEFAULT_INPUT: SimulationInput = {
 
   capitalSocial: 1000,
   partRemuneration: 1,
+
+  avantagesEstimes: false,
+  trValeurFaciale: 10,
+  trPartPatronale: 0.5,
+  joursTravaillesCdi: 218,
+  transportAnnuel: 900,
+  mutuelleEmployeurAnnuel: 360,
 };
 
 export function caAnnuel(input: SimulationInput): number {

@@ -6,7 +6,13 @@ import { describe, expect, it } from "vitest";
 import Engine from "publicodes";
 import rules from "modele-social";
 import { DEFAULT_PARAMS, DEFAULT_INPUT } from "../src/lib/params";
-import { cotisationsTns } from "../src/lib/engine";
+import {
+  calcAll,
+  calcCdi,
+  calcPortage,
+  cotisationsSalarialesPrivees,
+  cotisationsTns,
+} from "../src/lib/engine";
 import { impotFoyer } from "../src/lib/ir";
 
 const p = DEFAULT_PARAMS;
@@ -117,11 +123,96 @@ describe("CDI cadre : brut → net et coût employeur vs URSSAF", () => {
     };
     it(`brut ${brut} € → net`, () => {
       const off = urssaf(situation, "salarié . rémunération . net . à payer avant impôt");
-      expectClose(brut * (1 - p.cdiSalariales), off, 2);
+      expectClose(brut - cotisationsSalarialesPrivees(brut, true, p), off, 2);
     });
     it(`brut ${brut} € → coût employeur`, () => {
       const off = urssaf(situation, "salarié . coût total employeur");
       expectClose(brut * (1 + p.cdiPatronales), off, 4);
     });
   }
+});
+
+describe("avantages salarié (estimation indicative)", () => {
+  const ON = { ...DEFAULT_INPUT, avantagesEstimes: true };
+
+  const detail = (lignes: { label: string; value: number }[], prefix: string) =>
+    lignes.find((d) => d.label.startsWith(prefix))?.value ?? 0;
+
+  it("toggle OFF (défaut) : aucun avantage sur aucun statut", () => {
+    for (const r of calcAll(DEFAULT_INPUT, p)) {
+      expect(r.avantages).toBe(0);
+      expect(r.avantagesDetails).toHaveLength(0);
+    }
+  });
+
+  it("le toggle ne modifie jamais le net validé ni le taux de restitution", () => {
+    const off = calcAll(DEFAULT_INPUT, p);
+    const on = calcAll(ON, p);
+    off.forEach((r, i) => {
+      expect(on[i].netAnnuel).toBe(r.netAnnuel);
+      expect(on[i].tauxRestitution).toBe(r.tauxRestitution);
+    });
+  });
+
+  it("seuls CDI et portage portent des avantages", () => {
+    for (const r of calcAll(ON, p)) {
+      if (r.id === "cdi" || r.id === "portage") expect(r.avantages).toBeGreaterThan(0);
+      else expect(r.avantages).toBe(0);
+    }
+  });
+
+  it("CDI : titres-resto + transport exonérés, total = somme des lignes", () => {
+    const cdi = calcCdi(ON, p);
+    const trTitre = Math.min(ON.trValeurFaciale * ON.trPartPatronale, p.trPlafondExo);
+    expect(detail(cdi.avantagesDetails, "Titres-resto")).toBeCloseTo(
+      trTitre * ON.joursTravaillesCdi,
+      6,
+    );
+    expect(detail(cdi.avantagesDetails, "Transport")).toBeCloseTo(
+      ON.transportAnnuel * p.transportTauxPriseEnCharge,
+      6,
+    );
+    const somme = cdi.avantagesDetails.reduce((s, d) => s + d.value, 0);
+    expect(cdi.avantages).toBeCloseTo(somme, 6);
+  });
+
+  it("CDI : la mutuelle est imposable → part nette strictement < part employeur", () => {
+    const cdi = calcCdi(ON, p);
+    const mutNet = detail(cdi.avantagesDetails, "Mutuelle");
+    expect(mutNet).toBeGreaterThan(0);
+    expect(mutNet).toBeLessThan(ON.mutuelleEmployeurAnnuel);
+  });
+
+  it("titre-resto : la part patronale est plafonnée à trPlafondExo", () => {
+    // 20 € × 60 % = 12 € > plafond 7,32 € → la ligne doit être plafonnée
+    const cdi = calcCdi({ ...ON, trValeurFaciale: 20, trPartPatronale: 0.6 }, p);
+    expect(detail(cdi.avantagesDetails, "Titres-resto")).toBeCloseTo(
+      p.trPlafondExo * ON.joursTravaillesCdi,
+      6,
+    );
+  });
+
+  it("portage : gain auto-financé > 0 mais < valeur employeur-financée du CDI", () => {
+    const portage = calcPortage(ON, p);
+    const cdi = calcCdi(ON, p);
+    expect(portage.avantages).toBeGreaterThan(0);
+    // En portage le gain n'est que l'économie de charges/impôt, pas la valeur faciale.
+    expect(portage.avantages).toBeLessThan(cdi.avantages);
+  });
+
+  it("portage : un warning explique le caractère auto-financé", () => {
+    const portage = calcPortage(ON, p);
+    expect(portage.warnings.some((w) => w.toLowerCase().includes("auto-financé"))).toBe(true);
+  });
+
+  it("avantages tous nuls si les montants saisis sont à zéro", () => {
+    const zero = {
+      ...ON,
+      trValeurFaciale: 0,
+      transportAnnuel: 0,
+      mutuelleEmployeurAnnuel: 0,
+    };
+    expect(calcCdi(zero, p).avantages).toBe(0);
+    expect(calcPortage(zero, p).avantages).toBe(0);
+  });
 });

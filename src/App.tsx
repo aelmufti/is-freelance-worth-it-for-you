@@ -287,8 +287,10 @@ export default function App({ page }: { page: StatutPage }) {
             sur revenus 2025, PFU 31,4 %, réforme de l'assiette TNS). Elle ne
             remplace pas un expert-comptable : CFE, plafonnement du quotient
             familial, réduction générale de cotisations, mutuelle obligatoire,
-            prévoyance et cas particuliers ne sont pas tous modélisés. Aucune
-            donnée n'est envoyée : tout est calculé dans votre navigateur.
+            prévoyance et cas particuliers ne sont pas tous modélisés. Les
+            avantages salarié (titres-resto, transport, mutuelle) sont une
+            estimation indicative, affichée à part et exclue du net comparé.
+            Aucune donnée n'est envoyée : tout est calculé dans votre navigateur.
           </p>
           <p className="mt-2 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
             ✓ Contrôle qualité : nos résultats sont comparés automatiquement au
