@@ -80,7 +80,6 @@
     <!-- Performance hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap"
@@ -142,21 +141,6 @@
         ]
       }
     </script>
-    <!-- Mur de consentement : masqué AVANT le paint pour les visiteurs ayant
-         déjà choisi (évite le flash du fond flouté à chaque visite) et quand
-         JS est absent (sinon le site resterait bloqué derrière l'overlay). -->
-    <style>
-      .consent-resolved #consent-overlay { display: none !important; }
-    </style>
-    <script>
-      try {
-        if (localStorage.getItem("consent-analytics"))
-          document.documentElement.classList.add("consent-resolved");
-      } catch (e) {}
-    </script>
-    <noscript>
-      <style>#consent-overlay { display: none !important; }</style>
-    </noscript>
   </head>
   <body>
     <div id="root"></div>

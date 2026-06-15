@@ -109,17 +109,8 @@ export function MentionsLegales({ onClose }: { onClose: () => void }) {
             serveurs.
           </p>
           <p>
-            <span className="uppercase">Cookies :</span> avec votre
-            consentement préalable (bandeau affiché à la première visite),
-            le service Google Analytics 4 (Google LLC, États-Unis) dépose des
-            cookies de mesure d'audience (« _ga », « _ga_* », durée maximale
-            13 mois) afin d'établir des statistiques de fréquentation. Sans
-            consentement, ou en cas de refus, aucun cookie n'est déposé et le
-            site reste pleinement fonctionnel. Vous pouvez retirer ou
-            modifier votre choix à tout moment via le lien « Gérer les
-            cookies » en bas de page. Les données associées peuvent faire
-            l'objet d'un transfert hors de l'Union européenne, encadré par
-            les clauses contractuelles types de la Commission européenne.
+            <span className="uppercase">Cookies :</span> ce site n'utilise
+            aucun cookie de mesure d'audience ni de traceur publicitaire.
           </p>
           <p>
             <span className="uppercase">Mesure d'audience :</span> des

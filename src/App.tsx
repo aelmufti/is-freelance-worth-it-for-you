@@ -31,7 +31,6 @@ function ChartFallback({ label }: { label: string }) {
 import { Faq } from "./components/Faq";
 import { BreakEvenTable } from "./components/BreakEvenTable";
 import { MentionsLegales } from "./components/MentionsLegales";
-import { CookieBanner, useGaConsent } from "./components/CookieConsent";
 import { SectionTitle, euro } from "./components/ui";
 import { PAGES, pageUrl } from "./lib/pages";
 import type { StatutPage } from "./lib/pages";
@@ -77,7 +76,6 @@ export default function App({ page }: { page: StatutPage }) {
   const [focusStatuts, setFocusStatuts] = useState<StatutId[] | null>(
     page.statut ? [page.statut] : null,
   );
-  const consent = useGaConsent();
   const isStatutPage = Boolean(page.statut);
   const canonicalUrl = pageUrl(page);
 
@@ -378,24 +376,10 @@ export default function App({ page }: { page: StatutPage }) {
           >
             Mentions légales
           </button>
-          <button
-            type="button"
-            onClick={() => consent.reset()}
-            className="text-[10px] font-bold uppercase tracking-[0.12em] underline decoration-1 underline-offset-2 opacity-60 hover:opacity-100"
-          >
-            Gérer les cookies
-          </button>
         </div>
       </footer>
 
       {showLegal && <MentionsLegales onClose={() => setShowLegal(false)} />}
-      {consent.visible && (
-        <CookieBanner
-          onAccept={() => consent.decide("granted")}
-          onRefuse={() => consent.decide("denied")}
-          onShowLegal={() => setShowLegal(true)}
-        />
-      )}
     </div>
   );
 }
