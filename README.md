@@ -77,7 +77,7 @@ npm run compare
 - **Tailwind CSS v4** avec design tokens néo-brutalistes
 - **recharts** pour les graphiques
 - **publicodes / modele-social** + **vitest** pour la validation contre l'URSSAF
-- **Vercel** (hébergement) + **Vercel Analytics** + **GA4** (derrière consentement CNIL)
+- **Vercel** (hébergement) + **Vercel Analytics** (sans cookie, exempté de consentement)
 
 Charte graphique : **néo-brutalisme strict** — JetBrains Mono partout, border-radius 0, ombres dures décalées sans blur, aucun dégradé, palette plate à fort contraste.
 
@@ -108,8 +108,7 @@ src/
 │   ├── Results.tsx        # cartes par statut
 │   ├── Charts.tsx         # barres comparatives + courbe de break-even
 │   ├── ProsCons.tsx       # forces/faiblesses par statut
-│   ├── MentionsLegales.tsx
-│   └── CookieConsent.tsx
+│   └── MentionsLegales.tsx
 ├── data/prosCons.ts       # contenu éditorial par statut
 └── App.tsx
 tests/urssaf.test.ts       # validation contre le moteur URSSAF
@@ -136,7 +135,7 @@ Pour rester lisible, on simplifie. Sont **hors périmètre** :
 ## Vie privée
 
 - **Aucune donnée** saisie dans le simulateur ne quitte votre navigateur.
-- **Aucun cookie** déposé tant que vous n'avez pas accepté le bandeau.
+- **Aucun cookie** ni traceur : mesure d'audience anonyme via Vercel Analytics, sans consentement requis.
 - **Code source intégral** disponible ici — vérifiez vous-même.
 
 ---
