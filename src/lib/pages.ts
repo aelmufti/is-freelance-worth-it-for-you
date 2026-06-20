@@ -227,7 +227,123 @@ const MICRO: StatutPage = {
   ],
 };
 
-export const PAGES: StatutPage[] = [HOME, PORTAGE, SASU, MICRO];
+// ----------------------------------------------------------------- EI AU RÉEL
+const EI: StatutPage = {
+  slug: "simulateur-ei",
+  statut: "ei",
+  breadcrumb: "Simulateur EI au réel",
+  metaTitle: "Simulateur EI au réel 2026 : net réel et frais déductibles",
+  metaDescription:
+    "Entreprise individuelle au réel 2026 : cotisations TNS, frais réellement déductibles, sans plafond de chiffre d'affaires, net après impôt. À partir de quel TJM l'EI bat votre CDI. Calculs validés URSSAF.",
+  h1: "Simulateur EI au réel 2026 : votre net quand les frais comptent",
+  intro:
+    "L'entreprise individuelle au réel, c'est la micro sans ses deux limites : vos frais sont déduits pour de vrai, et il n'y a aucun plafond de chiffre d'affaires. En échange, une vraie comptabilité et l'impôt sur le bénéfice. Ce simulateur calcule votre net après cotisations TNS et impôt, face à un CDI et aux autres statuts.",
+  sections: [
+    {
+      heading: "Frais réels déductibles : là où l'EI dépasse la micro",
+      paragraphs: [
+        "En micro, l'administration applique un abattement forfaitaire (34 % en BNC) censé couvrir vos charges, que vos frais réels soient plus hauts ou plus bas. À l'EI au réel, on inverse la logique : vous tenez une comptabilité et vous déduisez vos dépenses professionnelles à l'euro près — local, matériel, déplacements, sous-traitance, logiciels, formation. Votre bénéfice imposable, c'est le chiffre d'affaires moins ces frais.",
+        "La règle de décision est simple : comparez vos frais réels à l'abattement de la micro. Tant qu'ils restent en dessous, la micro et son zéro paperasse gagnent. Dès qu'ils le dépassent — un poste de travail coûteux, un atelier, de la sous-traitance régulière — l'EI au réel devient plus avantageuse, car elle paie cotisations et impôt sur un bénéfice plus faible.",
+      ],
+    },
+    {
+      heading: "Le régime TNS : des cotisations allégées, une protection à surveiller",
+      paragraphs: [
+        "L'entrepreneur individuel est un travailleur non salarié (TNS). Ses cotisations, calculées sur le bénéfice, restent nettement plus légères que celles d'un assimilé salarié (SASU, portage) : la réforme 2026 de l'assiette unique applique un abattement de 26 % avant calcul, ce qui rapproche encore l'assiette du revenu réellement perçu. C'est pourquoi, à chiffre d'affaires égal, l'EI laisse souvent plus de net qu'une société à l'IS très chargée sur le salaire.",
+        "La contrepartie est sociale : pas d'assurance chômage, une retraite et une prévoyance moins généreuses que celles du régime général. Depuis 2022, le patrimoine personnel de l'entrepreneur est en revanche protégé par défaut, et l'EI peut, si besoin, opter pour l'impôt sur les sociétés. Pour qui veut maximiser son net en gérant lui-même sa protection, c'est un statut redoutablement efficace.",
+      ],
+    },
+    {
+      heading: "À partir de quel TJM l'EI bat le CDI",
+      paragraphs: [
+        "Grâce à des cotisations modérées et à la déduction des frais, l'EI au réel affiche un seuil de TJM bas pour égaler un CDI donné — souvent juste au-dessus de la micro, et bien en dessous des statuts à l'IS. Le tableau plus bas donne ce point de bascule selon votre salaire de référence ; réglez le simulateur sur vos jours facturés et vos frais réels pour obtenir le vôtre.",
+        "L'EI est le prolongement naturel de la micro : on y passe quand le chiffre d'affaires franchit le plafond, ou quand les frais montent assez pour rendre l'abattement forfaitaire perdant. Tant que vous restez « léger », gardez la micro ; dès que l'activité grossit, l'EI au réel prend le relais sans changer de logique — vous restez en nom propre, sans créer de société.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "EI au réel ou micro-entreprise : laquelle choisir ?",
+      answer:
+        "Comparez vos frais réels à l'abattement forfaitaire de la micro (34 % du CA en BNC). En dessous, la micro rend plus grâce à sa simplicité et à l'absence de comptabilité. Au-dessus, l'EI au réel déduit vos charges pour de vrai et devient plus avantageuse, sans plafond de chiffre d'affaires. Le simulateur place les deux statuts côte à côte sur votre situation.",
+    },
+    {
+      question: "Quels frais sont déductibles en EI au réel ?",
+      answer:
+        "Toutes les dépenses engagées dans l'intérêt de l'activité : loyer et charges du local, matériel et amortissements, déplacements, frais de repas dans les limites admises, logiciels et abonnements, sous-traitance, formation, cotisations facultatives (Madelin). C'est précisément ce que la micro ne permet pas : elle applique un abattement forfaitaire, vos factures réelles restant à votre charge.",
+    },
+    {
+      question: "Y a-t-il un plafond de chiffre d'affaires en EI au réel ?",
+      answer:
+        "Non. Contrairement à la micro (83 600 € en prestations de services, 203 100 € en vente), l'EI au réel n'a aucun plafond de chiffre d'affaires. Vous pouvez développer votre activité sans changer de cadre, en restant en nom propre — c'est souvent la suite logique d'une micro qui a atteint ses limites.",
+    },
+    {
+      question: "Quelles cotisations paie un entrepreneur individuel au réel en 2026 ?",
+      answer:
+        "Des cotisations TNS calculées sur le bénéfice (de l'ordre de 40 à 45 % après l'abattement d'assiette de 26 % issu de la réforme 2026), couvrant maladie, retraite, allocations familiales et CSG-CRDS, mais pas le chômage. S'y ajoute l'impôt sur le revenu au barème progressif sur ce même bénéfice. Le simulateur intègre ces taux 2026.",
+    },
+  ],
+};
+
+// --------------------------------------------------------------------- EURL
+const EURL: StatutPage = {
+  slug: "simulateur-eurl",
+  statut: "eurl",
+  breadcrumb: "Simulateur EURL",
+  metaTitle: "Simulateur EURL à l'IS 2026 : rémunération, dividendes et net",
+  metaDescription:
+    "Simulateur EURL à l'IS 2026 : arbitrage rémunération TNS / dividendes, règle des 10 % du capital, impôt sur les sociétés, net après impôt. À partir de quel TJM l'EURL bat votre CDI. Calculs validés URSSAF.",
+  h1: "Simulateur EURL 2026 : rémunération, dividendes et ce qu'il vous reste",
+  intro:
+    "L'EURL, c'est l'EI passée en société : responsabilité limitée, option pour l'impôt sur les sociétés, et possibilité de se verser des dividendes. Mais le gérant associé unique reste un travailleur non salarié — et les dividendes y obéissent à une règle bien particulière. Ce simulateur chiffre votre net réel selon le dosage rémunération / dividendes, face à un CDI.",
+  sections: [
+    {
+      heading: "Gérant majoritaire = TNS : la facture sociale allégée",
+      paragraphs: [
+        "Contrairement au président de SASU, assimilé salarié, le gérant associé unique d'une EURL est un travailleur non salarié. Ses cotisations sur la rémunération sont bien plus basses (de l'ordre de 45 % du revenu, contre 75 à 80 % du net en SASU), pour une protection sociale plus modeste et, comme tout indépendant, sans assurance chômage. À rémunération égale, l'EURL laisse donc davantage de net que la SASU.",
+        "L'EURL relève par défaut de l'impôt sur le revenu, mais l'option pour l'impôt sur les sociétés est le choix courant dès qu'on veut piloter sa rémunération : c'est ce cas que modélise le simulateur. Le bénéfice non versé en salaire est alors taxé à l'IS (15 % jusqu'à 42 500 €, 25 % au-delà), puis conservé dans la société ou distribué en dividendes.",
+      ],
+    },
+    {
+      heading: "Rémunération ou dividendes : l'arbitrage, et le piège des 10 %",
+      paragraphs: [
+        "Comme en SASU, vous arbitrez entre rémunération — qui ouvre des droits mais supporte les cotisations — et dividendes, prélevés sur le bénéfice après IS. Mais une règle change tout en EURL : seule la fraction de dividendes inférieure à 10 % du capital social profite de la flat tax de 31,4 %. Au-delà de ce seuil, les dividendes sont soumis aux cotisations sociales TNS, comme une rémunération.",
+        "Conséquence : la stratégie « petit salaire, gros dividendes » qui fonctionne en SASU est beaucoup moins efficace en EURL, sauf à doter la société d'un capital conséquent. Le panneau « Paramètres avancés » vous laisse régler la part de rémunération et le capital social pour voir, euro par euro, où se situe votre optimum — et constater l'effet du seuil des 10 %.",
+      ],
+    },
+    {
+      heading: "EURL ou SASU : le vrai départage",
+      paragraphs: [
+        "Le choix se joue sur deux axes. Sur la rémunération, l'EURL gagne : les charges TNS sont bien plus légères que celles de l'assimilé salarié. Sur les dividendes, la SASU reprend l'avantage : ils échappent aux cotisations et restent à la flat tax, sans la barrière des 10 % du capital. Votre profil de versement décide donc du gagnant.",
+        "En pratique : si vous comptez vous verser l'essentiel en rémunération, l'EURL est souvent la plus rentable. Si votre stratégie repose sur les dividendes — ou si vous voulez cumuler avec l'ARE en début d'activité — la SASU prend le dessus. Le tableau de seuils plus bas situe le TJM à partir duquel l'EURL bat votre CDI ; comparez-le à celui de la SASU pour trancher sur vos chiffres.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "EURL ou SASU : quelle différence pour le revenu net ?",
+      answer:
+        "En EURL, le gérant est travailleur non salarié : cotisations légères (autour de 45 % du revenu), protection moindre, pas de chômage. En SASU, le président est assimilé salarié : meilleure couverture, charges bien plus lourdes sur le salaire, mais dividendes à la flat tax sans plafond. L'EURL l'emporte si vous vous versez surtout une rémunération ; la SASU si vous misez sur les dividendes.",
+    },
+    {
+      question: "Comment sont taxés les dividendes d'une EURL ?",
+      answer:
+        "La part de dividendes inférieure à 10 % du capital social est soumise à la flat tax de 31,4 % (12,8 % d'IR + 18,6 % de prélèvements sociaux). Au-delà de ce seuil, les dividendes supportent les cotisations sociales TNS et l'impôt sur le revenu — et non la flat tax. C'est la grande différence avec la SASU, où tous les dividendes restent à la flat tax : en EURL, le capital social pèse directement sur votre optimisation.",
+    },
+    {
+      question: "Le gérant d'une EURL a-t-il droit au chômage ?",
+      answer:
+        "Non. Comme tout travailleur non salarié, le gérant associé unique d'une EURL ne cotise pas à l'assurance chômage et n'ouvre aucun droit à l'ARE au titre de son mandat. Si la sécurité d'un filet est déterminante pour vous, le portage salarial est le seul statut indépendant qui ouvre droit au chômage.",
+    },
+    {
+      question: "Quelles charges paie une EURL à l'IS en 2026 ?",
+      answer:
+        "Sur la rémunération du gérant : cotisations TNS (de l'ordre de 45 % après l'abattement d'assiette 2026). Sur le bénéfice : impôt sur les sociétés à 15 % jusqu'à 42 500 €, puis 25 %. Sur les dividendes : flat tax de 31,4 % sous 10 % du capital, cotisations TNS + IR au-delà. Le simulateur additionne ces couches pour donner votre net réel selon votre dosage.",
+    },
+  ],
+};
+
+export const PAGES: StatutPage[] = [HOME, MICRO, EI, EURL, SASU, PORTAGE];
 
 export const ROUTE_SLUGS: string[] = PAGES.filter((p) => p.slug).map(
   (p) => p.slug,
