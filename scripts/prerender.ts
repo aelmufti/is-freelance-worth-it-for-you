@@ -15,7 +15,7 @@ import { chromium } from "playwright";
 import { writeFileSync, mkdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PAGES, pageUrl, SITE, type StatutPage } from "../src/lib/pages";
+import { PAGES, pageUrl, ogImagePath, SITE, type StatutPage } from "../src/lib/pages";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dir, "..");
@@ -37,6 +37,10 @@ function rewriteHead(html: string, page: StatutPage): string {
   const url = pageUrl(page);
   const t = esc(page.metaTitle);
   const d = esc(page.metaDescription);
+  const og = `${SITE}${ogImagePath(page)}`;
+  const ogAlt = esc(
+    page.slug ? page.metaTitle : "Capture du simulateur freelance vs CDI 2026",
+  );
   const repl: Array<[RegExp, string]> = [
     [/<title>[\s\S]*?<\/title>/, `<title>${t}</title>`],
     [/<meta name="description" content="[^"]*"\s*\/?>/, `<meta name="description" content="${d}">`],
@@ -49,6 +53,11 @@ function rewriteHead(html: string, page: StatutPage): string {
     [/<meta name="twitter:url" content="[^"]*"\s*\/?>/, `<meta name="twitter:url" content="${url}">`],
     [/<meta name="twitter:title" content="[^"]*"\s*\/?>/, `<meta name="twitter:title" content="${t}">`],
     [/<meta name="twitter:description" content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${d}">`],
+    [/<meta property="og:image" content="[^"]*"\s*\/?>/, `<meta property="og:image" content="${og}">`],
+    [/<meta property="og:image:secure_url" content="[^"]*"\s*\/?>/, `<meta property="og:image:secure_url" content="${og}">`],
+    [/<meta property="og:image:alt" content="[^"]*"\s*\/?>/, `<meta property="og:image:alt" content="${ogAlt}">`],
+    [/<meta name="twitter:image" content="[^"]*"\s*\/?>/, `<meta name="twitter:image" content="${og}">`],
+    [/<meta name="twitter:image:alt" content="[^"]*"\s*\/?>/, `<meta name="twitter:image:alt" content="${ogAlt}">`],
   ];
   let h = html;
   for (const [re, val] of repl) {

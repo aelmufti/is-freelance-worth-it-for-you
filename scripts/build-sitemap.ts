@@ -4,7 +4,7 @@
 import { writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PAGES, pageUrl } from "../src/lib/pages";
+import { CONTENT_UPDATED, PAGES, pageUrl } from "../src/lib/pages";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const out = resolve(__dir, "..", "public", "sitemap.xml");
@@ -15,6 +15,7 @@ const urls = PAGES.map((p) => {
     <loc>${loc}</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="${loc}" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${loc}" />
+    <lastmod>${CONTENT_UPDATED}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${p.slug ? "0.8" : "1.0"}</priority>
   </url>`;

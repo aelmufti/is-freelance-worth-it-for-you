@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.8",
     "@tailwindcss/vite": "^4.3.0",
     "@vercel/analytics": "^2.0.1",
     "react": "^19.2.7",
@@ -22,11 +23,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && tsx scripts/build-sitemap.ts && vite build && tsx scripts/apply-prerender.ts",
+    "build": "tsc -b && tsx scripts/build-sitemap.ts && tsx scripts/build-llms.ts && vite build && tsx scripts/apply-prerender.ts",
     "preview": "vite preview",
     "test": "vitest run",
     "compare": "tsx scripts/compare-urssaf.ts",
-    "prerender:capture": "tsc -b && tsx scripts/build-sitemap.ts && vite build && tsx scripts/ensure-chromium.ts && tsx scripts/og-image.ts && tsx scripts/apple-icon.ts && tsx scripts/prerender.ts"
+    "prerender:capture": "tsc -b && tsx scripts/build-sitemap.ts && tsx scripts/build-llms.ts && vite build && tsx scripts/ensure-chromium.ts && tsx scripts/og-image.ts && tsx scripts/apple-icon.ts && tsx scripts/prerender.ts"
   },
   "name": "freelance-vs-cdi",
   "private": true,

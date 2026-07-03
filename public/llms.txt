@@ -4,9 +4,30 @@
 
 Le simulateur prend en entrée un TJM (taux journalier moyen), un nombre de jours facturés par mois, un foyer fiscal (situation, parts, revenu du conjoint) et un salaire CDI de comparaison. Il calcule pour chacun des six statuts : le chiffre d'affaires, les cotisations sociales, l'impôt sur le revenu (et l'IS et la flat tax le cas échéant), le revenu net mensuel et annuel, et le seuil de TJM à partir duquel ce statut bat le CDI fourni.
 
-## Outil principal
+Taux et barèmes vérifiés le 2026-07-03. Contenu intégral : https://freelance-ou-cdi.fr/llms-full.txt
 
-- [Simulateur freelance vs CDI 2026](https://freelance-ou-cdi.fr/) : page unique, calcul instantané, tous les statuts en parallèle, tous les paramètres modifiables.
+## Pages
+
+- [Simulateur freelance vs CDI 2026](https://freelance-ou-cdi.fr/) : Simulateur gratuit 2026 : comparez votre net en micro-entreprise, EURL, SASU, portage salarial et CDI. Cotisations, impôt sur le revenu, flat tax 31,4 % et seuil de rentabilité TJM, calculs validés URSSAF.
+- [Simulateur micro-entreprise](https://freelance-ou-cdi.fr/simulateur-micro-entreprise/) : Simulateur micro-entreprise 2026 : cotisations en % du CA, abattement, plafonds et net après impôt. À partir de quel TJM la micro bat votre CDI, et quand le plafond vous bloque. Calculs validés URSSAF.
+- [Simulateur EI au réel](https://freelance-ou-cdi.fr/simulateur-ei/) : Entreprise individuelle au réel 2026 : cotisations TNS, frais réellement déductibles, sans plafond de chiffre d'affaires, net après impôt. À partir de quel TJM l'EI bat votre CDI. Calculs validés URSSAF.
+- [Simulateur EURL](https://freelance-ou-cdi.fr/simulateur-eurl/) : Simulateur EURL à l'IS 2026 : arbitrage rémunération TNS / dividendes, règle des 10 % du capital, impôt sur les sociétés, net après impôt. À partir de quel TJM l'EURL bat votre CDI. Calculs validés URSSAF.
+- [Simulateur SASU](https://freelance-ou-cdi.fr/simulateur-sasu/) : Simulateur SASU 2026 : arbitrage salaire / dividendes, flat tax 31,4 %, impôt sur les sociétés et net après impôt. À partir de quel TJM la SASU bat votre CDI, calculs validés URSSAF.
+- [Simulateur portage salarial](https://freelance-ou-cdi.fr/simulateur-portage-salarial/) : Combien reste-t-il vraiment en portage salarial en 2026 ? Frais de gestion, cotisations du régime général, net après impôt, et le TJM à partir duquel le portage bat votre CDI. Calculs validés URSSAF.
+- [SASU ou EURL](https://freelance-ou-cdi.fr/sasu-ou-eurl/) : SASU ou EURL pour votre activité en 2026 ? Cotisations TNS contre assimilé salarié, dividendes à la flat tax contre règle des 10 % du capital, cumul ARE : le comparatif chiffré, validé URSSAF.
+- [Micro-entreprise ou SASU](https://freelance-ou-cdi.fr/micro-entreprise-ou-sasu/) : Micro-entreprise ou SASU pour se lancer en 2026 ? Net conservé, plafond de 83 600 €, cumul ARE, dividendes : le comparatif chiffré des deux statuts préférés des freelances, validé URSSAF.
+- [Portage ou micro-entreprise](https://freelance-ou-cdi.fr/portage-salarial-ou-micro-entreprise/) : Portage salarial ou micro-entreprise en 2026 ? À TJM égal, la micro conserve environ 59 % du chiffre d'affaires en net contre 43 % en portage — mais le portage ouvre le chômage. Comparatif validé URSSAF.
+- [Portage salarial ou CDI](https://freelance-ou-cdi.fr/portage-salarial-ou-cdi/) : Rester en CDI ou passer en portage salarial en 2026 ? Le TJM nécessaire pour égaler votre salaire (environ 455 €/jour pour 55 000 € brut), ce que vous gardez du salariat, ce que vous perdez. Validé URSSAF.
+- [Convertir un TJM en salaire](https://freelance-ou-cdi.fr/tjm-en-salaire/) : Combien vaut un TJM en salaire ? Le tableau de conversion 2026 palier par palier (300 à 800 €/jour) : chiffre d'affaires, net mensuel par statut et CDI équivalent. Calculs validés URSSAF.
+- [TJM 300 €](https://freelance-ou-cdi.fr/tjm-300/) : Un TJM de 300 € = 59 400 € facturés par an. Meilleur net : 3 017 €/mois (micro-entreprise), l'équivalent d'un CDI à environ 51 500 € brut. Calculs 2026 validés URSSAF.
+- [TJM 350 €](https://freelance-ou-cdi.fr/tjm-350/) : Un TJM de 350 € = 69 300 € facturés par an. Meilleur net : 3 466 €/mois (micro-entreprise), l'équivalent d'un CDI à environ 61 000 € brut. Calculs 2026 validés URSSAF.
+- [TJM 400 €](https://freelance-ou-cdi.fr/tjm-400/) : Un TJM de 400 € = 79 200 € facturés par an. Meilleur net : 3 915 €/mois (micro-entreprise), l'équivalent d'un CDI à environ 70 000 € brut. Calculs 2026 validés URSSAF.
+- [TJM 450 €](https://freelance-ou-cdi.fr/tjm-450/) : Un TJM de 450 € = 89 100 € facturés par an. Meilleur net : 3 979 €/mois (EI au réel), l'équivalent d'un CDI à environ 71 500 € brut. Calculs 2026 validés URSSAF.
+- [TJM 500 €](https://freelance-ou-cdi.fr/tjm-500/) : Un TJM de 500 € = 99 000 € facturés par an. Meilleur net : 4 397 €/mois (EI au réel), l'équivalent d'un CDI à environ 80 000 € brut. Calculs 2026 validés URSSAF.
+- [TJM 550 €](https://freelance-ou-cdi.fr/tjm-550/) : Un TJM de 550 € = 108 900 € facturés par an. Meilleur net : 4 842 €/mois (EI au réel), l'équivalent d'un CDI à environ 89 500 € brut. Calculs 2026 validés URSSAF.
+- [TJM 600 €](https://freelance-ou-cdi.fr/tjm-600/) : Un TJM de 600 € = 118 800 € facturés par an. Meilleur net : 5 288 €/mois (EI au réel), l'équivalent d'un CDI à environ 98 500 € brut. Calculs 2026 validés URSSAF.
+- [TJM 700 €](https://freelance-ou-cdi.fr/tjm-700/) : Un TJM de 700 € = 138 600 € facturés par an. Meilleur net : 6 035 €/mois (EI au réel), l'équivalent d'un CDI à environ 114 500 € brut. Calculs 2026 validés URSSAF.
+- [TJM 800 €](https://freelance-ou-cdi.fr/tjm-800/) : Un TJM de 800 € = 158 400 € facturés par an. Meilleur net : 6 781 €/mois (EI au réel), l'équivalent d'un CDI à environ 132 500 € brut. Calculs 2026 validés URSSAF.
 
 ## Données et hypothèses
 

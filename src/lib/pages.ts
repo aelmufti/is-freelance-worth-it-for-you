@@ -11,11 +11,27 @@
 // page à l'autre (anti « doorway page »).
 
 import type { SimulationInput } from "./params";
+import { DEFAULT_INPUT, DEFAULT_PARAMS, caAnnuel } from "./params";
 import type { StatutId } from "./engine";
+import {
+  calcCdi,
+  calcEurl,
+  calcMicro,
+  calcPortage,
+  calcSasu,
+  tjmEquivalentCdi,
+} from "./engine";
 import type { FaqItem } from "../data/faq";
 import { FAQ } from "../data/faq";
+import { TJM_HUB, TJM_PAGES } from "../data/tjm";
 
 export const SITE = "https://freelance-ou-cdi.fr";
+
+// Date de dernière vérification des taux / mise à jour du contenu (ISO).
+// À mettre à jour à chaque changement de contenu ou de taux, EN MÊME TEMPS que
+// le champ "dateModified" du JSON-LD dans index.html (sync manuelle).
+// Alimente : <lastmod> du sitemap, ligne « Taux vérifiés le … » (App.tsx).
+export const CONTENT_UPDATED = "2026-07-03";
 
 export interface PageSection {
   heading: string;
@@ -25,7 +41,7 @@ export interface PageSection {
 
 export interface StatutPage {
   slug: string; // "" pour la home
-  statut?: StatutId; // statut mis en avant (focus podium)
+  statuts?: StatutId[]; // statuts mis en avant (focus podium) — 1 pour une page statut, 2 pour un comparatif
   breadcrumb?: string; // libellé fil d'Ariane
   metaTitle: string;
   metaDescription: string;
@@ -34,7 +50,53 @@ export interface StatutPage {
   sections: PageSection[];
   faq: FaqItem[];
   inputOverrides?: Partial<SimulationInput>;
+  related?: string[]; // slugs des pages liées (bloc « À lire aussi » — maillage interne)
+  hideFromFooter?: boolean; // pages longue traîne (TJM) non listées dans le footer
 }
+
+// ------------------------------------------------- CHIFFRES POUR COMPARATIFS
+// Calculés par le moteur sur le scénario par défaut (18 j × 11 mois, 3 000 €
+// de frais pro, célibataire, CDI 55 000 € brut) — même principe que
+// src/data/faq.ts : impossible qu'ils divergent du simulateur.
+const _p = DEFAULT_PARAMS;
+const _ref = DEFAULT_INPUT;
+const _fmt = (n: number): string => {
+  const s = String(Math.round(n));
+  return s.length > 3 ? `${s.slice(0, -3)} ${s.slice(-3)}` : s;
+};
+const _round5 = (n: number | null): number =>
+  n === null ? NaN : Math.round(n / 5) * 5;
+
+// Nets mensuels au TJM par défaut (550 €), 100 % rémunération
+const NET_EURL_MOIS = _fmt(calcEurl(_ref, _p).netMensuel);
+const NET_SASU_MOIS = _fmt(calcSasu(_ref, _p).netMensuel);
+const NET_CDI_MOIS = _fmt(calcCdi(_ref, _p).netMensuel);
+
+// Seuils de TJM pour battre le CDI de référence (55 000 € brut)
+const TJM_MICRO_CDI = _round5(tjmEquivalentCdi(_ref, _p, calcMicro));
+const TJM_SASU_CDI = _round5(tjmEquivalentCdi(_ref, _p, calcSasu));
+const TJM_PORTAGE_CDI = _round5(tjmEquivalentCdi(_ref, _p, calcPortage));
+
+// Part du CA conservée en net après cotisations ET impôt, à TJM 400 €
+// (niveau où micro et portage sont tous deux accessibles)
+const _in400 = { ..._ref, tjm: 400 };
+const _ca400 = caAnnuel(_in400);
+const PCT_MICRO_400 = Math.round(
+  (calcMicro(_in400, _p).netAnnuel / _ca400) * 100,
+);
+const PCT_PORTAGE_400 = Math.round(
+  (calcPortage(_in400, _p).netAnnuel / _ca400) * 100,
+);
+
+// TJM au-delà duquel le plafond micro (prestations) est dépassé, au rythme
+// de facturation par défaut
+const TJM_PLAFOND_MICRO = Math.round(
+  _p.microPlafondService / (_ref.joursParMois * _ref.moisFactures),
+);
+// CA annuel à facturer en portage pour égaler le CDI de référence
+const CA_PORTAGE_CDI = _fmt(
+  TJM_PORTAGE_CDI * _ref.joursParMois * _ref.moisFactures,
+);
 
 // --------------------------------------------------------------------- HOME
 const HOME: StatutPage = {
@@ -48,12 +110,18 @@ const HOME: StatutPage = {
     "Micro-entreprise, EI au réel, EURL, SASU, portage salarial — net après cotisations ET impôt sur le revenu, comparé à votre CDI. Barème IR 2026, flat tax 31,4 %, réforme TNS incluse.",
   sections: [],
   faq: FAQ,
+  related: [
+    "tjm-en-salaire",
+    "sasu-ou-eurl",
+    "micro-entreprise-ou-sasu",
+    "portage-salarial-ou-cdi",
+  ],
 };
 
 // ------------------------------------------------------------------- PORTAGE
 const PORTAGE: StatutPage = {
   slug: "simulateur-portage-salarial",
-  statut: "portage",
+  statuts: ["portage"],
   breadcrumb: "Simulateur portage salarial",
   metaTitle:
     "Simulateur portage salarial 2026 : salaire net réel vs CDI et freelance",
@@ -107,12 +175,17 @@ const PORTAGE: StatutPage = {
         "Il n'existe pas de plafond de CA en portage, contrairement à la micro. En pratique, les sociétés de portage demandent souvent un TJM plancher (fréquemment autour de 250 à 300 €/jour) pour que le salaire dépasse le minimum conventionnel une fois les charges déduites. En dessous, l'enveloppe ne suffit pas à constituer un bulletin de paie viable.",
     },
   ],
+  related: [
+    "portage-salarial-ou-cdi",
+    "portage-salarial-ou-micro-entreprise",
+    "simulateur-micro-entreprise",
+  ],
 };
 
 // ---------------------------------------------------------------------- SASU
 const SASU: StatutPage = {
   slug: "simulateur-sasu",
-  statut: "sasu",
+  statuts: ["sasu"],
   breadcrumb: "Simulateur SASU",
   metaTitle:
     "Simulateur SASU 2026 : salaire, dividendes et net réel vs CDI",
@@ -166,12 +239,13 @@ const SASU: StatutPage = {
         "Sur le salaire du président : cotisations patronales et salariales du régime général, de l'ordre de 75 à 80 % du net versé. Sur les bénéfices conservés : impôt sur les sociétés à 15 % jusqu'à 42 500 € puis 25 %. Sur les dividendes distribués : flat tax de 31,4 % (12,8 % d'IR + 18,6 % de prélèvements sociaux). Le simulateur additionne ces couches pour donner votre net réel.",
     },
   ],
+  related: ["sasu-ou-eurl", "micro-entreprise-ou-sasu", "simulateur-eurl"],
 };
 
 // --------------------------------------------------------------------- MICRO
 const MICRO: StatutPage = {
   slug: "simulateur-micro-entreprise",
-  statut: "micro",
+  statuts: ["micro"],
   breadcrumb: "Simulateur micro-entreprise",
   metaTitle:
     "Simulateur micro-entreprise 2026 : revenu net réel et plafonds",
@@ -225,12 +299,17 @@ const MICRO: StatutPage = {
         "Les cotisations sont un pourcentage du chiffre d'affaires encaissé : environ 24,6 % en BNC, 21,2 % en prestations BIC et 12,3 % en vente, auxquels s'ajoute une petite contribution à la formation. S'y ajoute l'impôt sur le revenu, calculé après abattement (ou, sur option et sous conditions de revenu, un versement libératoire prélevé directement sur le CA). Le simulateur intègre ces taux 2026.",
     },
   ],
+  related: [
+    "micro-entreprise-ou-sasu",
+    "portage-salarial-ou-micro-entreprise",
+    "simulateur-ei",
+  ],
 };
 
 // ----------------------------------------------------------------- EI AU RÉEL
 const EI: StatutPage = {
   slug: "simulateur-ei",
-  statut: "ei",
+  statuts: ["ei"],
   breadcrumb: "Simulateur EI au réel",
   metaTitle: "Simulateur EI au réel 2026 : net réel et frais déductibles",
   metaDescription:
@@ -283,12 +362,13 @@ const EI: StatutPage = {
         "Des cotisations TNS calculées sur le bénéfice (de l'ordre de 40 à 45 % après l'abattement d'assiette de 26 % issu de la réforme 2026), couvrant maladie, retraite, allocations familiales et CSG-CRDS, mais pas le chômage. S'y ajoute l'impôt sur le revenu au barème progressif sur ce même bénéfice. Le simulateur intègre ces taux 2026.",
     },
   ],
+  related: ["simulateur-micro-entreprise", "simulateur-eurl"],
 };
 
 // --------------------------------------------------------------------- EURL
 const EURL: StatutPage = {
   slug: "simulateur-eurl",
-  statut: "eurl",
+  statuts: ["eurl"],
   breadcrumb: "Simulateur EURL",
   metaTitle: "Simulateur EURL à l'IS 2026 : rémunération, dividendes et net",
   metaDescription:
@@ -341,9 +421,263 @@ const EURL: StatutPage = {
         "Sur la rémunération du gérant : cotisations TNS (de l'ordre de 45 % après l'abattement d'assiette 2026). Sur le bénéfice : impôt sur les sociétés à 15 % jusqu'à 42 500 €, puis 25 %. Sur les dividendes : flat tax de 31,4 % sous 10 % du capital, cotisations TNS + IR au-delà. Le simulateur additionne ces couches pour donner votre net réel selon votre dosage.",
     },
   ],
+  related: ["sasu-ou-eurl", "simulateur-sasu", "simulateur-ei"],
 };
 
-export const PAGES: StatutPage[] = [HOME, MICRO, EI, EURL, SASU, PORTAGE];
+// ------------------------------------------------------------- SASU OU EURL
+const SASU_OU_EURL: StatutPage = {
+  slug: "sasu-ou-eurl",
+  statuts: ["sasu", "eurl"],
+  breadcrumb: "SASU ou EURL",
+  metaTitle: "SASU ou EURL en 2026 : quel statut laisse le plus de net ?",
+  metaDescription:
+    "SASU ou EURL pour votre activité en 2026 ? Cotisations TNS contre assimilé salarié, dividendes à la flat tax contre règle des 10 % du capital, cumul ARE : le comparatif chiffré, validé URSSAF.",
+  h1: "SASU ou EURL : quel statut vous laisse le plus de net en 2026 ?",
+  intro: `C'est le duel classique du freelance qui passe en société — et la réponse dépend entièrement de la façon dont vous comptez vous payer. Sur le scénario de référence du simulateur (TJM 550 €, tout en rémunération), l'EURL laisse ${NET_EURL_MOIS} €/mois net contre ${NET_SASU_MOIS} € en SASU. Mais dès que les dividendes entrent en jeu, le match s'inverse. Ce comparatif chiffre les deux trajectoires sur VOS paramètres.`,
+  sections: [
+    {
+      heading: "Deux régimes sociaux, deux factures très différentes",
+      paragraphs: [
+        "Tout part du statut social du dirigeant. Le gérant associé unique d'EURL est travailleur non salarié : ses cotisations tournent autour de 45 % de sa rémunération, allégées encore par l'abattement d'assiette de 26 % de la réforme 2026. Le président de SASU est assimilé salarié : régime général complet, mais 75 à 80 % de charges sur le net versé — la facture sociale la plus lourde de tous les statuts.",
+        `La conséquence est mécanique : si vous transformez l'essentiel de votre chiffre d'affaires en rémunération, l'EURL gagne, et largement. Sur le scénario de référence (TJM 550 €, 18 jours facturés sur 11 mois, 100 % en rémunération), le simulateur donne ${NET_EURL_MOIS} €/mois net en EURL contre ${NET_SASU_MOIS} €/mois en SASU — un écart qui se creuse encore quand le chiffre d'affaires monte.`,
+      ],
+    },
+    {
+      heading: "Dividendes : la règle qui inverse le match",
+      paragraphs: [
+        "La SASU a une carte que l'EURL n'a pas : tous ses dividendes restent à la flat tax de 31,4 %, sans limite. Un président de SASU peut se verser un salaire minimal pour ses droits sociaux et sortir le reste en dividendes après IS — l'itinéraire qui évite les grosses cotisations. En EURL, la même stratégie se heurte à un mur : au-delà de 10 % du capital social, les dividendes du gérant repassent aux cotisations TNS, comme une rémunération.",
+        "Autrement dit, l'optimisation « petit salaire, gros dividendes » est une stratégie SASU. En EURL, elle n'a de sens qu'avec un capital social important — rare quand on démarre. Le panneau « Paramètres avancés » du simulateur permet de faire varier la part de rémunération et le capital pour visualiser précisément où bascule votre situation.",
+      ],
+    },
+    {
+      heading: "Trancher : trois questions suffisent",
+      paragraphs: [
+        "Un : comment voulez-vous vous payer ? Essentiel en rémunération régulière → EURL. Minimum vital en salaire et le reste en dividendes annuels → SASU. Deux : touchez-vous l'ARE ? Le cumul allocations chômage + SASU sans salaire est un montage éprouvé en sortie de CDI ; l'EURL s'y prête moins bien car la rémunération du gérant, même faible, entame l'ARE. Trois : quelle protection sociale visez-vous ? L'assimilé salarié de la SASU cotise plus mais valide une meilleure retraite.",
+        "Le tableau de seuils plus bas donne, pour chaque salaire CDI de référence, le TJM à partir duquel chacun des deux statuts devient gagnant. Réglez ensuite le simulateur sur vos propres chiffres : c'est le dosage rémunération/dividendes — pas le statut en lui-même — qui fait l'écart final.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "Quel statut paie le moins de cotisations : SASU ou EURL ?",
+      answer:
+        "L'EURL, nettement. Le gérant associé unique est travailleur non salarié : environ 45 % de cotisations sur sa rémunération (après l'abattement d'assiette de 26 % de la réforme 2026). Le président de SASU est assimilé salarié : 75 à 80 % de charges sur le net versé. À rémunération égale, l'EURL laisse donc plus de net — la SASU ne reprend l'avantage que par les dividendes, qui échappent aux cotisations.",
+    },
+    {
+      question: "SASU ou EURL pour se verser des dividendes ?",
+      answer:
+        "La SASU. Ses dividendes sont intégralement soumis à la flat tax de 31,4 %, sans plafond. En EURL, seule la fraction inférieure à 10 % du capital social bénéficie de la flat tax : au-delà, les dividendes supportent les cotisations sociales TNS comme une rémunération. Sauf capital social très élevé, la stratégie dividendes n'est vraiment efficace qu'en SASU.",
+    },
+    {
+      question: "SASU ou EURL pour cumuler avec le chômage (ARE) ?",
+      answer:
+        "La SASU est le montage le plus utilisé : un président qui ne se verse aucun salaire conserve l'intégralité de son ARE, et peut se rémunérer en dividendes (non considérés comme un salaire par France Travail). En EURL, la rémunération du gérant vient en déduction de l'allocation ; le cumul intégral est plus difficile à maintenir. Ni l'un ni l'autre ne génèrent de NOUVEAUX droits au chômage.",
+    },
+    {
+      question: "Peut-on passer d'une EURL à une SASU, ou l'inverse ?",
+      answer:
+        "Oui, c'est une transformation de société (EURL → SASU ou SASU → EURL) : décision de l'associé unique, intervention d'un commissaire à la transformation dans certains cas, mise à jour des statuts et formalités au guichet unique. Comptez quelques centaines à quelques milliers d'euros de frais. C'est un choix réversible — mais assez coûteux pour mériter de bien simuler avant de créer.",
+    },
+  ],
+  related: ["simulateur-sasu", "simulateur-eurl", "micro-entreprise-ou-sasu"],
+};
+
+// --------------------------------------------------------- MICRO OU SASU
+const MICRO_OU_SASU: StatutPage = {
+  slug: "micro-entreprise-ou-sasu",
+  statuts: ["micro", "sasu"],
+  breadcrumb: "Micro-entreprise ou SASU",
+  metaTitle: "Micro-entreprise ou SASU en 2026 : le comparatif chiffré",
+  metaDescription:
+    "Micro-entreprise ou SASU pour se lancer en 2026 ? Net conservé, plafond de 83 600 €, cumul ARE, dividendes : le comparatif chiffré des deux statuts préférés des freelances, validé URSSAF.",
+  h1: "Micro-entreprise ou SASU : le comparatif chiffré 2026",
+  intro: `Ce sont les deux statuts les plus choisis par les freelances, et ils sont aux antipodes : la micro mise tout sur la simplicité et des cotisations légères, la SASU sur la protection et l'optimisation. Pour battre un CDI à 55 000 € brut, il faut un TJM d'environ ${TJM_MICRO_CDI} € en micro… contre ${TJM_SASU_CDI} € en SASU. Voici comment trancher selon votre niveau de revenu et votre situation.`,
+  sections: [
+    {
+      heading: "Sous le plafond, la micro gagne presque toujours",
+      paragraphs: [
+        `En micro-entreprise, les cotisations sont un simple pourcentage du chiffre d'affaires (environ 24,6 % en BNC en 2026) et l'impôt se calcule après un abattement forfaitaire de 34 %. En SASU, le salaire du président supporte 75 à 80 % de charges. Le résultat se lit dans les seuils : pour égaler un CDI à 55 000 € brut (${NET_CDI_MOIS} €/mois net), il faut environ ${TJM_MICRO_CDI} €/jour en micro contre ${TJM_SASU_CDI} €/jour en SASU — presque 30 % de plus.`,
+        "Tant que votre activité tient sous le plafond et que vos frais professionnels restent faibles, la micro convertit mieux chaque euro facturé en net disponible, sans comptable ni bilan. Créer une SASU « pour faire sérieux » à ce stade, c'est payer de la structure et des cotisations pour un bénéfice que vous ne touchez pas encore.",
+      ],
+    },
+    {
+      heading: "Le plafond de 83 600 € : là où la SASU entre en jeu",
+      paragraphs: [
+        `La micro s'arrête net à 83 600 € de chiffre d'affaires en prestations de services. Au rythme de 18 jours facturés sur 11 mois, ce plafond correspond à un TJM d'environ ${TJM_PLAFOND_MICRO} € : au-dessus, la question « micro ou SASU » ne se pose plus, la micro n'est simplement plus accessible. S'y ajoute la limite des frais : en micro, rien n'est déductible au réel — matériel coûteux, sous-traitance ou local font fondre l'avantage du forfait.`,
+        "C'est dans cette zone haute que la SASU déploie ses atouts : pas de plafond, frais déductibles, impôt sur les sociétés à 15 % jusqu'à 42 500 € de bénéfice, et surtout l'arbitrage salaire/dividendes qui permet de piloter précisément ce que vous sortez et ce que vous capitalisez dans la société.",
+      ],
+    },
+    {
+      heading: "ARE, dividendes, crédibilité : les critères qui départagent",
+      paragraphs: [
+        "En sortie de CDI avec des droits au chômage, la SASU offre un montage que la micro ne permet pas : président sans salaire, ARE maintenue à 100 %, rémunération en dividendes quand les résultats arrivent. En micro, chaque euro de chiffre d'affaires encaissé vient réduire l'allocation mensuelle. Si vous comptez sur l'ARE comme filet de lancement, ce seul critère peut trancher le débat.",
+        "Restent les critères d'image et de croissance : une SASU facture avec une TVA récupérable dès le premier euro, rassure certains grands comptes, et accueille plus tard des associés ou un rachat. La micro reste imbattable pour tester une activité ou compléter un revenu. Le simulateur ci-dessus place les deux statuts côte à côte sur votre TJM réel — c'est le point de départ le plus fiable.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "À chiffre d'affaires égal, qui laisse le plus de net : micro ou SASU ?",
+      answer:
+        "Sous le plafond de la micro (83 600 € de CA en services) et avec des frais réels faibles, la micro-entreprise laisse quasi systématiquement plus de net : cotisations d'environ 24,6 % du CA en BNC contre 75 à 80 % de charges sur le salaire du président de SASU. La SASU ne comble l'écart qu'en jouant sur les dividendes (flat tax 31,4 % après IS) et la déduction des frais réels — d'autant plus efficace que le chiffre d'affaires est élevé.",
+    },
+    {
+      question: "Peut-on commencer en micro-entreprise et passer en SASU ensuite ?",
+      answer:
+        "Oui, et c'est le parcours le plus courant : on teste l'activité en micro (création gratuite, zéro comptabilité), puis on crée une SASU quand le chiffre d'affaires approche le plafond de 83 600 €, que les frais réels grossissent ou qu'un besoin d'optimisation apparaît. La bascule implique de créer la société, transférer les contrats clients et radier la micro — quelques semaines de formalités, sans continuité juridique entre les deux structures.",
+    },
+    {
+      question: "Quel statut choisir en sortie de CDI avec des droits au chômage ?",
+      answer:
+        "La SASU permet le cumul le plus favorable : un président sans salaire conserve 100 % de son ARE et peut se verser des dividendes, qui ne sont pas déduits de l'allocation. En micro-entreprise, France Travail déduit chaque mois environ 70 % du chiffre d'affaires encaissé (après abattement) de l'ARE versée. Pour maximiser le filet pendant le lancement, la SASU l'emporte ; la micro reste plus simple si votre activité démarre doucement.",
+    },
+    {
+      question: "La SASU vaut-elle le coup sous le plafond de la micro ?",
+      answer:
+        "Rarement pour le seul revenu net : sous 83 600 € de CA avec peu de frais, la micro laisse davantage, sans comptable (compter 1 000 à 2 000 €/an de frais de gestion en SASU). La SASU se justifie malgré tout dans trois cas : cumul ARE en sortie de CDI, frais professionnels élevés à déduire, ou clients grands comptes exigeant une société. Sinon, commencez en micro et basculez quand les chiffres l'imposent.",
+    },
+  ],
+  related: [
+    "simulateur-micro-entreprise",
+    "simulateur-sasu",
+    "sasu-ou-eurl",
+  ],
+};
+
+// ----------------------------------------------- PORTAGE OU MICRO-ENTREPRISE
+const PORTAGE_OU_MICRO: StatutPage = {
+  slug: "portage-salarial-ou-micro-entreprise",
+  statuts: ["portage", "micro"],
+  breadcrumb: "Portage ou micro-entreprise",
+  metaTitle: "Portage salarial ou micro-entreprise : comparatif 2026",
+  metaDescription: `Portage salarial ou micro-entreprise en 2026 ? À TJM égal, la micro conserve environ ${PCT_MICRO_400} % du chiffre d'affaires en net contre ${PCT_PORTAGE_400} % en portage — mais le portage ouvre le chômage. Comparatif validé URSSAF.`,
+  h1: "Portage salarial ou micro-entreprise : sécurité contre net maximal",
+  intro: `Même métier, même TJM, deux mondes : à 400 €/jour, la micro-entreprise vous laisse environ ${PCT_MICRO_400} % du chiffre d'affaires en net après cotisations et impôt, le portage environ ${PCT_PORTAGE_400} %. La différence achète une vraie protection — chômage compris. Ce comparatif chiffre exactement ce que chaque statut garde et ce qu'il couvre, pour choisir en connaissance de cause.`,
+  sections: [
+    {
+      heading: "À TJM égal, l'écart de net est massif",
+      paragraphs: [
+        `Le chemin de l'argent explique tout. En micro, le chiffre d'affaires supporte environ 24,6 % de cotisations (BNC 2026) puis l'impôt après abattement de 34 % : sur un TJM de 400 €, il reste environ ${PCT_MICRO_400} % en net dans votre poche. En portage, la société prélève d'abord ses frais de gestion (souvent 5 à 10 %), puis l'enveloppe restante subit cotisations patronales ET salariales du régime général avant impôt : il reste environ ${PCT_PORTAGE_400} % du même chiffre d'affaires.`,
+        "Sur une année pleine à 400 €/jour (environ 79 000 € facturés), l'écart se compte en dizaines de milliers d'euros. Aucun des deux statuts ne « triche » : le portage transforme la différence en droits sociaux. La vraie question est de savoir si ces droits valent, pour vous, ce qu'ils coûtent.",
+      ],
+    },
+    {
+      heading: "Ce que le portage achète avec la différence",
+      paragraphs: [
+        "Le portage est le seul statut freelance qui cotise à l'assurance chômage : mission terminée, vous pouvez ouvrir des droits à l'ARE comme n'importe quel salarié. S'ajoutent la retraite complète du régime général (base + complémentaire), la prévoyance, la mutuelle d'entreprise, et un bulletin de salaire qui change tout face à un banquier pour un crédit immobilier. La micro n'offre rien de tout cela : retraite réduite, pas de chômage, et des revenus que les banques regardent avec prudence les premières années.",
+        "Le portage épargne aussi la gestion : pas de facturation à relancer, pas de déclarations URSSAF, pas de franchise de TVA à surveiller. Pour une mission longue chez un grand compte qui exige un cadre salarié, ou une transition entre deux CDI, ce confort a une vraie valeur — que le simulateur ne mesure pas, mais que votre tranquillité connaît.",
+      ],
+    },
+    {
+      heading: "Plafonds, TVA, minimums : les contraintes croisées",
+      paragraphs: [
+        `Chaque statut a sa zone d'exclusion. La micro plafonne à 83 600 € de chiffre d'affaires en prestations — environ ${TJM_PLAFOND_MICRO} €/jour au rythme de 18 jours sur 11 mois — et sa franchise de TVA saute dès 37 500 €. Le portage, lui, a un plancher : la plupart des sociétés refusent les TJM sous 250 à 300 €, car l'enveloppe ne suffit plus à constituer un bulletin de paie conforme au minimum conventionnel.`,
+        "La règle de décision tient en deux profils. Vous optimisez le net, vos frais sont faibles, vous tolérez le risque : micro, tant que le plafond le permet. Vous voulez un filet (chômage, retraite pleine, crédit immobilier en vue) ou votre client impose un cadre salarié : portage, en acceptant son coût. Beaucoup de freelances font d'ailleurs les deux au fil de leur carrière — le simulateur vous dit ce que chaque option vaut à votre TJM.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "Quel écart de revenu entre portage et micro-entreprise à TJM égal ?",
+      answer: `Sur un TJM de 400 € (environ 79 000 € facturés par an à 18 jours par mois sur 11 mois), la micro-entreprise BNC laisse environ ${PCT_MICRO_400} % du chiffre d'affaires en net après cotisations et impôt, contre environ ${PCT_PORTAGE_400} % en portage salarial — frais de gestion et cotisations du régime général déduits. L'écart, plusieurs centaines d'euros par mois, correspond au prix de la protection sociale complète du portage (chômage, retraite, prévoyance).`,
+    },
+    {
+      question: "Le portage salarial est-il plus sûr que la micro-entreprise ?",
+      answer:
+        "Sur le plan social, oui : le salarié porté cotise au chômage (ARE possible en fin de mission), valide une retraite complète au régime général et bénéficie d'une prévoyance et d'une mutuelle d'entreprise. Le micro-entrepreneur n'a ni chômage, ni retraite complète, et sa protection maladie est minimale. En contrepartie, le portage rend nettement moins de net à chiffre d'affaires égal — la « sécurité » est exactement ce que finance la différence.",
+    },
+    {
+      question: "Peut-on cumuler portage salarial et micro-entreprise ?",
+      answer:
+        "Oui, le cumul est légal et courant : le portage est un contrat de travail, la micro une activité indépendante, et rien n'interdit d'avoir les deux. Schéma classique : les grosses missions longues passent en portage (protection, bulletin de paie), les petites prestations ponctuelles en micro (net maximal, souplesse). Attention seulement à d'éventuelles clauses d'exclusivité dans le contrat de portage et au plafond de CA de la micro.",
+    },
+    {
+      question: "Qui devrait choisir le portage plutôt que la micro-entreprise ?",
+      answer:
+        "Le portage s'impose dans quatre situations : vous quittez un CDI et voulez continuer à vous constituer des droits au chômage ; vous préparez un crédit immobilier et avez besoin de bulletins de salaire ; votre client (souvent grand compte) exige un intervenant salarié ; ou votre TJM dépasse ce que le plafond de la micro autorise et vous ne voulez pas créer de société. Sinon, à petit niveau de frais et sous le plafond, la micro maximise votre revenu.",
+    },
+  ],
+  related: [
+    "simulateur-portage-salarial",
+    "simulateur-micro-entreprise",
+    "portage-salarial-ou-cdi",
+  ],
+};
+
+// ------------------------------------------------------- PORTAGE OU CDI
+const PORTAGE_OU_CDI: StatutPage = {
+  slug: "portage-salarial-ou-cdi",
+  statuts: ["portage", "cdi"],
+  breadcrumb: "Portage salarial ou CDI",
+  metaTitle: "Portage salarial ou CDI en 2026 : à quel TJM ça vaut le coup ?",
+  metaDescription: `Rester en CDI ou passer en portage salarial en 2026 ? Le TJM nécessaire pour égaler votre salaire (environ ${TJM_PORTAGE_CDI} €/jour pour 55 000 € brut), ce que vous gardez du salariat, ce que vous perdez. Validé URSSAF.`,
+  h1: "Portage salarial ou CDI : à partir de quel TJM ça vaut le coup ?",
+  intro: `Le portage est la sortie de CDI la moins risquée : vous restez salarié, avec chômage et retraite — seul l'employeur change de nature. Mais ce confort se paie : pour égaler un CDI à 55 000 € brut (${NET_CDI_MOIS} €/mois net après impôt), il faut facturer environ ${TJM_PORTAGE_CDI} €/jour, soit ${CA_PORTAGE_CDI} € dans l'année. Ce simulateur calcule votre propre point de bascule.`,
+  sections: [
+    {
+      heading: "Le portage garde presque tout du salariat",
+      paragraphs: [
+        "C'est la spécificité du portage face à tous les autres statuts freelance : vous signez un vrai contrat de travail. Assurance chômage (l'ARE s'ouvre en fin de mission), retraite complète du régime général, prévoyance, mutuelle, bulletins de salaire — un banquier ou un bailleur ne voit quasiment pas la différence avec votre CDI actuel. Aucune création d'entreprise, aucune comptabilité, aucune URSSAF à gérer.",
+        "Ce qui change : c'est vous qui trouvez les missions et négociez le tarif, et c'est votre chiffre d'affaires qui finance tout — les frais de gestion de la société de portage (5 à 10 %), puis les cotisations patronales ET salariales. En CDI, l'employeur paie sa part au-dessus de votre brut ; en portage, tout sort de votre enveloppe. D'où un besoin de facturation nettement supérieur au « salaire équivalent ».",
+      ],
+    },
+    {
+      heading: "Le TJM qu'il faut viser pour ne pas perdre",
+      paragraphs: [
+        `Sur le scénario de référence du simulateur (18 jours facturés par mois, 11 mois, 3 000 € de frais professionnels), égaler le net d'un CDI de cadre à 55 000 € brut exige un TJM d'environ ${TJM_PORTAGE_CDI} € — le seuil le plus élevé des cinq statuts freelance, précisément parce que le portage porte la protection la plus complète. Le tableau plus bas décline ce seuil pour chaque niveau de salaire, de 35 000 € à 120 000 € brut.`,
+        "Deux curseurs pèsent autant que le TJM : les jours réellement facturés (18 par mois est déjà un bon taux d'occupation — les intermissions ne sont pas payées) et le douzième mois sans facturation qui remplace vos congés payés. Passez vos propres valeurs dans le simulateur avant de négocier : un TJM correct à 20 jours facturés devient perdant à 15.",
+      ],
+    },
+    {
+      heading: "Les vrais termes de l'arbitrage",
+      paragraphs: [
+        "Face à votre CDI, le portage n'apporte ni économie de charges ni magie fiscale — il rend même un peu moins à revenu facturé égal. Ce qu'il apporte : la liberté de choisir missions, clients et rythme, un tarif que VOUS négociez (et qui peut monter bien plus vite qu'un salaire), et la possibilité de tester l'indépendance sans brûler le filet du chômage. Ce qu'il retire : la stabilité d'un revenu garanti pendant les creux, les congés payés implicites, et les avantages annexes (participation, titres-restaurant, mutuelle familiale).",
+        "La bonne lecture n'est donc pas « portage contre CDI » mais « quel TJM transforme ma liberté en gain net ». Sous le seuil, vous payez votre indépendance ; au-dessus, elle vous paie. Et si votre TJM cible dépasse nettement le seuil, comparez aussi micro, EI et SASU : à protection moindre, elles rendent beaucoup plus — c'est tout l'objet de ce simulateur.",
+      ],
+    },
+  ],
+  faq: [
+    {
+      question: "Quel TJM demander en portage pour ne pas perdre par rapport à mon CDI ?",
+      answer: `Pour un CDI de cadre à 55 000 € brut par an (${NET_CDI_MOIS} €/mois net après impôt), il faut environ ${TJM_PORTAGE_CDI} €/jour en portage salarial, à raison de 18 jours facturés par mois sur 11 mois — soit environ ${CA_PORTAGE_CDI} € de chiffre d'affaires annuel. Le seuil varie quasi proportionnellement avec le salaire : le tableau du simulateur le donne pour chaque niveau de brut, et le calcul s'ajuste à vos jours facturés réels.`,
+    },
+    {
+      question: "Perd-on ses droits au chômage en passant du CDI au portage ?",
+      answer:
+        "Non — c'est même l'argument central du portage. Le salarié porté cotise à l'assurance chômage comme tout salarié : vos droits acquis en CDI sont conservés, et vos missions en portage en génèrent de nouveaux. En fin de mission, vous pouvez ouvrir ou recharger des droits à l'ARE auprès de France Travail. Aucun autre statut freelance (micro, EI, EURL, SASU) n'offre cette continuité.",
+    },
+    {
+      question: "Le portage salarial compte-t-il pour la retraite comme un CDI ?",
+      answer:
+        "Oui : le salarié porté cotise au régime général (retraite de base) et à l'AGIRC-ARRCO (complémentaire) exactement comme un cadre en CDI, à hauteur du salaire reconstitué après frais de gestion. À chiffre d'affaires suffisant, vous validez vos trimestres et accumulez des points dans les mêmes conditions. C'est une différence majeure avec la micro-entreprise, où les droits retraite sont sensiblement plus faibles.",
+    },
+    {
+      question: "Faut-il quitter son CDI pour le portage salarial ?",
+      answer:
+        "Le portage est le meilleur « sas » si vous voulez tester l'indépendance sans risque : rupture conventionnelle pour conserver l'ARE, puis missions portées qui maintiennent chômage et retraite. Il devient discutable si votre TJM est confortablement au-dessus du seuil d'équivalence : sa double couche de frais et cotisations en fait le statut le moins rémunérateur, et une micro, une EI ou une SASU rendrait nettement plus. Simulez les cinq statuts avant de signer.",
+    },
+  ],
+  related: [
+    "simulateur-portage-salarial",
+    "portage-salarial-ou-micro-entreprise",
+    "simulateur-sasu",
+  ],
+};
+
+export const PAGES: StatutPage[] = [
+  HOME,
+  MICRO,
+  EI,
+  EURL,
+  SASU,
+  PORTAGE,
+  SASU_OU_EURL,
+  MICRO_OU_SASU,
+  PORTAGE_OU_MICRO,
+  PORTAGE_OU_CDI,
+  TJM_HUB,
+  ...TJM_PAGES,
+];
 
 export const ROUTE_SLUGS: string[] = PAGES.filter((p) => p.slug).map(
   (p) => p.slug,
@@ -356,4 +690,10 @@ export function getPage(pathname: string): StatutPage {
 
 export function pageUrl(page: StatutPage): string {
   return page.slug ? `${SITE}/${page.slug}/` : `${SITE}/`;
+}
+
+// Chemin (absolu, sans domaine) de l'image Open Graph de la page.
+// Générées par scripts/og-image.ts, référencées par scripts/prerender.ts.
+export function ogImagePath(page: StatutPage): string {
+  return page.slug ? `/og-${page.slug}.png` : "/og.png";
 }

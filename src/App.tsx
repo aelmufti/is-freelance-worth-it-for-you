@@ -32,7 +32,7 @@ import { Faq } from "./components/Faq";
 import { BreakEvenTable } from "./components/BreakEvenTable";
 import { MentionsLegales } from "./components/MentionsLegales";
 import { SectionTitle, euro } from "./components/ui";
-import { PAGES, pageUrl } from "./lib/pages";
+import { CONTENT_UPDATED, PAGES, pageUrl } from "./lib/pages";
 import type { StatutPage } from "./lib/pages";
 
 const SOURCES: Array<{ label: string; url: string }> = [
@@ -66,6 +66,17 @@ const SOURCES: Array<{ label: string; url: string }> = [
   },
 ];
 
+// Format JJ mois AAAA sans passer par Date (évite tout décalage de fuseau
+// entre prerender et hydration).
+const MOIS = [
+  "janvier", "février", "mars", "avril", "mai", "juin",
+  "juillet", "août", "septembre", "octobre", "novembre", "décembre",
+];
+const updatedLabel = (() => {
+  const [y, m, d] = CONTENT_UPDATED.split("-").map(Number);
+  return `${d} ${MOIS[m - 1]} ${y}`;
+})();
+
 export default function App({ page }: { page: StatutPage }) {
   const [input, setInput] = useState<SimulationInput>(() => ({
     ...DEFAULT_INPUT,
@@ -74,10 +85,13 @@ export default function App({ page }: { page: StatutPage }) {
   const [params, setParams] = useState<FiscalParams>(DEFAULT_PARAMS);
   const [showLegal, setShowLegal] = useState(false);
   const [focusStatuts, setFocusStatuts] = useState<StatutId[] | null>(
-    page.statut ? [page.statut] : null,
+    page.statuts ?? null,
   );
-  const isStatutPage = Boolean(page.statut);
+  const isStatutPage = Boolean(page.breadcrumb);
   const canonicalUrl = pageUrl(page);
+  const relatedPages = (page.related ?? [])
+    .map((slug) => PAGES.find((p) => p.slug === slug))
+    .filter((p): p is StatutPage => Boolean(p));
 
   // Les graphiques recharts mesurent leur conteneur et utilisent des
   // identifiants SVG dynamiques — incompatibles avec l'hydration. On les
@@ -209,6 +223,30 @@ export default function App({ page }: { page: StatutPage }) {
           </div>
         )}
 
+        {/* À LIRE AUSSI — maillage interne dans le corps de page */}
+        {relatedPages.length > 0 && (
+          <nav
+            aria-label="À lire aussi"
+            className="border-[3px] border-ink bg-white p-5 shadow-brutal"
+          >
+            <div className="text-sm font-extrabold uppercase tracking-[0.12em]">
+              À lire aussi
+            </div>
+            <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              {relatedPages.map((p) => (
+                <li key={p.slug}>
+                  <a
+                    href={`/${p.slug}/`}
+                    className="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                  >
+                    {`▸ ${p.breadcrumb ?? p.slug}`}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
         {/* GRAPHIQUES */}
         <section className="space-y-6">
           <SectionTitle>
@@ -268,6 +306,9 @@ export default function App({ page }: { page: StatutPage }) {
           <h3 className="text-sm font-extrabold uppercase tracking-[0.12em]">
             Sources officielles (taux 2026)
           </h3>
+          <p className="mt-1 text-xs font-bold opacity-70">
+            {`Taux et barèmes vérifiés le ${updatedLabel}.`}
+          </p>
           <ul className="mt-2 grid gap-1 text-xs md:grid-cols-2">
             {SOURCES.map((s) => (
               <li key={s.url}>
@@ -336,14 +377,14 @@ export default function App({ page }: { page: StatutPage }) {
         </div>
 
         <nav
-          aria-label="Simulateurs par statut"
+          aria-label="Simulateurs et comparatifs"
           className="mx-auto mb-6 max-w-xl normal-case tracking-normal"
         >
           <div className="text-sm font-extrabold uppercase tracking-[0.06em]">
-            Simulateurs par statut
+            Simulateurs et comparatifs
           </div>
           <ul className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-bold">
-            {PAGES.map((p) => (
+            {PAGES.filter((p) => !p.hideFromFooter).map((p) => (
               <li key={p.slug}>
                 <a
                   href={p.slug ? `/${p.slug}/` : "/"}

@@ -605,3 +605,25 @@ export function tjmEquivalentCdi(
   if (!statut({ ...input, tjm: hi }, p).eligible) return null;
   return hi;
 }
+
+/**
+ * Salaire brut annuel CDI dont le net après impôt égale le net annuel visé
+ * (recherche binaire — réciproque de tjmEquivalentCdi, côté salarié).
+ */
+export function brutCdiEquivalent(
+  input: SimulationInput,
+  p: FiscalParams,
+  netAnnuelCible: number,
+): number | null {
+  let lo = 10000;
+  let hi = 1000000;
+  const net = (brut: number) =>
+    calcCdi({ ...input, cdiBrutAnnuel: brut }, p).netAnnuel;
+  if (net(hi) < netAnnuelCible || net(lo) > netAnnuelCible) return null;
+  for (let i = 0; i < 40; i++) {
+    const mid = (lo + hi) / 2;
+    if (net(mid) >= netAnnuelCible) hi = mid;
+    else lo = mid;
+  }
+  return hi;
+}
