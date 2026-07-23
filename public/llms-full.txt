@@ -1168,6 +1168,224 @@ Partez du net mensuel de votre salaire actuel et cherchez, dans le tableau des s
 
 ---
 
+# Observatoire du TJM freelance 2026
+
+URL : https://freelance-ou-cdi.fr/observatoire-tjm-2026/
+
+Combien facture vraiment un freelance selon son métier — et surtout, combien lui reste-t-il en net ? Cet observatoire croise les TJM médians observés sur le marché en 2026 (d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)) avec le revenu net réellement disponible après cotisations et impôt, calculé par notre moteur validé URSSAF. Chaque métier a sa page détaillée, statut par statut.
+
+## Ce que gagnent les freelances par métier (médiane 2026)
+
+Consultant stratégie — TJM médian 650 €/jour (fourchette 450–950 €) : jusqu'à 5 663 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 106 500 € brut par an.
+
+Expert cybersécurité — TJM médian 650 €/jour (fourchette 520–900 €) : jusqu'à 5 663 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 106 500 € brut par an.
+
+Data scientist — TJM médian 645 €/jour (fourchette 500–850 €) : jusqu'à 5 625 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 105 500 € brut par an.
+
+DevOps / cloud — TJM médian 600 €/jour (fourchette 500–800 €) : jusqu'à 5 288 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 98 500 € brut par an.
+
+Data engineer — TJM médian 600 €/jour (fourchette 450–800 €) : jusqu'à 5 288 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 98 500 € brut par an.
+
+Product manager — TJM médian 595 €/jour (fourchette 450–800 €) : jusqu'à 5 243 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 97 500 € brut par an.
+
+Consultant marketing — TJM médian 590 €/jour (fourchette 350–800 €) : jusqu'à 5 199 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 97 000 € brut par an.
+
+Développeur web — TJM médian 535 €/jour (fourchette 350–900 €) : jusqu'à 4 708 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 86 500 € brut par an.
+
+Consultant SEO — TJM médian 450 €/jour (fourchette 350–650 €) : jusqu'à 3 979 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 71 500 € brut par an.
+
+Designer UX/UI — TJM médian 450 €/jour (fourchette 300–650 €) : jusqu'à 3 979 €/mois net au mieux (EI au réel), soit l'équivalent d'un CDI à environ 71 500 € brut par an.
+
+## Comment lire ces chiffres
+
+Les TJM affichés sont des médianes indicatives issues des baromètres publics : ils donnent un ordre de grandeur, pas une garantie. Le tarif réel dépend de la séniorité, de la spécialité, du secteur du client et de la région — hors Île-de-France, les TJM du numérique sont en moyenne inférieurs de 7 à 10 %.
+
+Le net mensuel, lui, est calculé : à partir de chaque TJM médian, le moteur applique les cotisations, l'impôt sur le revenu et les frais du scénario de référence (18 jours facturés par mois sur 11 mois, 3 000 € de frais pro, célibataire sans enfant), puis retient le statut le plus avantageux. C'est ce croisement — tarif de marché d'un côté, net réel de l'autre — qui manque à la plupart des baromètres.
+
+## Du TJM au choix de statut
+
+Un TJM élevé ne dit rien du net tant qu'on n'a pas choisi son statut : à 650 €/jour, l'écart entre la micro (quand elle reste accessible) et le portage salarial dépasse largement 1 000 €/mois. Le bon réflexe est donc de partir de son métier et de son TJM de marché, puis de simuler les six statuts pour trouver celui qui maximise le net — ou la protection.
+
+Ouvrez la page de votre métier pour le détail complet, ou réglez directement le simulateur sur votre TJM : vous obtiendrez votre net réel, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler.
+
+## Questions fréquentes
+
+### Quel métier freelance a le meilleur TJM en 2026 ?
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), les TJM médians les plus élevés se trouvent en data science (~645 €/jour), en cybersécurité et en conseil en stratégie (~650 €), suivis du cloud/DevOps et du data engineering (~600 €). Le développement web se situe autour de 535 €, le design et le SEO vers 450 €. Ce sont des médianes : les seniors dépassent souvent ces montants.
+
+### Un TJM élevé signifie-t-il un revenu net élevé ?
+
+Pas mécaniquement : le net dépend autant du statut que du TJM. À TJM égal, la micro-entreprise ou l'EI laissent bien plus de net que le portage salarial, qui finance en échange le chômage et une retraite complète. L'observatoire affiche pour chaque métier le net du meilleur statut ; le simulateur compare les six.
+
+### D'où viennent ces TJM par métier ?
+
+Ce sont des médianes indicatives issues des baromètres freelance publics 2026 (Malt, Blog du Modérateur, tjmetre.fr). Elles servent de repère de marché. Les revenus nets associés, eux, sont calculés par notre moteur, validé contre le simulateur officiel de l'URSSAF. Vérifiez le baromètre Malt pour un chiffrage à jour de votre spécialité.
+
+---
+
+# Méthodologie : comment les calculs sont faits
+
+URL : https://freelance-ou-cdi.fr/methodologie/
+
+Ce simulateur compare, pour un même chiffre d'affaires, le revenu net réellement disponible dans six statuts : micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial et CDI cadre. Cette page détaille exactement ce qui est calculé, avec quelles hypothèses, quelles sources et quelles limites — pour que vous puissiez juger de la fiabilité des chiffres, et les reproduire.
+
+## Ce que le moteur calcule, étape par étape
+
+Le point de départ est le chiffre d'affaires : taux journalier moyen (TJM) multiplié par le nombre de jours réellement facturés dans l'année. Le moteur en déduit, pour chaque statut, les cotisations sociales, l'impôt sur le revenu (et, le cas échéant, l'impôt sur les sociétés et la flat tax sur les dividendes), puis les frais professionnels, pour arriver au revenu net mensuel et annuel après impôt.
+
+Les cotisations dépendent du régime : un pourcentage du chiffre d'affaires en micro-entreprise (environ 24,6 % en BNC), des cotisations TNS en EI et EURL (de l'ordre de 45 % du revenu après l'abattement d'assiette de 26 % de la réforme 2026), et des cotisations du régime général en SASU et portage (75 à 80 % de charges sur le salaire, part patronale comprise). L'impôt sur le revenu applique le barème progressif 2026 avec le quotient familial du foyer renseigné.
+
+## Impôt sur les sociétés, dividendes et flat tax
+
+Pour l'EURL et la SASU à l'impôt sur les sociétés, le bénéfice non versé en rémunération est taxé à l'IS : 15 % jusqu'à 42 500 € de bénéfice, 25 % au-delà. Ce qui est ensuite distribué en dividendes supporte la flat tax (prélèvement forfaitaire unique) de 31,4 %, soit 12,8 % d'impôt sur le revenu et 18,6 % de prélèvements sociaux dans les hypothèses retenues.
+
+Une règle propre à l'EURL est modélisée : la part de dividendes qui dépasse 10 % du capital social bascule des prélèvements forfaitaires vers les cotisations sociales TNS. C'est ce qui explique que la stratégie « petit salaire, gros dividendes » soit bien plus efficace en SASU qu'en EURL, à capital modeste.
+
+## Le scénario de référence et ses hypothèses
+
+Sauf réglage de votre part, les chiffres cités dans les pages reposent sur un scénario de référence : 18 jours facturés par mois sur 11 mois (soit 198 jours par an, un taux d'occupation réaliste qui réserve du temps pour la prospection, l'intermission et les congés), 3 000 € de frais professionnels annuels, un foyer d'un célibataire sans enfant, et un CDI de comparaison à 55 000 € brut cadre. Chaque curseur du simulateur modifie ces hypothèses en temps réel.
+
+Le CDI « équivalent » affiché est calculé à net égal : c'est le salaire brut qui laisserait le même montant sur le compte après cotisations salariales et impôt. Cette équivalence ne valorise pas l'assurance chômage, les congés payés ni la retraite du salarié — elle sert de repère, pas de verdict.
+
+## Validation, limites et fraîcheur
+
+Les résultats sont comparés automatiquement au moteur de calcul open source « modele-social », celui qui équipe le simulateur officiel mon-entreprise.urssaf.fr : les écarts sont inférieurs à 2 % sur les cas testés. Cette démarche est purement technique — ce site est indépendant et n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration.
+
+Certains éléments ne sont pas tous modélisés : cotisation foncière des entreprises (CFE), plafonnement du quotient familial, réduction générale de cotisations, mutuelle obligatoire, prévoyance et cas particuliers. Les avantages salarié (titres-restaurant, transport, mutuelle) sont une estimation indicative, affichée à part et exclue du net comparé. Le simulateur est une aide à la décision, pas un substitut à un expert-comptable. Les taux et barèmes sont datés dans le pied de page « Sources » et mis à jour à chaque évolution réglementaire.
+
+## Questions fréquentes
+
+### Les calculs de ce simulateur sont-ils fiables ?
+
+Ils sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF (celui de mon-entreprise.urssaf.fr), avec des écarts inférieurs à 2 % sur les cas testés. Le code du moteur et tous les taux 2026 sont publics. C'est une aide à la décision indicative, pas un avis d'expert-comptable : certains cas particuliers ne sont pas modélisés.
+
+### Ce site est-il affilié à l'URSSAF ?
+
+Non. Le site est un projet personnel indépendant, sans aucune affiliation ni approbation de l'URSSAF ou d'une administration. La comparaison au moteur « modele-social » est purement technique : elle sert à vérifier la justesse des calculs, pas à revendiquer un partenariat.
+
+### À quelle fréquence les taux sont-ils mis à jour ?
+
+Les taux et barèmes sont vérifiés et datés dans le pied de page de chaque page (« Sources officielles »). Ils sont mis à jour à chaque évolution réglementaire significative : barème de l'impôt sur le revenu, taux de cotisations, réforme de l'assiette des indépendants, évolution de la flat tax.
+
+---
+
+# À propos de freelance-ou-cdi.fr
+
+URL : https://freelance-ou-cdi.fr/a-propos/
+
+freelance-ou-cdi.fr est un simulateur gratuit qui répond à une question simple mais mal outillée : entre le CDI et les différents statuts de freelance, qu'est-ce qui vous laisse vraiment le plus sur votre compte en fin de mois ? Voici qui l'édite, pourquoi, et selon quels principes.
+
+## Qui édite ce site
+
+Le site est conçu et développé par Ali El Mufti, développeur indépendant (aelm.dev). C'est un projet personnel, sans société éditrice ni financement publicitaire : il fait partie d'une série d'outils gratuits pensés pour être réellement utiles plutôt que pour capter des données ou vendre un service.
+
+Le code est entièrement open source (licence MIT) et public sur GitHub. N'importe qui peut inspecter le moteur de calcul, vérifier les taux utilisés, signaler une erreur ou proposer une amélioration. Cette transparence est volontaire : sur un sujet d'argent, une « boîte noire » n'inspire pas confiance.
+
+## Pourquoi ce simulateur existe
+
+La plupart des comparateurs répondent à côté de la vraie question. On trouve facilement son chiffre d'affaires ou son « salaire brut », mais rarement le net réellement disponible après cotisations ET impôt, statut par statut, comparé à un CDI équivalent. C'est pourtant ce chiffre-là qui décide d'un passage en indépendant.
+
+L'objectif est donc de donner une réponse honnête et chiffrée, avec ses nuances : ce qu'on gagne en net, mais aussi ce qu'on perd en protection (chômage, congés, retraite). Le simulateur ne pousse aucun statut — il met les faits côte à côte pour que la décision reste la vôtre.
+
+## Nos principes
+
+Gratuité et sans compte : aucune inscription, aucun paywall. Respect de la vie privée : tous les calculs se font dans votre navigateur, aucune donnée saisie n'est envoyée ni stockée sur un serveur. Justesse : les résultats sont validés contre le moteur officiel de l'URSSAF et les taux sont datés.
+
+Indépendance : ce site n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration. Il ne remplace pas un expert-comptable pour votre situation précise, mais vous donne un point de départ fiable pour en discuter — ou simplement pour y voir clair avant de vous lancer.
+
+## Questions fréquentes
+
+### freelance-ou-cdi.fr est-il vraiment gratuit ?
+
+Oui, entièrement : pas de compte, pas de paywall, pas de publicité intrusive. Le code est open source (MIT) et le simulateur fonctionne intégralement dans votre navigateur, sans collecte de données. C'est un projet personnel d'Ali El Mufti, pensé comme un outil d'utilité publique.
+
+### Mes données sont-elles collectées ?
+
+Non. Tous les calculs sont réalisés localement dans votre navigateur : le TJM, les jours, votre situation familiale ou votre salaire ne sont jamais envoyés ni enregistrés sur un serveur. Vous pouvez utiliser le simulateur en toute confidentialité.
+
+---
+
+# Glossaire du freelance : les termes qui comptent
+
+URL : https://freelance-ou-cdi.fr/glossaire/
+
+Passer en freelance, c'est apprendre une langue : TJM, TNS, flat tax, abattement, franchise de TVA… Voici les définitions claires des termes qui reviennent dans le simulateur et dans les guides, pour lire ses chiffres sans se tromper.
+
+## TJM (taux journalier moyen)
+
+Le prix de vente hors taxes d'une journée de prestation. Ce n'est pas un salaire : il doit financer les cotisations sociales, l'impôt, les frais professionnels et les jours non facturés (congés, prospection, intermission). Selon le statut, il n'en reste qu'entre 40 et 60 % en net disponible.
+
+## Chiffre d'affaires (CA)
+
+Le total facturé hors taxes sur une période : TJM multiplié par les jours réellement facturés. C'est la base de départ de tous les calculs, avant cotisations et impôt. À ne pas confondre avec le revenu net, qui est ce qu'il reste une fois toutes les charges déduites.
+
+## Cotisations sociales
+
+Les prélèvements qui financent votre protection sociale (maladie, retraite, allocations familiales, et parfois chômage). Leur assiette et leur taux varient fortement selon le statut : un pourcentage du chiffre d'affaires en micro, du revenu en TNS, du salaire en assimilé salarié.
+
+## Micro-entreprise
+
+Régime simplifié en nom propre : cotisations calculées en pourcentage du chiffre d'affaires encaissé, impôt après un abattement forfaitaire, aucune comptabilité. Simple et avantageux à faibles frais, mais plafonné (83 600 € de CA en prestations de services) et sans frais réels déductibles.
+
+## EI au réel (entreprise individuelle au réel)
+
+La micro sans ses deux limites : les frais professionnels sont déduits pour de vrai et il n'y a aucun plafond de chiffre d'affaires. En échange, une vraie comptabilité et un impôt calculé sur le bénéfice réel. Le dirigeant reste travailleur non salarié (TNS).
+
+## EURL
+
+Société à associé unique. Le gérant associé unique est TNS (cotisations allégées). Souvent à l'impôt sur les sociétés, elle permet de piloter sa rémunération et de distribuer des dividendes — mais seule la part sous 10 % du capital social profite de la flat tax.
+
+## SASU
+
+Société par actions à associé unique. Le président est assimilé salarié : meilleure protection sociale (hors chômage), mais cotisations les plus lourdes sur le salaire. Son atout est l'arbitrage salaire/dividendes, ces derniers restant à la flat tax sans plafond.
+
+## Portage salarial
+
+Vous exercez comme un indépendant mais une société de portage vous salarie : elle facture le client, prélève des frais de gestion (5 à 10 %) et vous verse un salaire. Seul statut freelance à ouvrir des droits au chômage, au prix du net le plus bas à chiffre d'affaires égal.
+
+## TNS (travailleur non salarié)
+
+Le régime social des indépendants en nom propre (EI) et des gérants majoritaires (EURL) : cotisations plus légères qu'un salarié (environ 45 % du revenu), mais protection plus modeste et pas d'assurance chômage.
+
+## Assimilé salarié
+
+Le régime social du président de SASU et du salarié porté : rattaché au régime général (comme un cadre) pour la maladie et la retraite, avec des cotisations lourdes. Attention : « assimilé salarié » n'ouvre pas automatiquement le chômage (la SASU non, le portage oui).
+
+## Flat tax (PFU)
+
+Le prélèvement forfaitaire unique sur les dividendes, retenu ici à 31,4 % (12,8 % d'impôt sur le revenu et 18,6 % de prélèvements sociaux). Il s'applique notamment aux dividendes de SASU, et à ceux d'EURL sous le seuil de 10 % du capital social.
+
+## Impôt sur les sociétés (IS)
+
+L'impôt sur le bénéfice des sociétés (EURL et SASU sur option) : 15 % jusqu'à 42 500 € de bénéfice, 25 % au-delà. Le bénéfice non versé en rémunération y est soumis, avant d'être éventuellement distribué en dividendes.
+
+## Abattement forfaitaire
+
+En micro-entreprise, un pourcentage du chiffre d'affaires (34 % en BNC, 50 % ou 71 % ailleurs) déduit d'office pour calculer l'impôt, censé représenter vos frais. Avantageux si vos frais réels sont plus faibles, pénalisant s'ils sont plus élevés — auquel cas l'EI au réel devient préférable.
+
+## Plafond de la micro-entreprise
+
+La limite de chiffre d'affaires pour rester en micro : 83 600 € en prestations de services, 203 100 € en vente de marchandises. Dépassée deux années de suite, elle fait basculer vers l'EI au réel ou une société.
+
+## Franchise de TVA
+
+Le régime qui dispense de facturer la TVA sous certains seuils (environ 37 500 € de CA en services). Distinct du plafond de la micro : on peut rester micro-entrepreneur tout en devant facturer la TVA après avoir dépassé le seuil de franchise.
+
+## ARE (allocation de retour à l'emploi)
+
+L'allocation chômage versée par France Travail. Aucun statut freelance n'en ouvre de nouveaux droits, sauf le portage salarial. Un reliquat d'ARE issu d'un CDI peut toutefois être maintenu et cumulé avec une activité freelance, ce qui sécurise un lancement.
+
+## ACRE
+
+L'aide aux créateurs et repreneurs d'entreprise : une exonération partielle de cotisations sociales sur la première année d'activité, sous conditions. En micro, elle prend la forme de taux de cotisations réduits ; ailleurs, d'une exonération sur les cotisations du dirigeant.
+
+## Net après impôt
+
+Le montant réellement disponible une fois payés les cotisations sociales, les frais professionnels et l'impôt sur le revenu (plus IS et flat tax le cas échéant). C'est le seul chiffre comparable d'un statut à l'autre — et la référence utilisée partout dans ce simulateur.
+
+---
+
 # Convertir un TJM en salaire : le tableau 2026
 
 URL : https://freelance-ou-cdi.fr/tjm-en-salaire/
@@ -2343,6 +2561,446 @@ Dans le meilleur statut (EI au réel), il faut facturer environ 138 600 € par 
 ### 6 000 € net par mois en freelance, ça vaut quel salaire ?
 
 Environ 113 500 € brut par an en CDI cadre : c'est le salaire qui laisse le même net après cotisations salariales et impôt. L'équivalence ne compte ni le chômage, ni les congés payés, ni la retraite du salarié — à pondérer selon votre situation. Autrement dit, un freelance qui atteint 6 000 € net « travaille » au niveau d'un cadre payé 113 500 € brut, en échange d'une protection sociale qu'il gère lui-même.
+
+---
+
+# TJM développeur web freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/
+
+Le TJM médian observé pour un développeur web full-stack en France tourne autour de 535 €/jour en 2026, dans une fourchette d'environ 350 à 900 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 4 708 €/mois net après impôt — l'équivalent d'un CDI à environ 86 500 € brut. C'est le métier le plus demandé de la tech freelance : les profils full-stack maîtrisant les frameworks récents (React, Node, TypeScript) tirent les tarifs vers le haut, et les seniors dépassent souvent 700 €/jour.
+
+## Le TJM d'un développeur web en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un développeur web full-stack facture le plus souvent entre 350 et 900 €/jour, avec une médiane autour de 535 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 535 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 535 €/jour laissent en net, statut par statut
+
+Sur 105 930 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 4 708 € en EI au réel, 4 025 € en SASU (100 % salaire) et 3 677 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un développeur web qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un développeur web freelance en 2026 ?
+
+Environ 535 €/jour en médiane, dans une fourchette de 350 à 900 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 350 €, les profils seniors ou rares vers 900 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un développeur web freelance en net par mois ?
+
+À 535 €/jour et 18 jours facturés par mois sur 11 mois (105 930 € de CA annuel), le meilleur statut (EI au réel) laisse environ 4 708 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 86 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est développeur web freelance ?
+
+Pour maximiser le net : EI au réel (4 708 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (3 677 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un développeur web dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 535 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM DevOps / cloud freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/
+
+Le TJM médian observé pour un ingénieur DevOps / cloud en France tourne autour de 600 €/jour en 2026, dans une fourchette d'environ 500 à 800 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 288 €/mois net après impôt — l'équivalent d'un CDI à environ 98 500 € brut. La rareté des compétences cloud (AWS, Kubernetes, Terraform) maintient les tarifs élevés ; les architectes cloud expérimentés dépassent régulièrement 750 €/jour.
+
+## Le TJM d'un DevOps / cloud en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un ingénieur DevOps / cloud facture le plus souvent entre 500 et 800 €/jour, avec une médiane autour de 600 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 600 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 600 €/jour laissent en net, statut par statut
+
+Sur 118 800 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 288 € en EI au réel, 4 457 € en SASU (100 % salaire) et 4 066 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un DevOps / cloud qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un DevOps / cloud freelance en 2026 ?
+
+Environ 600 €/jour en médiane, dans une fourchette de 500 à 800 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 500 €, les profils seniors ou rares vers 800 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un DevOps / cloud freelance en net par mois ?
+
+À 600 €/jour et 18 jours facturés par mois sur 11 mois (118 800 € de CA annuel), le meilleur statut (EI au réel) laisse environ 5 288 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 98 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est DevOps / cloud freelance ?
+
+Pour maximiser le net : EI au réel (5 288 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (4 066 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un DevOps / cloud dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 600 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM data scientist freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/
+
+Le TJM médian observé pour un data scientist en France tourne autour de 645 €/jour en 2026, dans une fourchette d'environ 500 à 850 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 625 €/mois net après impôt — l'équivalent d'un CDI à environ 105 500 € brut. L'un des TJM médians les plus hauts de la tech. La maîtrise de la mise en production (MLOps) et des sujets d'intelligence artificielle pousse les seniors au-delà de 800 €/jour.
+
+## Le TJM d'un data scientist en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un data scientist facture le plus souvent entre 500 et 850 €/jour, avec une médiane autour de 645 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 645 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 645 €/jour laissent en net, statut par statut
+
+Sur 127 710 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 625 € en EI au réel, 4 755 € en SASU (100 % salaire) et 4 335 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un data scientist qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un data scientist freelance en 2026 ?
+
+Environ 645 €/jour en médiane, dans une fourchette de 500 à 850 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 500 €, les profils seniors ou rares vers 850 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un data scientist freelance en net par mois ?
+
+À 645 €/jour et 18 jours facturés par mois sur 11 mois (127 710 € de CA annuel), le meilleur statut (EI au réel) laisse environ 5 625 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 105 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est data scientist freelance ?
+
+Pour maximiser le net : EI au réel (5 625 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (4 335 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un data scientist dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 645 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM data engineer freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/
+
+Le TJM médian observé pour un data engineer / analyste data en France tourne autour de 600 €/jour en 2026, dans une fourchette d'environ 450 à 800 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 288 €/mois net après impôt — l'équivalent d'un CDI à environ 98 500 € brut. Data engineering et analytics (BigQuery, Snowflake, dbt) : demande forte et tarifs proches des data scientists. Hors Île-de-France, comptez environ 9 % de moins sur ces profils.
+
+## Le TJM d'un data engineer en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un data engineer / analyste data facture le plus souvent entre 450 et 800 €/jour, avec une médiane autour de 600 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 600 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 600 €/jour laissent en net, statut par statut
+
+Sur 118 800 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 288 € en EI au réel, 4 457 € en SASU (100 % salaire) et 4 066 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un data engineer qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un data engineer freelance en 2026 ?
+
+Environ 600 €/jour en médiane, dans une fourchette de 450 à 800 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 450 €, les profils seniors ou rares vers 800 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un data engineer freelance en net par mois ?
+
+À 600 €/jour et 18 jours facturés par mois sur 11 mois (118 800 € de CA annuel), le meilleur statut (EI au réel) laisse environ 5 288 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 98 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est data engineer freelance ?
+
+Pour maximiser le net : EI au réel (5 288 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (4 066 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un data engineer dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 600 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM product manager freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-product-manager/
+
+Le TJM médian observé pour un product manager / chef de projet digital en France tourne autour de 595 €/jour en 2026, dans une fourchette d'environ 450 à 800 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 243 €/mois net après impôt — l'équivalent d'un CDI à environ 97 500 € brut. Le TJM médian d'un product manager ou chef de projet digital est solide, mais très dépendant du secteur client : une scale-up bien financée paie souvent mieux qu'un grand compte traditionnel.
+
+## Le TJM d'un product manager en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un product manager / chef de projet digital facture le plus souvent entre 450 et 800 €/jour, avec une médiane autour de 595 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 595 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 595 €/jour laissent en net, statut par statut
+
+Sur 117 810 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 243 € en EI au réel, 4 424 € en SASU (100 % salaire) et 4 036 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un product manager qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un product manager freelance en 2026 ?
+
+Environ 595 €/jour en médiane, dans une fourchette de 450 à 800 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 450 €, les profils seniors ou rares vers 800 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un product manager freelance en net par mois ?
+
+À 595 €/jour et 18 jours facturés par mois sur 11 mois (117 810 € de CA annuel), le meilleur statut (EI au réel) laisse environ 5 243 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 97 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est product manager freelance ?
+
+Pour maximiser le net : EI au réel (5 243 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (4 036 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un product manager dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 595 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM consultant stratégie freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/
+
+Le TJM médian observé pour un consultant en stratégie / management de transition en France tourne autour de 650 €/jour en 2026, dans une fourchette d'environ 450 à 950 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 663 €/mois net après impôt — l'équivalent d'un CDI à environ 106 500 € brut. La fourchette est large : un consultant junior tourne autour de 450 €/jour, tandis que les managers de transition atteignent couramment 1 000 à 1 200 €/jour.
+
+## Le TJM d'un consultant stratégie en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un consultant en stratégie / management de transition facture le plus souvent entre 450 et 950 €/jour, avec une médiane autour de 650 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 650 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 650 €/jour laissent en net, statut par statut
+
+Sur 128 700 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 663 € en EI au réel, 4 789 € en SASU (100 % salaire) et 4 365 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un consultant stratégie qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un consultant stratégie freelance en 2026 ?
+
+Environ 650 €/jour en médiane, dans une fourchette de 450 à 950 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 450 €, les profils seniors ou rares vers 950 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un consultant stratégie freelance en net par mois ?
+
+À 650 €/jour et 18 jours facturés par mois sur 11 mois (128 700 € de CA annuel), le meilleur statut (EI au réel) laisse environ 5 663 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 106 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est consultant stratégie freelance ?
+
+Pour maximiser le net : EI au réel (5 663 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (4 365 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un consultant stratégie dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 650 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM consultant marketing freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/
+
+Le TJM médian observé pour un consultant marketing digital en France tourne autour de 590 €/jour en 2026, dans une fourchette d'environ 350 à 800 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 199 €/mois net après impôt — l'équivalent d'un CDI à environ 97 000 € brut. Le baromètre Malt situe le TJM médian d'un consultant marketing confirmé autour de 590 €/jour, avec des juniors vers 300 € et des seniors au-delà de 800 €.
+
+## Le TJM d'un consultant marketing en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un consultant marketing digital facture le plus souvent entre 350 et 800 €/jour, avec une médiane autour de 590 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 590 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 590 €/jour laissent en net, statut par statut
+
+Sur 116 820 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 199 € en EI au réel, 4 390 € en SASU (100 % salaire) et 4 006 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un consultant marketing qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un consultant marketing freelance en 2026 ?
+
+Environ 590 €/jour en médiane, dans une fourchette de 350 à 800 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 350 €, les profils seniors ou rares vers 800 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un consultant marketing freelance en net par mois ?
+
+À 590 €/jour et 18 jours facturés par mois sur 11 mois (116 820 € de CA annuel), le meilleur statut (EI au réel) laisse environ 5 199 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 97 000 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est consultant marketing freelance ?
+
+Pour maximiser le net : EI au réel (5 199 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (4 006 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un consultant marketing dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 590 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM consultant SEO freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/
+
+Le TJM médian observé pour un consultant SEO / acquisition en France tourne autour de 450 €/jour en 2026, dans une fourchette d'environ 350 à 650 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 3 979 €/mois net après impôt — l'équivalent d'un CDI à environ 71 500 € brut. Les tarifs SEO sont plus accessibles que le développement, mais les experts en SEO technique ou en data SEO montent au-delà de 600 €/jour.
+
+## Le TJM d'un consultant SEO en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un consultant SEO / acquisition facture le plus souvent entre 350 et 650 €/jour, avec une médiane autour de 450 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 450 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 450 €/jour laissent en net, statut par statut
+
+Sur 89 100 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 3 979 € en EI au réel, 3 461 € en SASU (100 % salaire) et 3 169 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un consultant SEO qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un consultant SEO freelance en 2026 ?
+
+Environ 450 €/jour en médiane, dans une fourchette de 350 à 650 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 350 €, les profils seniors ou rares vers 650 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un consultant SEO freelance en net par mois ?
+
+À 450 €/jour et 18 jours facturés par mois sur 11 mois (89 100 € de CA annuel), le meilleur statut (EI au réel) laisse environ 3 979 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 71 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est consultant SEO freelance ?
+
+Pour maximiser le net : EI au réel (3 979 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (3 169 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un consultant SEO dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 450 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM designer UX/UI freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/
+
+Le TJM médian observé pour un designer UX/UI en France tourne autour de 450 €/jour en 2026, dans une fourchette d'environ 300 à 650 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 3 979 €/mois net après impôt — l'équivalent d'un CDI à environ 71 500 € brut. En design produit, les juniors démarrent autour de 300 €/jour ; les seniors dotés d'un vrai portfolio produit et de compétences en design system dépassent 550 €.
+
+## Le TJM d'un designer UX/UI en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un designer UX/UI facture le plus souvent entre 300 et 650 €/jour, avec une médiane autour de 450 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 450 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 450 €/jour laissent en net, statut par statut
+
+Sur 89 100 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 3 979 € en EI au réel, 3 461 € en SASU (100 % salaire) et 3 169 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un designer UX/UI qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un designer UX/UI freelance en 2026 ?
+
+Environ 450 €/jour en médiane, dans une fourchette de 300 à 650 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 300 €, les profils seniors ou rares vers 650 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un designer UX/UI freelance en net par mois ?
+
+À 450 €/jour et 18 jours facturés par mois sur 11 mois (89 100 € de CA annuel), le meilleur statut (EI au réel) laisse environ 3 979 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 71 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est designer UX/UI freelance ?
+
+Pour maximiser le net : EI au réel (3 979 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (3 169 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un designer UX/UI dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 450 €/jour est un repère national, à ajuster selon votre marché local.
+
+---
+
+# TJM expert cybersécurité freelance : tarif moyen et net réel (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/
+
+Le TJM médian observé pour un expert en cybersécurité en France tourne autour de 650 €/jour en 2026, dans une fourchette d'environ 520 à 900 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 663 €/mois net après impôt — l'équivalent d'un CDI à environ 106 500 € brut. La pénurie de profils place la cybersécurité parmi les TJM les plus hauts ; le pentest et la gouvernance sécurité se situent au sommet de la fourchette.
+
+## Le TJM d'un expert cybersécurité en 2026
+
+D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr), un expert en cybersécurité facture le plus souvent entre 520 et 900 €/jour, avec une médiane autour de 650 €. Ces montants sont des ordres de grandeur : le tarif réel dépend de votre séniorité, de votre spécialité, du secteur du client et de la durée de la mission.
+
+La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 650 €/jour comme un repère de marché, pas comme un plafond.
+
+## Ce que 650 €/jour laissent en net, statut par statut
+
+Sur 128 700 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 663 € en EI au réel, 4 789 € en SASU (100 % salaire) et 4 365 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).
+
+## Faire évoluer son TJM
+
+Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un expert cybersécurité qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+
+Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
+
+## Questions fréquentes
+
+### Quel est le TJM moyen d'un expert cybersécurité freelance en 2026 ?
+
+Environ 650 €/jour en médiane, dans une fourchette de 520 à 900 € selon l'expérience et la spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Les juniors se situent vers 520 €, les profils seniors ou rares vers 900 € et au-delà. Hors Île-de-France, comptez environ 7 à 10 % de moins.
+
+### Combien gagne un expert cybersécurité freelance en net par mois ?
+
+À 650 €/jour et 18 jours facturés par mois sur 11 mois (128 700 € de CA annuel), le meilleur statut (EI au réel) laisse environ 5 663 €/mois net après cotisations et impôt — l'équivalent d'un CDI à 106 500 € brut. Le net exact dépend de vos frais, de vos jours facturés et de votre foyer fiscal.
+
+### Quel statut choisir quand on est expert cybersécurité freelance ?
+
+Pour maximiser le net : EI au réel (5 663 €/mois dans ce scénario). Pour maximiser la protection : le portage salarial (4 365 €/mois), seul statut ouvrant droit au chômage. La SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le simulateur compare les six statuts sur votre situation.
+
+### Le TJM d'un expert cybersécurité dépend-il de la région ?
+
+Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors Île-de-France pour les métiers du numérique. Paris et les grandes métropoles concentrent les missions les mieux payées, mais le télétravail atténue l'écart. La médiane de 650 €/jour est un repère national, à ajuster selon votre marché local.
 
 ---
 

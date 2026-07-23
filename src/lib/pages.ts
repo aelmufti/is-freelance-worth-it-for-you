@@ -27,6 +27,8 @@ import { TJM_HUB, TJM_PAGES } from "../data/tjm";
 import { OBJECTIF_PAGES } from "../data/objectifNet";
 import { COMPARATIF_PAGES } from "../data/comparatifs";
 import { GUIDE_PAGES } from "../data/guides";
+import { INSTITUTIONNEL_PAGES } from "../data/institutionnel";
+import { METIER_PAGES, OBSERVATOIRE_TJM } from "../data/tjmMetiers";
 
 export const SITE = "https://freelance-ou-cdi.fr";
 
@@ -55,6 +57,11 @@ export interface StatutPage {
   inputOverrides?: Partial<SimulationInput>;
   related?: string[]; // slugs des pages liées (bloc « À lire aussi » — maillage interne)
   hideFromFooter?: boolean; // pages longue traîne (TJM) non listées dans le footer
+  // « content » = page éditoriale sans simulateur (méthodologie, à propos,
+  // glossaire) : App.tsx masque le verdict, le simulateur, les graphiques, le
+  // tableau de seuils et les forces/faiblesses, et prerender.ts injecte un
+  // schema Article au lieu du WebApplication.
+  layout?: "content";
 }
 
 // ------------------------------------------------- CHIFFRES POUR COMPARATIFS
@@ -118,6 +125,7 @@ const HOME: StatutPage = {
     "sasu-ou-eurl",
     "micro-entreprise-ou-sasu",
     "portage-salarial-ou-cdi",
+    "observatoire-tjm-2026",
     "guides/comment-fixer-son-tjm",
     "guides/passer-de-salarie-a-freelance",
   ],
@@ -682,9 +690,12 @@ export const PAGES: StatutPage[] = [
   PORTAGE_OU_CDI,
   ...COMPARATIF_PAGES,
   ...GUIDE_PAGES,
+  OBSERVATOIRE_TJM,
+  ...INSTITUTIONNEL_PAGES,
   TJM_HUB,
   ...TJM_PAGES,
   ...OBJECTIF_PAGES,
+  ...METIER_PAGES,
 ];
 
 export const ROUTE_SLUGS: string[] = PAGES.filter((p) => p.slug).map(

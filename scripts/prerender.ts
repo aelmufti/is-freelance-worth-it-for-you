@@ -15,7 +15,7 @@ import { chromium } from "playwright";
 import { writeFileSync, mkdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PAGES, pageUrl, ogImagePath, SITE, type StatutPage } from "../src/lib/pages";
+import { CONTENT_UPDATED, PAGES, pageUrl, ogImagePath, SITE, type StatutPage } from "../src/lib/pages";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dir, "..");
@@ -64,17 +64,41 @@ function rewriteHead(html: string, page: StatutPage): string {
     if (!re.test(h)) throw new Error(`rewriteHead: motif introuvable pour ${page.slug} → ${re}`);
     h = h.replace(re, val);
   }
-  const breadcrumb = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE}/` },
-      { "@type": "ListItem", position: 2, name: page.breadcrumb, item: url },
-    ],
-  });
+  const jsonLd: string[] = [
+    JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE}/` },
+        { "@type": "ListItem", position: 2, name: page.breadcrumb, item: url },
+      ],
+    }),
+  ];
+  // Pages éditoriales (méthodologie, à propos, glossaire, observatoire) : un
+  // schema Article daté + auteur/éditeur renforce l'E-E-A-T sur un sujet YMYL.
+  if (page.layout === "content") {
+    jsonLd.push(
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: page.h1,
+        description: page.metaDescription,
+        inLanguage: "fr-FR",
+        url,
+        image: og,
+        datePublished: CONTENT_UPDATED,
+        dateModified: CONTENT_UPDATED,
+        author: { "@type": "Person", name: "Ali El Mufti", url: "https://aelm.dev" },
+        publisher: { "@type": "Person", name: "Ali El Mufti", url: "https://aelm.dev" },
+        isPartOf: { "@type": "WebSite", name: "freelance-ou-cdi.fr", url: `${SITE}/` },
+      }),
+    );
+  }
   return h.replace(
     "</head>",
-    `  <script type="application/ld+json">${breadcrumb}</script>\n  </head>`,
+    jsonLd
+      .map((s) => `  <script type="application/ld+json">${s}</script>`)
+      .join("\n") + "\n  </head>",
   );
 }
 

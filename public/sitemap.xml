@@ -210,6 +210,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://freelance-ou-cdi.fr/observatoire-tjm-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/observatoire-tjm-2026/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/observatoire-tjm-2026/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/methodologie/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/methodologie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/methodologie/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/a-propos/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/a-propos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/a-propos/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/glossaire/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/glossaire/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/glossaire/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://freelance-ou-cdi.fr/tjm-en-salaire/</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-en-salaire/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-en-salaire/" />
@@ -413,6 +445,86 @@
     <loc>https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-product-manager/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-product-manager/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-product-manager/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/" />
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

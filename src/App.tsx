@@ -88,6 +88,7 @@ export default function App({ page }: { page: StatutPage }) {
     page.statuts ?? null,
   );
   const isStatutPage = Boolean(page.breadcrumb);
+  const isContent = page.layout === "content";
   const canonicalUrl = pageUrl(page);
   const relatedPages = (page.related ?? [])
     .map((slug) => PAGES.find((p) => p.slug === slug))
@@ -165,47 +166,51 @@ export default function App({ page }: { page: StatutPage }) {
       </header>
 
       <main id="main-content" className="mx-auto max-w-7xl space-y-12 px-4 py-10">
-        {/* VERDICT */}
-        <section className="anim-pop">
-          <div className="border-[3px] border-ink bg-ink p-5 text-white shadow-brutal-lg md:p-6">
-            <div className="text-xs font-extrabold uppercase tracking-[0.12em] opacity-70">
-              Estimation avec vos paramètres — indicatif, pas un conseil
-            </div>
-            <div className="mt-1 text-xl font-extrabold uppercase tracking-tight md:text-3xl">
-              {best.id === "cdi" ? (
-                "À ce niveau, le CDI reste plus rentable."
-              ) : (
-                <>
-                  <span>{`${best.label} : ${euro(best.netMensuel)}/mois net, soit `}</span>
-                  <span className="bg-tag-green px-2 text-white">{`+${euro(deltaCdi / 12)}/mois`}</span>
-                  <span>{" vs votre CDI"}</span>
-                </>
-              )}
-            </div>
-            <div className="mt-2 text-xs font-bold opacity-70">
-              {`CDI de référence : ${euro(cdi.netMensuel)}/mois net après impôt — sans compter chômage, congés payés et retraite, à pondérer selon votre aversion au risque.`}
-            </div>
-          </div>
-        </section>
+        {!isContent && (
+          <>
+            {/* VERDICT */}
+            <section className="anim-pop">
+              <div className="border-[3px] border-ink bg-ink p-5 text-white shadow-brutal-lg md:p-6">
+                <div className="text-xs font-extrabold uppercase tracking-[0.12em] opacity-70">
+                  Estimation avec vos paramètres — indicatif, pas un conseil
+                </div>
+                <div className="mt-1 text-xl font-extrabold uppercase tracking-tight md:text-3xl">
+                  {best.id === "cdi" ? (
+                    "À ce niveau, le CDI reste plus rentable."
+                  ) : (
+                    <>
+                      <span>{`${best.label} : ${euro(best.netMensuel)}/mois net, soit `}</span>
+                      <span className="bg-tag-green px-2 text-white">{`+${euro(deltaCdi / 12)}/mois`}</span>
+                      <span>{" vs votre CDI"}</span>
+                    </>
+                  )}
+                </div>
+                <div className="mt-2 text-xs font-bold opacity-70">
+                  {`CDI de référence : ${euro(cdi.netMensuel)}/mois net après impôt — sans compter chômage, congés payés et retraite, à pondérer selon votre aversion au risque.`}
+                </div>
+              </div>
+            </section>
 
-        {/* SIMULATEUR */}
-        <section className="grid gap-6 lg:grid-cols-[380px_1fr]">
-          <div className="space-y-6">
-            <MainForm
-              input={input}
-              setInput={setInput}
-              onFocusStatuts={setFocusStatuts}
-            />
-            <AdvancedParams
-              params={params}
-              setParams={setParams}
-              defaults={DEFAULT_PARAMS}
-            />
-          </div>
-          <div className="space-y-6">
-            <Podium results={results} focusStatuts={focusStatuts} />
-          </div>
-        </section>
+            {/* SIMULATEUR */}
+            <section className="grid gap-6 lg:grid-cols-[380px_1fr]">
+              <div className="space-y-6">
+                <MainForm
+                  input={input}
+                  setInput={setInput}
+                  onFocusStatuts={setFocusStatuts}
+                />
+                <AdvancedParams
+                  params={params}
+                  setParams={setParams}
+                  defaults={DEFAULT_PARAMS}
+                />
+              </div>
+              <div className="space-y-6">
+                <Podium results={results} focusStatuts={focusStatuts} />
+              </div>
+            </section>
+          </>
+        )}
 
         {/* CONTENU ÉDITORIAL — unique par page statut (anti-doorway) */}
         {page.sections.length > 0 && (
@@ -247,59 +252,65 @@ export default function App({ page }: { page: StatutPage }) {
           </nav>
         )}
 
-        {/* GRAPHIQUES */}
-        <section className="space-y-6">
-          <SectionTitle>
-            <span className="highlight">Comparaison</span> visuelle
-          </SectionTitle>
-          {chartsReady && (
-            <Suspense fallback={<ChartFallback label="Comparaison" />}>
-              <CompareBars results={results} />
-            </Suspense>
-          )}
-          {chartsReady && (
-            <Suspense fallback={<ChartFallback label="Seuil de rentabilité TJM" />}>
-              <BreakEvenChart input={input} params={params} />
-            </Suspense>
-          )}
-          {!chartsReady && (
-            <>
-              <ChartFallback label="Net mensuel après impôt, par statut" />
-              <ChartFallback label="Seuil de rentabilité TJM" />
-            </>
-          )}
-        </section>
+        {!isContent && (
+          <>
+            {/* GRAPHIQUES */}
+            <section className="space-y-6">
+              <SectionTitle>
+                <span className="highlight">Comparaison</span> visuelle
+              </SectionTitle>
+              {chartsReady && (
+                <Suspense fallback={<ChartFallback label="Comparaison" />}>
+                  <CompareBars results={results} />
+                </Suspense>
+              )}
+              {chartsReady && (
+                <Suspense fallback={<ChartFallback label="Seuil de rentabilité TJM" />}>
+                  <BreakEvenChart input={input} params={params} />
+                </Suspense>
+              )}
+              {!chartsReady && (
+                <>
+                  <ChartFallback label="Net mensuel après impôt, par statut" />
+                  <ChartFallback label="Seuil de rentabilité TJM" />
+                </>
+              )}
+            </section>
 
-        {/* TABLEAU TJM BREAK-EVEN — asset citable (SEO longue traîne + GEO) */}
-        <section aria-labelledby="breakeven-title" id="tjm-equivalent-cdi">
-          <SectionTitle>
-            <span id="breakeven-title">
-              À partir de quel <span className="highlight">TJM</span> le
-              freelance bat le CDI ?
-            </span>
-          </SectionTitle>
-          <BreakEvenTable />
-        </section>
+            {/* TABLEAU TJM BREAK-EVEN — asset citable (SEO longue traîne + GEO) */}
+            <section aria-labelledby="breakeven-title" id="tjm-equivalent-cdi">
+              <SectionTitle>
+                <span id="breakeven-title">
+                  À partir de quel <span className="highlight">TJM</span> le
+                  freelance bat le CDI ?
+                </span>
+              </SectionTitle>
+              <BreakEvenTable />
+            </section>
 
-        {/* AVANTAGES / INCONVÉNIENTS */}
-        <section aria-labelledby="statuts-title">
-          <SectionTitle>
-            <span id="statuts-title">
-              Statuts : <span className="highlight">forces & faiblesses</span>
-            </span>
-          </SectionTitle>
-          <ProsCons />
-        </section>
+            {/* AVANTAGES / INCONVÉNIENTS */}
+            <section aria-labelledby="statuts-title">
+              <SectionTitle>
+                <span id="statuts-title">
+                  Statuts : <span className="highlight">forces & faiblesses</span>
+                </span>
+              </SectionTitle>
+              <ProsCons />
+            </section>
+          </>
+        )}
 
         {/* FAQ */}
-        <section aria-labelledby="faq-title">
-          <SectionTitle>
-            <span id="faq-title">
-              Questions <span className="highlight">fréquentes</span>
-            </span>
-          </SectionTitle>
-          <Faq items={page.faq} canonicalUrl={canonicalUrl} />
-        </section>
+        {page.faq.length > 0 && (
+          <section aria-labelledby="faq-title">
+            <SectionTitle>
+              <span id="faq-title">
+                Questions <span className="highlight">fréquentes</span>
+              </span>
+            </SectionTitle>
+            <Faq items={page.faq} canonicalUrl={canonicalUrl} />
+          </section>
+        )}
 
         {/* SOURCES + DISCLAIMER */}
         <section className="border-[3px] border-ink bg-white p-5 shadow-brutal">

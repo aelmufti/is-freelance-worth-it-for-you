@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#F7F5EF">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Méthodologie du simulateur freelance vs CDI 2026 : calculs et sources</title>
+    <meta name="description" content="Comment sont calculés les revenus nets du simulateur freelance-ou-cdi.fr : cotisations par statut, barème 2026 de l'impôt, flat tax, impôt sur les sociétés, hypothèses, limites et validation contre le moteur URSSAF.">
+    <meta name="author" content="Ali El Mufti">
+    <meta name="generator" content="Vite + React">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+
+    <link rel="canonical" href="https://freelance-ou-cdi.fr/methodologie/">
+    <link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/methodologie/">
+    <link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/methodologie/">
+    <link rel="author" href="https://aelm.dev">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="freelance-ou-cdi.fr">
+    <meta property="og:url" content="https://freelance-ou-cdi.fr/methodologie/">
+    <meta property="og:title" content="Méthodologie du simulateur freelance vs CDI 2026 : calculs et sources">
+    <meta property="og:description" content="Comment sont calculés les revenus nets du simulateur freelance-ou-cdi.fr : cotisations par statut, barème 2026 de l'impôt, flat tax, impôt sur les sociétés, hypothèses, limites et validation contre le moteur URSSAF.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="https://freelance-ou-cdi.fr/og-methodologie.png">
+    <meta property="og:image:secure_url" content="https://freelance-ou-cdi.fr/og-methodologie.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Méthodologie du simulateur freelance vs CDI 2026 : calculs et sources">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://freelance-ou-cdi.fr/methodologie/">
+    <meta name="twitter:title" content="Méthodologie du simulateur freelance vs CDI 2026 : calculs et sources">
+    <meta name="twitter:description" content="Comment sont calculés les revenus nets du simulateur freelance-ou-cdi.fr : cotisations par statut, barème 2026 de l'impôt, flat tax, impôt sur les sociétés, hypothèses, limites et validation contre le moteur URSSAF.">
+    <meta name="twitter:image" content="https://freelance-ou-cdi.fr/og-methodologie.png">
+    <meta name="twitter:image:alt" content="Méthodologie du simulateur freelance vs CDI 2026 : calculs et sources">
+
+    <!-- PWA-ish -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Freelance ou CDI">
+    <meta name="application-name" content="Freelance ou CDI">
+
+    <!-- Performance hints (police auto-hébergée via @fontsource, cf. index.css) -->
+    <link rel="dns-prefetch" href="https://va.vercel-scripts.com">
+
+    <!-- Données structurées Schema.org : WebApplication + Person + WebSite (FAQPage générée par l'app depuis src/data/faq.ts) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://freelance-ou-cdi.fr/#website",
+            "url": "https://freelance-ou-cdi.fr/",
+            "name": "freelance-ou-cdi.fr",
+            "inLanguage": "fr-FR",
+            "publisher": { "@id": "https://freelance-ou-cdi.fr/#person" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://freelance-ou-cdi.fr/#app",
+            "name": "Freelance ou CDI : simulateur de revenu 2026",
+            "alternateName": "Simulateur freelance vs CDI",
+            "url": "https://freelance-ou-cdi.fr/",
+            "applicationCategory": "FinanceApplication",
+            "applicationSubCategory": "Tax Calculator",
+            "operatingSystem": "Any (web)",
+            "browserRequirements": "Requires JavaScript",
+            "inLanguage": "fr-FR",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR"
+            },
+            "featureList": [
+              "Comparaison micro-entreprise, EI au réel, EURL, SASU, portage salarial et CDI",
+              "Barème impôt sur le revenu 2026",
+              "Flat tax 31,4 % et impôt sur les sociétés",
+              "Réforme assiette unique TNS 2026",
+              "Seuil de TJM équivalent au CDI",
+              "Calculs validés contre le moteur officiel URSSAF",
+              "Aucune donnée collectée — calculs dans le navigateur"
+            ],
+            "author": { "@id": "https://freelance-ou-cdi.fr/#person" },
+            "publisher": { "@id": "https://freelance-ou-cdi.fr/#person" },
+            "softwareVersion": "1.0",
+            "datePublished": "2026-06-11",
+            "dateModified": "2026-07-03",
+            "license": "https://opensource.org/licenses/MIT"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://freelance-ou-cdi.fr/#person",
+            "name": "Ali El Mufti",
+            "url": "https://aelm.dev",
+            "sameAs": ["https://aelm.dev", "https://github.com/aelmufti"]
+          }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin="" src="/assets/index-B_daqyAi.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-y9oHIRX6.css">
+  <script src="/_vercel/insights/script.js" data-sdkn="@vercel/analytics/react" data-sdkv="2.0.1" defer=""></script>  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://freelance-ou-cdi.fr/"},{"@type":"ListItem","position":2,"name":"Méthodologie","item":"https://freelance-ou-cdi.fr/methodologie/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Méthodologie : comment les calculs sont faits","description":"Comment sont calculés les revenus nets du simulateur freelance-ou-cdi.fr : cotisations par statut, barème 2026 de l'impôt, flat tax, impôt sur les sociétés, hypothèses, limites et validation contre le moteur URSSAF.","inLanguage":"fr-FR","url":"https://freelance-ou-cdi.fr/methodologie/","image":"https://freelance-ou-cdi.fr/og-methodologie.png","datePublished":"2026-07-03","dateModified":"2026-07-03","author":{"@type":"Person","name":"Ali El Mufti","url":"https://aelm.dev"},"publisher":{"@type":"Person","name":"Ali El Mufti","url":"https://aelm.dev"},"isPartOf":{"@type":"WebSite","name":"freelance-ou-cdi.fr","url":"https://freelance-ou-cdi.fr/"}}</script>
+  </head>
+  <body>
+    <div id="root"><div class="min-h-screen"><a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-ink focus:bg-tag-yellow focus:px-3 focus:py-1.5 focus:text-xs focus:font-extrabold focus:uppercase">Aller au contenu</a><header class="tech-grid border-b-[3px] border-ink"><div class="mx-auto max-w-7xl px-4 py-12 md:py-16"><nav aria-label="Fil d'Ariane" class="anim-left mb-3 text-xs font-bold uppercase tracking-[0.12em] opacity-70"><a href="/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Accueil</a><span aria-hidden="true"> / </span><span>Méthodologie</span></nav><div class="anim-left mb-4 flex flex-wrap gap-2"><span class="border-2 border-ink bg-tag-yellow px-2 py-0.5 text-xs font-extrabold uppercase tracking-[0.12em]">100 % gratuit</span><span class="border-2 border-ink bg-tag-green px-2 py-0.5 text-xs font-extrabold uppercase tracking-[0.12em] text-white">Taux 2026</span></div><h1 class="anim-up max-w-4xl text-4xl font-extrabold uppercase leading-tight tracking-tight md:text-6xl">Méthodologie : comment les calculs sont faits</h1><p class="anim-up mt-4 max-w-2xl text-sm font-bold opacity-70 md:text-base">Ce simulateur compare, pour un même chiffre d'affaires, le revenu net réellement disponible dans six statuts : micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial et CDI cadre. Cette page détaille exactement ce qui est calculé, avec quelles hypothèses, quelles sources et quelles limites — pour que vous puissiez juger de la fiabilité des chiffres, et les reproduire.</p></div></header><main id="main-content" class="mx-auto max-w-7xl space-y-12 px-4 py-10"><div class="space-y-10"><section aria-label="Ce que le moteur calcule, étape par étape"><h2 class="mb-4 text-2xl font-extrabold uppercase tracking-tight md:text-3xl">Ce que le moteur calcule, étape par étape</h2><div class="max-w-3xl space-y-3 text-sm font-bold leading-relaxed md:text-base"><p>Le point de départ est le chiffre d'affaires : taux journalier moyen (TJM) multiplié par le nombre de jours réellement facturés dans l'année. Le moteur en déduit, pour chaque statut, les cotisations sociales, l'impôt sur le revenu (et, le cas échéant, l'impôt sur les sociétés et la flat tax sur les dividendes), puis les frais professionnels, pour arriver au revenu net mensuel et annuel après impôt.</p><p>Les cotisations dépendent du régime : un pourcentage du chiffre d'affaires en micro-entreprise (environ 24,6 % en BNC), des cotisations TNS en EI et EURL (de l'ordre de 45 % du revenu après l'abattement d'assiette de 26 % de la réforme 2026), et des cotisations du régime général en SASU et portage (75 à 80 % de charges sur le salaire, part patronale comprise). L'impôt sur le revenu applique le barème progressif 2026 avec le quotient familial du foyer renseigné.</p></div></section><section aria-label="Impôt sur les sociétés, dividendes et flat tax"><h2 class="mb-4 text-2xl font-extrabold uppercase tracking-tight md:text-3xl">Impôt sur les sociétés, dividendes et flat tax</h2><div class="max-w-3xl space-y-3 text-sm font-bold leading-relaxed md:text-base"><p>Pour l'EURL et la SASU à l'impôt sur les sociétés, le bénéfice non versé en rémunération est taxé à l'IS : 15 % jusqu'à 42 500 € de bénéfice, 25 % au-delà. Ce qui est ensuite distribué en dividendes supporte la flat tax (prélèvement forfaitaire unique) de 31,4 %, soit 12,8 % d'impôt sur le revenu et 18,6 % de prélèvements sociaux dans les hypothèses retenues.</p><p>Une règle propre à l'EURL est modélisée : la part de dividendes qui dépasse 10 % du capital social bascule des prélèvements forfaitaires vers les cotisations sociales TNS. C'est ce qui explique que la stratégie « petit salaire, gros dividendes » soit bien plus efficace en SASU qu'en EURL, à capital modeste.</p></div></section><section aria-label="Le scénario de référence et ses hypothèses"><h2 class="mb-4 text-2xl font-extrabold uppercase tracking-tight md:text-3xl">Le scénario de référence et ses hypothèses</h2><div class="max-w-3xl space-y-3 text-sm font-bold leading-relaxed md:text-base"><p>Sauf réglage de votre part, les chiffres cités dans les pages reposent sur un scénario de référence : 18 jours facturés par mois sur 11 mois (soit 198 jours par an, un taux d'occupation réaliste qui réserve du temps pour la prospection, l'intermission et les congés), 3 000 € de frais professionnels annuels, un foyer d'un célibataire sans enfant, et un CDI de comparaison à 55 000 € brut cadre. Chaque curseur du simulateur modifie ces hypothèses en temps réel.</p><p>Le CDI « équivalent » affiché est calculé à net égal : c'est le salaire brut qui laisserait le même montant sur le compte après cotisations salariales et impôt. Cette équivalence ne valorise pas l'assurance chômage, les congés payés ni la retraite du salarié — elle sert de repère, pas de verdict.</p></div></section><section aria-label="Validation, limites et fraîcheur"><h2 class="mb-4 text-2xl font-extrabold uppercase tracking-tight md:text-3xl">Validation, limites et fraîcheur</h2><div class="max-w-3xl space-y-3 text-sm font-bold leading-relaxed md:text-base"><p>Les résultats sont comparés automatiquement au moteur de calcul open source « modele-social », celui qui équipe le simulateur officiel mon-entreprise.urssaf.fr : les écarts sont inférieurs à 2 % sur les cas testés. Cette démarche est purement technique — ce site est indépendant et n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration.</p><p>Certains éléments ne sont pas tous modélisés : cotisation foncière des entreprises (CFE), plafonnement du quotient familial, réduction générale de cotisations, mutuelle obligatoire, prévoyance et cas particuliers. Les avantages salarié (titres-restaurant, transport, mutuelle) sont une estimation indicative, affichée à part et exclue du net comparé. Le simulateur est une aide à la décision, pas un substitut à un expert-comptable. Les taux et barèmes sont datés dans le pied de page « Sources » et mis à jour à chaque évolution réglementaire.</p></div></section></div><nav aria-label="À lire aussi" class="border-[3px] border-ink bg-white p-5 shadow-brutal"><div class="text-sm font-extrabold uppercase tracking-[0.12em]">À lire aussi</div><ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm"><li><a href="/a-propos/" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ À propos</a></li><li><a href="/glossaire/" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ Glossaire</a></li><li><a href="/tjm-en-salaire/" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ Convertir un TJM en salaire</a></li></ul></nav><section aria-labelledby="faq-title"><h2 class="mb-4 text-2xl font-extrabold uppercase tracking-tight md:text-3xl"><span id="faq-title">Questions <span class="highlight">fréquentes</span></span></h2><div class="space-y-3"><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","@id":"https://freelance-ou-cdi.fr/methodologie/#faq","inLanguage":"fr-FR","mainEntity":[{"@type":"Question","name":"Les calculs de ce simulateur sont-ils fiables ?","acceptedAnswer":{"@type":"Answer","text":"Ils sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF (celui de mon-entreprise.urssaf.fr), avec des écarts inférieurs à 2 % sur les cas testés. Le code du moteur et tous les taux 2026 sont publics. C'est une aide à la décision indicative, pas un avis d'expert-comptable : certains cas particuliers ne sont pas modélisés."}},{"@type":"Question","name":"Ce site est-il affilié à l'URSSAF ?","acceptedAnswer":{"@type":"Answer","text":"Non. Le site est un projet personnel indépendant, sans aucune affiliation ni approbation de l'URSSAF ou d'une administration. La comparaison au moteur « modele-social » est purement technique : elle sert à vérifier la justesse des calculs, pas à revendiquer un partenariat."}},{"@type":"Question","name":"À quelle fréquence les taux sont-ils mis à jour ?","acceptedAnswer":{"@type":"Answer","text":"Les taux et barèmes sont vérifiés et datés dans le pied de page de chaque page (« Sources officielles »). Ils sont mis à jour à chaque évolution réglementaire significative : barème de l'impôt sur le revenu, taux de cotisations, réforme de l'assiette des indépendants, évolution de la flat tax."}}]}</script><article class="border-[3px] border-ink bg-white shadow-brutal-sm"><h3><button type="button" aria-expanded="true" aria-controls="faq-0" class="brutal-press flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-extrabold uppercase tracking-tight"><span>Les calculs de ce simulateur sont-ils fiables ?</span><span aria-hidden="true" class="shrink-0 border-2 border-ink bg-tag-yellow px-2 text-xs">−</span></button></h3><div id="faq-0" class="border-t-2 border-ink px-4 py-3 text-sm font-bold leading-relaxed">Ils sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF (celui de mon-entreprise.urssaf.fr), avec des écarts inférieurs à 2 % sur les cas testés. Le code du moteur et tous les taux 2026 sont publics. C'est une aide à la décision indicative, pas un avis d'expert-comptable : certains cas particuliers ne sont pas modélisés.</div></article><article class="border-[3px] border-ink bg-white shadow-brutal-sm"><h3><button type="button" aria-expanded="false" aria-controls="faq-1" class="brutal-press flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-extrabold uppercase tracking-tight"><span>Ce site est-il affilié à l'URSSAF ?</span><span aria-hidden="true" class="shrink-0 border-2 border-ink bg-tag-yellow px-2 text-xs">+</span></button></h3><div id="faq-1" hidden="" class="border-t-2 border-ink px-4 py-3 text-sm font-bold leading-relaxed">Non. Le site est un projet personnel indépendant, sans aucune affiliation ni approbation de l'URSSAF ou d'une administration. La comparaison au moteur « modele-social » est purement technique : elle sert à vérifier la justesse des calculs, pas à revendiquer un partenariat.</div></article><article class="border-[3px] border-ink bg-white shadow-brutal-sm"><h3><button type="button" aria-expanded="false" aria-controls="faq-2" class="brutal-press flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-extrabold uppercase tracking-tight"><span>À quelle fréquence les taux sont-ils mis à jour ?</span><span aria-hidden="true" class="shrink-0 border-2 border-ink bg-tag-yellow px-2 text-xs">+</span></button></h3><div id="faq-2" hidden="" class="border-t-2 border-ink px-4 py-3 text-sm font-bold leading-relaxed">Les taux et barèmes sont vérifiés et datés dans le pied de page de chaque page (« Sources officielles »). Ils sont mis à jour à chaque évolution réglementaire significative : barème de l'impôt sur le revenu, taux de cotisations, réforme de l'assiette des indépendants, évolution de la flat tax.</div></article></div></section><section class="border-[3px] border-ink bg-white p-5 shadow-brutal"><h3 class="text-sm font-extrabold uppercase tracking-[0.12em]">Sources officielles (taux 2026)</h3><p class="mt-1 text-xs font-bold opacity-70">Taux et barèmes vérifiés le 3 juillet 2026.</p><ul class="mt-2 grid gap-1 text-xs md:grid-cols-2"><li><a href="https://www.economie.gouv.fr/entreprises/gerer-sa-micro-entreprise/micro-entreprises-quel-est-le-montant-de-vos-cotisations-sociales" target="_blank" rel="noreferrer" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ economie.gouv.fr — cotisations micro-entreprise</a></li><li><a href="https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mon-impot-sur-le-revenu/comment-calculer-votre-impot-dapres-le-bareme-de-limpot-sur-le-revenu" target="_blank" rel="noreferrer" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ economie.gouv.fr — barème de l'impôt sur le revenu</a></li><li><a href="https://entreprendre.service-public.gouv.fr/actualites/A18796" target="_blank" rel="noreferrer" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ service-public.fr — évolution du PFU (flat tax 31,4 %)</a></li><li><a href="https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/reforme-cotisations-independants.html" target="_blank" rel="noreferrer" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ urssaf.fr — réforme de l'assiette des indépendants</a></li><li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F23575" target="_blank" rel="noreferrer" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ service-public.fr — impôt sur les sociétés</a></li><li><a href="https://entreprendre.service-public.gouv.fr/vosdroits/F23267" target="_blank" rel="noreferrer" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ service-public.fr — régime fiscal micro</a></li><li><a href="https://www.entreprises.cci-paris-idf.fr/fiches-pratiques/les-charges-sociales-au-1er-janvier-2026" target="_blank" rel="noreferrer" class="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow">▸ CCI Paris IdF — charges sociales au 1ᵉʳ janvier 2026</a></li></ul><p class="mt-4 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">⚠ Simulation indicative, à jour des principaux taux 2026 (barème IR sur revenus 2025, PFU 31,4 %, réforme de l'assiette TNS). Elle ne remplace pas un expert-comptable : CFE, plafonnement du quotient familial, réduction générale de cotisations, mutuelle obligatoire, prévoyance et cas particuliers ne sont pas tous modélisés. Les avantages salarié (titres-resto, transport, mutuelle) sont une estimation indicative, affichée à part et exclue du net comparé. Aucune donnée n'est envoyée : tout est calculé dans votre navigateur.</p><p class="mt-2 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">✓ Contrôle qualité : nos résultats sont comparés automatiquement au moteur de calcul open source « modele-social » qui équipe mon-entreprise.urssaf.fr (écarts inférieurs à 2 % sur les cas testés). Cette démarche est purement technique : ce site est indépendant et n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration.</p></section></main><footer class="border-t-[3px] border-ink bg-ink px-4 py-6 text-center text-xs font-extrabold uppercase tracking-[0.12em] text-white"><div class="mx-auto mb-6 max-w-xl border-2 border-white bg-ink p-4 normal-case tracking-normal"><div class="text-sm font-extrabold uppercase tracking-[0.06em]">★ Vous aimez ce simulateur ?</div><p class="mt-1 text-xs font-bold opacity-80">Le code est entièrement public et gratuit. Si l'outil vous a été utile, une étoile sur GitHub m'aide beaucoup à le faire connaître.</p><a href="https://github.com/aelmufti/is-freelance-worth-it-for-you" target="_blank" rel="noreferrer" class="brutal-press mt-3 inline-flex items-center gap-2 border-2 border-white bg-tag-yellow px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.06em] text-ink shadow-brutal-sm" style="box-shadow: rgb(229, 229, 229) 3px 3px 0px 0px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.06-.02-2.08-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.91-.01 3.3 0 .32.22.7.83.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>Mettre une étoile sur GitHub</a></div><nav aria-label="Simulateurs et comparatifs" class="mx-auto mb-6 max-w-xl normal-case tracking-normal"><div class="text-sm font-extrabold uppercase tracking-[0.06em]">Simulateurs et comparatifs</div><ul class="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-bold"><li><a href="/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Accueil</a></li><li><a href="/simulateur-micro-entreprise/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Simulateur micro-entreprise</a></li><li><a href="/simulateur-ei/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Simulateur EI au réel</a></li><li><a href="/simulateur-eurl/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Simulateur EURL</a></li><li><a href="/simulateur-sasu/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Simulateur SASU</a></li><li><a href="/simulateur-portage-salarial/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Simulateur portage salarial</a></li><li><a href="/sasu-ou-eurl/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">SASU ou EURL</a></li><li><a href="/micro-entreprise-ou-sasu/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Micro-entreprise ou SASU</a></li><li><a href="/portage-salarial-ou-micro-entreprise/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Portage ou micro-entreprise</a></li><li><a href="/portage-salarial-ou-cdi/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Portage salarial ou CDI</a></li><li><a href="/micro-entreprise-ou-eurl/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Micro-entreprise ou EURL</a></li><li><a href="/micro-entreprise-ou-ei/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Micro-entreprise ou EI au réel</a></li><li><a href="/ei-ou-eurl/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">EI au réel ou EURL</a></li><li><a href="/ei-ou-sasu/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">EI au réel ou SASU</a></li><li><a href="/portage-salarial-ou-sasu/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Portage salarial ou SASU</a></li><li><a href="/portage-salarial-ou-eurl/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Portage salarial ou EURL</a></li><li><a href="/observatoire-tjm-2026/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Observatoire du TJM 2026</a></li><li><a href="/methodologie/" aria-current="page" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Méthodologie</a></li><li><a href="/a-propos/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">À propos</a></li><li><a href="/glossaire/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Glossaire</a></li><li><a href="/tjm-en-salaire/" class="underline decoration-2 underline-offset-2 hover:bg-tag-yellow">Convertir un TJM en salaire</a></li></ul></nav><div>FREELANCE-OU-CDI.FR — gratuit, open, sans compte</div><div class="mt-3"><span>Fait par </span><a href="https://aelm.dev?utm_source=freelance-simulateur&amp;utm_medium=referral&amp;utm_campaign=footer" target="_blank" rel="noreferrer" class="brutal-press inline-block border-2 border-white bg-primary px-2 py-0.5 text-white">ALI EL MUFTI</a></div><div class="mt-3 flex justify-center gap-4"><button type="button" class="text-[10px] font-bold uppercase tracking-[0.12em] underline decoration-1 underline-offset-2 opacity-60 hover:opacity-100">Mentions légales</button></div></footer></div></div>
+    <noscript>
+      <div
+        style="
+          font-family: ui-monospace, Menlo, Consolas, monospace;
+          max-width: 720px;
+          margin: 2rem auto;
+          padding: 1.5rem;
+          border: 3px solid #0d0d0d;
+          background: #fff;
+        "
+      >
+        <h1 style="font-weight: 900; text-transform: uppercase">
+          Freelance ou CDI : combien il vous reste vraiment
+        </h1>
+        <p>
+          Ce simulateur compare le revenu net en micro-entreprise, EI au réel,
+          EURL, SASU, portage salarial et CDI cadre, après cotisations sociales
+          ET impôt sur le revenu — au taux 2026.
+        </p>
+        <p>
+          Le simulateur interactif nécessite JavaScript. Activez-le pour
+          paramétrer votre TJM, vos jours facturés et votre foyer fiscal, et
+          voir le seuil à partir duquel chaque statut bat votre CDI.
+        </p>
+        <p>
+          <strong>Calculs validés</strong> contre le moteur de calcul officiel
+          de l'URSSAF (modele-social, mon-entreprise.urssaf.fr) — écarts
+          inférieurs à 2 % en régime courant.
+        </p>
+      </div>
+    </noscript>
+  
+
+</body></html>
