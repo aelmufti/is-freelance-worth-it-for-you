@@ -82,9 +82,145 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://freelance-ou-cdi.fr/micro-entreprise-ou-eurl/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/micro-entreprise-ou-eurl/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/micro-entreprise-ou-eurl/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/micro-entreprise-ou-ei/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/micro-entreprise-ou-ei/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/micro-entreprise-ou-ei/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/ei-ou-eurl/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/ei-ou-eurl/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/ei-ou-eurl/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/ei-ou-sasu/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/ei-ou-sasu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/ei-ou-sasu/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/portage-salarial-ou-sasu/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/portage-salarial-ou-sasu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/portage-salarial-ou-sasu/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/portage-salarial-ou-eurl/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/portage-salarial-ou-eurl/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/portage-salarial-ou-eurl/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/micro-entreprise-ou-cdi/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/micro-entreprise-ou-cdi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/micro-entreprise-ou-cdi/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/sasu-ou-cdi/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/sasu-ou-cdi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/sasu-ou-cdi/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/eurl-ou-cdi/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/eurl-ou-cdi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/eurl-ou-cdi/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/ei-ou-cdi/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/ei-ou-cdi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/ei-ou-cdi/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/guides/comment-fixer-son-tjm/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/guides/comment-fixer-son-tjm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/guides/comment-fixer-son-tjm/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/guides/charges-sociales-freelance/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/guides/charges-sociales-freelance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/guides/charges-sociales-freelance/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/guides/freelance-et-chomage-are/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/guides/freelance-et-chomage-are/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/guides/freelance-et-chomage-are/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/guides/acre-premiere-annee/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/guides/acre-premiere-annee/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/guides/acre-premiere-annee/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/guides/franchise-tva-freelance/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/guides/franchise-tva-freelance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/guides/franchise-tva-freelance/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/guides/passer-de-salarie-a-freelance/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/guides/passer-de-salarie-a-freelance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/guides/passer-de-salarie-a-freelance/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://freelance-ou-cdi.fr/tjm-en-salaire/</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-en-salaire/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-en-salaire/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-250/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-250/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-250/" />
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -98,9 +234,25 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-325/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-325/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-325/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://freelance-ou-cdi.fr/tjm-350/</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-350/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-350/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-375/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-375/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-375/" />
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -114,6 +266,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-425/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-425/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-425/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://freelance-ou-cdi.fr/tjm-450/</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-450/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-450/" />
@@ -122,9 +282,25 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-475/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-475/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-475/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://freelance-ou-cdi.fr/tjm-500/</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-500/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-500/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-525/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-525/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-525/" />
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -146,6 +322,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-650/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-650/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-650/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://freelance-ou-cdi.fr/tjm-700/</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-700/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-700/" />
@@ -154,9 +338,81 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-750/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-750/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-750/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://freelance-ou-cdi.fr/tjm-800/</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-800/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-800/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-900/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-900/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-900/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-1000/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-1000/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-1000/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-pour-3000-euros-net/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-pour-3000-euros-net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-pour-3000-euros-net/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-pour-3500-euros-net/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-pour-3500-euros-net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-pour-3500-euros-net/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-pour-4000-euros-net/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-pour-4000-euros-net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-pour-4000-euros-net/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-pour-4500-euros-net/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-pour-4500-euros-net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-pour-4500-euros-net/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-pour-5000-euros-net/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-pour-5000-euros-net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-pour-5000-euros-net/" />
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/</loc>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/" />
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

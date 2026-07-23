@@ -464,31 +464,755 @@ Le portage est le meilleur « sas » si vous voulez tester l'indépendance sans 
 
 ---
 
+# Micro-entreprise ou EURL : le comparatif chiffré 2026
+
+URL : https://freelance-ou-cdi.fr/micro-entreprise-ou-eurl/
+
+La micro et l'EURL sont deux façons opposées d'exercer seul : d'un côté la simplicité maximale et un plafond, de l'autre une vraie société à l'impôt sur les sociétés, sans limite de chiffre d'affaires. Pour égaler un CDI à 55 000 € brut, il faut environ 320 €/jour en micro contre 355 € en EURL. Voici quand chacune l'emporte.
+
+## Deux logiques : forfait contre frais réels
+
+En micro-entreprise, tout est forfaitaire : les cotisations sont un pourcentage du chiffre d'affaires encaissé (environ 24,6 % en BNC) et l'impôt se calcule après un abattement de 34 % censé couvrir vos frais. Rien de tout cela ne demande de comptabilité. En EURL, on inverse la logique : vous tenez des comptes, déduisez vos frais réels à l'euro près, et payez l'impôt sur les sociétés sur le bénéfice restant.
+
+Conséquence directe : tant que vos frais professionnels sont faibles, la micro convertit mieux chaque euro facturé. À 400 €/jour, elle laisse environ 3 915 €/mois net contre 3 582 € en EURL sur le même scénario. L'EURL ne reprend l'avantage que lorsque les frais réels dépassent l'abattement forfaitaire, ou quand le chiffre d'affaires franchit le plafond de la micro.
+
+## Le plafond, la responsabilité et les dividendes
+
+La micro s'arrête à 83 600 € de chiffre d'affaires en prestations de services. L'EURL n'a aucun plafond : c'est la suite naturelle quand l'activité grossit. Elle apporte aussi la responsabilité limitée (votre patrimoine personnel est protégé par la société) et la possibilité de se verser des dividendes après impôt sur les sociétés.
+
+Attention toutefois à la règle propre à l'EURL : seule la fraction de dividendes inférieure à 10 % du capital social profite de la flat tax de 31,4 %. Au-delà, ils supportent les cotisations sociales TNS, comme une rémunération. La stratégie « petit salaire, gros dividendes » y est donc bien moins efficace qu'en SASU — un point décisif si votre choix se joue sur l'optimisation.
+
+## Comment trancher
+
+Restez en micro tant que trois conditions tiennent : votre chiffre d'affaires est sous le plafond, vos frais réels sont inférieurs à l'abattement de 34 %, et vous n'avez pas besoin de piloter finement rémunération et dividendes. C'est le cas de la plupart des prestataires intellectuels qui démarrent : développeur, consultant, rédacteur avec un simple ordinateur.
+
+Passez à l'EURL dès que l'une de ces conditions saute : plafond approché, frais réels lourds (local, matériel, sous-traitance), ou volonté de capitaliser dans une société. Le simulateur ci-dessus place les deux statuts côte à côte sur votre TJM réel — c'est le point de départ le plus fiable avant de créer quoi que ce soit.
+
+## Questions fréquentes
+
+### Micro-entreprise ou EURL : laquelle laisse le plus de net ?
+
+Sous le plafond de la micro (83 600 € de CA en services) et avec peu de frais, la micro laisse davantage : à 400 €/jour, environ 3 915 €/mois net contre 3 582 € en EURL. L'EURL reprend l'avantage quand vos frais réels dépassent l'abattement forfaitaire de 34 % ou quand le chiffre d'affaires dépasse le plafond. Le simulateur compare les deux sur votre situation exacte.
+
+### Quand passer de la micro-entreprise à l'EURL ?
+
+Trois déclencheurs : le chiffre d'affaires approche du plafond de 83 600 €, vos frais professionnels réels dépassent l'abattement de 34 % (l'EURL les déduit pour de vrai), ou vous voulez la responsabilité limitée et la possibilité de capitaliser des bénéfices dans une société. Tant qu'aucun ne s'applique, la simplicité et le zéro comptabilité de la micro l'emportent presque toujours.
+
+### L'EURL permet-elle de payer moins de charges que la micro ?
+
+Pas mécaniquement. En micro, les cotisations sont plafonnées à un pourcentage du chiffre d'affaires ; en EURL à l'IS, elles portent sur la rémunération TNS (environ 45 %) mais la déduction des frais réels et l'arbitrage avec les dividendes peuvent réduire l'assiette. L'EURL gagne surtout quand les frais sont élevés ; à frais faibles, la micro reste plus légère et plus simple.
+
+### Peut-on avoir une micro-entreprise et une EURL en même temps ?
+
+Oui, ce sont deux structures juridiques distinctes et rien n'interdit de cumuler une activité en micro et une EURL, à condition qu'elles ne servent pas à contourner artificiellement le plafond de la micro pour une même activité. En pratique, la transition se fait plutôt en série : on teste en micro, puis on bascule en EURL quand les chiffres l'imposent, en radiant la micro.
+
+---
+
+# Micro-entreprise ou EI au réel : abattement ou frais réels ?
+
+URL : https://freelance-ou-cdi.fr/micro-entreprise-ou-ei/
+
+C'est le même métier, en nom propre, sous le même régime social TNS — mais deux façons de calculer l'impôt. La micro applique un abattement forfaitaire de 34 % ; l'EI au réel déduit vos frais réels. Tout le choix tient dans une comparaison : vos dépenses réelles sont-elles plus hautes ou plus basses que l'abattement ? Ce comparatif chiffre les deux sur vos paramètres.
+
+## La seule vraie question : vos frais contre l'abattement de 34 %
+
+En micro, l'administration considère forfaitairement que 34 % de votre chiffre d'affaires (en BNC) couvre vos frais, quel que soit leur montant réel. En EI au réel, vous déduisez vos dépenses effectives : loyer, matériel, déplacements, logiciels, sous-traitance. La règle de décision est arithmétique : si vos frais réels sont inférieurs à 34 % du CA, la micro rend plus ; s'ils sont supérieurs, l'EI au réel prend l'avantage.
+
+Sur le scénario de référence avec 3 000 € de frais par an, à 400 €/jour, la micro laisse environ 3 915 €/mois net contre 3 582 € en EI au réel. Tant que vos frais restent modestes, l'abattement forfaitaire joue en votre faveur ; c'est l'atout de la micro pour les prestataires intellectuels peu équipés.
+
+## Le plafond et la paperasse font le reste
+
+Au-delà de l'impôt, deux différences comptent. La micro plafonne à 83 600 € de chiffre d'affaires en prestations ; l'EI au réel n'a aucune limite, ce qui en fait la suite logique quand l'activité grossit. Et la micro ne demande aucune comptabilité — un simple relevé de recettes — quand l'EI impose un vrai bilan, souvent avec un expert-comptable (comptez quelques centaines à un millier d'euros par an).
+
+Les deux statuts partagent en revanche l'essentiel : vous restez en nom propre, travailleur non salarié, sans assurance chômage, avec depuis 2022 la protection par défaut de votre patrimoine personnel. Passer de la micro à l'EI ne change donc ni votre régime social, ni votre responsabilité — seulement la façon de calculer le bénéfice imposable.
+
+## Le bon réflexe : simuler avant de renoncer à l'abattement
+
+L'erreur classique est de basculer au réel « parce que ça fait sérieux » alors que l'abattement forfaitaire est plus avantageux. Faites le calcul inverse : additionnez vos frais professionnels réels d'une année et comparez-les à 34 % de votre chiffre d'affaires. Si l'abattement est plus généreux, la micro vous fait gagner de l'argent ET du temps.
+
+À l'inverse, si vous engagez du matériel coûteux, un local ou de la sous-traitance régulière, l'EI au réel déduit tout cela et fait fondre votre base imposable. Le simulateur ci-dessus vous permet de faire varier vos frais pour voir précisément le point de bascule entre les deux régimes.
+
+## Questions fréquentes
+
+### Micro-entreprise ou EI au réel : comment savoir laquelle choisir ?
+
+Comparez vos frais professionnels réels à l'abattement forfaitaire de la micro (34 % du CA en BNC). En dessous, la micro rend plus, sans comptabilité : à 400 €/jour et 3 000 € de frais, environ 3 915 €/mois net contre 3 582 € au réel. Au-dessus, l'EI au réel déduit vos charges pour de vrai et devient plus avantageuse, sans plafond de chiffre d'affaires.
+
+### L'EI au réel a-t-elle un plafond de chiffre d'affaires ?
+
+Non. Contrairement à la micro (83 600 € en prestations de services), l'EI au réel n'a aucun plafond. C'est souvent la raison du passage : quand le chiffre d'affaires dépasse le plafond de la micro deux années de suite, on bascule automatiquement au réel, en restant en nom propre sans créer de société.
+
+### Change-t-on de régime social en passant de la micro à l'EI au réel ?
+
+Non. Dans les deux cas, vous êtes travailleur non salarié (TNS), affilié à la Sécurité sociale des indépendants, sans assurance chômage. Seul le calcul du bénéfice imposable et des cotisations change : forfaitaire en micro, sur le bénéfice réel à l'EI. Votre couverture maladie et retraite reste de même nature.
+
+### Faut-il un comptable pour une EI au réel ?
+
+Ce n'est pas obligatoire, mais fortement recommandé : l'EI au réel impose une comptabilité d'engagement, un bilan et une liasse fiscale. Comptez quelques centaines à un millier d'euros par an. C'est précisément ce coût — et le temps qu'il économise — qu'il faut mettre en balance avec le gain fiscal de la déduction des frais réels par rapport à la micro.
+
+---
+
+# EI au réel ou EURL : nom propre ou société en 2026 ?
+
+URL : https://freelance-ou-cdi.fr/ei-ou-eurl/
+
+Les deux sont des statuts d'indépendant au régime TNS, aux cotisations proches. La vraie différence est structurelle : l'EI reste une personne physique imposée à l'impôt sur le revenu, l'EURL est une société qui peut opter pour l'impôt sur les sociétés et distribuer des dividendes. Sur le scénario de référence (550 €/jour), l'EI laisse 4 842 €/mois net contre 4 842 € en EURL — mais le match se joue ailleurs.
+
+## Même régime social, deux enveloppes fiscales
+
+À l'EI comme à l'EURL, le dirigeant est travailleur non salarié : les cotisations sociales, autour de 45 % du revenu après l'abattement d'assiette de 26 % de la réforme 2026, sont du même ordre. La bascule se fait sur l'impôt. L'EI est par défaut à l'impôt sur le revenu : tout le bénéfice est imposé à votre barème, que vous le preniez ou non. L'EURL peut opter pour l'impôt sur les sociétés et ne soumettre à l'IR que ce que vous vous versez réellement.
+
+Cette option IS est le cœur de l'intérêt de l'EURL : le bénéfice non prélevé est taxé à l'IS (15 % jusqu'à 42 500 €, 25 % au-delà) et peut rester dans la société ou être distribué en dividendes. À l'EI à l'IR, aucune mise en réserve possible — le résultat est imposé intégralement chaque année, à votre tranche marginale.
+
+## Responsabilité, dividendes et le piège des 10 %
+
+L'EURL, en tant que société, sépare nettement votre patrimoine de celui de l'entreprise et accueille facilement un futur associé ou une transformation en SASU. L'EI, elle, protège aussi votre patrimoine personnel depuis 2022, mais reste une structure « en nom propre » sans capital ni parts sociales.
+
+Côté dividendes, l'EURL bute sur la même limite que face à la SASU : seule la part inférieure à 10 % du capital social bénéficie de la flat tax de 31,4 % ; au-delà, elle repasse aux cotisations TNS. Avec un capital modeste, la stratégie dividendes rapporte donc peu — ce qui rapproche l'EURL de l'EI pour qui se verse surtout une rémunération.
+
+## Quand l'EURL vaut son surcoût
+
+L'EURL coûte plus cher à créer et à tenir (statuts, comptabilité, formalités). Ce surcoût se justifie quand vous voulez lisser votre rémunération dans le temps, capitaliser des bénéfices à l'IS plutôt que de tout imposer à l'IR, ou préparer l'entrée d'associés. Pour un indépendant qui veut simplement déduire ses frais et se verser son bénéfice, l'EI au réel fait le même travail sans la structure.
+
+En résumé : l'EI si vous privilégiez la simplicité et vous versez l'essentiel de votre bénéfice ; l'EURL si l'option IS et la mise en réserve ont une valeur pour vous. Le simulateur compare les deux nets sur votre TJM ; au-delà du net immédiat, pesez la souplesse de l'IS que seule l'EURL apporte.
+
+## Questions fréquentes
+
+### EI au réel ou EURL : quelle différence de revenu net ?
+
+À cotisations TNS comparables, l'écart vient de l'impôt. Sur le scénario de référence (550 €/jour, tout en rémunération), l'EI laisse 4 842 €/mois net contre 4 842 € en EURL à l'IS. L'EURL creuse l'écart quand vous mettez du bénéfice en réserve à l'IS au lieu de tout imposer à votre barème ; à rémunération intégrale, les deux sont proches.
+
+### L'EURL protège-t-elle mieux le patrimoine que l'EI ?
+
+Les deux protègent le patrimoine personnel : l'EURL par la personnalité morale de la société, l'EI par la protection légale du patrimoine privé instaurée en 2022. La différence est surtout formelle et pratique : l'EURL, en tant que société, rassure certains partenaires, accueille des associés et se transforme plus facilement en SASU.
+
+### Peut-on passer d'une EI à une EURL ?
+
+Oui : on crée l'EURL puis on y apporte ou cède le fonds de l'entreprise individuelle. C'est un vrai changement de structure (statuts, capital, formalités au guichet unique), pas une simple option fiscale. On le fait généralement pour bénéficier de l'IS, capitaliser des bénéfices ou préparer une association.
+
+### EI ou EURL : laquelle paie le moins d'impôt ?
+
+Cela dépend de ce que vous prélevez. Si vous vous versez tout votre bénéfice, l'EI à l'IR et l'EURL à l'IS aboutissent à une imposition proche. Si vous laissez une partie du bénéfice dans la société, l'EURL à l'IS permet de ne payer que 15 à 25 % d'IS sur cette part au lieu de votre tranche marginale d'IR — un avantage qui grandit avec le niveau de revenu.
+
+---
+
+# EI au réel ou SASU : quel statut vous laisse le plus de net ?
+
+URL : https://freelance-ou-cdi.fr/ei-ou-sasu/
+
+Deux statuts sans plafond de chiffre d'affaires, qui déduisent tous deux les frais réels — mais tout les oppose côté social. L'EI est TNS, cotisations légères et protection modeste ; la SASU est assimilée salarié, protection complète et charges lourdes, compensées par les dividendes. Sur le scénario de référence (550 €/jour, tout en rémunération), l'EI laisse 4 842 €/mois net contre 4 125 € en SASU.
+
+## TNS contre assimilé salarié : la facture sociale
+
+L'entrepreneur individuel au réel cotise en TNS : de l'ordre de 45 % de son bénéfice après l'abattement d'assiette de 26 % de la réforme 2026, pour une protection maladie et retraite plus modeste. Le président de SASU est assimilé salarié : couverture du régime général (hors chômage), mais 75 à 80 % de charges sur le net versé — la facture la plus lourde de tous les statuts.
+
+À rémunération intégrale, l'écart est net : 4 842 € contre 4 125 €/mois sur le scénario de référence. C'est logique — l'EI ne finance qu'une protection réduite, la SASU une protection de cadre. La question n'est donc pas « qui paie le moins » mais « ce que ces cotisations vous achètent, et si vous en avez besoin ».
+
+## Le levier dividendes, réservé à la SASU
+
+La SASU a une carte que l'EI n'a pas : au lieu de tout passer en salaire chargé, son président peut se verser un salaire modéré et sortir le reste du bénéfice en dividendes, taxés à la flat tax de 31,4 % après impôt sur les sociétés, sans limite. Bien dosé, ce montage rapproche, voire dépasse, le net d'une EI à haut niveau de revenu.
+
+L'EI, imposée à l'IR sur la totalité de son bénéfice, n'a pas ce levier : tout est soumis aux cotisations TNS et au barème. Son avantage tient à sa simplicité et à des charges intrinsèquement plus basses ; celui de la SASU, à la flexibilité de l'arbitrage salaire/dividendes et à une meilleure couverture.
+
+## Chômage, ARE et sortie de CDI
+
+Un critère tranche souvent le débat en sortie de CDI : la SASU permet un président sans salaire qui conserve 100 % de son ARE et se rémunère en dividendes une fois les résultats là. L'EI, dont le bénéfice est un revenu d'activité, réduit l'allocation dès le premier euro dégagé. Si vous comptez sur le chômage comme filet de lancement, la SASU offre le montage le plus favorable.
+
+À l'inverse, l'indépendant aguerri qui maximise son net sans besoin d'ARE ni de protection étendue trouvera souvent l'EI plus rentable et bien plus simple. Le simulateur met les deux nets face à face sur votre TJM ; ajoutez mentalement la valeur du chômage et de la retraite pour arbitrer.
+
+## Questions fréquentes
+
+### EI au réel ou SASU : laquelle laisse le plus de net ?
+
+À rémunération intégrale, l'EI l'emporte grâce à ses cotisations TNS allégées : 4 842 €/mois net contre 4 125 € en SASU sur le scénario de référence (550 €/jour). La SASU rattrape, et peut dépasser, dès qu'on optimise via les dividendes (flat tax 31,4 % après IS) à haut niveau de chiffre d'affaires.
+
+### Peut-on cumuler l'ARE avec une EI ou une SASU ?
+
+La SASU permet le cumul le plus favorable : un président sans salaire garde 100 % de son ARE et peut se verser des dividendes, qui ne sont pas déduits de l'allocation. En EI, le bénéfice est un revenu d'activité qui réduit l'ARE dès qu'il est dégagé. Pour maximiser le filet chômage en sortie de CDI, la SASU est le meilleur montage.
+
+### La SASU protège-t-elle mieux que l'EI au réel ?
+
+Oui sur la couverture : le président de SASU relève du régime général (meilleure retraite, indemnités journalières, prévoyance), là où l'EI a une protection TNS plus modeste. Aucun des deux n'ouvre de droit au chômage au titre du mandat. Cette meilleure protection de la SASU se paie par des cotisations bien plus lourdes sur le salaire.
+
+### EI ou SASU pour un freelance qui a des frais élevés ?
+
+Les deux déduisent les frais réels, donc ce critère ne les départage pas. Le choix se fait sur le social : EI pour des cotisations légères et la simplicité, SASU pour la protection du régime général, l'arbitrage salaire/dividendes et le cumul ARE. Le simulateur intègre vos frais réels pour comparer les nets sur votre situation.
+
+---
+
+# Portage salarial ou SASU : sécurité ou optimisation ?
+
+URL : https://freelance-ou-cdi.fr/portage-salarial-ou-sasu/
+
+Curieusement proches et pourtant opposés : dans les deux cas vous relevez du régime général (assimilé salarié). Mais le portage ajoute l'assurance chômage et vous décharge de toute gestion, tandis que la SASU offre l'arbitrage salaire/dividendes et le contrôle total. Sur le scénario de référence (550 €/jour), le portage laisse 3 767 €/mois net contre 4 125 € en SASU à 100 % salaire.
+
+## Ce que le portage a et que la SASU n'a pas : le chômage
+
+Le salarié porté cotise à l'assurance chômage : à la fin d'une mission, il peut ouvrir des droits à l'ARE comme n'importe quel salarié. Le président de SASU, lui, ne cotise pas au chômage au titre de son mandat — c'est l'exception notable du statut « assimilé salarié ». Pour qui veut un vrai filet en cas de creux d'activité, le portage a un avantage que la SASU ne rattrapera jamais.
+
+Le portage supprime aussi toute la gestion : pas de société à créer, pas de comptabilité, pas de déclarations. La société de portage facture, encaisse, établit votre bulletin de paie. En échange, elle prélève des frais de gestion (5 à 10 %) qui s'ajoutent aux cotisations — d'où un net inférieur à chiffre d'affaires égal.
+
+## Ce que la SASU a et que le portage n'a pas : le pilotage
+
+La SASU vous rend maître de tout : vous choisissez la part de salaire et la part de dividendes, déduisez vos frais réels, capitalisez du bénéfice à l'IS. C'est ce qui explique qu'à haut niveau de revenu, une SASU bien pilotée laisse nettement plus que le portage, dont le net est « subi » une fois les frais de gestion et les cotisations complètes déduits.
+
+Le montage SASU + ARE est d'ailleurs redoutable en sortie de CDI : président sans salaire, chômage maintenu à 100 %, dividendes quand les résultats arrivent. Le portage, lui, génère de nouveaux droits au chômage mais ne permet pas ce cumul optimisé — c'est un salaire, qui vient en déduction de l'allocation.
+
+## Le bon choix selon votre horizon
+
+Choisissez le portage pour la tranquillité : transition depuis un CDI, missions ponctuelles, besoin de bulletins de salaire pour un crédit immobilier, ou simplement refus de gérer une société. Vous perdez en net ce que vous gagnez en sérénité et en droits.
+
+Choisissez la SASU pour la performance : activité installée, chiffre d'affaires élevé, volonté d'optimiser via les dividendes ou de cumuler avec l'ARE. Beaucoup de freelances commencent en portage puis créent une SASU une fois l'activité stabilisée — le simulateur vous montre ce que chaque statut vaut à votre TJM.
+
+## Questions fréquentes
+
+### Portage salarial ou SASU : lequel laisse le plus de net ?
+
+À chiffre d'affaires égal, la SASU laisse plus de net car elle évite les frais de gestion du portage (5 à 10 %) et permet l'arbitrage salaire/dividendes. Sur le scénario de référence (550 €/jour), le portage laisse 3 767 €/mois contre 4 125 € en SASU à 100 % salaire — et l'écart se creuse encore si la SASU optimise via les dividendes.
+
+### Le portage donne-t-il droit au chômage, pas la SASU ?
+
+Exactement. Le salarié porté cotise à l'assurance chômage et peut ouvrir des droits à l'ARE en fin de mission. Le président de SASU, bien qu'assimilé salarié, ne cotise pas au chômage au titre de son mandat. C'est la différence la plus décisive entre les deux : le portage sécurise, la SASU optimise.
+
+### Peut-on cumuler l'ARE avec le portage ou la SASU ?
+
+La SASU permet le cumul le plus favorable : un président sans salaire conserve 100 % de son ARE et se rémunère en dividendes. En portage, votre salaire vient en déduction de l'allocation, mais vos missions génèrent de nouveaux droits. Pour maximiser un reliquat d'ARE existant, la SASU l'emporte ; pour reconstituer des droits, le portage.
+
+### Portage ou SASU en sortie de CDI ?
+
+Le portage est le sas le plus simple : aucun montage, chômage maintenu par les missions, bulletins de salaire. La SASU est le montage le plus optimisé si vous avez un reliquat d'ARE conséquent (président sans salaire, dividendes) et acceptez de gérer une société. Le simulateur compare les nets ; ajoutez la valeur du chômage et de la gestion pour trancher.
+
+---
+
+# Portage salarial ou EURL : salariat ou société ?
+
+URL : https://freelance-ou-cdi.fr/portage-salarial-ou-eurl/
+
+Deux mondes : le portage vous garde salarié (chômage, retraite du régime général, aucune gestion), l'EURL fait de vous un chef d'entreprise TNS à l'impôt sur les sociétés. Sur le scénario de référence (550 €/jour), l'EURL laisse 4 842 €/mois net contre 3 767 € en portage — la différence, c'est le prix de la sécurité.
+
+## L'écart de net, et ce qu'il finance
+
+En EURL à l'IS, le gérant est TNS : cotisations autour de 45 % du revenu, allégées par l'abattement d'assiette de 26 % de la réforme 2026, et frais réels déductibles. En portage, votre chiffre d'affaires supporte d'abord les frais de gestion de la société (5 à 10 %), puis les cotisations patronales ET salariales du régime général. D'où un net sensiblement plus bas : 3 767 € contre 4 842 €/mois sur le scénario de référence.
+
+Cet écart n'est pas une perte sèche : il finance l'assurance chômage, une retraite complète et une prévoyance que l'EURL n'offre pas. La bonne lecture est « l'EURL rend plus de cash, le portage plus de droits ». À vous de dire ce que vaut, pour votre situation, ce filet de sécurité.
+
+## Gestion, engagement et réversibilité
+
+Le portage, c'est zéro création, zéro comptabilité, zéro déclaration : idéal pour tester l'indépendance sans engagement, ou pour une mission ponctuelle entre deux postes. L'EURL demande de créer une société, de tenir des comptes et de gérer les formalités — un vrai investissement de temps et d'argent, justifié quand l'activité est installée.
+
+Le portage est aussi le plus réversible : on entre et on sort sans dissoudre quoi que ce soit. Beaucoup de freelances l'utilisent comme rampe de lancement, puis créent une EURL (ou une SASU) une fois le chiffre d'affaires stabilisé et l'envie de piloter leur rémunération venue.
+
+## Qui devrait choisir quoi
+
+Le portage s'impose si vous voulez conserver le confort du salariat : chômage, bulletins de paie « bankables » pour un crédit, aucune gestion, mission encadrée exigée par un grand compte. Vous acceptez de rendre moins de net en échange de cette tranquillité.
+
+L'EURL s'impose si vous voulez maximiser votre revenu, déduire des frais réels importants et piloter rémunération et dividendes dans le temps. Sur les dividendes, gardez en tête la règle des 10 % du capital, qui limite l'optimisation en EURL. Le simulateur chiffre les deux nets à votre TJM pour objectiver l'arbitrage.
+
+## Questions fréquentes
+
+### Portage salarial ou EURL : lequel laisse le plus de net ?
+
+L'EURL, nettement, grâce aux cotisations TNS allégées et à l'absence de frais de gestion : sur le scénario de référence (550 €/jour), 4 842 €/mois net contre 3 767 € en portage. L'écart correspond au coût de la protection sociale complète du portage — chômage, retraite du régime général, prévoyance — que l'EURL n'apporte pas.
+
+### Le portage donne-t-il droit au chômage, pas l'EURL ?
+
+Oui. Le salarié porté cotise à l'assurance chômage et peut ouvrir des droits à l'ARE en fin de mission. Le gérant d'EURL est TNS et n'ouvre aucun droit au chômage au titre de son mandat. Si un filet de sécurité est déterminant pour vous, le portage est le seul des deux à l'offrir.
+
+### Faut-il créer une société en portage salarial ?
+
+Non, c'est justement son intérêt : vous signez un contrat de travail avec une société de portage qui gère tout (facturation, cotisations, bulletin de paie). Aucune création, aucune comptabilité. L'EURL, à l'inverse, suppose de constituer une société et d'en assurer la gestion comptable et administrative.
+
+### Peut-on passer du portage à l'EURL ?
+
+Oui, et c'est un parcours fréquent : on démarre en portage pour tester l'activité sans risque, puis on crée une EURL quand le chiffre d'affaires est stable et qu'on veut optimiser son net. La transition suppose de créer la société et de transférer les contrats clients — quelques semaines de formalités, sans continuité juridique entre les deux.
+
+---
+
+# Micro-entreprise ou CDI : à partir de quel TJM ça vaut le coup ?
+
+URL : https://freelance-ou-cdi.fr/micro-entreprise-ou-cdi/
+
+La micro est la porte d'entrée la plus simple vers l'indépendance : création gratuite, cotisations en pourcentage du chiffre d'affaires, zéro comptabilité. Mais quitter un CDI, c'est renoncer au chômage, aux congés payés et à un revenu garanti. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net après impôt), il faut environ 320 €/jour en micro. Ce simulateur calcule votre propre point de bascule.
+
+## Le TJM qui remplace votre salaire
+
+La micro affiche le seuil de TJM le plus bas de tous les statuts pour égaler un salaire donné, grâce à ses cotisations légères (environ 24,6 % du CA en BNC) et à l'abattement forfaitaire de 34 %. Pour un CDI cadre à 55 000 € brut, comptez environ 320 €/jour, à 18 jours facturés par mois sur 11 mois. Le tableau des seuils plus bas décline ce chiffre pour chaque niveau de salaire.
+
+Attention au piège des jours facturés : 18 par mois est déjà un bon taux d'occupation, car prospection, intermission et congés ne se facturent pas. À 15 jours par mois, le TJM nécessaire grimpe d'environ 20 %. Réglez le simulateur sur votre rythme réel avant de vous fixer un objectif.
+
+## Ce que vous perdez en quittant le CDI
+
+Un TJM « équivalent » ne remplace pas tout le CDI. Vous perdez l'assurance chômage (la micro n'y ouvre aucun droit), les congés payés, une retraite mieux garnie, et souvent des avantages annexes : mutuelle d'entreprise, titres-restaurant, participation. La micro ne protège pas non plus contre les impayés ni les creux d'activité.
+
+Le plafond de 83 600 € de chiffre d'affaires en prestations est l'autre limite : au-delà, la micro n'est plus accessible et il faut basculer à l'EI au réel ou en société. La micro est donc idéale pour tester une activité ou compléter un revenu, moins pour remplacer durablement un haut salaire.
+
+## Comment décider sereinement
+
+La bonne méthode : repérez votre net mensuel actuel après impôt, trouvez le TJM qui le reproduit en micro dans le tableau des seuils, puis ajoutez une marge de sécurité pour les intermissions et l'absence de chômage. Si votre TJM cible est nettement au-dessus du seuil, la micro est une évidence financière ; s'il est juste au-dessus, pesez la perte de sécurité.
+
+Beaucoup profitent d'une rupture conventionnelle pour lancer leur micro avec l'ARE comme filet : le chômage cumule alors partiellement avec les premiers revenus, ce qui adoucit la transition. Le simulateur compare micro et CDI sur vos chiffres exacts — le point de départ le plus fiable avant de vous décider.
+
+## Questions fréquentes
+
+### Quel TJM faut-il pour que la micro-entreprise batte mon CDI ?
+
+Pour un CDI cadre à 55 000 € brut (3 187 €/mois net après impôt), il faut environ 320 €/jour en micro-entreprise, à 18 jours facturés par mois sur 11 mois. Le seuil monte proportionnellement avec le salaire visé et si vous facturez moins de jours. Le tableau des seuils du simulateur le donne pour chaque niveau de brut.
+
+### Perd-on le chômage en passant du CDI à la micro-entreprise ?
+
+La micro n'ouvre aucun droit au chômage : vous ne cotisez pas à l'assurance chômage et ne générez pas de nouveaux droits. En revanche, des droits acquis avant (via une rupture conventionnelle par exemple) peuvent être maintenus partiellement et cumulés avec vos revenus de micro-entrepreneur, ce qui aide au lancement. Seul le portage salarial ouvre de vrais droits au chômage parmi les statuts freelance.
+
+### La micro-entreprise est-elle vraiment plus rentable qu'un CDI ?
+
+Au-dessus du seuil d'équivalence (environ 320 €/jour pour 55 000 € brut), la micro laisse plus de net que le CDI comparé. Mais « plus rentable » ne veut pas dire « équivalent » : le CDI apporte chômage, congés et retraite que le net seul ne reflète pas. Comparez à net égal, puis pondérez selon votre besoin de sécurité.
+
+### Jusqu'à quel salaire la micro-entreprise reste-t-elle intéressante ?
+
+Tant que le chiffre d'affaires nécessaire reste sous le plafond de 83 600 € en prestations — soit environ 420 €/jour au rythme de 18 jours sur 11 mois. Au-delà, la micro n'est plus accessible : pour remplacer un très haut salaire, il faut passer à l'EI au réel, l'EURL ou la SASU, comparées dans ce simulateur.
+
+---
+
+# SASU ou CDI : à partir de quel TJM ça vaut le coup ?
+
+URL : https://freelance-ou-cdi.fr/sasu-ou-cdi/
+
+La SASU est le statut freelance le plus proche du CDI : dans les deux cas, vous êtes assimilé salarié, avec la couverture du régime général. La grande différence est le chômage — que le CDI garantit et que la SASU n'ouvre pas. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net), il faut environ 410 €/jour en SASU. Voici l'arbitrage complet.
+
+## Presque le même statut social, sauf le chômage
+
+Le président de SASU relève du régime général comme un salarié : même assurance maladie, mêmes indemnités journalières, même retraite de base et complémentaire. La seule protection qui manque est l'assurance chômage — il ne cotise pas à l'ARE au titre de son mandat. Un CDI, lui, garantit ce filet en cas de rupture.
+
+Parce que la SASU porte des cotisations lourdes (75 à 80 % de charges sur le salaire), le TJM nécessaire pour égaler un CDI est élevé : environ 410 €/jour pour 55 000 € brut, à rémunération intégrale. Mais ce chiffre ne raconte que la moitié de l'histoire, car en SASU vous n'êtes pas obligé de tout passer en salaire.
+
+## Le levier que le CDI n'a pas : les dividendes
+
+En SASU, tout ce que vous ne vous versez pas en salaire reste un bénéfice, taxé à l'impôt sur les sociétés (15 % jusqu'à 42 500 €, 25 % au-delà), puis distribuable en dividendes à la flat tax de 31,4 %. Ce dosage salaire/dividendes permet d'améliorer le net à chiffre d'affaires égal — un pilotage impossible pour un salarié en CDI, dont la rémunération est entièrement soumise aux cotisations.
+
+C'est aussi ce qui rend la SASU imbattable en sortie de CDI : président sans salaire, ARE maintenue à 100 %, dividendes une fois les résultats là. Vous transformez votre reliquat de chômage en trésorerie de lancement, tout en construisant votre société — un montage que le CDI, par nature, ne permet pas.
+
+## Sécurité contre liberté
+
+Le CDI reste le choix de la stabilité : revenu garanti, chômage en cas de coup dur, aucune gestion. La SASU est le choix de la liberté et du potentiel : vous fixez votre tarif, choisissez vos missions, pilotez votre rémunération — au prix de la gestion d'une société et de la perte du filet chômage sur les nouvelles périodes.
+
+La bonne question n'est donc pas « SASU ou CDI » dans l'absolu, mais « à quel TJM ma liberté devient-elle aussi un gain net ». Sous le seuil, vous payez votre indépendance ; au-dessus, elle vous paie. Le simulateur situe ce seuil sur vos chiffres, et compare la SASU aux autres statuts freelance souvent plus rémunérateurs.
+
+## Questions fréquentes
+
+### Quel TJM pour que la SASU batte mon CDI ?
+
+Pour un CDI cadre à 55 000 € brut (3 187 €/mois net après impôt), il faut environ 410 €/jour en SASU à rémunération intégrale, à 18 jours facturés par mois sur 11 mois. Ce seuil baisse si vous optimisez via les dividendes. Le tableau des seuils du simulateur le donne pour chaque niveau de salaire.
+
+### Le président de SASU a-t-il droit au chômage comme un salarié en CDI ?
+
+Non. Bien qu'assimilé salarié pour la maladie et la retraite, le président de SASU ne cotise pas à l'assurance chômage au titre de son mandat et n'ouvre pas de droits à l'ARE. C'est la principale protection du CDI qu'il perd. En revanche, un reliquat d'ARE issu d'un CDI antérieur peut être maintenu s'il ne se verse pas de salaire.
+
+### Pourquoi la SASU est-elle si prisée en sortie de CDI ?
+
+Parce qu'elle permet de cumuler l'ARE issue du CDI rompu avec une activité : président sans salaire, l'allocation est maintenue à 100 %, et l'on se rémunère en dividendes une fois les résultats là. Ce montage transforme le reliquat de chômage en trésorerie de lancement, tout en gardant la couverture du régime général.
+
+### SASU ou CDI : lequel protège le mieux ?
+
+Le CDI, grâce à l'assurance chômage et au revenu garanti. La SASU offre la même couverture maladie et retraite qu'un cadre, mais sans chômage et sans salaire garanti. Elle compense par la liberté (tarif, missions, dividendes) et un potentiel de revenu supérieur au-delà du seuil d'équivalence d'environ 410 €/jour.
+
+---
+
+# EURL ou CDI : à partir de quel TJM ça vaut le coup ?
+
+URL : https://freelance-ou-cdi.fr/eurl-ou-cdi/
+
+Passer d'un CDI à une EURL, c'est troquer le statut de salarié contre celui de gérant indépendant : cotisations plus légères, mais plus de chômage ni de revenu garanti. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net), il faut environ 355 €/jour en EURL. Ce simulateur calcule votre point de bascule et met les deux nets face à face.
+
+## Gérant TNS : des charges plus légères que le salariat
+
+Le gérant associé unique d'une EURL est travailleur non salarié : ses cotisations, autour de 45 % du revenu après l'abattement d'assiette de 26 % de la réforme 2026, sont plus légères que celles d'un salarié « tout compris » (part patronale incluse). C'est pourquoi le TJM nécessaire pour égaler un CDI — environ 355 €/jour pour 55 000 € brut — est plus bas que celui d'une SASU ou d'un portage.
+
+À l'IS, l'EURL permet aussi de ne soumettre à l'impôt sur le revenu que ce que vous vous versez, et de capitaliser le reste dans la société à 15-25 % d'IS. Un salarié en CDI n'a pas cette souplesse : tout son brut passe par les cotisations et l'impôt, sans mise en réserve possible.
+
+## La contrepartie : ni chômage, ni revenu garanti
+
+En échange de ces charges allégées, le gérant d'EURL renonce à l'assurance chômage (aucun droit à l'ARE au titre du mandat), à une retraite aussi garnie que celle d'un cadre, et à la sécurité d'un salaire mensuel garanti. Il gère aussi les creux d'activité et les impayés seul. Le CDI, lui, garantit le revenu et le filet chômage.
+
+La protection sociale du TNS s'est rapprochée de celle du salarié, mais reste plus modeste sur la prévoyance et la retraite. Un gérant prudent complète souvent avec une prévoyance et une retraite facultatives (contrats Madelin), déductibles — un coût à intégrer dans la comparaison avec le CDI.
+
+## Trancher sur vos chiffres
+
+Repérez votre net mensuel actuel après impôt et cherchez le TJM qui le reproduit en EURL dans le tableau des seuils. S'il est nettement sous votre TJM cible, l'EURL est un gain net ; s'il est proche, la perte de sécurité pèse davantage. Ajoutez toujours une marge pour les intermissions et la protection sociale à reconstituer.
+
+Si votre choix est déjà « je passe en société », comparez surtout EURL et SASU : l'EURL gagne si vous vous versez l'essentiel en rémunération, la SASU si vous misez sur les dividendes ou le cumul ARE. Le simulateur place EURL, SASU et CDI côte à côte sur votre TJM.
+
+## Questions fréquentes
+
+### Quel TJM pour que l'EURL batte mon CDI ?
+
+Pour un CDI cadre à 55 000 € brut (3 187 €/mois net après impôt), il faut environ 355 €/jour en EURL à l'IS, à 18 jours facturés par mois sur 11 mois. C'est un seuil plus bas que la SASU, grâce aux cotisations TNS allégées. Le tableau des seuils du simulateur le décline pour chaque niveau de salaire.
+
+### Le gérant d'EURL a-t-il droit au chômage comme un salarié ?
+
+Non. Le gérant associé unique d'une EURL est travailleur non salarié et ne cotise pas à l'assurance chômage : aucun droit à l'ARE au titre du mandat. C'est la principale protection du CDI qu'il perd. Un reliquat d'ARE antérieur peut toutefois être partiellement maintenu selon la rémunération que le gérant se verse.
+
+### L'EURL laisse-t-elle plus de net qu'un CDI équivalent ?
+
+Au-dessus du seuil d'environ 355 €/jour (pour 55 000 € brut), oui, grâce aux cotisations TNS plus légères et à la déduction des frais réels. Mais à net égal, le CDI apporte le chômage et une retraite plus solide : comparez à net égal, puis retranchez le coût d'une prévoyance et d'une retraite facultatives pour une comparaison honnête.
+
+### EURL ou CDI pour un premier passage en indépendant ?
+
+L'EURL demande de créer et gérer une société, ce qui est un vrai engagement pour un premier pas. Beaucoup préfèrent tester d'abord en micro-entreprise ou en portage salarial (qui garde le chômage), puis créer une EURL une fois l'activité confirmée. Le simulateur compare ces options pour éclairer le premier choix.
+
+---
+
+# EI au réel ou CDI : à partir de quel TJM ça vaut le coup ?
+
+URL : https://freelance-ou-cdi.fr/ei-ou-cdi/
+
+L'entreprise individuelle au réel est l'indépendance en nom propre, sans société : cotisations TNS allégées, frais réels déductibles, aucun plafond. Face à elle, le CDI garde le chômage, les congés et un revenu garanti. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net), il faut environ 355 €/jour en EI. Ce simulateur chiffre l'arbitrage.
+
+## Un TJM d'équivalence bas, grâce au régime TNS
+
+L'entrepreneur individuel est TNS : ses cotisations, calculées sur le bénéfice après l'abattement d'assiette de 26 % de la réforme 2026, restent bien plus légères que celles d'un assimilé salarié. Résultat, le TJM pour égaler un CDI — environ 355 €/jour pour 55 000 € brut — est parmi les plus bas, juste au-dessus de la micro et loin devant la SASU ou le portage.
+
+L'EI déduit en plus vos frais réels à l'euro près, sans plafond de chiffre d'affaires. Pour un indépendant qui a de vraies dépenses professionnelles (matériel, local, déplacements), c'est un avantage net sur le CDI, dont la rémunération ne « déduit » rien de vos frais de travail.
+
+## Ce que le CDI garde et que l'EI n'a pas
+
+Le revers du régime TNS : pas d'assurance chômage, une retraite et une prévoyance plus modestes que le régime général, et aucun revenu garanti. Vous encaissez les creux d'activité et les impayés seul. Le CDI, lui, sécurise le revenu, ouvre des droits au chômage et cotise à une retraite de cadre.
+
+Depuis 2022, votre patrimoine personnel est protégé par défaut à l'EI, ce qui lève l'un des vieux risques du statut. Reste la volatilité du revenu d'indépendant : une marge de trésorerie et une prévoyance facultative sont vivement conseillées pour compenser ce que le CDI apporte automatiquement.
+
+## Décider avec le bon repère
+
+Partez de votre net mensuel actuel après impôt, trouvez le TJM qui le reproduit en EI dans le tableau des seuils, puis ajoutez une marge pour les intermissions et la protection à reconstituer. Si votre TJM cible est confortablement au-dessus du seuil, l'EI est un vrai gain ; s'il est juste au-dessus, la sécurité du CDI pèse lourd.
+
+Si vous hésitez encore sur le statut, comparez l'EI à la micro (même métier, abattement contre frais réels) et au portage (qui garde le chômage). Le simulateur met l'EI, le CDI et les autres statuts côte à côte sur votre TJM réel.
+
+## Questions fréquentes
+
+### Quel TJM pour que l'EI au réel batte mon CDI ?
+
+Pour un CDI cadre à 55 000 € brut (3 187 €/mois net après impôt), il faut environ 355 €/jour en EI au réel, à 18 jours facturés par mois sur 11 mois. C'est l'un des seuils les plus bas, grâce aux cotisations TNS et à la déduction des frais réels. Le tableau des seuils du simulateur le donne pour chaque salaire.
+
+### Perd-on le chômage en quittant un CDI pour une EI ?
+
+Oui : l'entrepreneur individuel est TNS et ne cotise pas à l'assurance chômage, sans droit à l'ARE au titre de son activité. Un reliquat de droits acquis en CDI peut être maintenu partiellement au démarrage et cumulé avec les revenus d'indépendant. Seul le portage salarial ouvre de vrais droits au chômage parmi les statuts freelance.
+
+### EI au réel ou CDI : lequel laisse le plus de net ?
+
+Au-dessus d'environ 355 €/jour (pour 55 000 € brut), l'EI laisse plus de net grâce aux cotisations TNS légères et aux frais déductibles. Mais le CDI apporte chômage, congés et retraite de cadre que le net seul ne reflète pas : comparez à net égal, puis intégrez le coût d'une prévoyance facultative pour être juste.
+
+### EI au réel ou micro pour quitter un CDI ?
+
+Si vos frais professionnels sont faibles, la micro est plus simple et souvent plus avantageuse jusqu'à son plafond de 83 600 €. Si vos frais réels sont élevés ou si vous dépassez ce plafond, l'EI au réel les déduit pour de vrai, sans limite de chiffre d'affaires. Le simulateur compare les deux — et le CDI — sur votre situation.
+
+---
+
+# Comment fixer son TJM en freelance : la méthode 2026
+
+URL : https://freelance-ou-cdi.fr/guides/comment-fixer-son-tjm/
+
+Le TJM (taux journalier moyen) est la décision la plus structurante d'un freelance : trop bas, vous travaillez à perte sans le voir ; trop haut, vous ne signez pas. La bonne méthode ne part pas du marché mais de vos chiffres — le salaire que vous voulez remplacer, les jours que vous pouvez réellement facturer, et tout ce que le TJM doit financer que le salariat prenait en charge.
+
+## Partir du net que vous visez, pas du marché
+
+Commencez par le revenu net mensuel que vous voulez toucher après impôt. Multipliez-le par douze, puis remontez le fil à l'envers : ce net doit rester une fois payés les cotisations sociales de votre statut, l'impôt sur le revenu et vos frais professionnels. C'est exactement ce que fait le simulateur ci-dessus, qui vous donne le TJM correspondant statut par statut.
+
+Le marché n'intervient qu'ensuite, comme garde-fou : si votre TJM calculé est très au-dessus des prix pratiqués dans votre spécialité, il faudra soit réduire votre train de vie cible, soit monter en compétence ou en positionnement. Mais partir du marché d'abord, c'est risquer de caler son tarif sous son seuil de rentabilité sans s'en apercevoir.
+
+## Compter les jours réellement facturables
+
+L'erreur la plus fréquente est de diviser son objectif annuel par 220 jours ouvrés. En réalité, un freelance facture rarement plus de 18 jours par mois sur 11 mois, soit environ 198 jours par an : le reste part en prospection, en administratif, en intermission entre deux missions, en formation et en congés — tout ce temps non facturé que le salaire couvrait implicitement.
+
+Cette différence est énorme : passer de 220 à 198 jours facturés augmente mécaniquement le TJM nécessaire d'environ 10 %, et viser 15 jours par mois plutôt que 18 le renchérit encore de 20 %. Réglez le curseur « jours facturés » du simulateur sur une hypothèse prudente : mieux vaut un TJM un peu haut et des semaines pleines qu'un TJM juste et des trous non anticipés.
+
+## Ajouter les charges, les frais et une vraie marge
+
+Le TJM est un prix de vente hors taxes, pas un salaire journalier. Il doit financer les cotisations sociales (de 24,6 % du chiffre d'affaires en micro BNC à 75-80 % de charges sur le salaire en SASU), l'impôt, vos frais professionnels (matériel, logiciels, assurance, comptable) et une marge de sécurité pour les creux. Selon le statut, il ne reste au final qu'entre 40 et 60 % du TJM en net disponible.
+
+Ajoutez enfin ce que le salariat vous offrait gratuitement et que vous devez désormais autofinancer : mutuelle, prévoyance, retraite complémentaire, jours de maladie. Un TJM correctement fixé intègre ces coûts invisibles — c'est la différence entre un tarif qui « paraît » élevé et un tarif qui vous laisse réellement mieux qu'un CDI.
+
+## Questions fréquentes
+
+### Comment calculer son TJM freelance ?
+
+Partez du net mensuel visé, annualisez-le, puis ajoutez les cotisations sociales de votre statut, l'impôt sur le revenu et vos frais professionnels pour obtenir le chiffre d'affaires nécessaire. Divisez ce chiffre d'affaires par les jours réellement facturables (environ 198 par an, soit 18 jours × 11 mois). Le simulateur fait ce calcul statut par statut à partir de votre objectif.
+
+### Combien de jours par an un freelance facture-t-il vraiment ?
+
+Rarement plus de 198 jours (18 jours par mois sur 11 mois). Le reste part en prospection, administratif, intermission, formation et congés — non facturé. Calculer son TJM sur 220 jours ouvrés est l'erreur la plus courante : elle sous-estime le tarif nécessaire de 10 % ou plus.
+
+### Quelle marge ajouter à son TJM ?
+
+Au-delà des cotisations, de l'impôt et des frais, prévoyez une marge pour les creux d'activité et pour autofinancer ce que le salariat offrait (mutuelle, prévoyance, retraite complémentaire, jours de maladie). Une marge de sécurité de 10 à 20 % au-dessus de votre seuil de rentabilité strict évite de travailler à perte pendant les intermissions.
+
+### Faut-il aligner son TJM sur le marché ?
+
+Le marché est un garde-fou, pas un point de départ. Fixez d'abord votre TJM à partir de vos chiffres (net visé, jours facturables, charges), puis comparez-le aux prix de votre spécialité. S'il est très au-dessus, retravaillez votre positionnement ; s'il est en dessous du marché, vous laissez de l'argent sur la table.
+
+---
+
+# Charges sociales du freelance : combien, selon le statut ?
+
+URL : https://freelance-ou-cdi.fr/guides/charges-sociales-freelance/
+
+« Combien de charges ? » est la première question de tout futur freelance — et la réponse dépend entièrement du statut. On ne compare pas les mêmes choses : la micro cotise en pourcentage du chiffre d'affaires, le TNS sur son revenu, l'assimilé salarié sur son salaire net. Voici comment lire ces taux sans se tromper, et ce qu'ils achètent vraiment.
+
+## Trois bases de calcul, trois niveaux de charges
+
+En micro-entreprise, les cotisations sont un pourcentage du chiffre d'affaires encaissé : environ 24,6 % en prestations BNC, 21,2 % en prestations BIC, sans comptabilité. En entreprise individuelle au réel et en EURL, le dirigeant est travailleur non salarié (TNS) : ses cotisations tournent autour de 45 % de son revenu, calculées sur le bénéfice après l'abattement d'assiette de 26 % de la réforme 2026.
+
+En SASU et en portage salarial, le dirigeant est assimilé salarié : il supporte cotisations patronales ET salariales du régime général, soit 75 à 80 % de charges rapportées au net versé. Attention à ne pas comparer ces pourcentages entre eux : 24,6 % du chiffre d'affaires et 75 % du net ne portent pas sur la même base. Le seul repère fiable est le net final, que le simulateur calcule pour chaque statut.
+
+## Ce que ces cotisations vous achètent
+
+Les charges les plus lourdes ne sont pas de l'argent perdu : elles financent de la protection. L'assimilé salarié (SASU, portage) valide une retraite de cadre, des indemnités journalières solides et une prévoyance ; le portage y ajoute l'assurance chômage. Le TNS (EI, EURL) cotise moins mais valide une retraite et une prévoyance plus modestes, sans chômage.
+
+La micro est un cas particulier : ses cotisations légères ouvrent une protection réduite, surtout pour la retraite. C'est le prix de la simplicité. Beaucoup de micro-entrepreneurs complètent avec une prévoyance et une retraite facultatives — un coût à intégrer dans la comparaison, car il rapproche la micro des statuts plus chargés une fois la protection reconstituée.
+
+## La réforme 2026 de l'assiette des indépendants
+
+Depuis la réforme de l'assiette unique, les cotisations des TNS se calculent sur une assiette après un abattement de 26 %, censée mieux refléter le revenu réellement disponible. Concrètement, l'assiette sociale se rapproche du revenu net, ce qui modifie le rendement de l'EI et de l'EURL par rapport aux années précédentes — un point que le simulateur intègre déjà dans ses taux 2026.
+
+Cette réforme ne change pas la hiérarchie des statuts (micro et TNS restent plus légers que l'assimilé salarié), mais elle rebat un peu les cartes à la marge. C'est une raison de plus de raisonner en net calculé plutôt qu'en taux affiché : un même « pourcentage de charges » ne produit pas le même net d'une année ou d'un statut à l'autre.
+
+## Questions fréquentes
+
+### Combien de charges sociales paie un micro-entrepreneur en 2026 ?
+
+Environ 24,6 % du chiffre d'affaires encaissé en prestations de services BNC, 21,2 % en prestations BIC, plus une petite contribution à la formation. Ces cotisations sont prélevées directement sur le chiffre d'affaires, sans comptabilité, mais ouvrent une protection sociale réduite — notamment pour la retraite.
+
+### Pourquoi la SASU a-t-elle des charges si élevées ?
+
+Parce que le président est assimilé salarié : son salaire supporte les cotisations patronales et salariales du régime général, soit 75 à 80 % de charges rapportées au net. En contrepartie, il valide une retraite de cadre et une bonne couverture maladie. La SASU compense ce coût en permettant de se verser une partie du revenu en dividendes, non soumis à ces cotisations.
+
+### TNS ou assimilé salarié : quelle différence de charges ?
+
+Le TNS (EI, EURL) cotise environ 45 % de son revenu pour une protection plus modeste ; l'assimilé salarié (SASU, portage) supporte 75 à 80 % de charges sur son salaire pour une protection complète du régime général. À revenu égal, le TNS laisse donc plus de net immédiat, l'assimilé salarié plus de droits.
+
+### Peut-on comparer les taux de charges entre statuts ?
+
+Pas directement : ils ne portent pas sur la même base (chiffre d'affaires en micro, revenu en TNS, salaire net en assimilé salarié). Le seul repère fiable est le revenu net final après cotisations et impôt, à chiffre d'affaires égal. C'est précisément ce que le simulateur calcule et met côte à côte pour les six statuts.
+
+---
+
+# Freelance et chômage (ARE) : quels droits en 2026 ?
+
+URL : https://freelance-ou-cdi.fr/guides/freelance-et-chomage-are/
+
+« Est-ce que je garde le chômage ? » est la peur numéro un au moment de quitter un CDI. La réponse tient en deux temps : quels statuts génèrent de nouveaux droits (un seul, le portage), et comment conserver ou cumuler l'ARE issue d'un CDI rompu avec une activité freelance. Bien compris, ce mécanisme sécurise énormément un lancement.
+
+## Un seul statut freelance ouvre des droits : le portage
+
+Parmi les statuts d'indépendant, seul le portage salarial cotise à l'assurance chômage : le salarié porté ouvre des droits à l'ARE en fin de mission, exactement comme un salarié classique. La micro-entreprise, l'EI, l'EURL et la SASU n'ouvrent aucun droit au chômage au titre de l'activité — leurs dirigeants ne cotisent pas à France Travail.
+
+C'est l'argument décisif du portage pour qui veut continuer à se constituer un filet : chaque mission portée génère de nouveaux droits, et vous restez « bankable » avec des bulletins de paie. Les autres statuts optimisent le net, mais laissent la gestion du risque entièrement à votre charge.
+
+## Maintenir l'ARE d'un CDI pendant le lancement
+
+Si vous quittez un CDI avec des droits ouverts (rupture conventionnelle, licenciement), vous pouvez conserver cette ARE tout en démarrant une activité freelance — le montant est simplement ajusté selon vos revenus. En SASU, le montage le plus favorable consiste à ne pas se verser de salaire : l'ARE est alors maintenue à 100 % et l'on se rémunère en dividendes une fois les résultats là.
+
+En micro-entreprise ou en EI, l'ARE est réduite chaque mois en fonction du chiffre d'affaires ou du bénéfice dégagé, mais le cumul reste possible et adoucit la transition. C'est pourquoi beaucoup de freelances lancent leur activité juste après une rupture conventionnelle : le reliquat d'ARE sert de trésorerie de démarrage.
+
+## ARCE : toucher son chômage en capital
+
+France Travail propose une alternative au maintien mensuel : l'ARCE, qui verse une partie de vos droits en deux fois sous forme de capital pour financer la création ou la reprise d'entreprise. C'est intéressant si vous avez besoin d'un apport initial, mais vous renoncez au maintien mensuel de l'ARE — un arbitrage à faire selon votre besoin de trésorerie et la maturité de votre projet.
+
+Dans tous les cas, ces dispositifs ne créent pas de droits nouveaux : ils consomment un reliquat existant. Une fois épuisé, seul le portage salarial permet d'en reconstituer. Anticiper ce point évite la mauvaise surprise du freelance qui, deux ans après avoir quitté son CDI, découvre qu'il n'a plus aucun filet.
+
+## Questions fréquentes
+
+### Un auto-entrepreneur a-t-il droit au chômage ?
+
+Non : la micro-entreprise ne cotise pas à l'assurance chômage et n'ouvre aucun droit à l'ARE au titre de l'activité. En revanche, un reliquat de droits acquis avant (via un CDI rompu) peut être maintenu partiellement et cumulé avec les revenus de micro-entrepreneur. Seul le portage salarial ouvre de nouveaux droits parmi les statuts freelance.
+
+### Peut-on cumuler l'ARE et une activité freelance ?
+
+Oui. Avec un reliquat d'ARE issu d'un CDI, le cumul est possible dans tous les statuts, avec un ajustement du montant selon vos revenus. En SASU sans salaire, l'ARE est maintenue à 100 % (revenus en dividendes) ; en micro ou EI, elle est réduite selon le chiffre d'affaires ou le bénéfice. Le cumul adoucit fortement un lancement.
+
+### Le portage salarial ouvre-t-il vraiment droit au chômage ?
+
+Oui : le salarié porté cotise à l'assurance chômage comme tout salarié et peut ouvrir des droits à l'ARE en fin de mission. C'est le seul statut freelance dans ce cas. C'est ce qui en fait le meilleur « sas » pour tester l'indépendance sans brûler son filet de sécurité.
+
+### Qu'est-ce que l'ARCE ?
+
+L'ARCE (aide à la reprise ou à la création d'entreprise) permet de percevoir une partie de ses droits au chômage en capital, en deux versements, plutôt qu'en allocation mensuelle. Elle finance le démarrage mais fait renoncer au maintien mensuel de l'ARE. C'est un arbitrage entre trésorerie immédiate et filet mensuel, selon la maturité du projet.
+
+---
+
+# ACRE : l'exonération de cotisations de la première année
+
+URL : https://freelance-ou-cdi.fr/guides/acre-premiere-annee/
+
+L'ACRE (aide aux créateurs et repreneurs d'entreprise) allège les cotisations sociales de votre première année d'activité. Mal connue ou oubliée, elle représente pourtant plusieurs milliers d'euros au démarrage — le moment où la trésorerie est la plus fragile. Voici qui y a droit, ce qu'elle exonère et comment elle s'applique selon le statut.
+
+## Ce que l'ACRE exonère, et pour combien de temps
+
+L'ACRE consiste en une exonération partielle des cotisations sociales sur la première période d'activité — de l'ordre de douze mois. Elle ne supprime pas toutes les charges, mais en efface une bonne partie tant que votre revenu reste sous certains plafonds. Sur un lancement, cela améliore nettement le net conservé au moment où chaque euro compte.
+
+L'exonération est dégressive selon le revenu : pleine sous un premier seuil, réduite ensuite, puis nulle au-delà d'un plafond. Concrètement, plus votre première année démarre fort, moins l'avantage est important — mais il reste presque toujours bon à prendre pour les premiers mois, souvent plus modestes.
+
+## Comment ça marche selon le statut
+
+En micro-entreprise, l'ACRE se traduit par des taux de cotisations réduits pendant la première année : au lieu des 24,6 % habituels en BNC, vous payez un pourcentage abaissé sur votre chiffre d'affaires. En société (EURL, SASU) ou en EI, l'exonération porte sur les cotisations calculées sur le revenu ou le salaire du dirigeant, dans les mêmes limites de plafond.
+
+L'ACRE est en principe attribuée automatiquement à la création pour les micro-entrepreneurs éligibles, mais mieux vaut le vérifier : un oubli de l'administration ou une condition non remplie peut vous faire payer le plein tarif dès le départ. Gardez la trace de votre demande et contrôlez vos premiers appels de cotisations.
+
+## Qui peut en bénéficier
+
+L'ACRE vise les créateurs et repreneurs d'entreprise sous conditions : notamment ne pas en avoir bénéficié dans les trois années précédentes, et remplir certains critères tenant à votre situation (demandeur d'emploi, jeune, bénéficiaire de minima sociaux, ou création classique selon les règles en vigueur). Les conditions évoluent régulièrement : vérifiez votre éligibilité au moment de la création.
+
+Cumulée avec le maintien de l'ARE ou l'ARCE de France Travail, l'ACRE forme un package de démarrage puissant : charges allégées d'un côté, filet chômage de l'autre. C'est souvent ce qui rend viable une première année à chiffre d'affaires modeste — d'où l'intérêt de bien articuler les deux dispositifs dès le lancement.
+
+## Questions fréquentes
+
+### Qu'est-ce que l'ACRE pour un freelance ?
+
+C'est une exonération partielle de cotisations sociales sur la première année d'activité, destinée aux créateurs et repreneurs d'entreprise. En micro-entreprise, elle prend la forme de taux de cotisations réduits sur le chiffre d'affaires ; en société ou en EI, d'une exonération sur les cotisations du dirigeant, dans la limite de plafonds de revenu.
+
+### L'ACRE est-elle automatique en micro-entreprise ?
+
+Pour les micro-entrepreneurs éligibles, l'ACRE est en principe attribuée automatiquement à la création, mais il faut le vérifier : contrôlez vos premiers appels de cotisations pour vous assurer que les taux réduits sont bien appliqués. Une condition non remplie ou une erreur peut vous faire payer le plein tarif.
+
+### Combien de temps dure l'ACRE ?
+
+L'exonération porte sur la première période d'activité, de l'ordre de douze mois, avec un montant dégressif selon le revenu : pleine sous un premier seuil, réduite au-delà, puis nulle au-dessus d'un plafond. Les modalités exactes évoluent : vérifiez les règles en vigueur au moment de votre création.
+
+### Peut-on cumuler l'ACRE et le chômage ?
+
+Oui : l'ACRE (allègement de cotisations) se cumule avec le maintien de l'ARE ou l'ARCE de France Travail (droits au chômage). C'est un package de démarrage courant : charges réduites la première année et filet chômage, qui rend viable un lancement à chiffre d'affaires modeste.
+
+---
+
+# Franchise de TVA : seuils et conséquences pour le freelance
+
+URL : https://freelance-ou-cdi.fr/guides/franchise-tva-freelance/
+
+Tant que votre chiffre d'affaires reste sous certains seuils, vous facturez sans TVA : c'est la franchise en base. Passé ces seuils, vous devez la collecter — un changement qui touche vos factures, votre trésorerie et surtout vos clients. Comprendre ce mécanisme évite deux erreurs symétriques : facturer de la TVA à tort, ou dépasser le seuil sans s'en rendre compte.
+
+## Les seuils de la franchise en base
+
+En prestations de services, la franchise de TVA s'applique sous environ 37 500 € de chiffre d'affaires, avec un seuil de tolérance légèrement supérieur ; en vente de marchandises, les seuils sont bien plus hauts (autour de 85 000 €). Sous ces montants, vous ne facturez pas de TVA, vous n'en récupérez pas non plus, et vos déclarations sont simplifiées.
+
+Attention à ne pas confondre ce seuil de TVA avec le plafond de la micro-entreprise (83 600 € en services) : ce sont deux limites distinctes. On peut rester en micro tout en dépassant le seuil de franchise de TVA — dans ce cas, on garde le régime micro mais on doit facturer la TVA.
+
+## Ce que change le passage à la TVA
+
+Une fois assujetti, vous ajoutez la TVA (20 % dans le cas général) sur vos factures, la collectez pour le compte de l'État et la reversez, en déduisant la TVA que vous payez sur vos propres achats professionnels. Cela implique des déclarations régulières et une gestion de trésorerie plus fine, car la TVA collectée n'est pas votre argent.
+
+L'impact réel dépend de vos clients. Si vous facturez des entreprises, elles récupèrent la TVA : facturer avec ou sans ne change presque rien pour elles, et vous, vous pouvez enfin déduire la TVA sur vos achats. Si vous facturez des particuliers, qui ne récupèrent rien, passer à la TVA renchérit votre prix de 20 % — un vrai sujet de compétitivité.
+
+## Faut-il rester sous le seuil ou l'assumer ?
+
+Pour un freelance qui travaille surtout avec des entreprises, dépasser le seuil de TVA est neutre, voire avantageux (récupération de la TVA sur les achats). Il n'y a aucune raison de brider son chiffre d'affaires pour rester en franchise. Certains optent même volontairement pour la TVA dès le départ afin de déduire leurs investissements.
+
+Pour un freelance qui vend à des particuliers, en revanche, franchir le seuil signifie soit augmenter ses prix de 20 %, soit rogner sa marge. Là, surveiller son chiffre d'affaires ou ajuster son activité a du sens. Dans tous les cas, anticipez le franchissement : le régler après coup, avec des factures déjà émises sans TVA, est source de complications.
+
+## Questions fréquentes
+
+### Quel est le seuil de franchise de TVA en 2026 ?
+
+Environ 37 500 € de chiffre d'affaires en prestations de services (avec un seuil de tolérance un peu supérieur) et environ 85 000 € en vente de marchandises. Sous ces montants, vous facturez sans TVA (franchise en base). Ce seuil est distinct du plafond de la micro-entreprise (83 600 € en services).
+
+### Dépasser le seuil de TVA fait-il sortir de la micro-entreprise ?
+
+Non : le seuil de franchise de TVA et le plafond de la micro sont deux limites différentes. Vous pouvez rester micro-entrepreneur tout en dépassant le seuil de TVA — vous conservez le régime micro, mais vous devez alors facturer et reverser la TVA. Vous ne quittez la micro qu'en dépassant son plafond de chiffre d'affaires.
+
+### La TVA change-t-elle mon revenu net ?
+
+Si vos clients sont des entreprises qui récupèrent la TVA, presque pas : vous la collectez et la reversez, mais vous pouvez déduire la TVA sur vos achats professionnels, ce qui joue en votre faveur. Si vos clients sont des particuliers, passer à la TVA renchérit votre prix de 20 % ou réduit votre marge, selon que vous répercutez ou non.
+
+### Peut-on facturer la TVA volontairement sous le seuil ?
+
+Oui, on peut renoncer à la franchise et opter pour la TVA même sous les seuils. C'est intéressant si vous réalisez des achats professionnels importants dont vous voulez récupérer la TVA, et si vos clients sont des entreprises. Pour une clientèle de particuliers, mieux vaut généralement rester en franchise tant que possible.
+
+---
+
+# Passer de salarié à freelance : les étapes clés en 2026
+
+URL : https://freelance-ou-cdi.fr/guides/passer-de-salarie-a-freelance/
+
+Quitter la sécurité d'un CDI pour l'indépendance est autant un projet financier qu'un saut personnel. Bien préparé, il se fait sans casse : en s'appuyant sur le chômage comme filet, en choisissant le bon statut et en fixant un TJM qui remplace vraiment le salaire. Voici l'ordre dans lequel dérouler la transition pour ne rien laisser au hasard.
+
+## Sécuriser la sortie : rupture conventionnelle et chômage
+
+La meilleure porte de sortie est souvent la rupture conventionnelle : elle ouvre des droits à l'ARE, contrairement à une démission classique. Ce reliquat de chômage devient votre filet de lancement — vous pouvez le maintenir en cumul avec vos premiers revenus, ou le percevoir en capital via l'ARCE pour financer le démarrage.
+
+Ne quittez pas votre poste avant d'avoir clarifié ce point : selon que vous partez en rupture conventionnelle, en fin de CDD ou en démission, vos droits diffèrent radicalement. Un lancement adossé à l'ARE est infiniment plus confortable qu'un départ sans filet — cela peut valoir la peine d'attendre le bon moment.
+
+## Choisir le statut et fixer le TJM
+
+Le choix du statut découle de votre profil : micro-entreprise pour tester simplement avec peu de frais, EI au réel si vos frais sont élevés, SASU pour cumuler l'ARE et optimiser via les dividendes, portage salarial pour garder le confort du salariat et le chômage. Le simulateur compare les six statuts sur vos chiffres — c'est le point de départ le plus objectif.
+
+En parallèle, fixez votre TJM à partir du net que vous voulez remplacer, pas du marché : le tableau des seuils vous donne, pour votre ancien salaire, le TJM minimal par statut. Ajoutez une marge pour les intermissions et pour autofinancer mutuelle, prévoyance et retraite que l'employeur payait. Un TJM juste au-dessus du seuil laisse peu de coussin.
+
+## Constituer sa trésorerie et ses premiers clients
+
+Avant de vous lancer, visez trois à six mois de charges d'avance : les premiers paiements clients tardent souvent, et les délais de règlement en freelance sont réels. Idéalement, sécurisez une première mission ou un premier client avant de démissionner — beaucoup commencent en parallèle de leur emploi, dans le respect de leur contrat, pour valider la demande.
+
+Enfin, anticipez les coûts invisibles du salariat que vous reprenez à votre charge : mutuelle, prévoyance, retraite complémentaire, matériel, comptable, assurance professionnelle. Les intégrer dès le business plan évite la désillusion du freelance qui, un an après, réalise que son « meilleur salaire » ne couvrait pas ce que le CDI offrait gratuitement.
+
+## Questions fréquentes
+
+### Faut-il démissionner pour devenir freelance ?
+
+Mieux vaut éviter la démission simple, qui n'ouvre pas de droits au chômage. La rupture conventionnelle est la voie privilégiée : elle donne accès à l'ARE, qui sert de filet de lancement (en cumul avec les premiers revenus, ou en capital via l'ARCE). Clarifiez vos droits avant de quitter votre poste.
+
+### Quel statut choisir pour se lancer en freelance ?
+
+Cela dépend de votre profil : micro-entreprise pour tester simplement avec peu de frais, EI au réel si vos frais sont élevés, SASU pour cumuler l'ARE et optimiser via les dividendes, portage salarial pour garder chômage et bulletins de paie. Le simulateur compare les six statuts sur votre TJM et votre situation.
+
+### Combien de trésorerie prévoir avant de se lancer ?
+
+Visez trois à six mois de charges d'avance : les premiers paiements clients tardent et les délais de règlement sont réels en freelance. Sécuriser une première mission avant de démissionner, ou démarrer en parallèle de son emploi (dans le respect de son contrat), réduit fortement le risque de la transition.
+
+### Quel TJM viser en quittant son CDI ?
+
+Partez du net mensuel de votre salaire actuel et cherchez, dans le tableau des seuils, le TJM qui le reproduit dans le statut visé. Ajoutez une marge pour les intermissions et pour autofinancer mutuelle, prévoyance et retraite. Un TJM juste au niveau du seuil ne laisse aucun coussin : mieux vaut viser au-dessus.
+
+---
+
 # Convertir un TJM en salaire : le tableau 2026
 
 URL : https://freelance-ou-cdi.fr/tjm-en-salaire/
 
-Un TJM ne se compare pas à un salaire journalier : il finance aussi les cotisations, l'impôt, les jours non facturés et les frais. Cette page convertit chaque palier de TJM en net mensuel réel et en salaire CDI équivalent — au taux 2026, sur un rythme de 18 jours facturés par mois sur 11 mois. Chaque palier a sa page détaillée.
+Un TJM ne se compare pas à un salaire journalier : il finance aussi les cotisations, l'impôt, les jours non facturés et les frais. Cette page convertit chaque palier de TJM en net mensuel réel et en salaire CDI équivalent — de 250 à 1 000 €/jour, au taux 2026, sur un rythme de 18 jours facturés par mois sur 11 mois. Chaque palier a sa page détaillée.
 
 ## La conversion, palier par palier
 
+TJM 250 € — 49 500 € facturés par an : 2 569 €/mois net après impôt au mieux (micro-entreprise), soit l'équivalent d'un CDI à environ 42 000 € brut par an.
+
 TJM 300 € — 59 400 € facturés par an : 3 017 €/mois net après impôt au mieux (micro-entreprise), soit l'équivalent d'un CDI à environ 51 500 € brut par an.
+
+TJM 325 € — 64 350 € facturés par an : 3 242 €/mois net après impôt au mieux (micro-entreprise), soit l'équivalent d'un CDI à environ 56 000 € brut par an.
 
 TJM 350 € — 69 300 € facturés par an : 3 466 €/mois net après impôt au mieux (micro-entreprise), soit l'équivalent d'un CDI à environ 61 000 € brut par an.
 
+TJM 375 € — 74 250 € facturés par an : 3 691 €/mois net après impôt au mieux (micro-entreprise), soit l'équivalent d'un CDI à environ 65 500 € brut par an.
+
 TJM 400 € — 79 200 € facturés par an : 3 915 €/mois net après impôt au mieux (micro-entreprise), soit l'équivalent d'un CDI à environ 70 000 € brut par an.
+
+TJM 425 € — 84 150 € facturés par an : 3 783 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 67 500 € brut par an.
 
 TJM 450 € — 89 100 € facturés par an : 3 979 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 71 500 € brut par an.
 
+TJM 475 € — 94 050 € facturés par an : 4 174 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 75 500 € brut par an.
+
 TJM 500 € — 99 000 € facturés par an : 4 397 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 80 000 € brut par an.
+
+TJM 525 € — 103 950 € facturés par an : 4 619 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 85 000 € brut par an.
 
 TJM 550 € — 108 900 € facturés par an : 4 842 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 89 500 € brut par an.
 
 TJM 600 € — 118 800 € facturés par an : 5 288 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 98 500 € brut par an.
 
+TJM 650 € — 128 700 € facturés par an : 5 663 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 106 500 € brut par an.
+
 TJM 700 € — 138 600 € facturés par an : 6 035 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 114 500 € brut par an.
 
+TJM 750 € — 148 500 € facturés par an : 6 408 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 123 500 € brut par an.
+
 TJM 800 € — 158 400 € facturés par an : 6 781 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 132 500 € brut par an.
+
+TJM 900 € — 178 200 € facturés par an : 7 527 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 150 500 € brut par an.
+
+TJM 1000 € — 198 000 € facturés par an : 8 272 €/mois net après impôt au mieux (EI au réel), soit l'équivalent d'un CDI à environ 168 500 € brut par an.
 
 ## Comment lire cette conversion
 
@@ -519,6 +1243,50 @@ Non, loin de là. Le TJM est un prix de vente hors taxes, pas un salaire : il do
 ### Quel TJM demander pour égaler mon salaire actuel ?
 
 Repérez votre brut annuel dans le tableau des seuils de ce site : il donne, pour chaque niveau de salaire de 35 000 à 120 000 €, le TJM minimal par statut (micro, EI/EURL, SASU, portage) qui produit le même net après impôt. Par exemple, un CDI cadre à 55 000 € brut se remplace à partir d'environ 320 €/jour en micro-entreprise et 455 €/jour en portage salarial. Ajoutez une marge de sécurité pour les intermissions.
+
+---
+
+# TJM 250 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-250/
+
+À 250 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 49 500 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 2 569 €/mois — l'équivalent d'un CDI à environ 42 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 250 € par jour rapportent vraiment, statut par statut
+
+Sur 49 500 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : 2 569 € en micro-entreprise, 2 418 € en EI au réel, 2 071 € en SASU (100 % salaire) et 1 881 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+L'ordre n'est pas un hasard : la micro et l'EI, aux cotisations légères, convertissent le mieux le chiffre d'affaires en net ; la SASU et le portage paient leur protection sociale complète par des charges bien plus lourdes. À ce niveau de TJM, l'écart entre le premier et le dernier statut représente plusieurs centaines d'euros par mois — d'où l'intérêt de comparer avant de choisir.
+
+## L'équivalent en salaire : un CDI à environ 42 000 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 250 €/jour (2 569 €/mois après impôt), il faudrait un salaire d'environ 42 000 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 250 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 250 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (49 500 € de chiffre d'affaires annuel), un TJM de 250 € équivaut à environ 42 000 € brut par an en CDI cadre, soit 2 569 €/mois net après impôt dans le meilleur statut (micro-entreprise). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 250 € en micro-entreprise ?
+
+Environ 2 569 € par mois net après cotisations (24,6 % du CA en BNC) et impôt sur le revenu, pour 49 500 € facturés dans l'année (18 jours par mois, 11 mois, célibataire sans enfant). Au-delà de 37 500 € de chiffre d'affaires, la TVA devient exigible mais ne change pas ce net si vos clients sont des entreprises.
+
+### Quel statut choisir avec un TJM de 250 € ?
+
+Pour maximiser le net : micro-entreprise (2 569 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (1 881 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 250 € ?
+
+49 500 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 63 000 €, mais ce rythme est rarement tenable sur la durée.
 
 ---
 
@@ -566,6 +1334,50 @@ Pour maximiser le net : micro-entreprise (3 017 €/mois après impôt dans ce s
 
 ---
 
+# TJM 325 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-325/
+
+À 325 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 64 350 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 3 242 €/mois — l'équivalent d'un CDI à environ 56 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 325 € par jour rapportent vraiment, statut par statut
+
+Sur 64 350 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : 3 242 € en micro-entreprise, 2 972 € en EI au réel, 2 631 € en SASU (100 % salaire) et 2 411 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+L'ordre n'est pas un hasard : la micro et l'EI, aux cotisations légères, convertissent le mieux le chiffre d'affaires en net ; la SASU et le portage paient leur protection sociale complète par des charges bien plus lourdes. À ce niveau de TJM, l'écart entre le premier et le dernier statut représente plusieurs centaines d'euros par mois — d'où l'intérêt de comparer avant de choisir.
+
+## L'équivalent en salaire : un CDI à environ 56 000 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 325 €/jour (3 242 €/mois après impôt), il faudrait un salaire d'environ 56 000 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 325 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 325 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (64 350 € de chiffre d'affaires annuel), un TJM de 325 € équivaut à environ 56 000 € brut par an en CDI cadre, soit 3 242 €/mois net après impôt dans le meilleur statut (micro-entreprise). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 325 € en micro-entreprise ?
+
+Environ 3 242 € par mois net après cotisations (24,6 % du CA en BNC) et impôt sur le revenu, pour 64 350 € facturés dans l'année (18 jours par mois, 11 mois, célibataire sans enfant). Au-delà de 37 500 € de chiffre d'affaires, la TVA devient exigible mais ne change pas ce net si vos clients sont des entreprises.
+
+### Quel statut choisir avec un TJM de 325 € ?
+
+Pour maximiser le net : micro-entreprise (3 242 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (2 411 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 325 € ?
+
+64 350 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 81 900 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
 # TJM 350 € : ce que ça fait en salaire net (2026)
 
 URL : https://freelance-ou-cdi.fr/tjm-350/
@@ -607,6 +1419,50 @@ Pour maximiser le net : micro-entreprise (3 466 €/mois après impôt dans ce s
 ### Quel chiffre d'affaires annuel avec un TJM de 350 € ?
 
 69 300 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 88 200 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
+# TJM 375 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-375/
+
+À 375 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 74 250 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 3 691 €/mois — l'équivalent d'un CDI à environ 65 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 375 € par jour rapportent vraiment, statut par statut
+
+Sur 74 250 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : 3 691 € en micro-entreprise, 3 378 € en EI au réel, 2 963 € en SASU (100 % salaire) et 2 720 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+L'ordre n'est pas un hasard : la micro et l'EI, aux cotisations légères, convertissent le mieux le chiffre d'affaires en net ; la SASU et le portage paient leur protection sociale complète par des charges bien plus lourdes. À ce niveau de TJM, l'écart entre le premier et le dernier statut représente plusieurs centaines d'euros par mois — d'où l'intérêt de comparer avant de choisir.
+
+## L'équivalent en salaire : un CDI à environ 65 500 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 375 €/jour (3 691 €/mois après impôt), il faudrait un salaire d'environ 65 500 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 375 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 375 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (74 250 € de chiffre d'affaires annuel), un TJM de 375 € équivaut à environ 65 500 € brut par an en CDI cadre, soit 3 691 €/mois net après impôt dans le meilleur statut (micro-entreprise). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 375 € en micro-entreprise ?
+
+Environ 3 691 € par mois net après cotisations (24,6 % du CA en BNC) et impôt sur le revenu, pour 74 250 € facturés dans l'année (18 jours par mois, 11 mois, célibataire sans enfant). Au-delà de 37 500 € de chiffre d'affaires, la TVA devient exigible mais ne change pas ce net si vos clients sont des entreprises.
+
+### Quel statut choisir avec un TJM de 375 € ?
+
+Pour maximiser le net : micro-entreprise (3 691 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (2 720 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 375 € ?
+
+74 250 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 94 500 €, mais ce rythme est rarement tenable sur la durée.
 
 ---
 
@@ -654,6 +1510,50 @@ Pour maximiser le net : micro-entreprise (3 915 €/mois après impôt dans ce s
 
 ---
 
+# TJM 425 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-425/
+
+À 425 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 84 150 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 3 783 €/mois — l'équivalent d'un CDI à environ 67 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 425 € par jour rapportent vraiment, statut par statut
+
+Sur 84 150 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond de 83 600 €), 3 783 € en EI au réel, 3 295 € en SASU (100 % salaire) et 3 019 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus une option : son plafond de 83 600 € de chiffre d'affaires en prestations est dépassé. Le choix se joue entre l'EI au réel (net maximal, protection légère), la SASU (arbitrage salaire/dividendes possible) et le portage (protection du salariat, net minimal).
+
+## L'équivalent en salaire : un CDI à environ 67 500 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 425 €/jour (3 783 €/mois après impôt), il faudrait un salaire d'environ 67 500 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 425 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 425 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (84 150 € de chiffre d'affaires annuel), un TJM de 425 € équivaut à environ 67 500 € brut par an en CDI cadre, soit 3 783 €/mois net après impôt dans le meilleur statut (EI au réel). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 425 € en micro-entreprise ?
+
+Aucun : avec 84 150 € de chiffre d'affaires annuel, le plafond de la micro-entreprise en prestations de services (83 600 €) est dépassé. À ce niveau de TJM, les statuts accessibles sont l'EI au réel (3 783 €/mois net), la SASU (3 295 €/mois à 100 % salaire) et le portage salarial (3 019 €/mois).
+
+### Quel statut choisir avec un TJM de 425 € ?
+
+Pour maximiser le net : EI au réel (3 783 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (3 019 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 425 € ?
+
+84 150 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 107 100 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
 # TJM 450 € : ce que ça fait en salaire net (2026)
 
 URL : https://freelance-ou-cdi.fr/tjm-450/
@@ -698,6 +1598,50 @@ Pour maximiser le net : EI au réel (3 979 €/mois après impôt dans ce scéna
 
 ---
 
+# TJM 475 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-475/
+
+À 475 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 94 050 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 4 174 €/mois — l'équivalent d'un CDI à environ 75 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 475 € par jour rapportent vraiment, statut par statut
+
+Sur 94 050 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond de 83 600 €), 4 174 € en EI au réel, 3 627 € en SASU (100 % salaire) et 3 318 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus une option : son plafond de 83 600 € de chiffre d'affaires en prestations est dépassé. Le choix se joue entre l'EI au réel (net maximal, protection légère), la SASU (arbitrage salaire/dividendes possible) et le portage (protection du salariat, net minimal).
+
+## L'équivalent en salaire : un CDI à environ 75 500 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 475 €/jour (4 174 €/mois après impôt), il faudrait un salaire d'environ 75 500 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 475 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 475 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (94 050 € de chiffre d'affaires annuel), un TJM de 475 € équivaut à environ 75 500 € brut par an en CDI cadre, soit 4 174 €/mois net après impôt dans le meilleur statut (EI au réel). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 475 € en micro-entreprise ?
+
+Aucun : avec 94 050 € de chiffre d'affaires annuel, le plafond de la micro-entreprise en prestations de services (83 600 €) est dépassé. À ce niveau de TJM, les statuts accessibles sont l'EI au réel (4 174 €/mois net), la SASU (3 627 €/mois à 100 % salaire) et le portage salarial (3 318 €/mois).
+
+### Quel statut choisir avec un TJM de 475 € ?
+
+Pour maximiser le net : EI au réel (4 174 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (3 318 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 475 € ?
+
+94 050 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 119 700 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
 # TJM 500 € : ce que ça fait en salaire net (2026)
 
 URL : https://freelance-ou-cdi.fr/tjm-500/
@@ -739,6 +1683,50 @@ Pour maximiser le net : EI au réel (4 397 €/mois après impôt dans ce scéna
 ### Quel chiffre d'affaires annuel avec un TJM de 500 € ?
 
 99 000 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 126 000 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
+# TJM 525 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-525/
+
+À 525 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 103 950 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 4 619 €/mois — l'équivalent d'un CDI à environ 85 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 525 € par jour rapportent vraiment, statut par statut
+
+Sur 103 950 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond de 83 600 €), 4 619 € en EI au réel, 3 959 € en SASU (100 % salaire) et 3 618 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus une option : son plafond de 83 600 € de chiffre d'affaires en prestations est dépassé. Le choix se joue entre l'EI au réel (net maximal, protection légère), la SASU (arbitrage salaire/dividendes possible) et le portage (protection du salariat, net minimal).
+
+## L'équivalent en salaire : un CDI à environ 85 000 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 525 €/jour (4 619 €/mois après impôt), il faudrait un salaire d'environ 85 000 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 525 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 525 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (103 950 € de chiffre d'affaires annuel), un TJM de 525 € équivaut à environ 85 000 € brut par an en CDI cadre, soit 4 619 €/mois net après impôt dans le meilleur statut (EI au réel). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 525 € en micro-entreprise ?
+
+Aucun : avec 103 950 € de chiffre d'affaires annuel, le plafond de la micro-entreprise en prestations de services (83 600 €) est dépassé. À ce niveau de TJM, les statuts accessibles sont l'EI au réel (4 619 €/mois net), la SASU (3 959 €/mois à 100 % salaire) et le portage salarial (3 618 €/mois).
+
+### Quel statut choisir avec un TJM de 525 € ?
+
+Pour maximiser le net : EI au réel (4 619 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (3 618 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 525 € ?
+
+103 950 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 132 300 €, mais ce rythme est rarement tenable sur la durée.
 
 ---
 
@@ -830,6 +1818,50 @@ Pour maximiser le net : EI au réel (5 288 €/mois après impôt dans ce scéna
 
 ---
 
+# TJM 650 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-650/
+
+À 650 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 128 700 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 5 663 €/mois — l'équivalent d'un CDI à environ 106 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 650 € par jour rapportent vraiment, statut par statut
+
+Sur 128 700 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond de 83 600 €), 5 663 € en EI au réel, 4 789 € en SASU (100 % salaire) et 4 365 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus une option : son plafond de 83 600 € de chiffre d'affaires en prestations est dépassé. Le choix se joue entre l'EI au réel (net maximal, protection légère), la SASU (arbitrage salaire/dividendes possible) et le portage (protection du salariat, net minimal).
+
+## L'équivalent en salaire : un CDI à environ 106 500 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 650 €/jour (5 663 €/mois après impôt), il faudrait un salaire d'environ 106 500 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 650 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 650 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (128 700 € de chiffre d'affaires annuel), un TJM de 650 € équivaut à environ 106 500 € brut par an en CDI cadre, soit 5 663 €/mois net après impôt dans le meilleur statut (EI au réel). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 650 € en micro-entreprise ?
+
+Aucun : avec 128 700 € de chiffre d'affaires annuel, le plafond de la micro-entreprise en prestations de services (83 600 €) est dépassé. À ce niveau de TJM, les statuts accessibles sont l'EI au réel (5 663 €/mois net), la SASU (4 789 €/mois à 100 % salaire) et le portage salarial (4 365 €/mois).
+
+### Quel statut choisir avec un TJM de 650 € ?
+
+Pour maximiser le net : EI au réel (5 663 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (4 365 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 650 € ?
+
+128 700 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 163 800 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
 # TJM 700 € : ce que ça fait en salaire net (2026)
 
 URL : https://freelance-ou-cdi.fr/tjm-700/
@@ -874,6 +1906,50 @@ Pour maximiser le net : EI au réel (6 035 €/mois après impôt dans ce scéna
 
 ---
 
+# TJM 750 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-750/
+
+À 750 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 148 500 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 6 408 €/mois — l'équivalent d'un CDI à environ 123 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 750 € par jour rapportent vraiment, statut par statut
+
+Sur 148 500 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond de 83 600 €), 6 408 € en EI au réel, 5 452 € en SASU (100 % salaire) et 4 963 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus une option : son plafond de 83 600 € de chiffre d'affaires en prestations est dépassé. Le choix se joue entre l'EI au réel (net maximal, protection légère), la SASU (arbitrage salaire/dividendes possible) et le portage (protection du salariat, net minimal).
+
+## L'équivalent en salaire : un CDI à environ 123 500 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 750 €/jour (6 408 €/mois après impôt), il faudrait un salaire d'environ 123 500 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 750 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 750 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (148 500 € de chiffre d'affaires annuel), un TJM de 750 € équivaut à environ 123 500 € brut par an en CDI cadre, soit 6 408 €/mois net après impôt dans le meilleur statut (EI au réel). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 750 € en micro-entreprise ?
+
+Aucun : avec 148 500 € de chiffre d'affaires annuel, le plafond de la micro-entreprise en prestations de services (83 600 €) est dépassé. À ce niveau de TJM, les statuts accessibles sont l'EI au réel (6 408 €/mois net), la SASU (5 452 €/mois à 100 % salaire) et le portage salarial (4 963 €/mois).
+
+### Quel statut choisir avec un TJM de 750 € ?
+
+Pour maximiser le net : EI au réel (6 408 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (4 963 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 750 € ?
+
+148 500 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 189 000 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
 # TJM 800 € : ce que ça fait en salaire net (2026)
 
 URL : https://freelance-ou-cdi.fr/tjm-800/
@@ -915,6 +1991,358 @@ Pour maximiser le net : EI au réel (6 781 €/mois après impôt dans ce scéna
 ### Quel chiffre d'affaires annuel avec un TJM de 800 € ?
 
 158 400 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 201 600 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
+# TJM 900 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-900/
+
+À 900 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 178 200 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 7 527 €/mois — l'équivalent d'un CDI à environ 150 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 900 € par jour rapportent vraiment, statut par statut
+
+Sur 178 200 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond de 83 600 €), 7 527 € en EI au réel, 6 386 € en SASU (100 % salaire) et 5 861 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus une option : son plafond de 83 600 € de chiffre d'affaires en prestations est dépassé. Le choix se joue entre l'EI au réel (net maximal, protection légère), la SASU (arbitrage salaire/dividendes possible) et le portage (protection du salariat, net minimal).
+
+## L'équivalent en salaire : un CDI à environ 150 500 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 900 €/jour (7 527 €/mois après impôt), il faudrait un salaire d'environ 150 500 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 900 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 900 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (178 200 € de chiffre d'affaires annuel), un TJM de 900 € équivaut à environ 150 500 € brut par an en CDI cadre, soit 7 527 €/mois net après impôt dans le meilleur statut (EI au réel). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 900 € en micro-entreprise ?
+
+Aucun : avec 178 200 € de chiffre d'affaires annuel, le plafond de la micro-entreprise en prestations de services (83 600 €) est dépassé. À ce niveau de TJM, les statuts accessibles sont l'EI au réel (7 527 €/mois net), la SASU (6 386 €/mois à 100 % salaire) et le portage salarial (5 861 €/mois).
+
+### Quel statut choisir avec un TJM de 900 € ?
+
+Pour maximiser le net : EI au réel (7 527 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (5 861 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 900 € ?
+
+178 200 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 226 800 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
+# TJM 1000 € : ce que ça fait en salaire net (2026)
+
+URL : https://freelance-ou-cdi.fr/tjm-1000/
+
+À 1000 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 198 000 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 8 272 €/mois — l'équivalent d'un CDI à environ 168 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
+
+## Ce que 1000 € par jour rapportent vraiment, statut par statut
+
+Sur 198 000 € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond de 83 600 €), 8 272 € en EI au réel, 6 955 € en SASU (100 % salaire) et 6 395 € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de facturation, la micro-entreprise n'est plus une option : son plafond de 83 600 € de chiffre d'affaires en prestations est dépassé. Le choix se joue entre l'EI au réel (net maximal, protection légère), la SASU (arbitrage salaire/dividendes possible) et le portage (protection du salariat, net minimal).
+
+## L'équivalent en salaire : un CDI à environ 168 500 € brut
+
+Pour retrouver en CDI le net du meilleur statut à 1000 €/jour (8 272 €/mois après impôt), il faudrait un salaire d'environ 168 500 € brut par an — le calcul intègre les cotisations salariales du privé (statut cadre) et le barème 2026 de l'impôt sur le revenu.
+
+Cette équivalence est un ordre de grandeur, pas une égalité : le CDI apporte en plus l'assurance chômage, les congés payés, une retraite mieux garnie et souvent des avantages annexes (mutuelle, titres-restaurant). À l'inverse, le freelance déduit ses frais et pilote son rythme. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Affinez avec vos propres paramètres
+
+Trois curseurs font bouger ces chiffres plus que tout : les jours réellement facturés (18 par mois est un bon taux d'occupation — les intermissions, la prospection et les congés ne se facturent pas), les frais professionnels (3 000 € par an dans ce scénario), et votre foyer fiscal (le célibataire sans enfant de ce scénario paie plus d'impôt qu'un parent en couple).
+
+Le simulateur en haut de page est préréglé sur 1000 € : modifiez les jours, les frais ou la situation familiale pour voir votre vrai net, statut par statut, et le seuil auquel chaque statut bat le CDI que vous comparez.
+
+## Questions fréquentes
+
+### Un TJM de 1000 €, c'est quel salaire ?
+
+À 18 jours facturés par mois sur 11 mois (198 000 € de chiffre d'affaires annuel), un TJM de 1000 € équivaut à environ 168 500 € brut par an en CDI cadre, soit 8 272 €/mois net après impôt dans le meilleur statut (EI au réel). L'équivalence ne tient pas compte du chômage et des congés payés du salarié, à pondérer selon votre situation.
+
+### Quel revenu net avec un TJM de 1000 € en micro-entreprise ?
+
+Aucun : avec 198 000 € de chiffre d'affaires annuel, le plafond de la micro-entreprise en prestations de services (83 600 €) est dépassé. À ce niveau de TJM, les statuts accessibles sont l'EI au réel (8 272 €/mois net), la SASU (6 955 €/mois à 100 % salaire) et le portage salarial (6 395 €/mois).
+
+### Quel statut choisir avec un TJM de 1000 € ?
+
+Pour maximiser le net : EI au réel (8 272 €/mois après impôt dans ce scénario). Pour maximiser la protection sociale : le portage salarial (6 395 €/mois), seul statut qui ouvre des droits au chômage. Entre les deux, la SASU permet l'arbitrage salaire/dividendes et le cumul avec l'ARE en sortie de CDI. Le bon choix dépend de vos frais, de votre foyer fiscal et de votre besoin de filet — le simulateur les met côte à côte.
+
+### Quel chiffre d'affaires annuel avec un TJM de 1000 € ?
+
+198 000 € en facturant 18 jours par mois sur 11 mois — un rythme de croisière réaliste qui réserve du temps pour la prospection, l'intermission et les congés. À temps plein maximal théorique (21 jours sur 12 mois), le même TJM produirait environ 252 000 €, mais ce rythme est rarement tenable sur la durée.
+
+---
+
+# Quel TJM pour 3 000 € net par mois en 2026 ?
+
+URL : https://freelance-ou-cdi.fr/tjm-pour-3000-euros-net/
+
+Pour toucher 3 000 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par micro-entreprise : il faut facturer environ 300 €/jour, à 18 jours par mois sur 11 mois, soit 59 400 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 51 000 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
+
+## Le TJM à viser pour 3 000 €/mois net, statut par statut
+
+Le même objectif de net demande un TJM très différent selon le statut, parce que chacun prélève des cotisations plus ou moins lourdes. Pour 3 000 € net par mois : 300 €/jour en micro-entreprise, 330 €/jour en EI au réel, 385 €/jour en SASU et 425 €/jour en portage salarial. Ces seuils sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+L'ordre n'est pas un hasard : la micro et l'EI, aux cotisations légères, atteignent l'objectif avec le TJM le plus bas ; la SASU et surtout le portage, qui financent une protection sociale complète, exigent de facturer sensiblement plus cher pour le même net dans votre poche.
+
+## L'équivalent en CDI : environ 51 000 € brut
+
+Pour retrouver 3 000 € net par mois en tant que salarié, il faudrait un CDI cadre à environ 51 000 € brut par an — le calcul intègre les cotisations salariales du privé et le barème 2026 de l'impôt sur le revenu. Si vous quittez un poste moins bien payé que ce niveau, un freelance à 300 €/jour représente une vraie augmentation de pouvoir d'achat, à protection sociale près.
+
+Cette équivalence se lit à net égal : elle ne valorise ni l'assurance chômage, ni les congés payés, ni la retraite plus garnie du salarié. Un CDI « équivalent » protège donc davantage qu'un TJM équivalent ; à l'inverse, le TJM se négocie et peut grimper bien plus vite qu'un salaire. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Ce qui fait bouger ce seuil
+
+Trois curseurs comptent autant que le statut. Les jours réellement facturés d'abord : 300 €/jour vise 3 000 € net à 18 jours par mois ; à 15 jours, il faut monter le TJM d'environ 20 % pour le même revenu, car prospection, intermission et congés ne se facturent pas. Les frais professionnels ensuite (3 000 € par an dans ce scénario), qui pèsent différemment en micro (non déductibles) et au réel. Votre foyer fiscal enfin : un couple avec enfants paie moins d'impôt qu'un célibataire, donc atteint 3 000 € net avec un TJM plus bas.
+
+Le simulateur en haut de page est préréglé sur 300 € (le seuil du meilleur statut) : modifiez les jours facturés, les frais ou la situation familiale pour voir le TJM exact qu'il vous faut, statut par statut, pour votre objectif de 3 000 € net par mois.
+
+## Questions fréquentes
+
+### Quel TJM faut-il pour gagner 3 000 € net par mois en freelance ?
+
+Environ 300 €/jour dans le statut le plus favorable (micro-entreprise), à 18 jours facturés par mois sur 11 mois, soit 59 400 € de chiffre d'affaires annuel (célibataire sans enfant, 3 000 € de frais pro, taux 2026). En portage salarial, le statut le plus chargé, il faut viser 425 €/jour pour le même net. Le seuil baisse si vous facturez plus de jours ou si votre foyer fiscal réduit votre impôt.
+
+### Peut-on atteindre 3 000 € net par mois en micro-entreprise ?
+
+Oui : il faut viser environ 300 €/jour, ce qui reste sous le plafond de 83 600 € de chiffre d'affaires en prestations. La micro est même le statut qui atteint 3 000 € net avec le TJM le plus bas, grâce à ses cotisations légères (24,6 % du CA en BNC) et à l'abattement forfaitaire de 34 % — à condition d'avoir peu de frais professionnels réels.
+
+### 3 000 € net par mois, c'est quel chiffre d'affaires annuel ?
+
+Dans le meilleur statut (micro-entreprise), il faut facturer environ 59 400 € par an pour dégager 3 000 € net par mois après cotisations et impôt — soit 300 €/jour sur 198 jours facturés. La différence entre ce chiffre d'affaires et votre net part en cotisations sociales, en impôt sur le revenu et en frais professionnels : c'est exactement ce que le simulateur décompose, ligne par ligne.
+
+### 3 000 € net par mois en freelance, ça vaut quel salaire ?
+
+Environ 51 000 € brut par an en CDI cadre : c'est le salaire qui laisse le même net après cotisations salariales et impôt. L'équivalence ne compte ni le chômage, ni les congés payés, ni la retraite du salarié — à pondérer selon votre situation. Autrement dit, un freelance qui atteint 3 000 € net « travaille » au niveau d'un cadre payé 51 000 € brut, en échange d'une protection sociale qu'il gère lui-même.
+
+---
+
+# Quel TJM pour 3 500 € net par mois en 2026 ?
+
+URL : https://freelance-ou-cdi.fr/tjm-pour-3500-euros-net/
+
+Pour toucher 3 500 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par micro-entreprise : il faut facturer environ 355 €/jour, à 18 jours par mois sur 11 mois, soit 70 290 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 61 500 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
+
+## Le TJM à viser pour 3 500 €/mois net, statut par statut
+
+Le même objectif de net demande un TJM très différent selon le statut, parce que chacun prélève des cotisations plus ou moins lourdes. Pour 3 500 € net par mois : 355 €/jour en micro-entreprise, 390 €/jour en EI au réel, 460 €/jour en SASU et 510 €/jour en portage salarial. Ces seuils sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+L'ordre n'est pas un hasard : la micro et l'EI, aux cotisations légères, atteignent l'objectif avec le TJM le plus bas ; la SASU et surtout le portage, qui financent une protection sociale complète, exigent de facturer sensiblement plus cher pour le même net dans votre poche.
+
+## L'équivalent en CDI : environ 61 500 € brut
+
+Pour retrouver 3 500 € net par mois en tant que salarié, il faudrait un CDI cadre à environ 61 500 € brut par an — le calcul intègre les cotisations salariales du privé et le barème 2026 de l'impôt sur le revenu. Si vous quittez un poste moins bien payé que ce niveau, un freelance à 355 €/jour représente une vraie augmentation de pouvoir d'achat, à protection sociale près.
+
+Cette équivalence se lit à net égal : elle ne valorise ni l'assurance chômage, ni les congés payés, ni la retraite plus garnie du salarié. Un CDI « équivalent » protège donc davantage qu'un TJM équivalent ; à l'inverse, le TJM se négocie et peut grimper bien plus vite qu'un salaire. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Ce qui fait bouger ce seuil
+
+Trois curseurs comptent autant que le statut. Les jours réellement facturés d'abord : 355 €/jour vise 3 500 € net à 18 jours par mois ; à 15 jours, il faut monter le TJM d'environ 20 % pour le même revenu, car prospection, intermission et congés ne se facturent pas. Les frais professionnels ensuite (3 000 € par an dans ce scénario), qui pèsent différemment en micro (non déductibles) et au réel. Votre foyer fiscal enfin : un couple avec enfants paie moins d'impôt qu'un célibataire, donc atteint 3 500 € net avec un TJM plus bas.
+
+Le simulateur en haut de page est préréglé sur 355 € (le seuil du meilleur statut) : modifiez les jours facturés, les frais ou la situation familiale pour voir le TJM exact qu'il vous faut, statut par statut, pour votre objectif de 3 500 € net par mois.
+
+## Questions fréquentes
+
+### Quel TJM faut-il pour gagner 3 500 € net par mois en freelance ?
+
+Environ 355 €/jour dans le statut le plus favorable (micro-entreprise), à 18 jours facturés par mois sur 11 mois, soit 70 290 € de chiffre d'affaires annuel (célibataire sans enfant, 3 000 € de frais pro, taux 2026). En portage salarial, le statut le plus chargé, il faut viser 510 €/jour pour le même net. Le seuil baisse si vous facturez plus de jours ou si votre foyer fiscal réduit votre impôt.
+
+### Peut-on atteindre 3 500 € net par mois en micro-entreprise ?
+
+Oui : il faut viser environ 355 €/jour, ce qui reste sous le plafond de 83 600 € de chiffre d'affaires en prestations. La micro est même le statut qui atteint 3 500 € net avec le TJM le plus bas, grâce à ses cotisations légères (24,6 % du CA en BNC) et à l'abattement forfaitaire de 34 % — à condition d'avoir peu de frais professionnels réels.
+
+### 3 500 € net par mois, c'est quel chiffre d'affaires annuel ?
+
+Dans le meilleur statut (micro-entreprise), il faut facturer environ 70 290 € par an pour dégager 3 500 € net par mois après cotisations et impôt — soit 355 €/jour sur 198 jours facturés. La différence entre ce chiffre d'affaires et votre net part en cotisations sociales, en impôt sur le revenu et en frais professionnels : c'est exactement ce que le simulateur décompose, ligne par ligne.
+
+### 3 500 € net par mois en freelance, ça vaut quel salaire ?
+
+Environ 61 500 € brut par an en CDI cadre : c'est le salaire qui laisse le même net après cotisations salariales et impôt. L'équivalence ne compte ni le chômage, ni les congés payés, ni la retraite du salarié — à pondérer selon votre situation. Autrement dit, un freelance qui atteint 3 500 € net « travaille » au niveau d'un cadre payé 61 500 € brut, en échange d'une protection sociale qu'il gère lui-même.
+
+---
+
+# Quel TJM pour 4 000 € net par mois en 2026 ?
+
+URL : https://freelance-ou-cdi.fr/tjm-pour-4000-euros-net/
+
+Pour toucher 4 000 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par micro-entreprise : il faut facturer environ 410 €/jour, à 18 jours par mois sur 11 mois, soit 81 180 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 72 000 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
+
+## Le TJM à viser pour 4 000 €/mois net, statut par statut
+
+Le même objectif de net demande un TJM très différent selon le statut, parce que chacun prélève des cotisations plus ou moins lourdes. Pour 4 000 € net par mois : 410 €/jour en micro-entreprise, 455 €/jour en EI au réel, 535 €/jour en SASU et 590 €/jour en portage salarial. Ces seuils sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+L'ordre n'est pas un hasard : la micro et l'EI, aux cotisations légères, atteignent l'objectif avec le TJM le plus bas ; la SASU et surtout le portage, qui financent une protection sociale complète, exigent de facturer sensiblement plus cher pour le même net dans votre poche.
+
+## L'équivalent en CDI : environ 72 000 € brut
+
+Pour retrouver 4 000 € net par mois en tant que salarié, il faudrait un CDI cadre à environ 72 000 € brut par an — le calcul intègre les cotisations salariales du privé et le barème 2026 de l'impôt sur le revenu. Si vous quittez un poste moins bien payé que ce niveau, un freelance à 410 €/jour représente une vraie augmentation de pouvoir d'achat, à protection sociale près.
+
+Cette équivalence se lit à net égal : elle ne valorise ni l'assurance chômage, ni les congés payés, ni la retraite plus garnie du salarié. Un CDI « équivalent » protège donc davantage qu'un TJM équivalent ; à l'inverse, le TJM se négocie et peut grimper bien plus vite qu'un salaire. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Ce qui fait bouger ce seuil
+
+Trois curseurs comptent autant que le statut. Les jours réellement facturés d'abord : 410 €/jour vise 4 000 € net à 18 jours par mois ; à 15 jours, il faut monter le TJM d'environ 20 % pour le même revenu, car prospection, intermission et congés ne se facturent pas. Les frais professionnels ensuite (3 000 € par an dans ce scénario), qui pèsent différemment en micro (non déductibles) et au réel. Votre foyer fiscal enfin : un couple avec enfants paie moins d'impôt qu'un célibataire, donc atteint 4 000 € net avec un TJM plus bas.
+
+Le simulateur en haut de page est préréglé sur 410 € (le seuil du meilleur statut) : modifiez les jours facturés, les frais ou la situation familiale pour voir le TJM exact qu'il vous faut, statut par statut, pour votre objectif de 4 000 € net par mois.
+
+## Questions fréquentes
+
+### Quel TJM faut-il pour gagner 4 000 € net par mois en freelance ?
+
+Environ 410 €/jour dans le statut le plus favorable (micro-entreprise), à 18 jours facturés par mois sur 11 mois, soit 81 180 € de chiffre d'affaires annuel (célibataire sans enfant, 3 000 € de frais pro, taux 2026). En portage salarial, le statut le plus chargé, il faut viser 590 €/jour pour le même net. Le seuil baisse si vous facturez plus de jours ou si votre foyer fiscal réduit votre impôt.
+
+### Peut-on atteindre 4 000 € net par mois en micro-entreprise ?
+
+Oui : il faut viser environ 410 €/jour, ce qui reste sous le plafond de 83 600 € de chiffre d'affaires en prestations. La micro est même le statut qui atteint 4 000 € net avec le TJM le plus bas, grâce à ses cotisations légères (24,6 % du CA en BNC) et à l'abattement forfaitaire de 34 % — à condition d'avoir peu de frais professionnels réels.
+
+### 4 000 € net par mois, c'est quel chiffre d'affaires annuel ?
+
+Dans le meilleur statut (micro-entreprise), il faut facturer environ 81 180 € par an pour dégager 4 000 € net par mois après cotisations et impôt — soit 410 €/jour sur 198 jours facturés. La différence entre ce chiffre d'affaires et votre net part en cotisations sociales, en impôt sur le revenu et en frais professionnels : c'est exactement ce que le simulateur décompose, ligne par ligne.
+
+### 4 000 € net par mois en freelance, ça vaut quel salaire ?
+
+Environ 72 000 € brut par an en CDI cadre : c'est le salaire qui laisse le même net après cotisations salariales et impôt. L'équivalence ne compte ni le chômage, ni les congés payés, ni la retraite du salarié — à pondérer selon votre situation. Autrement dit, un freelance qui atteint 4 000 € net « travaille » au niveau d'un cadre payé 72 000 € brut, en échange d'une protection sociale qu'il gère lui-même.
+
+---
+
+# Quel TJM pour 4 500 € net par mois en 2026 ?
+
+URL : https://freelance-ou-cdi.fr/tjm-pour-4500-euros-net/
+
+Pour toucher 4 500 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par EI au réel : il faut facturer environ 515 €/jour, à 18 jours par mois sur 11 mois, soit 101 970 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 82 500 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
+
+## Le TJM à viser pour 4 500 €/mois net, statut par statut
+
+Le même objectif de net demande un TJM très différent selon le statut, parce que chacun prélève des cotisations plus ou moins lourdes. Pour 4 500 € net par mois : la micro-entreprise ne permet pas d'atteindre ce revenu : son plafond de chiffre d'affaires (83 600 € en prestations) est atteint avant, 515 €/jour en EI au réel, 610 €/jour en SASU et 675 €/jour en portage salarial. Ces seuils sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de revenu, la micro-entreprise est hors jeu : atteindre 4 500 € net supposerait un chiffre d'affaires supérieur à son plafond de 83 600 €. Le choix se resserre sur l'EI au réel et l'EURL (cotisations TNS allégées, net maximal), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, TJM le plus élevé).
+
+## L'équivalent en CDI : environ 82 500 € brut
+
+Pour retrouver 4 500 € net par mois en tant que salarié, il faudrait un CDI cadre à environ 82 500 € brut par an — le calcul intègre les cotisations salariales du privé et le barème 2026 de l'impôt sur le revenu. Si vous quittez un poste moins bien payé que ce niveau, un freelance à 515 €/jour représente une vraie augmentation de pouvoir d'achat, à protection sociale près.
+
+Cette équivalence se lit à net égal : elle ne valorise ni l'assurance chômage, ni les congés payés, ni la retraite plus garnie du salarié. Un CDI « équivalent » protège donc davantage qu'un TJM équivalent ; à l'inverse, le TJM se négocie et peut grimper bien plus vite qu'un salaire. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Ce qui fait bouger ce seuil
+
+Trois curseurs comptent autant que le statut. Les jours réellement facturés d'abord : 515 €/jour vise 4 500 € net à 18 jours par mois ; à 15 jours, il faut monter le TJM d'environ 20 % pour le même revenu, car prospection, intermission et congés ne se facturent pas. Les frais professionnels ensuite (3 000 € par an dans ce scénario), qui pèsent différemment en micro (non déductibles) et au réel. Votre foyer fiscal enfin : un couple avec enfants paie moins d'impôt qu'un célibataire, donc atteint 4 500 € net avec un TJM plus bas.
+
+Le simulateur en haut de page est préréglé sur 515 € (le seuil du meilleur statut) : modifiez les jours facturés, les frais ou la situation familiale pour voir le TJM exact qu'il vous faut, statut par statut, pour votre objectif de 4 500 € net par mois.
+
+## Questions fréquentes
+
+### Quel TJM faut-il pour gagner 4 500 € net par mois en freelance ?
+
+Environ 515 €/jour dans le statut le plus favorable (EI au réel), à 18 jours facturés par mois sur 11 mois, soit 101 970 € de chiffre d'affaires annuel (célibataire sans enfant, 3 000 € de frais pro, taux 2026). En portage salarial, le statut le plus chargé, il faut viser 675 €/jour pour le même net. Le seuil baisse si vous facturez plus de jours ou si votre foyer fiscal réduit votre impôt.
+
+### Peut-on atteindre 4 500 € net par mois en micro-entreprise ?
+
+Non. Pour 4 500 € net par mois, le chiffre d'affaires nécessaire dépasse le plafond de la micro-entreprise (83 600 € en prestations de services). À ce niveau de revenu, il faut passer à l'EI au réel (515 €/jour), à l'EURL ou à la SASU, qui n'ont pas de plafond de chiffre d'affaires.
+
+### 4 500 € net par mois, c'est quel chiffre d'affaires annuel ?
+
+Dans le meilleur statut (EI au réel), il faut facturer environ 101 970 € par an pour dégager 4 500 € net par mois après cotisations et impôt — soit 515 €/jour sur 198 jours facturés. La différence entre ce chiffre d'affaires et votre net part en cotisations sociales, en impôt sur le revenu et en frais professionnels : c'est exactement ce que le simulateur décompose, ligne par ligne.
+
+### 4 500 € net par mois en freelance, ça vaut quel salaire ?
+
+Environ 82 500 € brut par an en CDI cadre : c'est le salaire qui laisse le même net après cotisations salariales et impôt. L'équivalence ne compte ni le chômage, ni les congés payés, ni la retraite du salarié — à pondérer selon votre situation. Autrement dit, un freelance qui atteint 4 500 € net « travaille » au niveau d'un cadre payé 82 500 € brut, en échange d'une protection sociale qu'il gère lui-même.
+
+---
+
+# Quel TJM pour 5 000 € net par mois en 2026 ?
+
+URL : https://freelance-ou-cdi.fr/tjm-pour-5000-euros-net/
+
+Pour toucher 5 000 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par EI au réel : il faut facturer environ 570 €/jour, à 18 jours par mois sur 11 mois, soit 112 860 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 92 500 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
+
+## Le TJM à viser pour 5 000 €/mois net, statut par statut
+
+Le même objectif de net demande un TJM très différent selon le statut, parce que chacun prélève des cotisations plus ou moins lourdes. Pour 5 000 € net par mois : la micro-entreprise ne permet pas d'atteindre ce revenu : son plafond de chiffre d'affaires (83 600 € en prestations) est atteint avant, 570 €/jour en EI au réel, 685 €/jour en SASU et 760 €/jour en portage salarial. Ces seuils sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de revenu, la micro-entreprise est hors jeu : atteindre 5 000 € net supposerait un chiffre d'affaires supérieur à son plafond de 83 600 €. Le choix se resserre sur l'EI au réel et l'EURL (cotisations TNS allégées, net maximal), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, TJM le plus élevé).
+
+## L'équivalent en CDI : environ 92 500 € brut
+
+Pour retrouver 5 000 € net par mois en tant que salarié, il faudrait un CDI cadre à environ 92 500 € brut par an — le calcul intègre les cotisations salariales du privé et le barème 2026 de l'impôt sur le revenu. Si vous quittez un poste moins bien payé que ce niveau, un freelance à 570 €/jour représente une vraie augmentation de pouvoir d'achat, à protection sociale près.
+
+Cette équivalence se lit à net égal : elle ne valorise ni l'assurance chômage, ni les congés payés, ni la retraite plus garnie du salarié. Un CDI « équivalent » protège donc davantage qu'un TJM équivalent ; à l'inverse, le TJM se négocie et peut grimper bien plus vite qu'un salaire. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Ce qui fait bouger ce seuil
+
+Trois curseurs comptent autant que le statut. Les jours réellement facturés d'abord : 570 €/jour vise 5 000 € net à 18 jours par mois ; à 15 jours, il faut monter le TJM d'environ 20 % pour le même revenu, car prospection, intermission et congés ne se facturent pas. Les frais professionnels ensuite (3 000 € par an dans ce scénario), qui pèsent différemment en micro (non déductibles) et au réel. Votre foyer fiscal enfin : un couple avec enfants paie moins d'impôt qu'un célibataire, donc atteint 5 000 € net avec un TJM plus bas.
+
+Le simulateur en haut de page est préréglé sur 570 € (le seuil du meilleur statut) : modifiez les jours facturés, les frais ou la situation familiale pour voir le TJM exact qu'il vous faut, statut par statut, pour votre objectif de 5 000 € net par mois.
+
+## Questions fréquentes
+
+### Quel TJM faut-il pour gagner 5 000 € net par mois en freelance ?
+
+Environ 570 €/jour dans le statut le plus favorable (EI au réel), à 18 jours facturés par mois sur 11 mois, soit 112 860 € de chiffre d'affaires annuel (célibataire sans enfant, 3 000 € de frais pro, taux 2026). En portage salarial, le statut le plus chargé, il faut viser 760 €/jour pour le même net. Le seuil baisse si vous facturez plus de jours ou si votre foyer fiscal réduit votre impôt.
+
+### Peut-on atteindre 5 000 € net par mois en micro-entreprise ?
+
+Non. Pour 5 000 € net par mois, le chiffre d'affaires nécessaire dépasse le plafond de la micro-entreprise (83 600 € en prestations de services). À ce niveau de revenu, il faut passer à l'EI au réel (570 €/jour), à l'EURL ou à la SASU, qui n'ont pas de plafond de chiffre d'affaires.
+
+### 5 000 € net par mois, c'est quel chiffre d'affaires annuel ?
+
+Dans le meilleur statut (EI au réel), il faut facturer environ 112 860 € par an pour dégager 5 000 € net par mois après cotisations et impôt — soit 570 €/jour sur 198 jours facturés. La différence entre ce chiffre d'affaires et votre net part en cotisations sociales, en impôt sur le revenu et en frais professionnels : c'est exactement ce que le simulateur décompose, ligne par ligne.
+
+### 5 000 € net par mois en freelance, ça vaut quel salaire ?
+
+Environ 92 500 € brut par an en CDI cadre : c'est le salaire qui laisse le même net après cotisations salariales et impôt. L'équivalence ne compte ni le chômage, ni les congés payés, ni la retraite du salarié — à pondérer selon votre situation. Autrement dit, un freelance qui atteint 5 000 € net « travaille » au niveau d'un cadre payé 92 500 € brut, en échange d'une protection sociale qu'il gère lui-même.
+
+---
+
+# Quel TJM pour 6 000 € net par mois en 2026 ?
+
+URL : https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/
+
+Pour toucher 6 000 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par EI au réel : il faut facturer environ 700 €/jour, à 18 jours par mois sur 11 mois, soit 138 600 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 113 500 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
+
+## Le TJM à viser pour 6 000 €/mois net, statut par statut
+
+Le même objectif de net demande un TJM très différent selon le statut, parce que chacun prélève des cotisations plus ou moins lourdes. Pour 6 000 € net par mois : la micro-entreprise ne permet pas d'atteindre ce revenu : son plafond de chiffre d'affaires (83 600 € en prestations) est atteint avant, 700 €/jour en EI au réel, 835 €/jour en SASU et 925 €/jour en portage salarial. Ces seuils sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.
+
+À ce niveau de revenu, la micro-entreprise est hors jeu : atteindre 6 000 € net supposerait un chiffre d'affaires supérieur à son plafond de 83 600 €. Le choix se resserre sur l'EI au réel et l'EURL (cotisations TNS allégées, net maximal), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, TJM le plus élevé).
+
+## L'équivalent en CDI : environ 113 500 € brut
+
+Pour retrouver 6 000 € net par mois en tant que salarié, il faudrait un CDI cadre à environ 113 500 € brut par an — le calcul intègre les cotisations salariales du privé et le barème 2026 de l'impôt sur le revenu. Si vous quittez un poste moins bien payé que ce niveau, un freelance à 700 €/jour représente une vraie augmentation de pouvoir d'achat, à protection sociale près.
+
+Cette équivalence se lit à net égal : elle ne valorise ni l'assurance chômage, ni les congés payés, ni la retraite plus garnie du salarié. Un CDI « équivalent » protège donc davantage qu'un TJM équivalent ; à l'inverse, le TJM se négocie et peut grimper bien plus vite qu'un salaire. Comparez à net égal, puis pondérez selon la valeur que VOUS accordez à ce filet.
+
+## Ce qui fait bouger ce seuil
+
+Trois curseurs comptent autant que le statut. Les jours réellement facturés d'abord : 700 €/jour vise 6 000 € net à 18 jours par mois ; à 15 jours, il faut monter le TJM d'environ 20 % pour le même revenu, car prospection, intermission et congés ne se facturent pas. Les frais professionnels ensuite (3 000 € par an dans ce scénario), qui pèsent différemment en micro (non déductibles) et au réel. Votre foyer fiscal enfin : un couple avec enfants paie moins d'impôt qu'un célibataire, donc atteint 6 000 € net avec un TJM plus bas.
+
+Le simulateur en haut de page est préréglé sur 700 € (le seuil du meilleur statut) : modifiez les jours facturés, les frais ou la situation familiale pour voir le TJM exact qu'il vous faut, statut par statut, pour votre objectif de 6 000 € net par mois.
+
+## Questions fréquentes
+
+### Quel TJM faut-il pour gagner 6 000 € net par mois en freelance ?
+
+Environ 700 €/jour dans le statut le plus favorable (EI au réel), à 18 jours facturés par mois sur 11 mois, soit 138 600 € de chiffre d'affaires annuel (célibataire sans enfant, 3 000 € de frais pro, taux 2026). En portage salarial, le statut le plus chargé, il faut viser 925 €/jour pour le même net. Le seuil baisse si vous facturez plus de jours ou si votre foyer fiscal réduit votre impôt.
+
+### Peut-on atteindre 6 000 € net par mois en micro-entreprise ?
+
+Non. Pour 6 000 € net par mois, le chiffre d'affaires nécessaire dépasse le plafond de la micro-entreprise (83 600 € en prestations de services). À ce niveau de revenu, il faut passer à l'EI au réel (700 €/jour), à l'EURL ou à la SASU, qui n'ont pas de plafond de chiffre d'affaires.
+
+### 6 000 € net par mois, c'est quel chiffre d'affaires annuel ?
+
+Dans le meilleur statut (EI au réel), il faut facturer environ 138 600 € par an pour dégager 6 000 € net par mois après cotisations et impôt — soit 700 €/jour sur 198 jours facturés. La différence entre ce chiffre d'affaires et votre net part en cotisations sociales, en impôt sur le revenu et en frais professionnels : c'est exactement ce que le simulateur décompose, ligne par ligne.
+
+### 6 000 € net par mois en freelance, ça vaut quel salaire ?
+
+Environ 113 500 € brut par an en CDI cadre : c'est le salaire qui laisse le même net après cotisations salariales et impôt. L'équivalence ne compte ni le chômage, ni les congés payés, ni la retraite du salarié — à pondérer selon votre situation. Autrement dit, un freelance qui atteint 6 000 € net « travaille » au niveau d'un cadre payé 113 500 € brut, en échange d'une protection sociale qu'il gère lui-même.
 
 ---
 

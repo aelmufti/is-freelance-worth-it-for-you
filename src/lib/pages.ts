@@ -24,6 +24,9 @@ import {
 import type { FaqItem } from "../data/faq";
 import { FAQ } from "../data/faq";
 import { TJM_HUB, TJM_PAGES } from "../data/tjm";
+import { OBJECTIF_PAGES } from "../data/objectifNet";
+import { COMPARATIF_PAGES } from "../data/comparatifs";
+import { GUIDE_PAGES } from "../data/guides";
 
 export const SITE = "https://freelance-ou-cdi.fr";
 
@@ -115,6 +118,8 @@ const HOME: StatutPage = {
     "sasu-ou-eurl",
     "micro-entreprise-ou-sasu",
     "portage-salarial-ou-cdi",
+    "guides/comment-fixer-son-tjm",
+    "guides/passer-de-salarie-a-freelance",
   ],
 };
 
@@ -675,8 +680,11 @@ export const PAGES: StatutPage[] = [
   MICRO_OU_SASU,
   PORTAGE_OU_MICRO,
   PORTAGE_OU_CDI,
+  ...COMPARATIF_PAGES,
+  ...GUIDE_PAGES,
   TJM_HUB,
   ...TJM_PAGES,
+  ...OBJECTIF_PAGES,
 ];
 
 export const ROUTE_SLUGS: string[] = PAGES.filter((p) => p.slug).map(
@@ -694,6 +702,9 @@ export function pageUrl(page: StatutPage): string {
 
 // Chemin (absolu, sans domaine) de l'image Open Graph de la page.
 // Générées par scripts/og-image.ts, référencées par scripts/prerender.ts.
+// Le slug est aplati (« / » → « - ») pour que les pages à slug imbriqué
+// (ex. « guides/… ») produisent un fichier plat dans public/ — og-image.ts
+// n'écrit pas de sous-dossier.
 export function ogImagePath(page: StatutPage): string {
-  return page.slug ? `/og-${page.slug}.png` : "/og.png";
+  return page.slug ? `/og-${page.slug.replace(/\//g, "-")}.png` : "/og.png";
 }

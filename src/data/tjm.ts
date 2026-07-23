@@ -19,7 +19,10 @@ import {
 } from "../lib/engine";
 import type { StatutPage } from "../lib/pages";
 
-export const TJMS = [300, 350, 400, 450, 500, 550, 600, 700, 800];
+export const TJMS = [
+  250, 300, 325, 350, 375, 400, 425, 450, 475, 500, 525, 550, 600, 650, 700,
+  750, 800, 900, 1000,
+];
 
 const p = DEFAULT_PARAMS;
 const ref = DEFAULT_INPUT;
@@ -179,10 +182,10 @@ const TJM_3000 = tjmPourNetMensuel(3000);
 export const TJM_HUB: StatutPage = {
   slug: "tjm-en-salaire",
   breadcrumb: "Convertir un TJM en salaire",
-  metaTitle: "Convertir un TJM en salaire : le tableau 2026 (300 à 800 €)",
-  metaDescription: `Combien vaut un TJM en salaire ? Le tableau de conversion 2026 palier par palier (300 à 800 €/jour) : chiffre d'affaires, net mensuel par statut et CDI équivalent. Calculs validés URSSAF.`,
+  metaTitle: "Convertir un TJM en salaire : le tableau 2026 (250 à 1 000 €)",
+  metaDescription: `Combien vaut un TJM en salaire ? Le tableau de conversion 2026 palier par palier (250 à 1 000 €/jour) : chiffre d'affaires, net mensuel par statut et CDI équivalent. Calculs validés URSSAF.`,
   h1: "Convertir un TJM en salaire : le tableau 2026",
-  intro: `Un TJM ne se compare pas à un salaire journalier : il finance aussi les cotisations, l'impôt, les jours non facturés et les frais. Cette page convertit chaque palier de TJM en net mensuel réel et en salaire CDI équivalent — au taux 2026, sur un rythme de 18 jours facturés par mois sur 11 mois. Chaque palier a sa page détaillée.`,
+  intro: `Un TJM ne se compare pas à un salaire journalier : il finance aussi les cotisations, l'impôt, les jours non facturés et les frais. Cette page convertit chaque palier de TJM en net mensuel réel et en salaire CDI équivalent — de 250 à 1 000 €/jour, au taux 2026, sur un rythme de 18 jours facturés par mois sur 11 mois. Chaque palier a sa page détaillée.`,
   sections: [
     {
       heading: "La conversion, palier par palier",
@@ -227,5 +230,12 @@ export const TJM_HUB: StatutPage = {
         "Repérez votre brut annuel dans le tableau des seuils de ce site : il donne, pour chaque niveau de salaire de 35 000 à 120 000 €, le TJM minimal par statut (micro, EI/EURL, SASU, portage) qui produit le même net après impôt. Par exemple, un CDI cadre à 55 000 € brut se remplace à partir d'environ 320 €/jour en micro-entreprise et 455 €/jour en portage salarial. Ajoutez une marge de sécurité pour les intermissions.",
     },
   ],
-  related: ["tjm-500", "tjm-600", "portage-salarial-ou-cdi", "sasu-ou-eurl"],
+  related: [
+    "tjm-500",
+    "tjm-600",
+    "tjm-pour-3000-euros-net",
+    "tjm-pour-4000-euros-net",
+    "tjm-pour-5000-euros-net",
+    "portage-salarial-ou-cdi",
+  ],
 };
