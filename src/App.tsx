@@ -166,6 +166,23 @@ export default function App({ page }: { page: StatutPage }) {
       </header>
 
       <main id="main-content" className="mx-auto max-w-7xl space-y-12 px-4 py-10">
+        {/* EN BREF — réponse directe, auto-suffisante et citable (SEO/GEO) */}
+        {page.tldr && (
+          <section aria-labelledby="tldr-title" className="anim-up">
+            <div className="border-[3px] border-ink bg-tag-yellow p-5 shadow-brutal md:p-6">
+              <h2
+                id="tldr-title"
+                className="text-sm font-extrabold uppercase tracking-[0.12em]"
+              >
+                En bref
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm font-bold leading-relaxed md:text-base">
+                {page.tldr}
+              </p>
+            </div>
+          </section>
+        )}
+
         {!isContent && (
           <>
             {/* VERDICT */}

@@ -117,9 +117,10 @@ function makeTjmPage(f: TjmFigures, prev?: number, next?: number): StatutPage {
     slug: `tjm-${f.tjm}`,
     breadcrumb: `TJM ${f.tjm} €`,
     hideFromFooter: true,
-    metaTitle: `TJM ${f.tjm} € : quel salaire net en 2026 ? (micro, SASU, portage)`,
-    metaDescription: `Un TJM de ${f.tjm} € = ${fmt(f.ca)} € facturés par an. Meilleur net : ${fmt(f.bestNetMensuel)} €/mois (${f.bestLabel}), l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. Calculs 2026 validés URSSAF.`,
+    metaTitle: `TJM ${f.tjm} € : quel salaire net en 2026 ?`,
+    metaDescription: `Un TJM de ${f.tjm} € = ${fmt(f.ca)} € facturés/an. Meilleur net : ${fmt(f.bestNetMensuel)} €/mois (${f.bestLabel}), soit un CDI à ~${fmt(f.brutEquivalent)} € brut. Validé URSSAF.`,
     h1: `TJM ${f.tjm} € : ce que ça fait en salaire net (2026)`,
+    tldr: `À ${f.tjm} € par jour, 18 jours facturés par mois sur 11 mois, vous facturez ${fmt(f.ca)} € par an et conservez au mieux ${fmt(f.bestNetMensuel)} € net par mois après cotisations et impôt (${f.bestLabel}) — l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut par an. Taux 2026, calculs validés URSSAF.`,
     intro: `À ${f.tjm} € par jour, 18 jours facturés par mois sur 11 mois, vous facturez ${fmt(f.ca)} € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (${f.bestLabel}) laisse ${fmt(f.bestNetMensuel)} €/mois — l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut par an. Le détail statut par statut, calculé au taux 2026.`,
     inputOverrides: { tjm: f.tjm },
     sections: [
@@ -182,9 +183,10 @@ const TJM_3000 = tjmPourNetMensuel(3000);
 export const TJM_HUB: StatutPage = {
   slug: "tjm-en-salaire",
   breadcrumb: "Convertir un TJM en salaire",
-  metaTitle: "Convertir un TJM en salaire : le tableau 2026 (250 à 1 000 €)",
-  metaDescription: `Combien vaut un TJM en salaire ? Le tableau de conversion 2026 palier par palier (250 à 1 000 €/jour) : chiffre d'affaires, net mensuel par statut et CDI équivalent. Calculs validés URSSAF.`,
+  metaTitle: "Convertir un TJM en salaire : le tableau 2026",
+  metaDescription: `Le tableau de conversion 2026, de 250 à 1 000 €/jour : chiffre d'affaires, net mensuel par statut et salaire CDI équivalent. Validé URSSAF.`,
   h1: "Convertir un TJM en salaire : le tableau 2026",
+  tldr: `Pour convertir un TJM en salaire, multipliez-le par les jours réellement facturés (18 par mois sur 11 mois, soit 198 jours), puis retirez cotisations, frais et impôt. Selon le statut, il reste entre 40 et 60 % du chiffre d'affaires en net. Repères 2026 : environ ${fmt(TJM_3000)} €/jour pour 3 000 € net par mois, ${fmt(TJM_4000)} €/jour pour 4 000 € net.`,
   intro: `Un TJM ne se compare pas à un salaire journalier : il finance aussi les cotisations, l'impôt, les jours non facturés et les frais. Cette page convertit chaque palier de TJM en net mensuel réel et en salaire CDI équivalent — de 250 à 1 000 €/jour, au taux 2026, sur un rythme de 18 jours facturés par mois sur 11 mois. Chaque palier a sa page détaillée.`,
   sections: [
     {
@@ -230,12 +232,14 @@ export const TJM_HUB: StatutPage = {
         "Repérez votre brut annuel dans le tableau des seuils de ce site : il donne, pour chaque niveau de salaire de 35 000 à 120 000 €, le TJM minimal par statut (micro, EI/EURL, SASU, portage) qui produit le même net après impôt. Par exemple, un CDI cadre à 55 000 € brut se remplace à partir d'environ 320 €/jour en micro-entreprise et 455 €/jour en portage salarial. Ajoutez une marge de sécurité pour les intermissions.",
     },
   ],
+  // Le hub liste TOUS les paliers et tous les objectifs de net : sans cela,
+  // les paliers extrêmes n'étaient atteignables qu'au bout d'une longue chaîne
+  // prev/next (profondeur de clic > 7, donc quasi jamais crawlés).
   related: [
-    "tjm-500",
-    "tjm-600",
-    "tjm-pour-3000-euros-net",
-    "tjm-pour-4000-euros-net",
-    "tjm-pour-5000-euros-net",
-    "portage-salarial-ou-cdi",
+    ...TJMS.map((t) => `tjm-${t}`),
+    ...[3000, 3500, 4000, 4500, 5000, 6000].map(
+      (n) => `tjm-pour-${n}-euros-net`,
+    ),
+    "observatoire-tjm-2026",
   ],
 };

@@ -81,7 +81,10 @@ const breakevenTable = [
 ].join("\n");
 
 const fullPages = PAGES.map((p) => {
-  const parts: string[] = [`# ${p.h1}`, "", `URL : ${pageUrl(p)}`, "", p.intro];
+  const parts: string[] = [`# ${p.h1}`, "", `URL : ${pageUrl(p)}`];
+  // La réponse directe en tête : c'est le passage qu'un moteur génératif cite.
+  if (p.tldr) parts.push("", `**En bref.** ${p.tldr}`);
+  parts.push("", p.intro);
   for (const s of p.sections) {
     parts.push("", `## ${s.heading}`, "", s.paragraphs.join("\n\n"));
   }

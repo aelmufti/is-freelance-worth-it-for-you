@@ -60,8 +60,9 @@ const MICRO_OU_EURL: StatutPage = {
   statuts: ["micro", "eurl"],
   breadcrumb: "Micro-entreprise ou EURL",
   metaTitle: "Micro-entreprise ou EURL en 2026 : quel statut choisir ?",
-  metaDescription: `Micro-entreprise ou EURL en 2026 ? Cotisations en % du CA contre société à l'IS, plafond de 83 600 €, frais déductibles et dividendes : le comparatif chiffré pour choisir, validé URSSAF.`,
+  metaDescription: `Cotisations en % du CA contre société à l'IS, plafond de 83 600 €, frais déductibles et dividendes : le comparatif chiffré 2026.`,
   h1: "Micro-entreprise ou EURL : le comparatif chiffré 2026",
+  tldr: `À 400 € par jour, la micro-entreprise laisse environ ${fmt(MICRO_400)} €/mois net contre ${fmt(EURL_400)} € en EURL. La micro gagne tant que vos frais réels restent sous l'abattement forfaitaire de 34 % et que le chiffre d'affaires reste sous ${fmt(p.microPlafondService)} €. L'EURL prend le relais au-delà : frais déduits au réel, aucun plafond, responsabilité limitée et dividendes possibles.`,
   intro: `La micro et l'EURL sont deux façons opposées d'exercer seul : d'un côté la simplicité maximale et un plafond, de l'autre une vraie société à l'impôt sur les sociétés, sans limite de chiffre d'affaires. Pour égaler un CDI à ${fmt(ref.cdiBrutAnnuel)} € brut, il faut environ ${fmt(T_MICRO)} €/jour en micro contre ${fmt(T_EURL)} € en EURL. Voici quand chacune l'emporte.`,
   sections: [
     {
@@ -112,9 +113,10 @@ const MICRO_OU_EI: StatutPage = {
   slug: "micro-entreprise-ou-ei",
   statuts: ["micro", "ei"],
   breadcrumb: "Micro-entreprise ou EI au réel",
-  metaTitle: "Micro-entreprise ou EI au réel 2026 : abattement ou frais réels ?",
-  metaDescription: `Micro-entreprise ou EI au réel en 2026 ? Abattement forfaitaire de 34 % contre déduction des frais réels, plafond de 83 600 €, même régime TNS : le comparatif chiffré pour choisir, validé URSSAF.`,
+  metaTitle: "Micro-entreprise ou EI au réel 2026 : que choisir ?",
+  metaDescription: `Abattement forfaitaire de 34 % contre déduction des frais réels, plafond de 83 600 €, même régime TNS : le comparatif chiffré.`,
   h1: "Micro-entreprise ou EI au réel : abattement ou frais réels ?",
+  tldr: `Micro et EI au réel partagent le même régime social TNS : seule change la façon de calculer l'impôt. Si vos frais professionnels réels sont inférieurs à l'abattement forfaitaire de 34 % du chiffre d'affaires, la micro rend plus — à 400 €/jour, environ ${fmt(MICRO_400)} €/mois net contre ${fmt(EI_400)} € au réel. Au-dessus, l'EI au réel les déduit pour de vrai, sans plafond de chiffre d'affaires.`,
   intro: `C'est le même métier, en nom propre, sous le même régime social TNS — mais deux façons de calculer l'impôt. La micro applique un abattement forfaitaire de 34 % ; l'EI au réel déduit vos frais réels. Tout le choix tient dans une comparaison : vos dépenses réelles sont-elles plus hautes ou plus basses que l'abattement ? Ce comparatif chiffre les deux sur vos paramètres.`,
   sections: [
     {
@@ -166,8 +168,9 @@ const EI_OU_EURL: StatutPage = {
   statuts: ["ei", "eurl"],
   breadcrumb: "EI au réel ou EURL",
   metaTitle: "EI au réel ou EURL en 2026 : nom propre ou société ?",
-  metaDescription: `EI au réel ou EURL en 2026 ? Nom propre à l'IR contre société à l'IS, responsabilité, dividendes et règle des 10 % du capital : le comparatif chiffré pour choisir, validé URSSAF.`,
+  metaDescription: `Nom propre à l'IR contre société à l'IS, responsabilité, dividendes et règle des 10 % du capital : le comparatif chiffré 2026.`,
   h1: "EI au réel ou EURL : nom propre ou société en 2026 ?",
+  tldr: `EI au réel et EURL relèvent du même régime social TNS, avec des cotisations comparables : la vraie différence est fiscale. L'EI est à l'impôt sur le revenu — tout le bénéfice est imposé chaque année ; l'EURL peut opter pour l'impôt sur les sociétés et ne soumettre à l'IR que ce que vous prélevez réellement. Sur le scénario de référence (550 €/jour), l'EI laisse ${fmt(EI_550)} €/mois net contre ${fmt(EURL_550)} € en EURL.`,
   intro: `Les deux sont des statuts d'indépendant au régime TNS, aux cotisations proches. La vraie différence est structurelle : l'EI reste une personne physique imposée à l'impôt sur le revenu, l'EURL est une société qui peut opter pour l'impôt sur les sociétés et distribuer des dividendes. Sur le scénario de référence (550 €/jour), l'EI laisse ${fmt(EI_550)} €/mois net contre ${fmt(EURL_550)} € en EURL — mais le match se joue ailleurs.`,
   sections: [
     {
@@ -219,8 +222,9 @@ const EI_OU_SASU: StatutPage = {
   statuts: ["ei", "sasu"],
   breadcrumb: "EI au réel ou SASU",
   metaTitle: "EI au réel ou SASU en 2026 : TNS ou assimilé salarié ?",
-  metaDescription: `EI au réel ou SASU en 2026 ? Cotisations TNS allégées contre assimilé salarié, dividendes à la flat tax, cumul ARE et protection sociale : le comparatif chiffré, validé URSSAF.`,
+  metaDescription: `Cotisations TNS allégées contre assimilé salarié, dividendes à la flat tax, cumul ARE et protection sociale : le comparatif chiffré.`,
   h1: "EI au réel ou SASU : quel statut vous laisse le plus de net ?",
+  tldr: `À rémunération intégrale, l'EI au réel laisse nettement plus de net que la SASU : ${fmt(EI_550)} €/mois contre ${fmt(SASU_550)} € sur le scénario de référence (550 €/jour), grâce à des cotisations TNS d'environ 45 % contre 75 à 80 % de charges en assimilé salarié. La SASU compense par l'arbitrage salaire/dividendes, une meilleure protection sociale et le cumul avec l'ARE en sortie de CDI.`,
   intro: `Deux statuts sans plafond de chiffre d'affaires, qui déduisent tous deux les frais réels — mais tout les oppose côté social. L'EI est TNS, cotisations légères et protection modeste ; la SASU est assimilée salarié, protection complète et charges lourdes, compensées par les dividendes. Sur le scénario de référence (550 €/jour, tout en rémunération), l'EI laisse ${fmt(EI_550)} €/mois net contre ${fmt(SASU_550)} € en SASU.`,
   sections: [
     {
@@ -271,9 +275,10 @@ const PORTAGE_OU_SASU: StatutPage = {
   slug: "portage-salarial-ou-sasu",
   statuts: ["portage", "sasu"],
   breadcrumb: "Portage salarial ou SASU",
-  metaTitle: "Portage salarial ou SASU en 2026 : sécurité ou optimisation ?",
-  metaDescription: `Portage salarial ou SASU en 2026 ? Deux régimes assimilés salariés, mais chômage et zéro gestion d'un côté, dividendes et pilotage de l'autre : le comparatif chiffré, validé URSSAF.`,
+  metaTitle: "Portage salarial ou SASU : sécurité ou optimisation ?",
+  metaDescription: `Deux régimes assimilés salariés : chômage et zéro gestion d'un côté, dividendes et pilotage de l'autre. Le comparatif chiffré 2026.`,
   h1: "Portage salarial ou SASU : sécurité ou optimisation ?",
+  tldr: `Portage et SASU relèvent tous deux du régime général, mais seul le portage cotise à l'assurance chômage. À chiffre d'affaires égal, la SASU laisse plus de net — ${fmt(SASU_550)} €/mois contre ${fmt(PORTAGE_550)} € en portage sur le scénario de référence (550 €/jour) — car elle évite les frais de gestion de 5 à 10 % et permet l'arbitrage salaire/dividendes.`,
   intro: `Curieusement proches et pourtant opposés : dans les deux cas vous relevez du régime général (assimilé salarié). Mais le portage ajoute l'assurance chômage et vous décharge de toute gestion, tandis que la SASU offre l'arbitrage salaire/dividendes et le contrôle total. Sur le scénario de référence (550 €/jour), le portage laisse ${fmt(PORTAGE_550)} €/mois net contre ${fmt(SASU_550)} € en SASU à 100 % salaire.`,
   sections: [
     {
@@ -325,8 +330,9 @@ const PORTAGE_OU_EURL: StatutPage = {
   statuts: ["portage", "eurl"],
   breadcrumb: "Portage salarial ou EURL",
   metaTitle: "Portage salarial ou EURL en 2026 : salariat ou société ?",
-  metaDescription: `Portage salarial ou EURL en 2026 ? Salariat avec chômage et zéro gestion contre société TNS à l'IS plus rémunératrice : le comparatif chiffré pour choisir, validé URSSAF.`,
+  metaDescription: `Salariat avec chômage et zéro gestion contre société TNS à l'IS plus rémunératrice : le comparatif chiffré 2026.`,
   h1: "Portage salarial ou EURL : salariat ou société ?",
+  tldr: `Sur le scénario de référence (550 €/jour), l'EURL laisse ${fmt(EURL_550)} €/mois net contre ${fmt(PORTAGE_550)} € en portage salarial : les cotisations TNS sont bien plus légères que celles du régime général, et l'EURL évite les frais de gestion de 5 à 10 %. Cet écart est le prix de la sécurité du portage — chômage, retraite complète, prévoyance et zéro gestion administrative.`,
   intro: `Deux mondes : le portage vous garde salarié (chômage, retraite du régime général, aucune gestion), l'EURL fait de vous un chef d'entreprise TNS à l'impôt sur les sociétés. Sur le scénario de référence (550 €/jour), l'EURL laisse ${fmt(EURL_550)} €/mois net contre ${fmt(PORTAGE_550)} € en portage — la différence, c'est le prix de la sécurité.`,
   sections: [
     {
@@ -377,9 +383,10 @@ const MICRO_OU_CDI: StatutPage = {
   slug: "micro-entreprise-ou-cdi",
   statuts: ["micro", "cdi"],
   breadcrumb: "Micro-entreprise ou CDI",
-  metaTitle: "Micro-entreprise ou CDI en 2026 : à quel TJM ça vaut le coup ?",
-  metaDescription: `Rester en CDI ou passer en micro-entreprise en 2026 ? Le TJM à partir duquel la micro bat votre salaire (environ ${fmt(T_MICRO)} €/jour pour ${BRUT_K} 000 € brut), ce que vous gagnez, ce que vous perdez. Validé URSSAF.`,
+  metaTitle: "Micro-entreprise ou CDI : à quel TJM ça vaut le coup ?",
+  metaDescription: `Le TJM à partir duquel la micro bat votre salaire (environ ${fmt(T_MICRO)} €/jour pour ${BRUT_K} 000 € brut), ce que vous gagnez et perdez.`,
   h1: "Micro-entreprise ou CDI : à partir de quel TJM ça vaut le coup ?",
+  tldr: `Pour égaler un CDI cadre à ${fmt(ref.cdiBrutAnnuel)} € brut (${fmt(NET_CDI)} €/mois net après impôt), il faut facturer environ ${fmt(T_MICRO)} € par jour en micro-entreprise, à 18 jours facturés par mois sur 11 mois. C'est le seuil le plus bas de tous les statuts. En contrepartie, la micro n'ouvre aucun droit au chômage et plafonne à ${fmt(p.microPlafondService)} € de chiffre d'affaires en prestations.`,
   intro: `La micro est la porte d'entrée la plus simple vers l'indépendance : création gratuite, cotisations en pourcentage du chiffre d'affaires, zéro comptabilité. Mais quitter un CDI, c'est renoncer au chômage, aux congés payés et à un revenu garanti. Pour égaler un CDI à ${fmt(ref.cdiBrutAnnuel)} € brut (${fmt(NET_CDI)} €/mois net après impôt), il faut environ ${fmt(T_MICRO)} €/jour en micro. Ce simulateur calcule votre propre point de bascule.`,
   sections: [
     {
@@ -432,8 +439,9 @@ const SASU_OU_CDI: StatutPage = {
   statuts: ["sasu", "cdi"],
   breadcrumb: "SASU ou CDI",
   metaTitle: "SASU ou CDI en 2026 : à partir de quel TJM ça vaut le coup ?",
-  metaDescription: `Rester en CDI ou passer en SASU en 2026 ? Deux régimes assimilés salariés, mais dividendes et liberté d'un côté, chômage garanti de l'autre. Le TJM d'équivalence (environ ${fmt(T_SASU)} €/jour pour ${BRUT_K} 000 € brut), validé URSSAF.`,
+  metaDescription: `Dividendes et liberté d'un côté, chômage garanti de l'autre. Le TJM d'équivalence : environ ${fmt(T_SASU)} €/jour pour ${BRUT_K} 000 € brut.`,
   h1: "SASU ou CDI : à partir de quel TJM ça vaut le coup ?",
+  tldr: `La SASU est le statut freelance le plus proche du CDI : président assimilé salarié, couverture du régime général — mais sans assurance chômage. Pour égaler un CDI à ${fmt(ref.cdiBrutAnnuel)} € brut (${fmt(NET_CDI)} €/mois net après impôt), il faut environ ${fmt(T_SASU)} € par jour en rémunération intégrale. Son atout : l'arbitrage salaire/dividendes et le cumul de l'ARE en sortie de CDI.`,
   intro: `La SASU est le statut freelance le plus proche du CDI : dans les deux cas, vous êtes assimilé salarié, avec la couverture du régime général. La grande différence est le chômage — que le CDI garantit et que la SASU n'ouvre pas. Pour égaler un CDI à ${fmt(ref.cdiBrutAnnuel)} € brut (${fmt(NET_CDI)} €/mois net), il faut environ ${fmt(T_SASU)} €/jour en SASU. Voici l'arbitrage complet.`,
   sections: [
     {
@@ -486,8 +494,9 @@ const EURL_OU_CDI: StatutPage = {
   statuts: ["eurl", "cdi"],
   breadcrumb: "EURL ou CDI",
   metaTitle: "EURL ou CDI en 2026 : à partir de quel TJM ça vaut le coup ?",
-  metaDescription: `Rester en CDI ou passer en EURL en 2026 ? Gérant TNS à l'IS contre salarié : cotisations plus légères mais pas de chômage. Le TJM d'équivalence (environ ${fmt(T_EURL)} €/jour pour ${BRUT_K} 000 € brut), validé URSSAF.`,
+  metaDescription: `Gérant TNS à l'IS contre salarié : cotisations plus légères, mais pas de chômage. Le TJM d'équivalence : environ ${fmt(T_EURL)} €/jour.`,
   h1: "EURL ou CDI : à partir de quel TJM ça vaut le coup ?",
+  tldr: `Le gérant d'EURL est travailleur non salarié : environ 45 % de cotisations sur sa rémunération, plus léger qu'un salarié « tout compris ». Pour égaler un CDI à ${fmt(ref.cdiBrutAnnuel)} € brut (${fmt(NET_CDI)} €/mois net après impôt), comptez environ ${fmt(T_EURL)} € par jour. En échange : aucun droit au chômage, pas de revenu garanti et une retraite moins garnie.`,
   intro: `Passer d'un CDI à une EURL, c'est troquer le statut de salarié contre celui de gérant indépendant : cotisations plus légères, mais plus de chômage ni de revenu garanti. Pour égaler un CDI à ${fmt(ref.cdiBrutAnnuel)} € brut (${fmt(NET_CDI)} €/mois net), il faut environ ${fmt(T_EURL)} €/jour en EURL. Ce simulateur calcule votre point de bascule et met les deux nets face à face.`,
   sections: [
     {
@@ -539,9 +548,10 @@ const EI_OU_CDI: StatutPage = {
   slug: "ei-ou-cdi",
   statuts: ["ei", "cdi"],
   breadcrumb: "EI au réel ou CDI",
-  metaTitle: "EI au réel ou CDI en 2026 : à partir de quel TJM ça vaut le coup ?",
-  metaDescription: `Rester en CDI ou passer en entreprise individuelle au réel en 2026 ? Cotisations TNS et frais déductibles contre sécurité du salariat. Le TJM d'équivalence (environ ${fmt(T_EI)} €/jour pour ${BRUT_K} 000 € brut), validé URSSAF.`,
+  metaTitle: "EI au réel ou CDI : à quel TJM ça vaut le coup ?",
+  metaDescription: `Cotisations TNS et frais déductibles contre sécurité du salariat. Le TJM d'équivalence : environ ${fmt(T_EI)} €/jour pour ${BRUT_K} 000 € brut.`,
   h1: "EI au réel ou CDI : à partir de quel TJM ça vaut le coup ?",
+  tldr: `L'entreprise individuelle au réel affiche l'un des seuils les plus bas pour remplacer un salaire : environ ${fmt(T_EI)} € par jour pour égaler un CDI cadre à ${fmt(ref.cdiBrutAnnuel)} € brut (${fmt(NET_CDI)} €/mois net après impôt), grâce aux cotisations TNS et à la déduction des frais réels. En contrepartie : aucun droit au chômage, pas de revenu garanti, une prévoyance à reconstituer.`,
   intro: `L'entreprise individuelle au réel est l'indépendance en nom propre, sans société : cotisations TNS allégées, frais réels déductibles, aucun plafond. Face à elle, le CDI garde le chômage, les congés et un revenu garanti. Pour égaler un CDI à ${fmt(ref.cdiBrutAnnuel)} € brut (${fmt(NET_CDI)} €/mois net), il faut environ ${fmt(T_EI)} €/jour en EI. Ce simulateur chiffre l'arbitrage.`,
   sections: [
     {

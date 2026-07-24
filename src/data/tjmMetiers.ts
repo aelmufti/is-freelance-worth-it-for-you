@@ -151,9 +151,10 @@ function makeMetierPage(m: Metier, prev?: Metier, next?: Metier): StatutPage {
     breadcrumb: `TJM ${m.court}`,
     hideFromFooter: true,
     inputOverrides: { tjm: m.tjm },
-    metaTitle: `TJM ${m.court} freelance 2026 : tarif moyen et salaire net réel`,
-    metaDescription: `TJM d'un ${m.nom} freelance en 2026 : médiane observée d'environ ${m.tjm} €/jour (fourchette ${m.bas}–${m.haut} €). Ce que ça laisse en net après impôt par statut, et l'équivalent CDI. Calculs validés URSSAF.`,
+    metaTitle: `TJM ${m.court} freelance 2026 : tarif et net réel`,
+    metaDescription: `TJM ${m.court} freelance 2026 : médiane ~${m.tjm} €/jour (${m.bas}–${m.haut} €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.`,
     h1: `TJM ${m.court} freelance : tarif moyen et net réel (2026)`,
+    tldr: `En 2026, un ${m.nom} freelance facture en médiane environ ${m.tjm} € par jour en France (fourchette ${m.bas} à ${m.haut} € selon séniorité et spécialité, d'après les ${TJM_METIERS_SOURCE}). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux ${fmt(f.bestNetMensuel)} € net par mois après cotisations et impôt (${f.bestLabel}), soit l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut.`,
     intro: `Le TJM médian observé pour un ${m.nom} en France tourne autour de ${m.tjm} €/jour en 2026, dans une fourchette d'environ ${m.bas} à ${m.haut} € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (${f.bestLabel}) laisse ${fmt(f.bestNetMensuel)} €/mois net après impôt — l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. ${m.contexte}`,
     sections: [
       {
@@ -213,9 +214,10 @@ export const OBSERVATOIRE_TJM: StatutPage = {
   slug: "observatoire-tjm-2026",
   breadcrumb: "Observatoire du TJM 2026",
   layout: "content",
-  metaTitle: "Observatoire du TJM freelance 2026 : tarifs par métier et net réel",
-  metaDescription: `Observatoire 2026 des TJM freelance par métier (dev, data, DevOps, product, consultant, design, cybersécurité) : médiane, fourchette et surtout le net réel après impôt par statut. Données sourcées, calculs validés URSSAF.`,
+  metaTitle: "Observatoire du TJM freelance 2026 : tarifs par métier",
+  metaDescription: `Les TJM médians par métier (dev, data, DevOps, product, conseil, design, cyber) croisés avec le net réel après impôt, statut par statut. Validé URSSAF.`,
   h1: "Observatoire du TJM freelance 2026",
+  tldr: `En 2026, les TJM médians des freelances français vont d'environ 450 €/jour (design, SEO) à 650 €/jour (conseil en stratégie, cybersécurité), le développement web se situant autour de 535 € et la data science autour de 645 € (d'après les ${TJM_METIERS_SOURCE}). À TJM égal, le net conservé varie de plus de 1 000 € par mois selon le statut choisi.`,
   intro: `Combien facture vraiment un freelance selon son métier — et surtout, combien lui reste-t-il en net ? Cet observatoire croise les TJM médians observés sur le marché en 2026 (d'après les ${TJM_METIERS_SOURCE}) avec le revenu net réellement disponible après cotisations et impôt, calculé par notre moteur validé URSSAF. Chaque métier a sa page détaillée, statut par statut.`,
   sections: [
     {

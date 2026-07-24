@@ -115,9 +115,10 @@ function makeObjectifPage(f: ObjFigures, prev?: number, next?: number): StatutPa
     slug: `tjm-pour-${f.net}-euros-net`,
     breadcrumb: `TJM pour ${fmt(f.net)} € net`,
     hideFromFooter: true,
-    metaTitle: `Quel TJM pour ${fmt(f.net)} € net par mois en 2026 ? (micro, SASU, portage)`,
-    metaDescription: `Pour ${fmt(f.net)} € net par mois après impôt en freelance, visez environ ${fmt(f.bestTjm)} €/jour en ${f.bestLabel} (${fmt(f.bestCa)} € de CA/an), l'équivalent d'un CDI à ${fmt(f.brutEquivalent)} € brut. Le TJM à viser statut par statut, calculs 2026 validés URSSAF.`,
+    metaTitle: `Quel TJM pour ${fmt(f.net)} € net par mois en 2026 ?`,
+    metaDescription: `Pour ${fmt(f.net)} € net/mois : visez ~${fmt(f.bestTjm)} €/jour en ${f.bestLabel} (${fmt(f.bestCa)} € de CA/an), soit un CDI à ${fmt(f.brutEquivalent)} € brut. Validé URSSAF.`,
     h1: `Quel TJM pour ${fmt(f.net)} € net par mois en 2026 ?`,
+    tldr: `Pour toucher ${fmt(f.net)} € net par mois après cotisations et impôt, il faut facturer environ ${fmt(f.bestTjm)} € par jour en ${f.bestLabel}, à 18 jours facturés par mois sur 11 mois, soit ${fmt(f.bestCa)} € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. Taux 2026, calculs validés URSSAF.`,
     intro: `Pour toucher ${fmt(f.net)} € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par ${f.bestLabel} : il faut facturer environ ${fmt(f.bestTjm)} €/jour, à 18 jours par mois sur 11 mois, soit ${fmt(f.bestCa)} € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.`,
     inputOverrides: { tjm: f.bestTjm },
     sections: [

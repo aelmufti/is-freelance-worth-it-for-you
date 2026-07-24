@@ -16,6 +16,7 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONTENT_UPDATED, PAGES, pageUrl, ogImagePath, SITE, type StatutPage } from "../src/lib/pages";
+import { OBSERVATOIRE_TJM } from "../src/data/tjmMetiers";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dir, "..");
@@ -74,23 +75,83 @@ function rewriteHead(html: string, page: StatutPage): string {
       ],
     }),
   ];
-  // Pages éditoriales (méthodologie, à propos, glossaire, observatoire) : un
-  // schema Article daté + auteur/éditeur renforce l'E-E-A-T sur un sujet YMYL.
-  if (page.layout === "content") {
+  const AUTHOR = {
+    "@type": "Person",
+    name: "Ali El Mufti",
+    url: "https://aelm.dev",
+  };
+
+  // Pages éditoriales (institutionnelles, guides, observatoire, pages métier) :
+  // un schema Article daté + auteur/éditeur renforce l'E-E-A-T sur un sujet YMYL
+  // et donne aux moteurs génératifs une entité datée à citer.
+  const isEditorial =
+    page.layout === "content" ||
+    page.slug.startsWith("guides/") ||
+    page.slug.startsWith("tjm-freelance-");
+  if (isEditorial) {
     jsonLd.push(
       JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
         headline: page.h1,
         description: page.metaDescription,
+        abstract: page.tldr,
         inLanguage: "fr-FR",
         url,
         image: og,
         datePublished: CONTENT_UPDATED,
         dateModified: CONTENT_UPDATED,
-        author: { "@type": "Person", name: "Ali El Mufti", url: "https://aelm.dev" },
-        publisher: { "@type": "Person", name: "Ali El Mufti", url: "https://aelm.dev" },
+        author: AUTHOR,
+        publisher: AUTHOR,
         isPartOf: { "@type": "WebSite", name: "freelance-ou-cdi.fr", url: `${SITE}/` },
+      }),
+    );
+  }
+
+  // Guides procéduraux : schema HowTo (étapes ordonnées).
+  if (page.howTo) {
+    jsonLd.push(
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: page.h1,
+        description: page.metaDescription,
+        inLanguage: "fr-FR",
+        step: page.howTo.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.name,
+          text: s.text,
+        })),
+      }),
+    );
+  }
+
+  // L'observatoire est un jeu de données : le schema Dataset est celui que les
+  // moteurs génératifs privilégient pour citer une étude chiffrée.
+  if (page.slug === OBSERVATOIRE_TJM.slug) {
+    jsonLd.push(
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        name: "Observatoire du TJM freelance 2026",
+        description:
+          "TJM médians observés par métier chez les freelances français en 2026, croisés avec le revenu net après cotisations et impôt pour chaque statut juridique.",
+        url,
+        inLanguage: "fr-FR",
+        license: "https://opensource.org/licenses/MIT",
+        isAccessibleForFree: true,
+        creator: AUTHOR,
+        datePublished: CONTENT_UPDATED,
+        dateModified: CONTENT_UPDATED,
+        temporalCoverage: "2026",
+        spatialCoverage: { "@type": "Place", name: "France" },
+        keywords: ["TJM", "freelance", "tarif journalier", "revenu net", "France"],
+        variableMeasured: [
+          { "@type": "PropertyValue", name: "TJM médian", unitText: "EUR/jour" },
+          { "@type": "PropertyValue", name: "Net mensuel après impôt", unitText: "EUR/mois" },
+          { "@type": "PropertyValue", name: "Salaire CDI équivalent", unitText: "EUR brut/an" },
+        ],
       }),
     );
   }

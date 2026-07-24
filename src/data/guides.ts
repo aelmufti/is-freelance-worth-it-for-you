@@ -19,9 +19,28 @@ const PLAFOND = fmt(p.microPlafondService);
 const FIXER_TJM: StatutPage = {
   slug: "guides/comment-fixer-son-tjm",
   breadcrumb: "Comment fixer son TJM",
-  metaTitle: "Comment fixer son TJM en freelance (2026) : la méthode chiffrée",
-  metaDescription: `Comment calculer son TJM freelance en 2026 ? Partir du salaire cible, compter les jours réellement facturables, ajouter charges, frais et marge : la méthode pas à pas, avec les erreurs à éviter.`,
+  metaTitle: "Comment fixer son TJM en freelance : la méthode 2026",
+  metaDescription: `Partir du salaire cible, compter les jours réellement facturables, ajouter charges, frais et marge : la méthode pas à pas.`,
   h1: "Comment fixer son TJM en freelance : la méthode 2026",
+  tldr: `Pour fixer son TJM, partez du net mensuel visé, annualisez-le, puis ajoutez les cotisations de votre statut, l'impôt et vos frais professionnels pour obtenir le chiffre d'affaires nécessaire. Divisez-le par les jours réellement facturables — environ 198 par an (18 jours par mois sur 11 mois), pas 220 jours ouvrés. Selon le statut, il ne reste que 40 à 60 % du TJM en net disponible.`,
+  howTo: [
+    {
+      name: "Partir du revenu net visé",
+      text: "Déterminez le net mensuel que vous voulez toucher après impôt, puis annualisez-le. C'est l'objectif à atteindre, avant toute considération de marché.",
+    },
+    {
+      name: "Compter les jours réellement facturables",
+      text: "Comptez environ 198 jours facturables par an (18 jours par mois sur 11 mois), et non 220 jours ouvrés : prospection, administratif, intermission, formation et congés ne se facturent pas.",
+    },
+    {
+      name: "Ajouter cotisations, impôt et frais",
+      text: "Remontez du net au chiffre d'affaires en ajoutant les cotisations sociales de votre statut, l'impôt sur le revenu et vos frais professionnels. Divisez ce chiffre d'affaires par les jours facturables pour obtenir le TJM plancher.",
+    },
+    {
+      name: "Ajouter une marge de sécurité",
+      text: "Ajoutez 10 à 20 % au-dessus de ce plancher pour absorber les creux d'activité et autofinancer mutuelle, prévoyance et retraite complémentaire que le salariat prenait en charge.",
+    },
+  ],
   intro: `Le TJM (taux journalier moyen) est la décision la plus structurante d'un freelance : trop bas, vous travaillez à perte sans le voir ; trop haut, vous ne signez pas. La bonne méthode ne part pas du marché mais de vos chiffres — le salaire que vous voulez remplacer, les jours que vous pouvez réellement facturer, et tout ce que le TJM doit financer que le salariat prenait en charge.`,
   sections: [
     {
@@ -72,9 +91,10 @@ const FIXER_TJM: StatutPage = {
 const CHARGES_SOCIALES: StatutPage = {
   slug: "guides/charges-sociales-freelance",
   breadcrumb: "Charges sociales du freelance",
-  metaTitle: "Charges sociales du freelance 2026 : combien selon le statut ?",
-  metaDescription: `Combien de charges sociales paie un freelance en 2026 ? Micro (24,6 % du CA), TNS (~45 % du revenu), assimilé salarié (75-80 %) : ce que chaque statut prélève et ce qu'il couvre, expliqué simplement.`,
+  metaTitle: "Charges sociales du freelance 2026 : combien par statut ?",
+  metaDescription: `Micro (24,6 % du CA), TNS (~45 % du revenu), assimilé salarié (75-80 %) : ce que chaque statut prélève et ce qu'il couvre vraiment.`,
   h1: "Charges sociales du freelance : combien, selon le statut ?",
+  tldr: `Les charges sociales du freelance ne se comparent pas directement, car elles ne portent pas sur la même base : environ 24,6 % du chiffre d'affaires en micro-entreprise (BNC), environ 45 % du revenu en TNS (EI, EURL) après l'abattement d'assiette de 26 % de la réforme 2026, et 75 à 80 % de charges sur le salaire en assimilé salarié (SASU, portage). Le seul repère fiable est le net final après impôt.`,
   intro: `« Combien de charges ? » est la première question de tout futur freelance — et la réponse dépend entièrement du statut. On ne compare pas les mêmes choses : la micro cotise en pourcentage du chiffre d'affaires, le TNS sur son revenu, l'assimilé salarié sur son salaire net. Voici comment lire ces taux sans se tromper, et ce qu'ils achètent vraiment.`,
   sections: [
     {
@@ -125,9 +145,10 @@ const CHARGES_SOCIALES: StatutPage = {
 const CHOMAGE_ARE: StatutPage = {
   slug: "guides/freelance-et-chomage-are",
   breadcrumb: "Freelance et chômage (ARE)",
-  metaTitle: "Freelance et chômage (ARE) en 2026 : quels droits selon le statut ?",
-  metaDescription: `Un freelance a-t-il droit au chômage en 2026 ? Seul le portage salarial ouvre des droits ; micro, EI, EURL et SASU non. Maintien de l'ARE d'un CDI, cumul, ARCE : le guide complet.`,
+  metaTitle: "Freelance et chômage (ARE) 2026 : quels droits ?",
+  metaDescription: `Seul le portage salarial ouvre des droits ; micro, EI, EURL et SASU non. Maintien de l'ARE d'un CDI, cumul et ARCE expliqués.`,
   h1: "Freelance et chômage (ARE) : quels droits en 2026 ?",
+  tldr: `Parmi les statuts freelance, seul le portage salarial cotise à l'assurance chômage et ouvre de nouveaux droits à l'ARE. La micro-entreprise, l'EI, l'EURL et la SASU n'en ouvrent aucun. En revanche, un reliquat d'ARE issu d'un CDI rompu peut être conservé et cumulé avec l'activité : en SASU sans salaire, l'allocation est même maintenue à 100 %, la rémunération se faisant en dividendes.`,
   intro: `« Est-ce que je garde le chômage ? » est la peur numéro un au moment de quitter un CDI. La réponse tient en deux temps : quels statuts génèrent de nouveaux droits (un seul, le portage), et comment conserver ou cumuler l'ARE issue d'un CDI rompu avec une activité freelance. Bien compris, ce mécanisme sécurise énormément un lancement.`,
   sections: [
     {
@@ -178,9 +199,10 @@ const CHOMAGE_ARE: StatutPage = {
 const ACRE: StatutPage = {
   slug: "guides/acre-premiere-annee",
   breadcrumb: "ACRE : première année",
-  metaTitle: "ACRE 2026 : exonération de cotisations la première année, mode d'emploi",
-  metaDescription: `L'ACRE en 2026 : qui y a droit, quelle exonération de cotisations sociales la première année, comment ça marche en micro-entreprise et en société. Le guide clair pour ne pas payer trop au démarrage.`,
+  metaTitle: "ACRE 2026 : l'exonération de cotisations, mode d'emploi",
+  metaDescription: `Qui y a droit, quelle exonération de cotisations la première année, comment ça marche en micro-entreprise et en société.`,
   h1: "ACRE : l'exonération de cotisations de la première année",
+  tldr: `L'ACRE est une exonération partielle des cotisations sociales sur la première année d'activité, destinée aux créateurs et repreneurs d'entreprise. En micro-entreprise, elle prend la forme de taux de cotisations réduits sur le chiffre d'affaires ; en société ou en EI, d'une exonération sur les cotisations du dirigeant. Elle est dégressive selon le revenu et se cumule avec le maintien de l'ARE ou l'ARCE.`,
   intro: `L'ACRE (aide aux créateurs et repreneurs d'entreprise) allège les cotisations sociales de votre première année d'activité. Mal connue ou oubliée, elle représente pourtant plusieurs milliers d'euros au démarrage — le moment où la trésorerie est la plus fragile. Voici qui y a droit, ce qu'elle exonère et comment elle s'applique selon le statut.`,
   sections: [
     {
@@ -232,8 +254,9 @@ const FRANCHISE_TVA: StatutPage = {
   slug: "guides/franchise-tva-freelance",
   breadcrumb: "Franchise de TVA",
   metaTitle: "Franchise de TVA du freelance 2026 : seuils et conséquences",
-  metaDescription: `La franchise en base de TVA en 2026 : seuils (37 500 € en services), ce que ça change pour vos factures et vos clients, quand la TVA devient obligatoire. Le guide clair pour freelances.`,
+  metaDescription: `Seuils (37 500 € en services), ce que ça change pour vos factures et vos clients, quand la TVA devient obligatoire.`,
   h1: "Franchise de TVA : seuils et conséquences pour le freelance",
+  tldr: `La franchise en base de TVA dispense de facturer la TVA sous environ 37 500 € de chiffre d'affaires en prestations de services (environ 85 000 € en vente de marchandises). Ce seuil est distinct du plafond de la micro-entreprise (${PLAFOND} €) : on peut rester micro-entrepreneur tout en devant facturer la TVA. Si vos clients sont des entreprises, qui la récupèrent, le passage à la TVA est quasi neutre.`,
   intro: `Tant que votre chiffre d'affaires reste sous certains seuils, vous facturez sans TVA : c'est la franchise en base. Passé ces seuils, vous devez la collecter — un changement qui touche vos factures, votre trésorerie et surtout vos clients. Comprendre ce mécanisme évite deux erreurs symétriques : facturer de la TVA à tort, ou dépasser le seuil sans s'en rendre compte.`,
   sections: [
     {
@@ -284,9 +307,28 @@ const FRANCHISE_TVA: StatutPage = {
 const SALARIE_FREELANCE: StatutPage = {
   slug: "guides/passer-de-salarie-a-freelance",
   breadcrumb: "De salarié à freelance",
-  metaTitle: "Passer de salarié à freelance en 2026 : les étapes et les pièges",
-  metaDescription: `Comment passer de salarié à freelance en 2026 ? Rupture conventionnelle et chômage, choix du statut, TJM, trésorerie : les étapes pour sécuriser sa transition sans y laisser de plumes.`,
+  metaTitle: "Passer de salarié à freelance en 2026 : étapes et pièges",
+  metaDescription: `Rupture conventionnelle et chômage, choix du statut, TJM, trésorerie : les étapes pour sécuriser sa transition.`,
   h1: "Passer de salarié à freelance : les étapes clés en 2026",
+  tldr: `Pour passer de salarié à freelance sans casse : privilégiez une rupture conventionnelle plutôt qu'une démission (elle ouvre des droits à l'ARE qui servent de filet), choisissez le statut adapté à vos frais et à votre besoin de protection, fixez votre TJM à partir du net que vous voulez remplacer, et constituez trois à six mois de trésorerie avant de vous lancer.`,
+  howTo: [
+    {
+      name: "Sécuriser la sortie du CDI",
+      text: "Privilégiez une rupture conventionnelle, qui ouvre des droits à l'ARE, plutôt qu'une démission qui n'en ouvre pas. Ce reliquat de chômage servira de filet pendant le lancement, en cumul avec les premiers revenus ou en capital via l'ARCE.",
+    },
+    {
+      name: "Choisir son statut",
+      text: "Micro-entreprise pour tester simplement avec peu de frais, EI au réel si vos frais sont élevés, SASU pour cumuler l'ARE et optimiser via les dividendes, portage salarial pour conserver chômage et bulletins de paie.",
+    },
+    {
+      name: "Fixer son TJM",
+      text: "Partez du net mensuel de votre salaire actuel et cherchez le TJM qui le reproduit dans le statut visé, puis ajoutez une marge pour les intermissions et pour autofinancer mutuelle, prévoyance et retraite.",
+    },
+    {
+      name: "Constituer sa trésorerie et ses premiers clients",
+      text: "Prévoyez trois à six mois de charges d'avance, car les premiers paiements tardent. Idéalement, sécurisez une première mission avant de quitter votre poste, dans le respect de votre contrat de travail.",
+    },
+  ],
   intro: `Quitter la sécurité d'un CDI pour l'indépendance est autant un projet financier qu'un saut personnel. Bien préparé, il se fait sans casse : en s'appuyant sur le chômage comme filet, en choisissant le bon statut et en fixant un TJM qui remplace vraiment le salaire. Voici l'ordre dans lequel dérouler la transition pour ne rien laisser au hasard.`,
   sections: [
     {
@@ -333,7 +375,57 @@ const SALARIE_FREELANCE: StatutPage = {
   related: ["tjm-en-salaire", "portage-salarial-ou-cdi", "micro-entreprise-ou-cdi"],
 };
 
+// -------------------------------------------------- HUB /guides/
+// Page d'index : rend les 6 guides atteignables en un clic depuis le footer
+// (sans elle, /guides/ renvoyait un 404 et plusieurs guides étaient orphelins).
+const GUIDES_HUB: StatutPage = {
+  slug: "guides",
+  breadcrumb: "Guides",
+  layout: "content",
+  metaTitle: "Guides du freelance 2026 : TJM, charges, chômage, TVA",
+  metaDescription: `Les guides pratiques pour se lancer et gérer son activité : fixer son TJM, charges sociales, ARE, ACRE, franchise de TVA, passer de salarié à freelance.`,
+  h1: "Les guides du freelance",
+  intro: `Six guides pratiques pour répondre aux questions qui reviennent avant et après le passage en indépendant : combien facturer, combien de charges, quels droits au chômage, quelles aides au démarrage, et comment organiser sa transition.`,
+  tldr: `Ces guides couvrent les six questions clés du freelance français : comment fixer son TJM à partir du net visé, combien coûtent les charges sociales selon le statut, quels droits au chômage (seul le portage en ouvre), l'exonération ACRE de la première année, les seuils de franchise de TVA, et les étapes pour passer de salarié à freelance sans casse.`,
+  sections: [
+    {
+      heading: "Fixer et faire évoluer son TJM",
+      paragraphs: [
+        "Le guide de la méthode : partir du net mensuel visé, compter les jours réellement facturables (environ 198 par an, pas 220), puis remonter aux cotisations, à l'impôt et aux frais. Avec les erreurs classiques qui font sous-facturer.",
+      ],
+    },
+    {
+      heading: "Comprendre ses charges sociales",
+      paragraphs: [
+        "Micro à 24,6 % du chiffre d'affaires, TNS à environ 45 % du revenu, assimilé salarié à 75-80 % de charges sur le salaire : trois bases de calcul différentes qu'on ne peut pas comparer directement. Le guide explique ce que chacune prélève et ce qu'elle couvre.",
+      ],
+    },
+    {
+      heading: "Chômage, ARE et aides au démarrage",
+      paragraphs: [
+        "Deux guides complémentaires : l'un sur les droits au chômage selon le statut (seul le portage salarial en ouvre) et sur le maintien de l'ARE issue d'un CDI ; l'autre sur l'ACRE, l'exonération partielle de cotisations de la première année.",
+      ],
+    },
+    {
+      heading: "TVA et transition depuis le salariat",
+      paragraphs: [
+        "La franchise en base de TVA, ses seuils et ce que le passage à la TVA change vraiment selon que vos clients sont des entreprises ou des particuliers. Et le guide de la transition salarié → freelance : rupture conventionnelle, choix du statut, TJM, trésorerie.",
+      ],
+    },
+  ],
+  faq: [],
+  related: [
+    "guides/comment-fixer-son-tjm",
+    "guides/charges-sociales-freelance",
+    "guides/freelance-et-chomage-are",
+    "guides/acre-premiere-annee",
+    "guides/franchise-tva-freelance",
+    "guides/passer-de-salarie-a-freelance",
+  ],
+};
+
 export const GUIDE_PAGES: StatutPage[] = [
+  GUIDES_HUB,
   FIXER_TJM,
   CHARGES_SOCIALES,
   CHOMAGE_ARE,

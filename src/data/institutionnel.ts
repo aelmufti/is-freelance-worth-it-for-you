@@ -9,9 +9,10 @@ const METHODOLOGIE: StatutPage = {
   slug: "methodologie",
   breadcrumb: "Méthodologie",
   layout: "content",
-  metaTitle: "Méthodologie du simulateur freelance vs CDI 2026 : calculs et sources",
-  metaDescription: `Comment sont calculés les revenus nets du simulateur freelance-ou-cdi.fr : cotisations par statut, barème 2026 de l'impôt, flat tax, impôt sur les sociétés, hypothèses, limites et validation contre le moteur URSSAF.`,
+  metaTitle: "Méthodologie du simulateur freelance vs CDI 2026",
+  metaDescription: `Comment sont calculés les nets : cotisations par statut, barème 2026, flat tax, IS, hypothèses, limites et validation URSSAF.`,
   h1: "Méthodologie : comment les calculs sont faits",
+  tldr: `Le simulateur part du chiffre d'affaires (TJM × jours facturés), applique les cotisations propres à chaque statut, l'impôt sur le revenu au barème 2026 (plus l'impôt sur les sociétés et la flat tax de 31,4 % le cas échéant), puis déduit les frais professionnels. Les résultats sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF, avec des écarts inférieurs à 2 % sur les cas testés.`,
   intro: `Ce simulateur compare, pour un même chiffre d'affaires, le revenu net réellement disponible dans six statuts : micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial et CDI cadre. Cette page détaille exactement ce qui est calculé, avec quelles hypothèses, quelles sources et quelles limites — pour que vous puissiez juger de la fiabilité des chiffres, et les reproduire.`,
   sections: [
     {
@@ -66,8 +67,9 @@ const A_PROPOS: StatutPage = {
   breadcrumb: "À propos",
   layout: "content",
   metaTitle: "À propos de freelance-ou-cdi.fr : qui édite ce simulateur ?",
-  metaDescription: `Qui est derrière freelance-ou-cdi.fr : un simulateur gratuit, open source et sans collecte de données, édité par Ali El Mufti pour aider à comparer freelance et CDI en net réel. Indépendant de toute administration.`,
+  metaDescription: `Un simulateur gratuit, open source et sans collecte de données, édité par Ali El Mufti. Indépendant de toute administration.`,
   h1: "À propos de freelance-ou-cdi.fr",
+  tldr: `freelance-ou-cdi.fr est un simulateur gratuit édité par Ali El Mufti, développeur indépendant. Le code est open source (licence MIT) et public sur GitHub, tous les calculs sont réalisés dans votre navigateur — aucune donnée saisie n'est envoyée ni stockée. Le site est un projet personnel, sans société éditrice ni financement publicitaire, et n'est affilié à aucune administration.`,
   intro: `freelance-ou-cdi.fr est un simulateur gratuit qui répond à une question simple mais mal outillée : entre le CDI et les différents statuts de freelance, qu'est-ce qui vous laisse vraiment le plus sur votre compte en fin de mois ? Voici qui l'édite, pourquoi, et selon quels principes.`,
   sections: [
     {
@@ -111,9 +113,10 @@ const GLOSSAIRE: StatutPage = {
   slug: "glossaire",
   breadcrumb: "Glossaire",
   layout: "content",
-  metaTitle: "Glossaire du freelance 2026 : TJM, TNS, flat tax, ARE… définitions",
-  metaDescription: `Le vocabulaire du freelance expliqué simplement : TJM, chiffre d'affaires, cotisations, TNS, assimilé salarié, flat tax, impôt sur les sociétés, abattement, plafond, franchise de TVA, ARE, ACRE.`,
+  metaTitle: "Glossaire du freelance 2026 : TJM, TNS, flat tax, ARE",
+  metaDescription: `TJM, chiffre d'affaires, cotisations, TNS, assimilé salarié, flat tax, abattement, plafond, franchise de TVA, ARE, ACRE : les définitions.`,
   h1: "Glossaire du freelance : les termes qui comptent",
+  tldr: `Le TJM est le prix de vente hors taxes d'une journée, pas un salaire : il finance aussi cotisations, impôt, frais et jours non facturés. Le TNS (EI, EURL) cotise environ 45 % de son revenu ; l'assimilé salarié (SASU, portage) 75 à 80 % de charges sur son salaire. La flat tax de 31,4 % s'applique aux dividendes. Seul le portage salarial ouvre des droits à l'ARE.`,
   intro: `Passer en freelance, c'est apprendre une langue : TJM, TNS, flat tax, abattement, franchise de TVA… Voici les définitions claires des termes qui reviennent dans le simulateur et dans les guides, pour lire ses chiffres sans se tromper.`,
   sections: [
     {
