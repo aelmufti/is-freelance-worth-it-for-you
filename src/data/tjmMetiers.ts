@@ -10,7 +10,7 @@
 // Blog du Modérateur, tjmetre.fr). Ordres de grandeur médians, à vérifier sur
 // le baromètre Malt pour un chiffrage à jour.
 
-import { figuresFor } from "./tjm";
+import { TJMS, figuresFor } from "./tjm";
 import type { StatutPage } from "../lib/pages";
 
 const fmt = (n: number): string => {
@@ -140,9 +140,15 @@ function makeMetierPage(m: Metier, prev?: Metier, next?: Metier): StatutPage {
   const microTxt = f.microEligible
     ? `${fmt(f.netMicro)} € en micro-entreprise`
     : `micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations)`;
+  // Le palier de TJM le plus proche du TJM médian du métier : c'est la page
+  // qui détaille les nets, et le lien manquait entre les deux grappes TJM.
+  const palier = TJMS.reduce((best, t) =>
+    Math.abs(t - m.tjm) < Math.abs(best - m.tjm) ? t : best,
+  );
   const related = [
     "observatoire-tjm-2026",
     "tjm-en-salaire",
+    `tjm-${palier}`,
     ...(prev ? [`tjm-freelance-${prev.slug}`] : []),
     ...(next ? [`tjm-freelance-${next.slug}`] : []),
   ];

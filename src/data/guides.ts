@@ -84,7 +84,13 @@ const FIXER_TJM: StatutPage = {
     },
   ],
   hideFromFooter: true,
-  related: ["tjm-en-salaire", "tjm-pour-4000-euros-net", "portage-salarial-ou-cdi"],
+  related: [
+    "tjm-en-salaire",
+    "tjm-pour-4000-euros-net",
+    "portage-salarial-ou-cdi",
+    "guides/passer-de-salarie-a-freelance",
+    "guides/charges-sociales-freelance",
+  ],
 };
 
 // -------------------------------------------------- CHARGES SOCIALES
@@ -138,7 +144,13 @@ const CHARGES_SOCIALES: StatutPage = {
     },
   ],
   hideFromFooter: true,
-  related: ["simulateur-micro-entreprise", "simulateur-sasu", "sasu-ou-eurl"],
+  related: [
+    "simulateur-micro-entreprise",
+    "simulateur-sasu",
+    "sasu-ou-eurl",
+    "guides/acre-premiere-annee",
+    "guides/franchise-tva-freelance",
+  ],
 };
 
 // -------------------------------------------------- FREELANCE ET CHÔMAGE
@@ -192,7 +204,13 @@ const CHOMAGE_ARE: StatutPage = {
     },
   ],
   hideFromFooter: true,
-  related: ["simulateur-portage-salarial", "simulateur-sasu", "portage-salarial-ou-cdi"],
+  related: [
+    "simulateur-portage-salarial",
+    "simulateur-sasu",
+    "portage-salarial-ou-cdi",
+    "guides/passer-de-salarie-a-freelance",
+    "guides/acre-premiere-annee",
+  ],
 };
 
 // -------------------------------------------------- ACRE
@@ -246,7 +264,12 @@ const ACRE: StatutPage = {
     },
   ],
   hideFromFooter: true,
-  related: ["simulateur-micro-entreprise", "guides/charges-sociales-freelance", "guides/freelance-et-chomage-are"],
+  related: [
+    "simulateur-micro-entreprise",
+    "guides/charges-sociales-freelance",
+    "guides/freelance-et-chomage-are",
+    "guides/franchise-tva-freelance",
+  ],
 };
 
 // -------------------------------------------------- FRANCHISE TVA
@@ -300,7 +323,13 @@ const FRANCHISE_TVA: StatutPage = {
     },
   ],
   hideFromFooter: true,
-  related: ["simulateur-micro-entreprise", "simulateur-ei", "micro-entreprise-ou-ei"],
+  related: [
+    "simulateur-micro-entreprise",
+    "simulateur-ei",
+    "micro-entreprise-ou-ei",
+    "guides/charges-sociales-freelance",
+    "guides/comment-fixer-son-tjm",
+  ],
 };
 
 // -------------------------------------------------- SALARIÉ → FREELANCE
@@ -372,7 +401,13 @@ const SALARIE_FREELANCE: StatutPage = {
     },
   ],
   hideFromFooter: true,
-  related: ["tjm-en-salaire", "portage-salarial-ou-cdi", "micro-entreprise-ou-cdi"],
+  related: [
+    "tjm-en-salaire",
+    "portage-salarial-ou-cdi",
+    "micro-entreprise-ou-cdi",
+    "guides/freelance-et-chomage-are",
+    "guides/comment-fixer-son-tjm",
+  ],
 };
 
 // -------------------------------------------------- HUB /guides/

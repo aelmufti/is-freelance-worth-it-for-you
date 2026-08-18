@@ -102,18 +102,72 @@ src/
 ├── lib/
 │   ├── params.ts          # tous les taux 2026 (modifiables dans l'UI)
 │   ├── ir.ts              # barème IR, quotient familial, décote
-│   └── engine.ts          # moteur de calcul par statut + break-even
+│   ├── engine.ts          # moteur de calcul par statut + break-even
+│   └── pages.ts           # registre des 67 pages (routing, sitemap, prerender)
 ├── components/
 │   ├── Form.tsx           # inputs + panneau "paramètres avancés"
 │   ├── Results.tsx        # cartes par statut
 │   ├── Charts.tsx         # barres comparatives + courbe de break-even
-│   ├── ProsCons.tsx       # forces/faiblesses par statut
+│   ├── BreakEvenTable.tsx # seuils de TJM (colonnes ciblées par page)
+│   ├── ProsCons.tsx       # forces/faiblesses (fiches ciblées par page)
 │   └── MentionsLegales.tsx
-├── data/prosCons.ts       # contenu éditorial par statut
+├── data/                  # contenu éditorial (statuts, comparatifs, guides, TJM)
 └── App.tsx
 tests/urssaf.test.ts       # validation contre le moteur URSSAF
 scripts/compare-urssaf.ts  # rapport humain des écarts
+scripts/prerender.ts       # capture Playwright + <head> et JSON-LD par route
+scripts/apply-prerender.ts # réapplique le HTML committé sur le dist/ Vercel
+scripts/build-sitemap.ts   # sitemap.xml depuis le registre de pages
 ```
+
+---
+
+## SEO : les règles à ne pas casser
+
+Le site publie 67 pages qui partagent le même simulateur. Tout l'enjeu est que
+chacune reste **distincte** : un cluster de pages quasi identiques finit en
+« explorée, actuellement non indexée ».
+
+**1. Le contenu partagé reste minoritaire.** Les blocs génériques sont réduits
+ou ciblés selon la page :
+
+| Bloc | Règle |
+|---|---|
+| Fiches forces/faiblesses | filtrées sur `page.statuts` ; remplacées par des liens sur la longue traîne TJM |
+| Tableau des seuils de TJM | colonnes limitées aux statuts de la page |
+| Sources + réserves | version complète sur l'accueil, les guides et les pages éditoriales ; version courte ailleurs, avec lien vers `/methodologie/` |
+| `<noscript>` | deux lignes — le contenu réel est déjà prérendu |
+
+Repère : viser **≥ 45 % de contenu propre** par page (mesure par 8-grammes
+non partagés). Ajouter un bloc affiché partout fait mécaniquement baisser ce
+ratio sur les 67 URL à la fois.
+
+**2. Le prerender committé doit suivre le code.** `prerendered/` est appliqué
+tel quel en production par `apply-prerender.ts`. Toute modification de
+`src/` visible dans le DOM impose de relancer :
+
+```bash
+npm run prerender:capture   # puis commiter prerendered/ et prerendered.html
+```
+
+Sans ça, Vercel sert l'ancien HTML avec le nouveau JS : les crawlers voient le
+contenu périmé et React casse l'hydration. Si `playwright install` ne peut pas
+télécharger Chromium (CI, conteneur), pointez un binaire existant :
+`CHROMIUM_EXECUTABLE_PATH=/chemin/vers/chrome npm run prerender:capture`.
+
+**3. Les dates sont des signaux, pas de la décoration.**
+
+- `CONTENT_UPDATED` — dernière vérification des **taux** ; affichée dans
+  « Sources officielles ». Ne l'avancez que si vous avez réellement revérifié.
+- `SITE_UPDATED` — dernière **révision éditoriale** ; alimente `<lastmod>` et
+  `dateModified`. Une page peut la surcharger avec son propre champ `updated`.
+- `SITE_PUBLISHED` / `published` — première publication, jamais égale à
+  `dateModified`.
+
+**4. Chaque page doit garder des liens entrants.** `hideFromFooter` retire une
+page du plan de site : ne l'utilisez que pour la longue traîne, et vérifiez
+qu'un hub (`/tjm-en-salaire/`, `/observatoire-tjm-2026/`, `/guides/`) ou les
+`related` d'autres pages la relaient — sinon elle tombe à zéro lien interne.
 
 ---
 

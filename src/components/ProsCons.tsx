@@ -1,11 +1,23 @@
 import { STATUTS_INFO } from "../data/prosCons";
+import type { StatutId } from "../lib/engine";
 import { Card } from "./ui";
 import { STATUT_COLORS } from "./Results";
 
-export function ProsCons() {
+// `statuts` restreint les fiches aux statuts dont la page parle réellement.
+// Sans ce filtre, les six fiches (~700 mots strictement identiques) étaient
+// recopiées sur 60 URL : c'était le premier bloc de contenu dupliqué du site,
+// et il diluait le sujet de chaque page. Le CDI reste affiché dès qu'un statut
+// indépendant est mis en avant : c'est le terme de comparaison de tout le site.
+export function ProsCons({ statuts }: { statuts?: StatutId[] } = {}) {
+  const focus = statuts?.length
+    ? new Set<StatutId>([...statuts, "cdi"])
+    : null;
+  const fiches = focus
+    ? STATUTS_INFO.filter((s) => focus.has(s.id))
+    : STATUTS_INFO;
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      {STATUTS_INFO.map((s, i) => (
+      {fiches.map((s, i) => (
         <Card key={s.id} className="anim-up" lift>
           <div
             className="border-b-[3px] border-ink px-4 py-2"

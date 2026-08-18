@@ -108,10 +108,18 @@ function makeTjmPage(f: TjmFigures, prev?: number, next?: number): StatutPage {
   const microTxt = f.microEligible
     ? `${fmt(f.netMicro)} € en micro-entreprise`
     : `micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond de ${fmt(p.microPlafondService)} €)`;
+  // Objectif de net le plus proche de ce que ce TJM laisse réellement : donne
+  // à chaque palier un lien vers l'autre grappe de la longue traîne, et à
+  // celle-ci les liens entrants qui lui manquaient.
+  const OBJECTIFS_NET = [3000, 3500, 4000, 4500, 5000, 6000];
+  const objectif = OBJECTIFS_NET.reduce((best, n) =>
+    Math.abs(n - f.bestNetMensuel) < Math.abs(best - f.bestNetMensuel) ? n : best,
+  );
   const related = [
     "tjm-en-salaire",
     ...(prev ? [`tjm-${prev}`] : []),
     ...(next ? [`tjm-${next}`] : []),
+    `tjm-pour-${objectif}-euros-net`,
   ];
   return {
     slug: `tjm-${f.tjm}`,

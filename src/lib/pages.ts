@@ -38,6 +38,17 @@ export const SITE = "https://freelance-ou-cdi.fr";
 // Alimente : <lastmod> du sitemap, ligne « Taux vérifiés le … » (App.tsx).
 export const CONTENT_UPDATED = "2026-07-03";
 
+// Date de dernière RÉVISION ÉDITORIALE du site (ISO). Distincte de
+// CONTENT_UPDATED, qui date la dernière vérification des TAUX : une refonte de
+// structure ou de maillage change le contenu sans que les barèmes bougent.
+// Alimente <lastmod> (sitemap) et dateModified (JSON-LD) — les deux signaux de
+// fraîcheur lus par les moteurs. Une page peut la surcharger via `updated`.
+export const SITE_UPDATED = "2026-08-18";
+
+// Date de première publication du site — `datePublished` du JSON-LD, qui ne
+// doit PAS être égale à dateModified (sinon la page paraît jamais révisée).
+export const SITE_PUBLISHED = "2026-06-11";
+
 export interface PageSection {
   heading: string;
   // Un paragraphe = une chaîne = un seul nœud texte (sécurité hydration #418).
@@ -73,6 +84,59 @@ export interface StatutPage {
   // tableau de seuils et les forces/faiblesses, et prerender.ts injecte un
   // schema Article au lieu du WebApplication.
   layout?: "content";
+  // Dernière révision éditoriale PROPRE à cette page (ISO). Par défaut
+  // SITE_UPDATED. Permet un <lastmod> et un dateModified justes page par page
+  // au lieu d'une date unique recopiée sur 67 URL (signal de fraîcheur nul).
+  updated?: string;
+  // Première publication de la page (ISO). Par défaut SITE_PUBLISHED.
+  published?: string;
+}
+
+// ----------------------------------------------------- REGROUPEMENT FOOTER
+// Le footer plat listait 22 liens sans hiérarchie ; groupés par intention, les
+// mêmes liens donnent des chemins de crawl lisibles et des ancres contextuelles.
+export type FooterGroup =
+  | "simulateurs"
+  | "comparatifs"
+  | "tjm"
+  | "guides"
+  | "ressources";
+
+export const FOOTER_GROUP_LABELS: Record<FooterGroup, string> = {
+  simulateurs: "Simulateurs par statut",
+  comparatifs: "Comparatifs",
+  tjm: "TJM et revenus",
+  guides: "Guides pratiques",
+  ressources: "Ressources",
+};
+
+export const FOOTER_GROUP_ORDER: FooterGroup[] = [
+  "simulateurs",
+  "comparatifs",
+  "tjm",
+  "guides",
+  "ressources",
+];
+
+// Déduit le groupe depuis le slug : pas de champ à maintenir dans les six
+// fichiers de données, et une nouvelle page atterrit automatiquement au bon
+// endroit.
+export function footerGroup(page: StatutPage): FooterGroup {
+  const s = page.slug;
+  if (s.startsWith("simulateur-")) return "simulateurs";
+  if (s.startsWith("guides")) return "guides";
+  if (s.startsWith("tjm-") || s === "observatoire-tjm-2026") return "tjm";
+  if (s.includes("-ou-")) return "comparatifs";
+  return "ressources";
+}
+
+// Date de dernière révision effective d'une page (fallback site).
+export function pageUpdated(page: StatutPage): string {
+  return page.updated ?? SITE_UPDATED;
+}
+
+export function pagePublished(page: StatutPage): string {
+  return page.published ?? SITE_PUBLISHED;
 }
 
 // ------------------------------------------------- CHIFFRES POUR COMPARATIFS

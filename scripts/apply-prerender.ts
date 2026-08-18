@@ -5,7 +5,7 @@
 // Sans Chromium : pur Node, identique en local et sur Vercel. La capture
 // initiale se fait en local via `npm run prerender:capture` (Playwright), qui
 // écrit prerendered.html + prerendered/<slug>.html.
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { PAGES } from "../src/lib/pages";
@@ -27,6 +27,20 @@ if (!newScript || !newCssLink) {
   console.error("Impossible d'extraire les références d'assets depuis dist/index.html");
   process.exit(1);
 }
+
+// Préchargement des polices. Les .woff2 sont déclarés DANS la feuille de style :
+// le navigateur ne les découvre qu'une fois le CSS téléchargé et analysé, ce qui
+// retarde d'un aller-retour l'affichage du texte — donc le LCP, sur un site où
+// tout est en JetBrains Mono. Les hashes changent à chaque build, on les relit
+// donc dans dist/assets/ plutôt que de les écrire en dur.
+const fontPreloads = readdirSync(resolve(DIST, "assets"))
+  .filter((f) => f.endsWith(".woff2"))
+  .sort()
+  .map(
+    (f) =>
+      `<link rel="preload" as="font" type="font/woff2" href="/assets/${f}" crossorigin>`,
+  )
+  .join("\n    ");
 
 function templatePath(slug: string): string {
   return slug
@@ -59,6 +73,15 @@ for (const page of PAGES) {
     /<link[^>]+href="\/assets\/index-[^"]+\.css"[^>]*>/g,
     newCssLink,
   );
+  // Purge les préchargements du build précédent (hashes périmés = requêtes
+  // gaspillées), puis réinjecte ceux du build courant.
+  out = out.replace(
+    /\s*<link rel="preload" as="font"[^>]*>/g,
+    "",
+  );
+  if (fontPreloads) {
+    out = out.replace("</head>", `  ${fontPreloads}\n  </head>`);
+  }
   const dest = distPath(page.slug);
   mkdirSync(dirname(dest), { recursive: true });
   writeFileSync(dest, out);

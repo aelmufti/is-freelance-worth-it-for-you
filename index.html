@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <title>Freelance ou CDI 2026 : simulateur de revenu net (micro, SASU, EURL)</title>
+    <title>Freelance ou CDI 2026 : simulateur de revenu net</title>
     <meta
       name="description"
       content="Simulateur gratuit 2026 : comparez votre net en micro-entreprise, EURL, SASU, portage salarial et CDI. Cotisations, impôt sur le revenu, flat tax 31,4 % et seuil de rentabilité TJM, calculs validés URSSAF."
@@ -76,7 +76,11 @@
     <!-- Performance hints (police auto-hébergée via @fontsource, cf. index.css) -->
     <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
 
-    <!-- Données structurées Schema.org : WebApplication + Person + WebSite (FAQPage générée par l'app depuis src/data/faq.ts) -->
+    <!-- Données structurées Schema.org de repli (mode dev / build sans
+         prerender). En production, scripts/prerender.ts REMPLACE ce bloc par un
+         graphe propre à chaque page, avec un nœud WebPage daté : les dates ne
+         sont donc plus écrites en dur ici, elles dérivaient du contenu.
+         La FAQPage, elle, est générée par l'app depuis src/data/faq.ts. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -118,8 +122,6 @@
             "author": { "@id": "https://freelance-ou-cdi.fr/#person" },
             "publisher": { "@id": "https://freelance-ou-cdi.fr/#person" },
             "softwareVersion": "1.0",
-            "datePublished": "2026-06-11",
-            "dateModified": "2026-07-03",
             "license": "https://opensource.org/licenses/MIT"
           },
           {
@@ -135,39 +137,26 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Toutes les routes sont prérendues : sans JavaScript, le contenu de la
+         page est déjà lisible dans le HTML. Ce bloc se limite donc à signaler
+         que seule l'interactivité manque — les quatre paragraphes qu'il
+         contenait avant étaient recopiés à l'identique sur 67 URL et pesaient
+         dans le contenu dupliqué vu par les crawlers, qui lisent le noscript. -->
     <noscript>
-      <div
+      <p
         style="
           font-family: ui-monospace, Menlo, Consolas, monospace;
           max-width: 720px;
-          margin: 2rem auto;
-          padding: 1.5rem;
+          margin: 1.5rem auto;
+          padding: 1rem;
           border: 3px solid #0d0d0d;
           background: #fff;
+          font-weight: 700;
         "
       >
-        <!-- Volontairement un paragraphe, pas un titre de niveau 1 : ce bloc est
-             identique sur toutes les pages prérendues et dupliquerait le titre
-             propre à chaque page (les crawlers IA lisent le noscript brut). -->
-        <p style="font-weight: 900; text-transform: uppercase; font-size: 1.5rem">
-          Freelance ou CDI : combien il vous reste vraiment
-        </p>
-        <p>
-          Ce simulateur compare le revenu net en micro-entreprise, EI au réel,
-          EURL, SASU, portage salarial et CDI cadre, après cotisations sociales
-          ET impôt sur le revenu — au taux 2026.
-        </p>
-        <p>
-          Le simulateur interactif nécessite JavaScript. Activez-le pour
-          paramétrer votre TJM, vos jours facturés et votre foyer fiscal, et
-          voir le seuil à partir duquel chaque statut bat votre CDI.
-        </p>
-        <p>
-          <strong>Calculs validés</strong> contre le moteur de calcul officiel
-          de l'URSSAF (modele-social, mon-entreprise.urssaf.fr) — écarts
-          inférieurs à 2 % en régime courant.
-        </p>
-      </div>
+        Les chiffres ci-dessous sont calculés au taux 2026. Activez JavaScript
+        pour régler votre TJM, vos jours facturés et votre foyer fiscal.
+      </p>
     </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>

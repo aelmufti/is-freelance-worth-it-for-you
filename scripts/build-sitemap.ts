@@ -4,10 +4,24 @@
 import { writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CONTENT_UPDATED, PAGES, pageUrl } from "../src/lib/pages";
+import { PAGES, pageUpdated, pageUrl, type StatutPage } from "../src/lib/pages";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const out = resolve(__dir, "..", "public", "sitemap.xml");
+
+// Priorité par nature de page. Avant, les 66 URL sortaient toutes à 0.8 : une
+// valeur uniforme ne transmet aucune hiérarchie, autant ne rien dire. Ici
+// l'accueil, les hubs et les simulateurs passent devant la longue traîne.
+function priority(p: StatutPage): string {
+  if (!p.slug) return "1.0";
+  if (p.slug.startsWith("simulateur-")) return "0.9";
+  if (["tjm-en-salaire", "guides", "observatoire-tjm-2026"].includes(p.slug)) {
+    return "0.9";
+  }
+  if (p.slug.startsWith("guides/") || p.slug.includes("-ou-")) return "0.8";
+  if (["methodologie", "a-propos", "glossaire"].includes(p.slug)) return "0.5";
+  return "0.6"; // longue traîne TJM (paliers, objectifs de net, métiers)
+}
 
 const urls = PAGES.map((p) => {
   const loc = pageUrl(p);
@@ -15,9 +29,8 @@ const urls = PAGES.map((p) => {
     <loc>${loc}</loc>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="${loc}" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${loc}" />
-    <lastmod>${CONTENT_UPDATED}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>${p.slug ? "0.8" : "1.0"}</priority>
+    <lastmod>${pageUpdated(p)}</lastmod>
+    <priority>${priority(p)}</priority>
   </url>`;
 }).join("\n");
 

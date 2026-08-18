@@ -213,7 +213,7 @@ const EI_OU_EURL: StatutPage = {
       answer: `Cela dépend de ce que vous prélevez. Si vous vous versez tout votre bénéfice, l'EI à l'IR et l'EURL à l'IS aboutissent à une imposition proche. Si vous laissez une partie du bénéfice dans la société, l'EURL à l'IS permet de ne payer que 15 à 25 % d'IS sur cette part au lieu de votre tranche marginale d'IR — un avantage qui grandit avec le niveau de revenu.`,
     },
   ],
-  related: ["simulateur-ei", "simulateur-eurl", "sasu-ou-eurl"],
+  related: ["simulateur-ei", "simulateur-eurl", "sasu-ou-eurl", "ei-ou-sasu"],
 };
 
 // -------------------------------------------------- EI OU SASU
@@ -267,7 +267,7 @@ const EI_OU_SASU: StatutPage = {
       answer: `Les deux déduisent les frais réels, donc ce critère ne les départage pas. Le choix se fait sur le social : EI pour des cotisations légères et la simplicité, SASU pour la protection du régime général, l'arbitrage salaire/dividendes et le cumul ARE. Le simulateur intègre vos frais réels pour comparer les nets sur votre situation.`,
     },
   ],
-  related: ["simulateur-ei", "simulateur-sasu", "micro-entreprise-ou-sasu"],
+  related: ["simulateur-ei", "simulateur-sasu", "micro-entreprise-ou-sasu", "ei-ou-eurl"],
 };
 
 // -------------------------------------------------- PORTAGE OU SASU
@@ -321,7 +321,7 @@ const PORTAGE_OU_SASU: StatutPage = {
       answer: `Le portage est le sas le plus simple : aucun montage, chômage maintenu par les missions, bulletins de salaire. La SASU est le montage le plus optimisé si vous avez un reliquat d'ARE conséquent (président sans salaire, dividendes) et acceptez de gérer une société. Le simulateur compare les nets ; ajoutez la valeur du chômage et de la gestion pour trancher.`,
     },
   ],
-  related: ["simulateur-portage-salarial", "simulateur-sasu", "portage-salarial-ou-cdi"],
+  related: ["simulateur-portage-salarial", "simulateur-sasu", "portage-salarial-ou-cdi", "portage-salarial-ou-eurl"],
 };
 
 // -------------------------------------------------- PORTAGE OU EURL
@@ -375,7 +375,7 @@ const PORTAGE_OU_EURL: StatutPage = {
       answer: `Oui, et c'est un parcours fréquent : on démarre en portage pour tester l'activité sans risque, puis on crée une EURL quand le chiffre d'affaires est stable et qu'on veut optimiser son net. La transition suppose de créer la société et de transférer les contrats clients — quelques semaines de formalités, sans continuité juridique entre les deux.`,
     },
   ],
-  related: ["simulateur-portage-salarial", "simulateur-eurl", "portage-salarial-ou-micro-entreprise"],
+  related: ["simulateur-portage-salarial", "simulateur-eurl", "portage-salarial-ou-micro-entreprise", "portage-salarial-ou-sasu"],
 };
 
 // -------------------------------------------------- MICRO OU CDI
@@ -429,7 +429,6 @@ const MICRO_OU_CDI: StatutPage = {
       answer: `Tant que le chiffre d'affaires nécessaire reste sous le plafond de ${fmt(p.microPlafondService)} € en prestations — soit environ 420 €/jour au rythme de 18 jours sur 11 mois. Au-delà, la micro n'est plus accessible : pour remplacer un très haut salaire, il faut passer à l'EI au réel, l'EURL ou la SASU, comparées dans ce simulateur.`,
     },
   ],
-  hideFromFooter: true,
   related: ["simulateur-micro-entreprise", "tjm-en-salaire", "portage-salarial-ou-cdi"],
 };
 
@@ -484,7 +483,6 @@ const SASU_OU_CDI: StatutPage = {
       answer: `Le CDI, grâce à l'assurance chômage et au revenu garanti. La SASU offre la même couverture maladie et retraite qu'un cadre, mais sans chômage et sans salaire garanti. Elle compense par la liberté (tarif, missions, dividendes) et un potentiel de revenu supérieur au-delà du seuil d'équivalence d'environ ${fmt(T_SASU)} €/jour.`,
     },
   ],
-  hideFromFooter: true,
   related: ["simulateur-sasu", "portage-salarial-ou-cdi", "micro-entreprise-ou-cdi"],
 };
 
@@ -539,7 +537,6 @@ const EURL_OU_CDI: StatutPage = {
       answer: `L'EURL demande de créer et gérer une société, ce qui est un vrai engagement pour un premier pas. Beaucoup préfèrent tester d'abord en micro-entreprise ou en portage salarial (qui garde le chômage), puis créer une EURL une fois l'activité confirmée. Le simulateur compare ces options pour éclairer le premier choix.`,
     },
   ],
-  hideFromFooter: true,
   related: ["simulateur-eurl", "sasu-ou-cdi", "micro-entreprise-ou-cdi"],
 };
 
@@ -594,7 +591,6 @@ const EI_OU_CDI: StatutPage = {
       answer: `Si vos frais professionnels sont faibles, la micro est plus simple et souvent plus avantageuse jusqu'à son plafond de ${fmt(p.microPlafondService)} €. Si vos frais réels sont élevés ou si vous dépassez ce plafond, l'EI au réel les déduit pour de vrai, sans limite de chiffre d'affaires. Le simulateur compare les deux — et le CDI — sur votre situation.`,
     },
   ],
-  hideFromFooter: true,
   related: ["simulateur-ei", "micro-entreprise-ou-cdi", "eurl-ou-cdi"],
 };
 

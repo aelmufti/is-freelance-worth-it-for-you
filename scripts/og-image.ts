@@ -95,7 +95,14 @@ function htmlFor(page: StatutPage): string {
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const pub = resolve(__dirname, "..", "public");
 
-const browser = await chromium.launch({ args: browser_args });
+const browser = await chromium.launch({
+  args: browser_args,
+  // Chromium fourni par l'environnement (CI/conteneur sans accès au CDN
+  // Playwright) : CHROMIUM_EXECUTABLE_PATH=/chemin/vers/chrome
+  ...(process.env.CHROMIUM_EXECUTABLE_PATH
+    ? { executablePath: process.env.CHROMIUM_EXECUTABLE_PATH }
+    : {}),
+});
 const page = await browser.newPage({
   viewport: { width: 1200, height: 630 },
   deviceScaleFactor: 1,

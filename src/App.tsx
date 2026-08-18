@@ -32,8 +32,15 @@ import { Faq } from "./components/Faq";
 import { BreakEvenTable } from "./components/BreakEvenTable";
 import { MentionsLegales } from "./components/MentionsLegales";
 import { SectionTitle, euro } from "./components/ui";
-import { CONTENT_UPDATED, PAGES, pageUrl } from "./lib/pages";
-import type { StatutPage } from "./lib/pages";
+import {
+  CONTENT_UPDATED,
+  FOOTER_GROUP_LABELS,
+  FOOTER_GROUP_ORDER,
+  PAGES,
+  footerGroup,
+  pageUrl,
+} from "./lib/pages";
+import type { FooterGroup, StatutPage } from "./lib/pages";
 
 const SOURCES: Array<{ label: string; url: string }> = [
   {
@@ -72,6 +79,33 @@ const MOIS = [
   "janvier", "février", "mars", "avril", "mai", "juin",
   "juillet", "août", "septembre", "octobre", "novembre", "décembre",
 ];
+// Libellés courts, insérables dans un titre de section. Sans eux, les H2
+// « Statuts : forces & faiblesses » et « Comparaison visuelle » étaient
+// rigoureusement identiques sur les 60 pages qui portent le simulateur.
+const STATUT_LABEL: Record<StatutId, string> = {
+  micro: "Micro-entreprise",
+  ei: "EI au réel",
+  eurl: "EURL",
+  sasu: "SASU",
+  portage: "Portage salarial",
+  cdi: "CDI",
+};
+
+// Liens vers les pages qui portent le détail forces/faiblesses de chaque statut.
+const STATUT_PAGES: Array<{ href: string; label: string }> = [
+  { href: "/simulateur-micro-entreprise/", label: "Micro-entreprise" },
+  { href: "/simulateur-ei/", label: "EI au réel" },
+  { href: "/simulateur-eurl/", label: "EURL" },
+  { href: "/simulateur-sasu/", label: "SASU" },
+  { href: "/simulateur-portage-salarial/", label: "Portage salarial" },
+  { href: "/", label: "Les six comparés côte à côte" },
+];
+
+function joinFr(parts: string[]): string {
+  if (parts.length <= 1) return parts[0] ?? "";
+  return `${parts.slice(0, -1).join(", ")} et ${parts[parts.length - 1]}`;
+}
+
 const updatedLabel = (() => {
   const [y, m, d] = CONTENT_UPDATED.split("-").map(Number);
   return `${d} ${MOIS[m - 1]} ${y}`;
@@ -89,6 +123,35 @@ export default function App({ page }: { page: StatutPage }) {
   );
   const isStatutPage = Boolean(page.breadcrumb);
   const isContent = page.layout === "content";
+  const focusStatutsPage = page.statuts ?? [];
+  // Libellé des statuts traités, pour des intertitres propres à la page.
+  const focusLabel = joinFr(
+    focusStatutsPage.map((id) => STATUT_LABEL[id]),
+  );
+  // Bloc « sources » complet réservé aux pages éditoriales et à l'accueil :
+  // les 7 liens officiels et les deux paragraphes de réserves sont la même
+  // masse de texte sur 67 URL. Ailleurs, une version courte datée renvoie vers
+  // /methodologie/, qui porte la version canonique.
+  // Fiches forces/faiblesses : accueil (page de référence) et pages centrées
+  // sur un ou deux statuts, où elles sont filtrées. Ailleurs, un lien.
+  const showProsCons = !page.slug || focusStatutsPage.length > 0;
+  const fullSources =
+    !page.slug || isContent || page.slug.startsWith("guides");
+  const footerPages = useMemo(() => {
+    const groups = new Map<FooterGroup, StatutPage[]>();
+    for (const p of PAGES) {
+      if (p.hideFromFooter || !p.slug) continue;
+      const g = footerGroup(p);
+      if (!groups.has(g)) groups.set(g, []);
+      groups.get(g)!.push(p);
+    }
+    // L'accueil ouvre la colonne « Ressources ».
+    groups.set("ressources", [
+      PAGES[0],
+      ...(groups.get("ressources") ?? []),
+    ]);
+    return groups;
+  }, []);
   const canonicalUrl = pageUrl(page);
   const relatedPages = (page.related ?? [])
     .map((slug) => PAGES.find((p) => p.slug === slug))
@@ -137,6 +200,19 @@ export default function App({ page }: { page: StatutPage }) {
                 Accueil
               </a>
               <span aria-hidden="true">{" / "}</span>
+              {/* Le fil visible doit suivre l'URL, comme le BreadcrumbList
+                  injecté au prerender : /guides/<x>/ passe par /guides/. */}
+              {page.slug.startsWith("guides/") && (
+                <>
+                  <a
+                    href="/guides/"
+                    className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                  >
+                    Guides
+                  </a>
+                  <span aria-hidden="true">{" / "}</span>
+                </>
+              )}
               <span>{page.breadcrumb}</span>
             </nav>
           )}
@@ -274,7 +350,16 @@ export default function App({ page }: { page: StatutPage }) {
             {/* GRAPHIQUES */}
             <section className="space-y-6">
               <SectionTitle>
-                <span className="highlight">Comparaison</span> visuelle
+                {focusLabel ? (
+                  <>
+                    <span className="highlight">{focusLabel}</span>
+                    {" en graphiques"}
+                  </>
+                ) : (
+                  <>
+                    <span className="highlight">Comparaison</span> visuelle
+                  </>
+                )}
               </SectionTitle>
               {chartsReady && (
                 <Suspense fallback={<ChartFallback label="Comparaison" />}>
@@ -298,22 +383,62 @@ export default function App({ page }: { page: StatutPage }) {
             <section aria-labelledby="breakeven-title" id="tjm-equivalent-cdi">
               <SectionTitle>
                 <span id="breakeven-title">
-                  À partir de quel <span className="highlight">TJM</span> le
-                  freelance bat le CDI ?
+                  À partir de quel <span className="highlight">TJM</span>
+                  {focusLabel ? ` ${focusLabel} bat le CDI ?` : " le freelance bat le CDI ?"}
                 </span>
               </SectionTitle>
-              <BreakEvenTable />
+              <BreakEvenTable statuts={page.statuts} />
             </section>
 
-            {/* AVANTAGES / INCONVÉNIENTS */}
-            <section aria-labelledby="statuts-title">
-              <SectionTitle>
-                <span id="statuts-title">
-                  Statuts : <span className="highlight">forces & faiblesses</span>
-                </span>
-              </SectionTitle>
-              <ProsCons />
-            </section>
+            {/* AVANTAGES / INCONVÉNIENTS
+                Les six fiches font ~820 mots strictement identiques : le plus
+                gros bloc dupliqué du site. On ne les déploie que là où elles
+                servent — l'accueil (page de référence) et les pages centrées
+                sur des statuts précis, où elles sont filtrées. Sur la longue
+                traîne TJM, la page a déjà son analyse propre et le podium
+                chiffré : un lien vers la référence remplace la recopie. */}
+            {showProsCons ? (
+              <section aria-labelledby="statuts-title">
+                <SectionTitle>
+                  <span id="statuts-title">
+                    {focusLabel ? `${focusLabel} : ` : "Statuts : "}
+                    <span className="highlight">forces & faiblesses</span>
+                  </span>
+                </SectionTitle>
+                <ProsCons statuts={page.statuts} />
+                {focusStatutsPage.length > 0 && (
+                  <p className="mt-4 text-sm font-bold">
+                    <a
+                      href="/"
+                      className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                    >
+                      ▸ Voir les six statuts comparés côte à côte
+                    </a>
+                  </p>
+                )}
+              </section>
+            ) : (
+              <nav
+                aria-label="Choisir un statut"
+                className="border-[3px] border-ink bg-white p-5 shadow-brutal"
+              >
+                <div className="text-sm font-extrabold uppercase tracking-[0.12em]">
+                  Forces et faiblesses de chaque statut
+                </div>
+                <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                  {STATUT_PAGES.map((sp) => (
+                    <li key={sp.href}>
+                      <a
+                        href={sp.href}
+                        className="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                      >
+                        {`▸ ${sp.label}`}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
           </>
         )}
 
@@ -337,38 +462,64 @@ export default function App({ page }: { page: StatutPage }) {
           <p className="mt-1 text-xs font-bold opacity-70">
             {`Taux et barèmes vérifiés le ${updatedLabel}.`}
           </p>
-          <ul className="mt-2 grid gap-1 text-xs md:grid-cols-2">
-            {SOURCES.map((s) => (
-              <li key={s.url}>
+          {fullSources ? (
+            <>
+              <ul className="mt-2 grid gap-1 text-xs md:grid-cols-2">
+                {SOURCES.map((s) => (
+                  <li key={s.url}>
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                    >
+                      {`▸ ${s.label}`}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
+                ⚠ Simulation indicative, à jour des principaux taux 2026 (barème
+                IR sur revenus 2025, PFU 31,4 %, réforme de l'assiette TNS). Elle
+                ne remplace pas un expert-comptable : CFE, plafonnement du
+                quotient familial, réduction générale de cotisations, mutuelle
+                obligatoire, prévoyance et cas particuliers ne sont pas tous
+                modélisés. Les avantages salarié (titres-resto, transport,
+                mutuelle) sont une estimation indicative, affichée à part et
+                exclue du net comparé. Aucune donnée n'est envoyée : tout est
+                calculé dans votre navigateur.
+              </p>
+              <p className="mt-2 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
+                ✓ Contrôle qualité : nos résultats sont comparés automatiquement
+                au moteur de calcul open source « modele-social » qui équipe
+                mon-entreprise.urssaf.fr (écarts inférieurs à 2 % sur les cas
+                testés). Cette démarche est purement technique : ce site est
+                indépendant et n'est ni édité, ni approuvé, ni soutenu par
+                l'URSSAF ou toute autre administration.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="mt-2 text-xs font-bold">
                 <a
-                  href={s.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                  href="/methodologie/"
+                  className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
                 >
-                  {`▸ ${s.label}`}
+                  ▸ Méthodologie détaillée, sources officielles et limites du
+                  calcul
                 </a>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
-            ⚠ Simulation indicative, à jour des principaux taux 2026 (barème IR
-            sur revenus 2025, PFU 31,4 %, réforme de l'assiette TNS). Elle ne
-            remplace pas un expert-comptable : CFE, plafonnement du quotient
-            familial, réduction générale de cotisations, mutuelle obligatoire,
-            prévoyance et cas particuliers ne sont pas tous modélisés. Les
-            avantages salarié (titres-resto, transport, mutuelle) sont une
-            estimation indicative, affichée à part et exclue du net comparé.
-            Aucune donnée n'est envoyée : tout est calculé dans votre navigateur.
-          </p>
-          <p className="mt-2 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
-            ✓ Contrôle qualité : nos résultats sont comparés automatiquement au
-            moteur de calcul open source « modele-social » qui équipe
-            mon-entreprise.urssaf.fr (écarts inférieurs à 2 % sur les cas
-            testés). Cette démarche est purement technique : ce site est
-            indépendant et n'est ni édité, ni approuvé, ni soutenu par
-            l'URSSAF ou toute autre administration.
-          </p>
+              </p>
+              <p className="mt-3 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
+                ⚠ Simulation indicative : elle ne remplace pas un
+                expert-comptable et ne modélise pas tous les cas particuliers.
+                Les résultats sont comparés au moteur open source
+                « modele-social » de l'URSSAF (écarts inférieurs à 2 %) ; ce
+                site reste indépendant et sans lien avec l'administration.
+                Aucune donnée n'est envoyée : tout est calculé dans votre
+                navigateur.
+              </p>
+            </>
+          )}
         </section>
 
       </main>
@@ -404,26 +555,37 @@ export default function App({ page }: { page: StatutPage }) {
           </a>
         </div>
 
+        {/* Plan du site groupé par intention : mêmes liens qu'avant, mais des
+            chemins de crawl lisibles et des ancres contextuelles au lieu d'une
+            liste à plat de 22 entrées. */}
         <nav
-          aria-label="Simulateurs et comparatifs"
-          className="mx-auto mb-6 max-w-xl normal-case tracking-normal"
+          aria-label="Plan du site"
+          className="mx-auto mb-6 max-w-5xl grid gap-6 text-left normal-case tracking-normal sm:grid-cols-2 lg:grid-cols-4"
         >
-          <div className="text-sm font-extrabold uppercase tracking-[0.06em]">
-            Simulateurs et comparatifs
-          </div>
-          <ul className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-bold">
-            {PAGES.filter((p) => !p.hideFromFooter).map((p) => (
-              <li key={p.slug}>
-                <a
-                  href={p.slug ? `/${p.slug}/` : "/"}
-                  aria-current={p.slug === page.slug ? "page" : undefined}
-                  className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
-                >
-                  {p.slug ? p.breadcrumb : "Accueil"}
-                </a>
-              </li>
-            ))}
-          </ul>
+          {FOOTER_GROUP_ORDER.map((group) => {
+            const items = footerPages.get(group);
+            if (!items?.length) return null;
+            return (
+              <div key={group}>
+                <div className="text-xs font-extrabold uppercase tracking-[0.06em]">
+                  {FOOTER_GROUP_LABELS[group]}
+                </div>
+                <ul className="mt-2 space-y-1 text-xs font-bold">
+                  {items.map((p) => (
+                    <li key={p.slug}>
+                      <a
+                        href={p.slug ? `/${p.slug}/` : "/"}
+                        aria-current={p.slug === page.slug ? "page" : undefined}
+                        className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                      >
+                        {p.slug ? p.breadcrumb : "Accueil"}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </nav>
 
         <div>FREELANCE-OU-CDI.FR — gratuit, open, sans compte</div>
