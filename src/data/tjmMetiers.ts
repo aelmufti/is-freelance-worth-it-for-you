@@ -12,6 +12,7 @@
 
 import { TJMS, figuresFor } from "./tjm";
 import type { StatutPage } from "../lib/pages";
+import { statutsAtTjm } from "../lib/keyTables";
 
 const fmt = (n: number): string => {
   const s = String(Math.round(n));
@@ -157,6 +158,10 @@ function makeMetierPage(m: Metier, prev?: Metier, next?: Metier): StatutPage {
     breadcrumb: `TJM ${m.court}`,
     hideFromFooter: true,
     inputOverrides: { tjm: m.tjm },
+    keyTable: () => ({
+      ...statutsAtTjm(m.tjm),
+      title: `${m.court.charAt(0).toUpperCase()}${m.court.slice(1)} freelance à ${m.tjm} €/jour : le net de chaque statut`,
+    }),
     metaTitle: `TJM ${m.court} freelance 2026 : tarif et net réel`,
     metaDescription: `TJM ${m.court} freelance 2026 : médiane ~${m.tjm} €/jour (${m.bas}–${m.haut} €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.`,
     h1: `TJM ${m.court} freelance : tarif moyen et net réel (2026)`,
@@ -223,6 +228,23 @@ export const OBSERVATOIRE_TJM: StatutPage = {
   metaTitle: "Observatoire du TJM freelance 2026 : tarifs par métier",
   metaDescription: `Les TJM médians par métier (dev, data, DevOps, product, conseil, design, cyber) croisés avec le net réel après impôt, statut par statut. Validé URSSAF.`,
   h1: "Observatoire du TJM freelance 2026",
+  // Le jeu de données de la page (déclaré en schema Dataset au prerender) sous
+  // sa forme la plus citable : une ligne par métier.
+  keyTable: () => ({
+    title: "TJM freelance par métier en 2026 : tarif et net réel",
+    caption: `TJM médian et fourchette junior–senior d'après les ${TJM_METIERS_SOURCE}. Net : meilleur statut, après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, célibataire sans enfant. Équivalent CDI : brut cadre donnant le même net. Taux 2026, validé URSSAF.`,
+    head: ["Métier", "TJM médian", "Fourchette", "Meilleur net/mois", "Équivalent CDI brut/an"],
+    rows: RANKED.map((m) => {
+      const f = figuresFor(m.tjm);
+      return [
+        m.court.charAt(0).toUpperCase() + m.court.slice(1),
+        `${m.tjm} €`,
+        `${m.bas}–${m.haut} €`,
+        `${fmt(f.bestNetMensuel)} €`,
+        `${fmt(f.brutEquivalent)} €`,
+      ];
+    }),
+  }),
   tldr: `En 2026, les TJM médians des freelances français vont d'environ 450 €/jour (design, SEO) à 650 €/jour (conseil en stratégie, cybersécurité), le développement web se situant autour de 535 € et la data science autour de 645 € (d'après les ${TJM_METIERS_SOURCE}). À TJM égal, le net conservé varie de plus de 1 000 € par mois selon le statut choisi.`,
   intro: `Combien facture vraiment un freelance selon son métier — et surtout, combien lui reste-t-il en net ? Cet observatoire croise les TJM médians observés sur le marché en 2026 (d'après les ${TJM_METIERS_SOURCE}) avec le revenu net réellement disponible après cotisations et impôt, calculé par notre moteur validé URSSAF. Chaque métier a sa page détaillée, statut par statut.`,
   sections: [

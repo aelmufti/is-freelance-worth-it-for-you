@@ -1,4 +1,12 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { DEFAULT_INPUT, DEFAULT_PARAMS } from "./lib/params";
 import type { FiscalParams, SimulationInput } from "./lib/params";
 import { calcAll } from "./lib/engine";
@@ -18,16 +26,28 @@ const BreakEvenChart = lazy(() =>
   import("./components/Charts").then((m) => ({ default: m.BreakEvenChart })),
 );
 
+// Occupe toute la hauteur réservée par son emplacement : le remplacement par
+// le vrai graphique ne décale rien (CLS nul).
 function ChartFallback({ label }: { label: string }) {
   return (
-    <div className="border-[3px] border-ink bg-white p-4 shadow-brutal">
+    <div className="flex flex-1 flex-col border-[3px] border-ink bg-white p-4 shadow-brutal">
       <div className="text-sm font-extrabold uppercase tracking-[0.06em]">
         {label}
       </div>
-      <div className="mt-3 h-40 border-2 border-ink bg-tag-offwhite" aria-hidden="true" />
+      <div className="mt-3 flex-1 border-2 border-ink bg-tag-offwhite" aria-hidden="true" />
     </div>
   );
 }
+
+// Hauteurs réellement rendues par les graphiques, mesurées de 320 à 1440 px
+// (identiques d'une page à l'autre), réservées AVANT leur montage. Chaque palier
+// réserve le MAXIMUM de sa plage de largeurs : le graphique ne peut jamais
+// grandir en se montant (au pire, quelques pixels de blanc en bord de palier).
+// Le bloc des seuils suit sa grille de tuiles (1, 2 puis 5 colonnes) et le
+// retour à la ligne de son texte.
+const SLOT_COMPARE = "flex min-h-[370px] flex-col min-[412px]:min-h-[350px]";
+const SLOT_SEUILS =
+  "flex min-h-[757px] flex-col min-[360px]:min-h-[741px] min-[480px]:min-h-[721px] min-[540px]:min-h-[705px] sm:min-h-[595px] min-[900px]:min-h-[579px] lg:min-h-[469px]";
 import { Faq } from "./components/Faq";
 import { BreakEvenTable } from "./components/BreakEvenTable";
 import { MentionsLegales } from "./components/MentionsLegales";
@@ -38,7 +58,9 @@ import {
   FOOTER_GROUP_ORDER,
   PAGES,
   footerGroup,
+  pageUpdated,
   pageUrl,
+  parentOf,
 } from "./lib/pages";
 import type { FooterGroup, StatutPage } from "./lib/pages";
 
@@ -106,10 +128,11 @@ function joinFr(parts: string[]): string {
   return `${parts.slice(0, -1).join(", ")} et ${parts[parts.length - 1]}`;
 }
 
-const updatedLabel = (() => {
-  const [y, m, d] = CONTENT_UPDATED.split("-").map(Number);
+function frDate(iso: string): string {
+  const [y, m, d] = iso.split("-").map(Number);
   return `${d} ${MOIS[m - 1]} ${y}`;
-})();
+}
+const updatedLabel = frDate(CONTENT_UPDATED);
 
 export default function App({ page }: { page: StatutPage }) {
   const [input, setInput] = useState<SimulationInput>(() => ({
@@ -122,6 +145,9 @@ export default function App({ page }: { page: StatutPage }) {
     page.statuts ?? null,
   );
   const isStatutPage = Boolean(page.breadcrumb);
+  const parent = parentOf(page);
+  // Calculé pour la seule page affichée (cf. lib/keyTables.ts).
+  const keyTable = useMemo(() => page.keyTable?.(), [page]);
   const isContent = page.layout === "content";
   const focusStatutsPage = page.statuts ?? [];
   // Libellé des statuts traités, pour des intertitres propres à la page.
@@ -158,12 +184,50 @@ export default function App({ page }: { page: StatutPage }) {
     .filter((p): p is StatutPage => Boolean(p));
 
   // Les graphiques recharts mesurent leur conteneur et utilisent des
-  // identifiants SVG dynamiques — incompatibles avec l'hydration. On les
-  // monte uniquement côté client après hydration pour éviter les mismatches.
+  // identifiants SVG dynamiques — incompatibles avec l'hydration : ils ne sont
+  // jamais dans le HTML prérendu.
+  //
+  // Ils ne sont pas non plus montés au chargement. Mesuré sous bridage mobile
+  // (CPU ×4) : le chunk recharts coûtait ~650 ms de thread principal sur CHAQUE
+  // page, pour des graphiques situés loin sous la ligne de flottaison — c'était
+  // l'essentiel du Total Blocking Time (proxy de l'INP, Core Web Vital). On
+  // attend donc qu'ils approchent du viewport ; les emplacements ont leur
+  // hauteur finale réservée, le montage ne décale rien.
   const [chartsReady, setChartsReady] = useState(false);
+  const chartsRef = useRef<HTMLElement>(null);
   useEffect(() => {
-    if (!IS_PRERENDER) setChartsReady(true);
+    if (IS_PRERENDER) return;
+    const el = chartsRef.current;
+    if (!el) return; // pages éditoriales : pas de graphiques
+    if (!("IntersectionObserver" in window)) {
+      setChartsReady(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setChartsReady(true);
+          io.disconnect();
+        }
+      },
+      // Marge large : le chunk (~110 Ko compressés) a le temps d'arriver avant
+      // que l'emplacement devienne visible, même en 4G lente.
+      { rootMargin: "800px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
   }, []);
+
+  // Les graphiques recalculent ~370 fois le moteur (courbe + seuils) à chaque
+  // frappe dans le formulaire. En valeur différée, React les rend en priorité
+  // basse et interruptible : la saisie reste fluide (INP), les graphiques
+  // suivent un instant après.
+  const chartInput = useDeferredValue(input);
+  const chartParams = useDeferredValue(params);
+  const chartResults = useMemo(
+    () => calcAll(chartInput, chartParams),
+    [chartInput, chartParams],
+  );
 
   const results = useMemo(() => calcAll(input, params), [input, params]);
   const best = useMemo(
@@ -200,15 +264,15 @@ export default function App({ page }: { page: StatutPage }) {
                 Accueil
               </a>
               <span aria-hidden="true">{" / "}</span>
-              {/* Le fil visible doit suivre l'URL, comme le BreadcrumbList
-                  injecté au prerender : /guides/<x>/ passe par /guides/. */}
-              {page.slug.startsWith("guides/") && (
+              {/* Même hiérarchie que le BreadcrumbList injecté au prerender
+                  (parentOf) : les deux doivent concorder. */}
+              {parent && (
                 <>
                   <a
-                    href="/guides/"
+                    href={`/${parent.slug}/`}
                     className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
                   >
-                    Guides
+                    {parent.breadcrumb}
                   </a>
                   <span aria-hidden="true">{" / "}</span>
                 </>
@@ -238,6 +302,26 @@ export default function App({ page }: { page: StatutPage }) {
           <p className="anim-up mt-4 max-w-2xl text-sm font-bold opacity-70 md:text-base">
             {page.intro}
           </p>
+          {/* Auteur et dates visibles : sujet YMYL (argent), où Google pèse
+              l'E-E-A-T, et première chose qu'un moteur génératif vérifie avant
+              de citer un chiffre fiscal. Les mêmes dates alimentent le JSON-LD
+              et le sitemap — elles doivent concorder. */}
+          <p className="anim-up mt-3 text-xs font-bold opacity-70">
+            <span>{"Par "}</span>
+            <a
+              href="/a-propos/"
+              rel="author"
+              className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+            >
+              Ali El Mufti
+            </a>
+            <span aria-hidden="true">{" · "}</span>
+            <span>{"Mis à jour le "}</span>
+            <time dateTime={pageUpdated(page)}>{frDate(pageUpdated(page))}</time>
+            <span aria-hidden="true">{" · "}</span>
+            <span>{"Taux vérifiés le "}</span>
+            <time dateTime={CONTENT_UPDATED}>{updatedLabel}</time>
+          </p>
         </div>
       </header>
 
@@ -255,6 +339,51 @@ export default function App({ page }: { page: StatutPage }) {
               <p className="mt-2 max-w-3xl text-sm font-bold leading-relaxed md:text-base">
                 {page.tldr}
               </p>
+            </div>
+          </section>
+        )}
+
+        {/* CHIFFRES CLÉS — la réponse de la page en <table> sémantique :
+            format repris tel quel en extrait optimisé et par les moteurs
+            génératifs. Chiffres issus du moteur, cf. lib/keyTables.ts. */}
+        {keyTable && (
+          <section aria-labelledby="chiffres-cles-title" className="anim-up">
+            <SectionTitle>
+              <span id="chiffres-cles-title">{keyTable.title}</span>
+            </SectionTitle>
+            <div className="overflow-x-auto border-[3px] border-ink shadow-brutal">
+              <table className="w-full border-collapse text-sm">
+                <caption className="caption-bottom border-t-2 border-ink bg-tag-offwhite px-3 py-2 text-left text-[11px] font-bold">
+                  {keyTable.caption}
+                </caption>
+                <thead>
+                  <tr className="bg-ink text-white">
+                    {keyTable.head.map((h, i) => (
+                      <th
+                        key={h}
+                        scope="col"
+                        className={`px-3 py-2 font-extrabold uppercase tracking-[0.06em] ${i === 0 ? "text-left" : "text-right"}`}
+                      >
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {keyTable.rows.map((row) => (
+                    <tr key={row[0]} className="border-t-2 border-ink bg-white">
+                      <th scope="row" className="px-3 py-2 text-left font-extrabold">
+                        {row[0]}
+                      </th>
+                      {row.slice(1).map((cell, k) => (
+                        <td key={k} className="px-3 py-2 text-right font-bold">
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </section>
         )}
@@ -348,7 +477,7 @@ export default function App({ page }: { page: StatutPage }) {
         {!isContent && (
           <>
             {/* GRAPHIQUES */}
-            <section className="space-y-6">
+            <section ref={chartsRef} className="space-y-6">
               <SectionTitle>
                 {focusLabel ? (
                   <>
@@ -361,22 +490,24 @@ export default function App({ page }: { page: StatutPage }) {
                   </>
                 )}
               </SectionTitle>
-              {chartsReady && (
-                <Suspense fallback={<ChartFallback label="Comparaison" />}>
-                  <CompareBars results={results} />
-                </Suspense>
-              )}
-              {chartsReady && (
-                <Suspense fallback={<ChartFallback label="Seuil de rentabilité TJM" />}>
-                  <BreakEvenChart input={input} params={params} />
-                </Suspense>
-              )}
-              {!chartsReady && (
-                <>
+              <div className={SLOT_COMPARE}>
+                {chartsReady ? (
+                  <Suspense fallback={<ChartFallback label="Comparaison" />}>
+                    <CompareBars results={chartResults} />
+                  </Suspense>
+                ) : (
                   <ChartFallback label="Net mensuel après impôt, par statut" />
+                )}
+              </div>
+              <div className={SLOT_SEUILS}>
+                {chartsReady ? (
+                  <Suspense fallback={<ChartFallback label="Seuil de rentabilité TJM" />}>
+                    <BreakEvenChart input={chartInput} params={chartParams} />
+                  </Suspense>
+                ) : (
                   <ChartFallback label="Seuil de rentabilité TJM" />
-                </>
-              )}
+                )}
+              </div>
             </section>
 
             {/* TABLEAU TJM BREAK-EVEN — asset citable (SEO longue traîne + GEO) */}

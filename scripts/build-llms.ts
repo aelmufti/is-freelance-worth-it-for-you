@@ -9,6 +9,7 @@ import { writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { CONTENT_UPDATED, PAGES, pageUrl } from "../src/lib/pages";
+import { pageToMarkdown } from "./lib/pageMarkdown";
 import {
   BREAKEVEN_ROWS,
   BREAKEVEN_SCENARIO,
@@ -80,22 +81,7 @@ const breakevenTable = [
   }),
 ].join("\n");
 
-const fullPages = PAGES.map((p) => {
-  const parts: string[] = [`# ${p.h1}`, "", `URL : ${pageUrl(p)}`];
-  // La réponse directe en tête : c'est le passage qu'un moteur génératif cite.
-  if (p.tldr) parts.push("", `**En bref.** ${p.tldr}`);
-  parts.push("", p.intro);
-  for (const s of p.sections) {
-    parts.push("", `## ${s.heading}`, "", s.paragraphs.join("\n\n"));
-  }
-  if (p.faq.length > 0) {
-    parts.push("", "## Questions fréquentes");
-    for (const f of p.faq) {
-      parts.push("", `### ${f.question}`, "", f.answer);
-    }
-  }
-  return parts.join("\n");
-}).join("\n\n---\n\n");
+const fullPages = PAGES.map((p) => pageToMarkdown(p)).join("\n\n---\n\n");
 
 const llmsFull = `${HEADER}
 

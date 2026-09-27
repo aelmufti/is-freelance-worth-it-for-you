@@ -169,6 +169,34 @@ page du plan de site : ne l'utilisez que pour la longue traîne, et vérifiez
 qu'un hub (`/tjm-en-salaire/`, `/observatoire-tjm-2026/`, `/guides/`) ou les
 `related` d'autres pages la relaient — sinon elle tombe à zéro lien interne.
 
+**5. La réponse chiffrée est un tableau, calculé à la demande.** Chaque page à
+chiffres expose un `keyTable` (`src/lib/keyTables.ts`), rendu en `<table>`
+sémantique sous « En bref » et repris dans `llms-full.txt` : c'est le format
+repris en extrait optimisé par Google et cité le plus fidèlement par les
+moteurs génératifs. C'est une **fonction** : seule la page affichée calcule
+le sien. Ne précalculez rien pour les 67 pages au chargement du bundle —
+chaque calcul au niveau module se paie en Total Blocking Time sur mobile.
+
+**6. Le JavaScript lourd attend son tour.** Les graphiques (recharts, ~110 Ko
+compressés, ~650 ms de CPU sur mobile) ne se montent qu'à l'approche du
+viewport, dans des emplacements à hauteur réservée. Tout nouveau composant
+lourd sous la ligne de flottaison suit la même règle.
+
+**7. GEO : chaque page a un jumeau Markdown, Bing est notifié.**
+
+- `/<slug>/index.html.md` (convention llmstxt.org) est généré au build par
+  `build-markdown.ts`, signalé par `<link rel="alternate" type="text/markdown">`
+  et exclu de Google par `X-Robots-Tag: noindex` (`vercel.json`).
+- Après chaque déploiement de production :
+  ```bash
+  npm run indexnow -- --since=<date de la révision>
+  ```
+  Bing alimente la recherche de ChatGPT et de Copilot : c'est le chemin le
+  plus court entre une mise à jour et une citation.
+
+**Mesurer.** `npm run build && npm run perf` (bridage mobile ×4, 4G lente,
+défilement complet de la page pour contrôler le CLS du montage différé).
+
 ---
 
 ## Ce qui n'est pas modélisé (volontairement)

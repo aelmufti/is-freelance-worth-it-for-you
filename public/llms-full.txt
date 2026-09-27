@@ -76,6 +76,19 @@ URL : https://freelance-ou-cdi.fr/simulateur-micro-entreprise/
 
 **En bref.** En micro-entreprise, les cotisations sont un pourcentage du chiffre d'affaires encaissé (environ 24,6 % en BNC) et l'impôt se calcule après un abattement forfaitaire de 34 %. C'est le statut qui laisse le plus de net tant qu'on reste sous son plafond de 83 600 € de chiffre d'affaires en prestations : pour égaler un CDI à 55 000 € brut, environ 320 € par jour suffisent. Taux 2026.
 
+## Micro-entreprise : le net mensuel selon le TJM
+
+| TJM | Micro-entreprise — net/mois |
+|---|---:|
+| 300 €/jour | 3 017 € |
+| 400 €/jour | 3 915 € |
+| 500 €/jour | Plafond dépassé |
+| 600 €/jour | Plafond dépassé |
+| 700 €/jour | Plafond dépassé |
+| 800 €/jour | Plafond dépassé |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 La micro-entreprise est le statut le plus simple et, sous un certain niveau de revenu, le plus rentable. Sa limite est connue d'avance : un plafond de chiffre d'affaires qui finit par tout verrouiller. Ce simulateur calcule votre net après cotisations et impôt, et vous dit à quel moment le plafond devient un mur.
 
 ## Pourquoi la micro est imbattable… jusqu'à un certain point
@@ -121,6 +134,19 @@ Les cotisations sont un pourcentage du chiffre d'affaires encaissé : environ 24
 URL : https://freelance-ou-cdi.fr/simulateur-ei/
 
 **En bref.** L'entreprise individuelle au réel déduit vos frais professionnels à l'euro près, sans aucun plafond de chiffre d'affaires, avec des cotisations TNS d'environ 45 % du bénéfice après l'abattement d'assiette de 26 % de la réforme 2026. Elle devient plus avantageuse que la micro-entreprise dès que vos frais réels dépassent l'abattement forfaitaire de 34 % du chiffre d'affaires. Taux 2026.
+
+## EI au réel : le net mensuel selon le TJM
+
+| TJM | EI au réel — net/mois |
+|---|---:|
+| 300 €/jour | 2 790 € |
+| 400 €/jour | 3 582 € |
+| 500 €/jour | 4 397 € |
+| 600 €/jour | 5 288 € |
+| 700 €/jour | 6 035 € |
+| 800 €/jour | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 L'entreprise individuelle au réel, c'est la micro sans ses deux limites : vos frais sont déduits pour de vrai, et il n'y a aucun plafond de chiffre d'affaires. En échange, une vraie comptabilité et l'impôt sur le bénéfice. Ce simulateur calcule votre net après cotisations TNS et impôt, face à un CDI et aux autres statuts.
 
@@ -168,6 +194,19 @@ URL : https://freelance-ou-cdi.fr/simulateur-eurl/
 
 **En bref.** En EURL à l'impôt sur les sociétés, le gérant associé unique est travailleur non salarié : environ 45 % de cotisations sur sa rémunération, contre 75 à 80 % de charges pour un président de SASU. Sur le scénario de référence (TJM 550 €, tout en rémunération), l'EURL laisse 4 842 €/mois net contre 4 125 € en SASU. Mais seuls les dividendes sous 10 % du capital social profitent de la flat tax de 31,4 %.
 
+## EURL : le net mensuel selon le TJM
+
+| TJM | EURL — net/mois |
+|---|---:|
+| 300 €/jour | 2 790 € |
+| 400 €/jour | 3 582 € |
+| 500 €/jour | 4 397 € |
+| 600 €/jour | 5 288 € |
+| 700 €/jour | 6 035 € |
+| 800 €/jour | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 L'EURL, c'est l'EI passée en société : responsabilité limitée, option pour l'impôt sur les sociétés, et possibilité de se verser des dividendes. Mais le gérant associé unique reste un travailleur non salarié — et les dividendes y obéissent à une règle bien particulière. Ce simulateur chiffre votre net réel selon le dosage rémunération / dividendes, face à un CDI.
 
 ## Gérant majoritaire = TNS : la facture sociale allégée
@@ -213,6 +252,19 @@ Sur la rémunération du gérant : cotisations TNS (de l'ordre de 45 % après l'
 URL : https://freelance-ou-cdi.fr/simulateur-sasu/
 
 **En bref.** Le président de SASU est assimilé salarié : 75 à 80 % de charges sur le salaire versé, en échange d'une protection sociale de cadre — mais sans assurance chômage. Son vrai levier est l'arbitrage salaire/dividendes, ces derniers étant taxés à la flat tax de 31,4 % après impôt sur les sociétés. Pour égaler un CDI à 55 000 € brut en rémunération intégrale, comptez environ 410 € par jour. Taux 2026.
+
+## SASU : le net mensuel selon le TJM
+
+| TJM | SASU — net/mois |
+|---|---:|
+| 300 €/jour | 2 464 € |
+| 400 €/jour | 3 129 € |
+| 500 €/jour | 3 793 € |
+| 600 €/jour | 4 457 € |
+| 700 €/jour | 5 121 € |
+| 800 €/jour | 5 784 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 La SASU coûte cher en cotisations, mais c'est le seul statut qui vous laisse choisir entre salaire et dividendes — et c'est là que tout se joue. Ce simulateur chiffre votre net réel selon ce dosage, impôt sur les sociétés et flat tax compris, face à un CDI.
 
@@ -260,6 +312,19 @@ URL : https://freelance-ou-cdi.fr/simulateur-portage-salarial/
 
 **En bref.** En portage salarial, la société de portage prélève 5 à 10 % de frais de gestion, puis l'enveloppe restante supporte les cotisations patronales et salariales du régime général : il reste environ 43 % du chiffre d'affaires en net. Pour égaler un CDI à 55 000 € brut, il faut facturer environ 455 € par jour, soit 90 090 € par an. C'est le seul statut freelance qui ouvre droit au chômage.
 
+## Portage salarial : le net mensuel selon le TJM
+
+| TJM | Portage salarial — net/mois |
+|---|---:|
+| 300 €/jour | 2 235 € |
+| 400 €/jour | 2 870 € |
+| 500 €/jour | 3 468 € |
+| 600 €/jour | 4 066 € |
+| 700 €/jour | 4 664 € |
+| 800 €/jour | 5 262 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Le portage, c'est la liberté du freelance avec le bulletin de paie du salarié. On le paie : c'est le statut où la plus petite part du chiffre d'affaires finit sur votre compte. Ce simulateur chiffre exactement ce qu'il vous reste, frais de gestion et cotisations déduits, face à un CDI et aux autres statuts.
 
 ## Comment marche le portage, concrètement
@@ -305,6 +370,19 @@ Il n'existe pas de plafond de CA en portage, contrairement à la micro. En prati
 URL : https://freelance-ou-cdi.fr/sasu-ou-eurl/
 
 **En bref.** Sur le scénario de référence (TJM 550 €, tout en rémunération), l'EURL laisse 4 842 €/mois net contre 4 125 € en SASU : son gérant est TNS (environ 45 % de cotisations) quand le président de SASU est assimilé salarié (75 à 80 % de charges). La SASU reprend l'avantage dès qu'on se verse des dividendes — tous à la flat tax de 31,4 % sans plafond, alors qu'en EURL seuls ceux sous 10 % du capital en bénéficient.
+
+## SASU ou EURL : le net mensuel selon le TJM
+
+| TJM | SASU — net/mois | EURL — net/mois |
+|---|---:|---:|
+| 300 €/jour | 2 464 € | 2 790 € |
+| 400 €/jour | 3 129 € | 3 582 € |
+| 500 €/jour | 3 793 € | 4 397 € |
+| 600 €/jour | 4 457 € | 5 288 € |
+| 700 €/jour | 5 121 € | 6 035 € |
+| 800 €/jour | 5 784 € | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 C'est le duel classique du freelance qui passe en société — et la réponse dépend entièrement de la façon dont vous comptez vous payer. Sur le scénario de référence du simulateur (TJM 550 €, tout en rémunération), l'EURL laisse 4 842 €/mois net contre 4 125 € en SASU. Mais dès que les dividendes entrent en jeu, le match s'inverse. Ce comparatif chiffre les deux trajectoires sur VOS paramètres.
 
@@ -352,6 +430,19 @@ URL : https://freelance-ou-cdi.fr/micro-entreprise-ou-sasu/
 
 **En bref.** Pour battre un CDI à 55 000 € brut, il faut environ 320 €/jour en micro-entreprise contre 410 €/jour en SASU. Sous le plafond de 83 600 € de chiffre d'affaires et avec peu de frais, la micro laisse quasi systématiquement plus de net. La SASU s'impose au-delà de ce plafond, avec des frais réels élevés, ou pour cumuler l'ARE en sortie de CDI.
 
+## Micro-entreprise ou SASU : le net mensuel selon le TJM
+
+| TJM | Micro-entreprise — net/mois | SASU — net/mois |
+|---|---:|---:|
+| 300 €/jour | 3 017 € | 2 464 € |
+| 400 €/jour | 3 915 € | 3 129 € |
+| 500 €/jour | Plafond dépassé | 3 793 € |
+| 600 €/jour | Plafond dépassé | 4 457 € |
+| 700 €/jour | Plafond dépassé | 5 121 € |
+| 800 €/jour | Plafond dépassé | 5 784 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Ce sont les deux statuts les plus choisis par les freelances, et ils sont aux antipodes : la micro mise tout sur la simplicité et des cotisations légères, la SASU sur la protection et l'optimisation. Pour battre un CDI à 55 000 € brut, il faut un TJM d'environ 320 € en micro… contre 410 € en SASU. Voici comment trancher selon votre niveau de revenu et votre situation.
 
 ## Sous le plafond, la micro gagne presque toujours
@@ -397,6 +488,19 @@ Rarement pour le seul revenu net : sous 83 600 € de CA avec peu de frais, la m
 URL : https://freelance-ou-cdi.fr/portage-salarial-ou-micro-entreprise/
 
 **En bref.** À 400 € par jour, la micro-entreprise conserve environ 59 % du chiffre d'affaires en net après cotisations et impôt, contre environ 43 % en portage salarial — plusieurs centaines d'euros d'écart chaque mois. Cette différence finance la protection du portage : assurance chômage, retraite complète du régime général et prévoyance, qu'aucune micro-entreprise n'offre.
+
+## Portage salarial ou Micro-entreprise : le net mensuel selon le TJM
+
+| TJM | Portage salarial — net/mois | Micro-entreprise — net/mois |
+|---|---:|---:|
+| 300 €/jour | 2 235 € | 3 017 € |
+| 400 €/jour | 2 870 € | 3 915 € |
+| 500 €/jour | 3 468 € | Plafond dépassé |
+| 600 €/jour | 4 066 € | Plafond dépassé |
+| 700 €/jour | 4 664 € | Plafond dépassé |
+| 800 €/jour | 5 262 € | Plafond dépassé |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 Même métier, même TJM, deux mondes : à 400 €/jour, la micro-entreprise vous laisse environ 59 % du chiffre d'affaires en net après cotisations et impôt, le portage environ 43 %. La différence achète une vraie protection — chômage compris. Ce comparatif chiffre exactement ce que chaque statut garde et ce qu'il couvre, pour choisir en connaissance de cause.
 
@@ -444,6 +548,19 @@ URL : https://freelance-ou-cdi.fr/portage-salarial-ou-cdi/
 
 **En bref.** Le portage est la sortie de CDI la moins risquée : vous restez salarié, avec assurance chômage et retraite du régime général. Mais pour égaler un CDI à 55 000 € brut (3 187 €/mois net après impôt), il faut facturer environ 455 € par jour, soit 90 090 € de chiffre d'affaires annuel — le seuil le plus élevé des cinq statuts freelance, parce que le portage porte la protection la plus complète.
 
+## Portage salarial : le net mensuel selon le TJM
+
+| TJM | Portage salarial — net/mois |
+|---|---:|
+| 300 €/jour | 2 235 € |
+| 400 €/jour | 2 870 € |
+| 500 €/jour | 3 468 € |
+| 600 €/jour | 4 066 € |
+| 700 €/jour | 4 664 € |
+| 800 €/jour | 5 262 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Le portage est la sortie de CDI la moins risquée : vous restez salarié, avec chômage et retraite — seul l'employeur change de nature. Mais ce confort se paie : pour égaler un CDI à 55 000 € brut (3 187 €/mois net après impôt), il faut facturer environ 455 €/jour, soit 90 090 € dans l'année. Ce simulateur calcule votre propre point de bascule.
 
 ## Le portage garde presque tout du salariat
@@ -489,6 +606,19 @@ Le portage est le meilleur « sas » si vous voulez tester l'indépendance sans 
 URL : https://freelance-ou-cdi.fr/micro-entreprise-ou-eurl/
 
 **En bref.** À 400 € par jour, la micro-entreprise laisse environ 3 915 €/mois net contre 3 582 € en EURL. La micro gagne tant que vos frais réels restent sous l'abattement forfaitaire de 34 % et que le chiffre d'affaires reste sous 83 600 €. L'EURL prend le relais au-delà : frais déduits au réel, aucun plafond, responsabilité limitée et dividendes possibles.
+
+## Micro-entreprise ou EURL : le net mensuel selon le TJM
+
+| TJM | Micro-entreprise — net/mois | EURL — net/mois |
+|---|---:|---:|
+| 300 €/jour | 3 017 € | 2 790 € |
+| 400 €/jour | 3 915 € | 3 582 € |
+| 500 €/jour | Plafond dépassé | 4 397 € |
+| 600 €/jour | Plafond dépassé | 5 288 € |
+| 700 €/jour | Plafond dépassé | 6 035 € |
+| 800 €/jour | Plafond dépassé | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 La micro et l'EURL sont deux façons opposées d'exercer seul : d'un côté la simplicité maximale et un plafond, de l'autre une vraie société à l'impôt sur les sociétés, sans limite de chiffre d'affaires. Pour égaler un CDI à 55 000 € brut, il faut environ 320 €/jour en micro contre 355 € en EURL. Voici quand chacune l'emporte.
 
@@ -536,6 +666,19 @@ URL : https://freelance-ou-cdi.fr/micro-entreprise-ou-ei/
 
 **En bref.** Micro et EI au réel partagent le même régime social TNS : seule change la façon de calculer l'impôt. Si vos frais professionnels réels sont inférieurs à l'abattement forfaitaire de 34 % du chiffre d'affaires, la micro rend plus — à 400 €/jour, environ 3 915 €/mois net contre 3 582 € au réel. Au-dessus, l'EI au réel les déduit pour de vrai, sans plafond de chiffre d'affaires.
 
+## Micro-entreprise ou EI au réel : le net mensuel selon le TJM
+
+| TJM | Micro-entreprise — net/mois | EI au réel — net/mois |
+|---|---:|---:|
+| 300 €/jour | 3 017 € | 2 790 € |
+| 400 €/jour | 3 915 € | 3 582 € |
+| 500 €/jour | Plafond dépassé | 4 397 € |
+| 600 €/jour | Plafond dépassé | 5 288 € |
+| 700 €/jour | Plafond dépassé | 6 035 € |
+| 800 €/jour | Plafond dépassé | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 C'est le même métier, en nom propre, sous le même régime social TNS — mais deux façons de calculer l'impôt. La micro applique un abattement forfaitaire de 34 % ; l'EI au réel déduit vos frais réels. Tout le choix tient dans une comparaison : vos dépenses réelles sont-elles plus hautes ou plus basses que l'abattement ? Ce comparatif chiffre les deux sur vos paramètres.
 
 ## La seule vraie question : vos frais contre l'abattement de 34 %
@@ -581,6 +724,19 @@ Ce n'est pas obligatoire, mais fortement recommandé : l'EI au réel impose une 
 URL : https://freelance-ou-cdi.fr/ei-ou-eurl/
 
 **En bref.** EI au réel et EURL relèvent du même régime social TNS, avec des cotisations comparables : la vraie différence est fiscale. L'EI est à l'impôt sur le revenu — tout le bénéfice est imposé chaque année ; l'EURL peut opter pour l'impôt sur les sociétés et ne soumettre à l'IR que ce que vous prélevez réellement. Sur le scénario de référence (550 €/jour), l'EI laisse 4 842 €/mois net contre 4 842 € en EURL.
+
+## EI au réel ou EURL : le net mensuel selon le TJM
+
+| TJM | EI au réel — net/mois | EURL — net/mois |
+|---|---:|---:|
+| 300 €/jour | 2 790 € | 2 790 € |
+| 400 €/jour | 3 582 € | 3 582 € |
+| 500 €/jour | 4 397 € | 4 397 € |
+| 600 €/jour | 5 288 € | 5 288 € |
+| 700 €/jour | 6 035 € | 6 035 € |
+| 800 €/jour | 6 781 € | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 Les deux sont des statuts d'indépendant au régime TNS, aux cotisations proches. La vraie différence est structurelle : l'EI reste une personne physique imposée à l'impôt sur le revenu, l'EURL est une société qui peut opter pour l'impôt sur les sociétés et distribuer des dividendes. Sur le scénario de référence (550 €/jour), l'EI laisse 4 842 €/mois net contre 4 842 € en EURL — mais le match se joue ailleurs.
 
@@ -628,6 +784,19 @@ URL : https://freelance-ou-cdi.fr/ei-ou-sasu/
 
 **En bref.** À rémunération intégrale, l'EI au réel laisse nettement plus de net que la SASU : 4 842 €/mois contre 4 125 € sur le scénario de référence (550 €/jour), grâce à des cotisations TNS d'environ 45 % contre 75 à 80 % de charges en assimilé salarié. La SASU compense par l'arbitrage salaire/dividendes, une meilleure protection sociale et le cumul avec l'ARE en sortie de CDI.
 
+## EI au réel ou SASU : le net mensuel selon le TJM
+
+| TJM | EI au réel — net/mois | SASU — net/mois |
+|---|---:|---:|
+| 300 €/jour | 2 790 € | 2 464 € |
+| 400 €/jour | 3 582 € | 3 129 € |
+| 500 €/jour | 4 397 € | 3 793 € |
+| 600 €/jour | 5 288 € | 4 457 € |
+| 700 €/jour | 6 035 € | 5 121 € |
+| 800 €/jour | 6 781 € | 5 784 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Deux statuts sans plafond de chiffre d'affaires, qui déduisent tous deux les frais réels — mais tout les oppose côté social. L'EI est TNS, cotisations légères et protection modeste ; la SASU est assimilée salarié, protection complète et charges lourdes, compensées par les dividendes. Sur le scénario de référence (550 €/jour, tout en rémunération), l'EI laisse 4 842 €/mois net contre 4 125 € en SASU.
 
 ## TNS contre assimilé salarié : la facture sociale
@@ -673,6 +842,19 @@ Les deux déduisent les frais réels, donc ce critère ne les départage pas. Le
 URL : https://freelance-ou-cdi.fr/portage-salarial-ou-sasu/
 
 **En bref.** Portage et SASU relèvent tous deux du régime général, mais seul le portage cotise à l'assurance chômage. À chiffre d'affaires égal, la SASU laisse plus de net — 4 125 €/mois contre 3 767 € en portage sur le scénario de référence (550 €/jour) — car elle évite les frais de gestion de 5 à 10 % et permet l'arbitrage salaire/dividendes.
+
+## Portage salarial ou SASU : le net mensuel selon le TJM
+
+| TJM | Portage salarial — net/mois | SASU — net/mois |
+|---|---:|---:|
+| 300 €/jour | 2 235 € | 2 464 € |
+| 400 €/jour | 2 870 € | 3 129 € |
+| 500 €/jour | 3 468 € | 3 793 € |
+| 600 €/jour | 4 066 € | 4 457 € |
+| 700 €/jour | 4 664 € | 5 121 € |
+| 800 €/jour | 5 262 € | 5 784 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 Curieusement proches et pourtant opposés : dans les deux cas vous relevez du régime général (assimilé salarié). Mais le portage ajoute l'assurance chômage et vous décharge de toute gestion, tandis que la SASU offre l'arbitrage salaire/dividendes et le contrôle total. Sur le scénario de référence (550 €/jour), le portage laisse 3 767 €/mois net contre 4 125 € en SASU à 100 % salaire.
 
@@ -720,6 +902,19 @@ URL : https://freelance-ou-cdi.fr/portage-salarial-ou-eurl/
 
 **En bref.** Sur le scénario de référence (550 €/jour), l'EURL laisse 4 842 €/mois net contre 3 767 € en portage salarial : les cotisations TNS sont bien plus légères que celles du régime général, et l'EURL évite les frais de gestion de 5 à 10 %. Cet écart est le prix de la sécurité du portage — chômage, retraite complète, prévoyance et zéro gestion administrative.
 
+## Portage salarial ou EURL : le net mensuel selon le TJM
+
+| TJM | Portage salarial — net/mois | EURL — net/mois |
+|---|---:|---:|
+| 300 €/jour | 2 235 € | 2 790 € |
+| 400 €/jour | 2 870 € | 3 582 € |
+| 500 €/jour | 3 468 € | 4 397 € |
+| 600 €/jour | 4 066 € | 5 288 € |
+| 700 €/jour | 4 664 € | 6 035 € |
+| 800 €/jour | 5 262 € | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Deux mondes : le portage vous garde salarié (chômage, retraite du régime général, aucune gestion), l'EURL fait de vous un chef d'entreprise TNS à l'impôt sur les sociétés. Sur le scénario de référence (550 €/jour), l'EURL laisse 4 842 €/mois net contre 3 767 € en portage — la différence, c'est le prix de la sécurité.
 
 ## L'écart de net, et ce qu'il finance
@@ -765,6 +960,19 @@ Oui, et c'est un parcours fréquent : on démarre en portage pour tester l'activ
 URL : https://freelance-ou-cdi.fr/micro-entreprise-ou-cdi/
 
 **En bref.** Pour égaler un CDI cadre à 55 000 € brut (3 187 €/mois net après impôt), il faut facturer environ 320 € par jour en micro-entreprise, à 18 jours facturés par mois sur 11 mois. C'est le seuil le plus bas de tous les statuts. En contrepartie, la micro n'ouvre aucun droit au chômage et plafonne à 83 600 € de chiffre d'affaires en prestations.
+
+## Micro-entreprise : le net mensuel selon le TJM
+
+| TJM | Micro-entreprise — net/mois |
+|---|---:|
+| 300 €/jour | 3 017 € |
+| 400 €/jour | 3 915 € |
+| 500 €/jour | Plafond dépassé |
+| 600 €/jour | Plafond dépassé |
+| 700 €/jour | Plafond dépassé |
+| 800 €/jour | Plafond dépassé |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 La micro est la porte d'entrée la plus simple vers l'indépendance : création gratuite, cotisations en pourcentage du chiffre d'affaires, zéro comptabilité. Mais quitter un CDI, c'est renoncer au chômage, aux congés payés et à un revenu garanti. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net après impôt), il faut environ 320 €/jour en micro. Ce simulateur calcule votre propre point de bascule.
 
@@ -812,6 +1020,19 @@ URL : https://freelance-ou-cdi.fr/sasu-ou-cdi/
 
 **En bref.** La SASU est le statut freelance le plus proche du CDI : président assimilé salarié, couverture du régime général — mais sans assurance chômage. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net après impôt), il faut environ 410 € par jour en rémunération intégrale. Son atout : l'arbitrage salaire/dividendes et le cumul de l'ARE en sortie de CDI.
 
+## SASU : le net mensuel selon le TJM
+
+| TJM | SASU — net/mois |
+|---|---:|
+| 300 €/jour | 2 464 € |
+| 400 €/jour | 3 129 € |
+| 500 €/jour | 3 793 € |
+| 600 €/jour | 4 457 € |
+| 700 €/jour | 5 121 € |
+| 800 €/jour | 5 784 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 La SASU est le statut freelance le plus proche du CDI : dans les deux cas, vous êtes assimilé salarié, avec la couverture du régime général. La grande différence est le chômage — que le CDI garantit et que la SASU n'ouvre pas. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net), il faut environ 410 €/jour en SASU. Voici l'arbitrage complet.
 
 ## Presque le même statut social, sauf le chômage
@@ -858,6 +1079,19 @@ URL : https://freelance-ou-cdi.fr/eurl-ou-cdi/
 
 **En bref.** Le gérant d'EURL est travailleur non salarié : environ 45 % de cotisations sur sa rémunération, plus léger qu'un salarié « tout compris ». Pour égaler un CDI à 55 000 € brut (3 187 €/mois net après impôt), comptez environ 355 € par jour. En échange : aucun droit au chômage, pas de revenu garanti et une retraite moins garnie.
 
+## EURL : le net mensuel selon le TJM
+
+| TJM | EURL — net/mois |
+|---|---:|
+| 300 €/jour | 2 790 € |
+| 400 €/jour | 3 582 € |
+| 500 €/jour | 4 397 € |
+| 600 €/jour | 5 288 € |
+| 700 €/jour | 6 035 € |
+| 800 €/jour | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Passer d'un CDI à une EURL, c'est troquer le statut de salarié contre celui de gérant indépendant : cotisations plus légères, mais plus de chômage ni de revenu garanti. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net), il faut environ 355 €/jour en EURL. Ce simulateur calcule votre point de bascule et met les deux nets face à face.
 
 ## Gérant TNS : des charges plus légères que le salariat
@@ -903,6 +1137,19 @@ L'EURL demande de créer et gérer une société, ce qui est un vrai engagement 
 URL : https://freelance-ou-cdi.fr/ei-ou-cdi/
 
 **En bref.** L'entreprise individuelle au réel affiche l'un des seuils les plus bas pour remplacer un salaire : environ 355 € par jour pour égaler un CDI cadre à 55 000 € brut (3 187 €/mois net après impôt), grâce aux cotisations TNS et à la déduction des frais réels. En contrepartie : aucun droit au chômage, pas de revenu garanti, une prévoyance à reconstituer.
+
+## EI au réel : le net mensuel selon le TJM
+
+| TJM | EI au réel — net/mois |
+|---|---:|
+| 300 €/jour | 2 790 € |
+| 400 €/jour | 3 582 € |
+| 500 €/jour | 4 397 € |
+| 600 €/jour | 5 288 € |
+| 700 €/jour | 6 035 € |
+| 800 €/jour | 6 781 € |
+
+*Net mensuel après cotisations sociales ET impôt sur le revenu. Repère : un CDI cadre à 55 000 € brut laisse 3 187 € net par mois après impôt. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 L'entreprise individuelle au réel est l'indépendance en nom propre, sans société : cotisations TNS allégées, frais réels déductibles, aucun plafond. Face à elle, le CDI garde le chômage, les congés et un revenu garanti. Pour égaler un CDI à 55 000 € brut (3 187 €/mois net), il faut environ 355 €/jour en EI. Ce simulateur chiffre l'arbitrage.
 
@@ -1252,6 +1499,23 @@ URL : https://freelance-ou-cdi.fr/observatoire-tjm-2026/
 
 **En bref.** En 2026, les TJM médians des freelances français vont d'environ 450 €/jour (design, SEO) à 650 €/jour (conseil en stratégie, cybersécurité), le développement web se situant autour de 535 € et la data science autour de 645 € (d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À TJM égal, le net conservé varie de plus de 1 000 € par mois selon le statut choisi.
 
+## TJM freelance par métier en 2026 : tarif et net réel
+
+| Métier | TJM médian | Fourchette | Meilleur net/mois | Équivalent CDI brut/an |
+|---|---:|---:|---:|---:|
+| Consultant stratégie | 650 € | 450–950 € | 5 663 € | 106 500 € |
+| Expert cybersécurité | 650 € | 520–900 € | 5 663 € | 106 500 € |
+| Data scientist | 645 € | 500–850 € | 5 625 € | 105 500 € |
+| DevOps / cloud | 600 € | 500–800 € | 5 288 € | 98 500 € |
+| Data engineer | 600 € | 450–800 € | 5 288 € | 98 500 € |
+| Product manager | 595 € | 450–800 € | 5 243 € | 97 500 € |
+| Consultant marketing | 590 € | 350–800 € | 5 199 € | 97 000 € |
+| Développeur web | 535 € | 350–900 € | 4 708 € | 86 500 € |
+| Consultant SEO | 450 € | 350–650 € | 3 979 € | 71 500 € |
+| Designer UX/UI | 450 € | 300–650 € | 3 979 € | 71 500 € |
+
+*TJM médian et fourchette junior–senior d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr). Net : meilleur statut, après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, célibataire sans enfant. Équivalent CDI : brut cadre donnant le même net. Taux 2026, validé URSSAF.*
+
 Combien facture vraiment un freelance selon son métier — et surtout, combien lui reste-t-il en net ? Cet observatoire croise les TJM médians observés sur le marché en 2026 (d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)) avec le revenu net réellement disponible après cotisations et impôt, calculé par notre moteur validé URSSAF. Chaque métier a sa page détaillée, statut par statut.
 
 ## Ce que gagnent les freelances par métier (médiane 2026)
@@ -1478,6 +1742,32 @@ URL : https://freelance-ou-cdi.fr/tjm-en-salaire/
 
 **En bref.** Pour convertir un TJM en salaire, multipliez-le par les jours réellement facturés (18 par mois sur 11 mois, soit 198 jours), puis retirez cotisations, frais et impôt. Selon le statut, il reste entre 40 et 60 % du chiffre d'affaires en net. Repères 2026 : environ 300 €/jour pour 3 000 € net par mois, 455 €/jour pour 4 000 € net.
 
+## Le tableau de conversion TJM → salaire 2026
+
+| TJM | CA annuel | Meilleur net/mois | Statut | Équivalent CDI brut/an |
+|---|---:|---:|---:|---:|
+| 250 € | 49 500 € | 2 569 € | Micro-entreprise | 42 000 € |
+| 300 € | 59 400 € | 3 017 € | Micro-entreprise | 51 500 € |
+| 325 € | 64 350 € | 3 242 € | Micro-entreprise | 56 000 € |
+| 350 € | 69 300 € | 3 466 € | Micro-entreprise | 61 000 € |
+| 375 € | 74 250 € | 3 691 € | Micro-entreprise | 65 500 € |
+| 400 € | 79 200 € | 3 915 € | Micro-entreprise | 70 000 € |
+| 425 € | 84 150 € | 3 783 € | EI au réel | 67 500 € |
+| 450 € | 89 100 € | 3 979 € | EI au réel | 71 500 € |
+| 475 € | 94 050 € | 4 174 € | EI au réel | 75 500 € |
+| 500 € | 99 000 € | 4 397 € | EI au réel | 80 000 € |
+| 525 € | 103 950 € | 4 619 € | EI au réel | 85 000 € |
+| 550 € | 108 900 € | 4 842 € | EI au réel | 89 500 € |
+| 600 € | 118 800 € | 5 288 € | EI au réel | 98 500 € |
+| 650 € | 128 700 € | 5 663 € | EI au réel | 106 500 € |
+| 700 € | 138 600 € | 6 035 € | EI au réel | 114 500 € |
+| 750 € | 148 500 € | 6 408 € | EI au réel | 123 500 € |
+| 800 € | 158 400 € | 6 781 € | EI au réel | 132 500 € |
+| 900 € | 178 200 € | 7 527 € | EI au réel | 150 500 € |
+| 1000 € | 198 000 € | 8 272 € | EI au réel | 168 500 € |
+
+*Chiffre d'affaires à 18 jours facturés par mois sur 11 mois. Net après cotisations sociales ET impôt sur le revenu, dans le statut qui laisse le plus. Équivalent CDI : salaire brut cadre donnant le même net après impôt (arrondi à 500 €). 3 000 € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.*
+
 Un TJM ne se compare pas à un salaire journalier : il finance aussi les cotisations, l'impôt, les jours non facturés et les frais. Cette page convertit chaque palier de TJM en net mensuel réel et en salaire CDI équivalent — de 250 à 1 000 €/jour, au taux 2026, sur un rythme de 18 jours facturés par mois sur 11 mois. Chaque palier a sa page détaillée.
 
 ## La conversion, palier par palier
@@ -1558,6 +1848,18 @@ URL : https://freelance-ou-cdi.fr/tjm-250/
 
 **En bref.** À 250 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 49 500 € par an et conservez au mieux 2 569 € net par mois après cotisations et impôt (micro-entreprise) — l'équivalent d'un CDI à environ 42 000 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 250 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | 2 569 € | 30 824 € | 62 % |
+| EI au réel | 2 418 € | 29 018 € | 59 % |
+| EURL | 2 418 € | 29 018 € | 59 % |
+| SASU | 2 071 € | 24 857 € | 50 % |
+| Portage salarial | 1 881 € | 22 575 € | 46 % |
+
+*Pour 49 500 € de chiffre d'affaires annuel (250 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 250 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 49 500 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 2 569 €/mois — l'équivalent d'un CDI à environ 42 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 250 € par jour rapportent vraiment, statut par statut
@@ -1603,6 +1905,18 @@ Pour maximiser le net : micro-entreprise (2 569 €/mois après impôt dans ce s
 URL : https://freelance-ou-cdi.fr/tjm-300/
 
 **En bref.** À 300 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 59 400 € par an et conservez au mieux 3 017 € net par mois après cotisations et impôt (micro-entreprise) — l'équivalent d'un CDI à environ 51 500 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 300 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | 3 017 € | 36 210 € | 61 % |
+| EI au réel | 2 790 € | 33 483 € | 56 % |
+| EURL | 2 790 € | 33 483 € | 56 % |
+| SASU | 2 464 € | 29 563 € | 50 % |
+| Portage salarial | 2 235 € | 26 816 € | 45 % |
+
+*Pour 59 400 € de chiffre d'affaires annuel (300 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 300 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 59 400 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 3 017 €/mois — l'équivalent d'un CDI à environ 51 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -1650,6 +1964,18 @@ URL : https://freelance-ou-cdi.fr/tjm-325/
 
 **En bref.** À 325 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 64 350 € par an et conservez au mieux 3 242 € net par mois après cotisations et impôt (micro-entreprise) — l'équivalent d'un CDI à environ 56 000 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 325 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | 3 242 € | 38 902 € | 60 % |
+| EI au réel | 2 972 € | 35 664 € | 55 % |
+| EURL | 2 972 € | 35 664 € | 55 % |
+| SASU | 2 631 € | 31 577 € | 49 % |
+| Portage salarial | 2 411 € | 28 937 € | 45 % |
+
+*Pour 64 350 € de chiffre d'affaires annuel (325 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 325 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 64 350 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 3 242 €/mois — l'équivalent d'un CDI à environ 56 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 325 € par jour rapportent vraiment, statut par statut
@@ -1695,6 +2021,18 @@ Pour maximiser le net : micro-entreprise (3 242 €/mois après impôt dans ce s
 URL : https://freelance-ou-cdi.fr/tjm-350/
 
 **En bref.** À 350 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 69 300 € par an et conservez au mieux 3 466 € net par mois après cotisations et impôt (micro-entreprise) — l'équivalent d'un CDI à environ 61 000 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 350 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | 3 466 € | 41 595 € | 60 % |
+| EI au réel | 3 162 € | 37 942 € | 55 % |
+| EURL | 3 162 € | 37 942 € | 55 % |
+| SASU | 2 797 € | 33 568 € | 48 % |
+| Portage salarial | 2 571 € | 30 849 € | 45 % |
+
+*Pour 69 300 € de chiffre d'affaires annuel (350 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 350 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 69 300 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 3 466 €/mois — l'équivalent d'un CDI à environ 61 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -1742,6 +2080,18 @@ URL : https://freelance-ou-cdi.fr/tjm-375/
 
 **En bref.** À 375 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 74 250 € par an et conservez au mieux 3 691 € net par mois après cotisations et impôt (micro-entreprise) — l'équivalent d'un CDI à environ 65 500 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 375 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | 3 691 € | 44 288 € | 60 % |
+| EI au réel | 3 378 € | 40 541 € | 55 % |
+| EURL | 3 378 € | 40 541 € | 55 % |
+| SASU | 2 963 € | 35 559 € | 48 % |
+| Portage salarial | 2 720 € | 32 644 € | 44 % |
+
+*Pour 74 250 € de chiffre d'affaires annuel (375 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 375 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 74 250 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 3 691 €/mois — l'équivalent d'un CDI à environ 65 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 375 € par jour rapportent vraiment, statut par statut
@@ -1787,6 +2137,18 @@ Pour maximiser le net : micro-entreprise (3 691 €/mois après impôt dans ce s
 URL : https://freelance-ou-cdi.fr/tjm-400/
 
 **En bref.** À 400 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 79 200 € par an et conservez au mieux 3 915 € net par mois après cotisations et impôt (micro-entreprise) — l'équivalent d'un CDI à environ 70 000 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 400 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | 3 915 € | 46 981 € | 59 % |
+| EI au réel | 3 582 € | 42 989 € | 54 % |
+| EURL | 3 582 € | 42 989 € | 54 % |
+| SASU | 3 129 € | 37 551 € | 47 % |
+| Portage salarial | 2 870 € | 34 438 € | 43 % |
+
+*Pour 79 200 € de chiffre d'affaires annuel (400 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 400 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 79 200 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (micro-entreprise) laisse 3 915 €/mois — l'équivalent d'un CDI à environ 70 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -1834,6 +2196,18 @@ URL : https://freelance-ou-cdi.fr/tjm-425/
 
 **En bref.** À 425 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 84 150 € par an et conservez au mieux 3 783 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 67 500 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 425 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 3 783 € | 45 391 € | 54 % |
+| EURL | 3 783 € | 45 391 € | 54 % |
+| SASU | 3 295 € | 39 542 € | 47 % |
+| Portage salarial | 3 019 € | 36 233 € | 43 % |
+
+*Pour 84 150 € de chiffre d'affaires annuel (425 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 425 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 84 150 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 3 783 €/mois — l'équivalent d'un CDI à environ 67 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 425 € par jour rapportent vraiment, statut par statut
@@ -1879,6 +2253,18 @@ Pour maximiser le net : EI au réel (3 783 €/mois après impôt dans ce scéna
 URL : https://freelance-ou-cdi.fr/tjm-450/
 
 **En bref.** À 450 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 89 100 € par an et conservez au mieux 3 979 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 71 500 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 450 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 3 979 € | 47 754 € | 54 % |
+| EURL | 3 979 € | 47 754 € | 54 % |
+| SASU | 3 461 € | 41 533 € | 47 % |
+| Portage salarial | 3 169 € | 38 027 € | 43 % |
+
+*Pour 89 100 € de chiffre d'affaires annuel (450 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 450 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 89 100 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 3 979 €/mois — l'équivalent d'un CDI à environ 71 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -1926,6 +2312,18 @@ URL : https://freelance-ou-cdi.fr/tjm-475/
 
 **En bref.** À 475 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 94 050 € par an et conservez au mieux 4 174 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 75 500 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 475 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 4 174 € | 50 085 € | 53 % |
+| EURL | 4 174 € | 50 085 € | 53 % |
+| SASU | 3 627 € | 43 525 € | 46 % |
+| Portage salarial | 3 318 € | 39 822 € | 42 % |
+
+*Pour 94 050 € de chiffre d'affaires annuel (475 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 475 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 94 050 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 4 174 €/mois — l'équivalent d'un CDI à environ 75 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 475 € par jour rapportent vraiment, statut par statut
@@ -1971,6 +2369,18 @@ Pour maximiser le net : EI au réel (4 174 €/mois après impôt dans ce scéna
 URL : https://freelance-ou-cdi.fr/tjm-500/
 
 **En bref.** À 500 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 99 000 € par an et conservez au mieux 4 397 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 80 000 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 500 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 4 397 € | 52 758 € | 53 % |
+| EURL | 4 397 € | 52 758 € | 53 % |
+| SASU | 3 793 € | 45 516 € | 46 % |
+| Portage salarial | 3 468 € | 41 616 € | 42 % |
+
+*Pour 99 000 € de chiffre d'affaires annuel (500 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 500 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 99 000 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 4 397 €/mois — l'équivalent d'un CDI à environ 80 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -2018,6 +2428,18 @@ URL : https://freelance-ou-cdi.fr/tjm-525/
 
 **En bref.** À 525 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 103 950 € par an et conservez au mieux 4 619 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 85 000 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 525 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 4 619 € | 55 432 € | 53 % |
+| EURL | 4 619 € | 55 432 € | 53 % |
+| SASU | 3 959 € | 47 507 € | 46 % |
+| Portage salarial | 3 618 € | 43 411 € | 42 % |
+
+*Pour 103 950 € de chiffre d'affaires annuel (525 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 525 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 103 950 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 4 619 €/mois — l'équivalent d'un CDI à environ 85 000 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 525 € par jour rapportent vraiment, statut par statut
@@ -2063,6 +2485,18 @@ Pour maximiser le net : EI au réel (4 619 €/mois après impôt dans ce scéna
 URL : https://freelance-ou-cdi.fr/tjm-550/
 
 **En bref.** À 550 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 108 900 € par an et conservez au mieux 4 842 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 89 500 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 550 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 4 842 € | 58 106 € | 53 % |
+| EURL | 4 842 € | 58 106 € | 53 % |
+| SASU | 4 125 € | 49 499 € | 45 % |
+| Portage salarial | 3 767 € | 45 205 € | 42 % |
+
+*Pour 108 900 € de chiffre d'affaires annuel (550 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 550 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 108 900 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 4 842 €/mois — l'équivalent d'un CDI à environ 89 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -2110,6 +2544,18 @@ URL : https://freelance-ou-cdi.fr/tjm-600/
 
 **En bref.** À 600 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 118 800 € par an et conservez au mieux 5 288 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 98 500 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 600 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 288 € | 63 453 € | 53 % |
+| EURL | 5 288 € | 63 453 € | 53 % |
+| SASU | 4 457 € | 53 481 € | 45 % |
+| Portage salarial | 4 066 € | 48 794 € | 41 % |
+
+*Pour 118 800 € de chiffre d'affaires annuel (600 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 600 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 118 800 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 5 288 €/mois — l'équivalent d'un CDI à environ 98 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 600 € par jour rapportent vraiment, statut par statut
@@ -2155,6 +2601,18 @@ Pour maximiser le net : EI au réel (5 288 €/mois après impôt dans ce scéna
 URL : https://freelance-ou-cdi.fr/tjm-650/
 
 **En bref.** À 650 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 128 700 € par an et conservez au mieux 5 663 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 106 500 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 650 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 663 € | 67 952 € | 53 % |
+| EURL | 5 663 € | 67 952 € | 53 % |
+| SASU | 4 789 € | 57 464 € | 45 % |
+| Portage salarial | 4 365 € | 52 383 € | 41 % |
+
+*Pour 128 700 € de chiffre d'affaires annuel (650 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 650 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 128 700 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 5 663 €/mois — l'équivalent d'un CDI à environ 106 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -2202,6 +2660,18 @@ URL : https://freelance-ou-cdi.fr/tjm-700/
 
 **En bref.** À 700 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 138 600 € par an et conservez au mieux 6 035 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 114 500 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 700 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 6 035 € | 72 426 € | 52 % |
+| EURL | 6 035 € | 72 426 € | 52 % |
+| SASU | 5 121 € | 61 447 € | 44 % |
+| Portage salarial | 4 664 € | 55 972 € | 40 % |
+
+*Pour 138 600 € de chiffre d'affaires annuel (700 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 700 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 138 600 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 6 035 €/mois — l'équivalent d'un CDI à environ 114 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 700 € par jour rapportent vraiment, statut par statut
@@ -2247,6 +2717,18 @@ Pour maximiser le net : EI au réel (6 035 €/mois après impôt dans ce scéna
 URL : https://freelance-ou-cdi.fr/tjm-750/
 
 **En bref.** À 750 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 148 500 € par an et conservez au mieux 6 408 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 123 500 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 750 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 6 408 € | 76 899 € | 52 % |
+| EURL | 6 408 € | 76 899 € | 52 % |
+| SASU | 5 452 € | 65 429 € | 44 % |
+| Portage salarial | 4 963 € | 59 561 € | 40 % |
+
+*Pour 148 500 € de chiffre d'affaires annuel (750 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 750 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 148 500 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 6 408 €/mois — l'équivalent d'un CDI à environ 123 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -2294,6 +2776,18 @@ URL : https://freelance-ou-cdi.fr/tjm-800/
 
 **En bref.** À 800 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 158 400 € par an et conservez au mieux 6 781 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 132 500 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 800 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 6 781 € | 81 373 € | 51 % |
+| EURL | 6 781 € | 81 373 € | 51 % |
+| SASU | 5 784 € | 69 412 € | 44 % |
+| Portage salarial | 5 262 € | 63 150 € | 40 % |
+
+*Pour 158 400 € de chiffre d'affaires annuel (800 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 800 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 158 400 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 6 781 €/mois — l'équivalent d'un CDI à environ 132 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 800 € par jour rapportent vraiment, statut par statut
@@ -2339,6 +2833,18 @@ Pour maximiser le net : EI au réel (6 781 €/mois après impôt dans ce scéna
 URL : https://freelance-ou-cdi.fr/tjm-900/
 
 **En bref.** À 900 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 178 200 € par an et conservez au mieux 7 527 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 150 500 € brut par an. Taux 2026, calculs validés URSSAF.
+
+## TJM 900 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 7 527 € | 90 320 € | 51 % |
+| EURL | 7 527 € | 90 320 € | 51 % |
+| SASU | 6 386 € | 76 632 € | 43 % |
+| Portage salarial | 5 861 € | 70 328 € | 39 % |
+
+*Pour 178 200 € de chiffre d'affaires annuel (900 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 À 900 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 178 200 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 7 527 €/mois — l'équivalent d'un CDI à environ 150 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
@@ -2386,6 +2892,18 @@ URL : https://freelance-ou-cdi.fr/tjm-1000/
 
 **En bref.** À 1000 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 198 000 € par an et conservez au mieux 8 272 € net par mois après cotisations et impôt (EI au réel) — l'équivalent d'un CDI à environ 168 500 € brut par an. Taux 2026, calculs validés URSSAF.
 
+## TJM 1000 € : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 8 272 € | 99 267 € | 50 % |
+| EURL | 8 272 € | 99 267 € | 50 % |
+| SASU | 6 955 € | 83 462 € | 42 % |
+| Portage salarial | 6 395 € | 76 742 € | 39 % |
+
+*Pour 198 000 € de chiffre d'affaires annuel (1000 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 À 1000 € par jour, 18 jours facturés par mois sur 11 mois, vous facturez 198 000 € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (EI au réel) laisse 8 272 €/mois — l'équivalent d'un CDI à environ 168 500 € brut par an. Le détail statut par statut, calculé au taux 2026.
 
 ## Ce que 1000 € par jour rapportent vraiment, statut par statut
@@ -2431,6 +2949,17 @@ Pour maximiser le net : EI au réel (8 272 €/mois après impôt dans ce scéna
 URL : https://freelance-ou-cdi.fr/tjm-pour-3000-euros-net/
 
 **En bref.** Pour toucher 3 000 € net par mois après cotisations et impôt, il faut facturer environ 300 € par jour en micro-entreprise, à 18 jours facturés par mois sur 11 mois, soit 59 400 € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ 51 000 € brut. Taux 2026, calculs validés URSSAF.
+
+## 3 000 € net par mois : le TJM à viser par statut
+
+| Statut | TJM à viser | CA annuel correspondant |
+|---|---:|---:|
+| Micro-entreprise | 300 €/jour | 59 400 € |
+| EI au réel | 330 €/jour | 65 340 € |
+| SASU | 385 €/jour | 76 230 € |
+| Portage salarial | 425 €/jour | 84 150 € |
+
+*TJM minimal (arrondi à 5 €) pour toucher 3 000 € net par mois après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, 3 000 € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.*
 
 Pour toucher 3 000 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par micro-entreprise : il faut facturer environ 300 €/jour, à 18 jours par mois sur 11 mois, soit 59 400 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 51 000 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
 
@@ -2478,6 +3007,17 @@ URL : https://freelance-ou-cdi.fr/tjm-pour-3500-euros-net/
 
 **En bref.** Pour toucher 3 500 € net par mois après cotisations et impôt, il faut facturer environ 355 € par jour en micro-entreprise, à 18 jours facturés par mois sur 11 mois, soit 70 290 € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ 61 500 € brut. Taux 2026, calculs validés URSSAF.
 
+## 3 500 € net par mois : le TJM à viser par statut
+
+| Statut | TJM à viser | CA annuel correspondant |
+|---|---:|---:|
+| Micro-entreprise | 355 €/jour | 70 290 € |
+| EI au réel | 390 €/jour | 77 220 € |
+| SASU | 460 €/jour | 91 080 € |
+| Portage salarial | 510 €/jour | 100 980 € |
+
+*TJM minimal (arrondi à 5 €) pour toucher 3 500 € net par mois après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, 3 000 € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.*
+
 Pour toucher 3 500 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par micro-entreprise : il faut facturer environ 355 €/jour, à 18 jours par mois sur 11 mois, soit 70 290 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 61 500 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
 
 ## Le TJM à viser pour 3 500 €/mois net, statut par statut
@@ -2523,6 +3063,17 @@ Environ 61 500 € brut par an en CDI cadre : c'est le salaire qui laisse le mê
 URL : https://freelance-ou-cdi.fr/tjm-pour-4000-euros-net/
 
 **En bref.** Pour toucher 4 000 € net par mois après cotisations et impôt, il faut facturer environ 410 € par jour en micro-entreprise, à 18 jours facturés par mois sur 11 mois, soit 81 180 € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ 72 000 € brut. Taux 2026, calculs validés URSSAF.
+
+## 4 000 € net par mois : le TJM à viser par statut
+
+| Statut | TJM à viser | CA annuel correspondant |
+|---|---:|---:|
+| Micro-entreprise | 410 €/jour | 81 180 € |
+| EI au réel | 455 €/jour | 90 090 € |
+| SASU | 535 €/jour | 105 930 € |
+| Portage salarial | 590 €/jour | 116 820 € |
+
+*TJM minimal (arrondi à 5 €) pour toucher 4 000 € net par mois après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, 3 000 € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.*
 
 Pour toucher 4 000 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par micro-entreprise : il faut facturer environ 410 €/jour, à 18 jours par mois sur 11 mois, soit 81 180 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 72 000 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
 
@@ -2570,6 +3121,17 @@ URL : https://freelance-ou-cdi.fr/tjm-pour-4500-euros-net/
 
 **En bref.** Pour toucher 4 500 € net par mois après cotisations et impôt, il faut facturer environ 515 € par jour en EI au réel, à 18 jours facturés par mois sur 11 mois, soit 101 970 € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ 82 500 € brut. Taux 2026, calculs validés URSSAF.
 
+## 4 500 € net par mois : le TJM à viser par statut
+
+| Statut | TJM à viser | CA annuel correspondant |
+|---|---:|---:|
+| Micro-entreprise | Inaccessible (plafond) | — |
+| EI au réel | 515 €/jour | 101 970 € |
+| SASU | 610 €/jour | 120 780 € |
+| Portage salarial | 675 €/jour | 133 650 € |
+
+*TJM minimal (arrondi à 5 €) pour toucher 4 500 € net par mois après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, 3 000 € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.*
+
 Pour toucher 4 500 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par EI au réel : il faut facturer environ 515 €/jour, à 18 jours par mois sur 11 mois, soit 101 970 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 82 500 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
 
 ## Le TJM à viser pour 4 500 €/mois net, statut par statut
@@ -2615,6 +3177,17 @@ Environ 82 500 € brut par an en CDI cadre : c'est le salaire qui laisse le mê
 URL : https://freelance-ou-cdi.fr/tjm-pour-5000-euros-net/
 
 **En bref.** Pour toucher 5 000 € net par mois après cotisations et impôt, il faut facturer environ 570 € par jour en EI au réel, à 18 jours facturés par mois sur 11 mois, soit 112 860 € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ 92 500 € brut. Taux 2026, calculs validés URSSAF.
+
+## 5 000 € net par mois : le TJM à viser par statut
+
+| Statut | TJM à viser | CA annuel correspondant |
+|---|---:|---:|
+| Micro-entreprise | Inaccessible (plafond) | — |
+| EI au réel | 570 €/jour | 112 860 € |
+| SASU | 685 €/jour | 135 630 € |
+| Portage salarial | 760 €/jour | 150 480 € |
+
+*TJM minimal (arrondi à 5 €) pour toucher 5 000 € net par mois après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, 3 000 € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.*
 
 Pour toucher 5 000 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par EI au réel : il faut facturer environ 570 €/jour, à 18 jours par mois sur 11 mois, soit 112 860 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 92 500 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
 
@@ -2662,6 +3235,17 @@ URL : https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/
 
 **En bref.** Pour toucher 6 000 € net par mois après cotisations et impôt, il faut facturer environ 700 € par jour en EI au réel, à 18 jours facturés par mois sur 11 mois, soit 138 600 € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ 113 500 € brut. Taux 2026, calculs validés URSSAF.
 
+## 6 000 € net par mois : le TJM à viser par statut
+
+| Statut | TJM à viser | CA annuel correspondant |
+|---|---:|---:|
+| Micro-entreprise | Inaccessible (plafond) | — |
+| EI au réel | 700 €/jour | 138 600 € |
+| SASU | 835 €/jour | 165 330 € |
+| Portage salarial | 925 €/jour | 183 150 € |
+
+*TJM minimal (arrondi à 5 €) pour toucher 6 000 € net par mois après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, 3 000 € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.*
+
 Pour toucher 6 000 € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par EI au réel : il faut facturer environ 700 €/jour, à 18 jours par mois sur 11 mois, soit 138 600 € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ 113 500 € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.
 
 ## Le TJM à viser pour 6 000 €/mois net, statut par statut
@@ -2707,6 +3291,18 @@ Environ 113 500 € brut par an en CDI cadre : c'est le salaire qui laisse le m�
 URL : https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/
 
 **En bref.** En 2026, un développeur web full-stack freelance facture en médiane environ 535 € par jour en France (fourchette 350 à 900 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 4 708 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 86 500 € brut.
+
+## Développeur web freelance à 535 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 4 708 € | 56 502 € | 53 % |
+| EURL | 4 708 € | 56 502 € | 53 % |
+| SASU | 4 025 € | 48 304 € | 46 % |
+| Portage salarial | 3 677 € | 44 128 € | 42 % |
+
+*Pour 105 930 € de chiffre d'affaires annuel (535 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 Le TJM médian observé pour un développeur web full-stack en France tourne autour de 535 €/jour en 2026, dans une fourchette d'environ 350 à 900 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 4 708 €/mois net après impôt — l'équivalent d'un CDI à environ 86 500 € brut. C'est le métier le plus demandé de la tech freelance : les profils full-stack maîtrisant les frameworks récents (React, Node, TypeScript) tirent les tarifs vers le haut, et les seniors dépassent souvent 700 €/jour.
 
@@ -2754,6 +3350,18 @@ URL : https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/
 
 **En bref.** En 2026, un ingénieur DevOps / cloud freelance facture en médiane environ 600 € par jour en France (fourchette 500 à 800 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 5 288 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 98 500 € brut.
 
+## DevOps / cloud freelance à 600 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 288 € | 63 453 € | 53 % |
+| EURL | 5 288 € | 63 453 € | 53 % |
+| SASU | 4 457 € | 53 481 € | 45 % |
+| Portage salarial | 4 066 € | 48 794 € | 41 % |
+
+*Pour 118 800 € de chiffre d'affaires annuel (600 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Le TJM médian observé pour un ingénieur DevOps / cloud en France tourne autour de 600 €/jour en 2026, dans une fourchette d'environ 500 à 800 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 288 €/mois net après impôt — l'équivalent d'un CDI à environ 98 500 € brut. La rareté des compétences cloud (AWS, Kubernetes, Terraform) maintient les tarifs élevés ; les architectes cloud expérimentés dépassent régulièrement 750 €/jour.
 
 ## Le TJM d'un DevOps / cloud en 2026
@@ -2799,6 +3407,18 @@ Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors 
 URL : https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/
 
 **En bref.** En 2026, un data scientist freelance facture en médiane environ 645 € par jour en France (fourchette 500 à 850 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 5 625 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 105 500 € brut.
+
+## Data scientist freelance à 645 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 625 € | 67 505 € | 53 % |
+| EURL | 5 625 € | 67 505 € | 53 % |
+| SASU | 4 755 € | 57 066 € | 45 % |
+| Portage salarial | 4 335 € | 52 024 € | 41 % |
+
+*Pour 127 710 € de chiffre d'affaires annuel (645 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 Le TJM médian observé pour un data scientist en France tourne autour de 645 €/jour en 2026, dans une fourchette d'environ 500 à 850 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 625 €/mois net après impôt — l'équivalent d'un CDI à environ 105 500 € brut. L'un des TJM médians les plus hauts de la tech. La maîtrise de la mise en production (MLOps) et des sujets d'intelligence artificielle pousse les seniors au-delà de 800 €/jour.
 
@@ -2846,6 +3466,18 @@ URL : https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/
 
 **En bref.** En 2026, un data engineer / analyste data freelance facture en médiane environ 600 € par jour en France (fourchette 450 à 800 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 5 288 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 98 500 € brut.
 
+## Data engineer freelance à 600 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 288 € | 63 453 € | 53 % |
+| EURL | 5 288 € | 63 453 € | 53 % |
+| SASU | 4 457 € | 53 481 € | 45 % |
+| Portage salarial | 4 066 € | 48 794 € | 41 % |
+
+*Pour 118 800 € de chiffre d'affaires annuel (600 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Le TJM médian observé pour un data engineer / analyste data en France tourne autour de 600 €/jour en 2026, dans une fourchette d'environ 450 à 800 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 288 €/mois net après impôt — l'équivalent d'un CDI à environ 98 500 € brut. Data engineering et analytics (BigQuery, Snowflake, dbt) : demande forte et tarifs proches des data scientists. Hors Île-de-France, comptez environ 9 % de moins sur ces profils.
 
 ## Le TJM d'un data engineer en 2026
@@ -2891,6 +3523,18 @@ Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors 
 URL : https://freelance-ou-cdi.fr/tjm-freelance-product-manager/
 
 **En bref.** En 2026, un product manager / chef de projet digital freelance facture en médiane environ 595 € par jour en France (fourchette 450 à 800 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 5 243 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 97 500 € brut.
+
+## Product manager freelance à 595 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 243 € | 62 918 € | 53 % |
+| EURL | 5 243 € | 62 918 € | 53 % |
+| SASU | 4 424 € | 53 083 € | 45 % |
+| Portage salarial | 4 036 € | 48 435 € | 41 % |
+
+*Pour 117 810 € de chiffre d'affaires annuel (595 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 Le TJM médian observé pour un product manager / chef de projet digital en France tourne autour de 595 €/jour en 2026, dans une fourchette d'environ 450 à 800 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 243 €/mois net après impôt — l'équivalent d'un CDI à environ 97 500 € brut. Le TJM médian d'un product manager ou chef de projet digital est solide, mais très dépendant du secteur client : une scale-up bien financée paie souvent mieux qu'un grand compte traditionnel.
 
@@ -2938,6 +3582,18 @@ URL : https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/
 
 **En bref.** En 2026, un consultant en stratégie / management de transition freelance facture en médiane environ 650 € par jour en France (fourchette 450 à 950 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 5 663 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 106 500 € brut.
 
+## Consultant stratégie freelance à 650 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 663 € | 67 952 € | 53 % |
+| EURL | 5 663 € | 67 952 € | 53 % |
+| SASU | 4 789 € | 57 464 € | 45 % |
+| Portage salarial | 4 365 € | 52 383 € | 41 % |
+
+*Pour 128 700 € de chiffre d'affaires annuel (650 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Le TJM médian observé pour un consultant en stratégie / management de transition en France tourne autour de 650 €/jour en 2026, dans une fourchette d'environ 450 à 950 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 663 €/mois net après impôt — l'équivalent d'un CDI à environ 106 500 € brut. La fourchette est large : un consultant junior tourne autour de 450 €/jour, tandis que les managers de transition atteignent couramment 1 000 à 1 200 €/jour.
 
 ## Le TJM d'un consultant stratégie en 2026
@@ -2983,6 +3639,18 @@ Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors 
 URL : https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/
 
 **En bref.** En 2026, un consultant marketing digital freelance facture en médiane environ 590 € par jour en France (fourchette 350 à 800 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 5 199 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 97 000 € brut.
+
+## Consultant marketing freelance à 590 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 199 € | 62 384 € | 53 % |
+| EURL | 5 199 € | 62 384 € | 53 % |
+| SASU | 4 390 € | 52 685 € | 45 % |
+| Portage salarial | 4 006 € | 48 076 € | 41 % |
+
+*Pour 116 820 € de chiffre d'affaires annuel (590 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 Le TJM médian observé pour un consultant marketing digital en France tourne autour de 590 €/jour en 2026, dans une fourchette d'environ 350 à 800 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 199 €/mois net après impôt — l'équivalent d'un CDI à environ 97 000 € brut. Le baromètre Malt situe le TJM médian d'un consultant marketing confirmé autour de 590 €/jour, avec des juniors vers 300 € et des seniors au-delà de 800 €.
 
@@ -3030,6 +3698,18 @@ URL : https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/
 
 **En bref.** En 2026, un consultant SEO / acquisition freelance facture en médiane environ 450 € par jour en France (fourchette 350 à 650 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 3 979 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 71 500 € brut.
 
+## Consultant SEO freelance à 450 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 3 979 € | 47 754 € | 54 % |
+| EURL | 3 979 € | 47 754 € | 54 % |
+| SASU | 3 461 € | 41 533 € | 47 % |
+| Portage salarial | 3 169 € | 38 027 € | 43 % |
+
+*Pour 89 100 € de chiffre d'affaires annuel (450 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Le TJM médian observé pour un consultant SEO / acquisition en France tourne autour de 450 €/jour en 2026, dans une fourchette d'environ 350 à 650 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 3 979 €/mois net après impôt — l'équivalent d'un CDI à environ 71 500 € brut. Les tarifs SEO sont plus accessibles que le développement, mais les experts en SEO technique ou en data SEO montent au-delà de 600 €/jour.
 
 ## Le TJM d'un consultant SEO en 2026
@@ -3076,6 +3756,18 @@ URL : https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/
 
 **En bref.** En 2026, un designer UX/UI freelance facture en médiane environ 450 € par jour en France (fourchette 300 à 650 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 3 979 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 71 500 € brut.
 
+## Designer UX/UI freelance à 450 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 3 979 € | 47 754 € | 54 % |
+| EURL | 3 979 € | 47 754 € | 54 % |
+| SASU | 3 461 € | 41 533 € | 47 % |
+| Portage salarial | 3 169 € | 38 027 € | 43 % |
+
+*Pour 89 100 € de chiffre d'affaires annuel (450 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
+
 Le TJM médian observé pour un designer UX/UI en France tourne autour de 450 €/jour en 2026, dans une fourchette d'environ 300 à 650 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 3 979 €/mois net après impôt — l'équivalent d'un CDI à environ 71 500 € brut. En design produit, les juniors démarrent autour de 300 €/jour ; les seniors dotés d'un vrai portfolio produit et de compétences en design system dépassent 550 €.
 
 ## Le TJM d'un designer UX/UI en 2026
@@ -3121,6 +3813,18 @@ Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors 
 URL : https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/
 
 **En bref.** En 2026, un expert en cybersécurité freelance facture en médiane environ 650 € par jour en France (fourchette 520 à 900 € selon séniorité et spécialité, d'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.fr)). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux 5 663 € net par mois après cotisations et impôt (EI au réel), soit l'équivalent d'un CDI à environ 106 500 € brut.
+
+## Expert cybersécurité freelance à 650 €/jour : le net de chaque statut
+
+| Statut | Net mensuel | Net annuel | Part du CA conservée |
+|---|---:|---:|---:|
+| Micro-entreprise | Plafond dépassé | — | — |
+| EI au réel | 5 663 € | 67 952 € | 53 % |
+| EURL | 5 663 € | 67 952 € | 53 % |
+| SASU | 4 789 € | 57 464 € | 45 % |
+| Portage salarial | 4 365 € | 52 383 € | 41 % |
+
+*Pour 128 700 € de chiffre d'affaires annuel (650 € × 18 jours × 11 mois). Net après cotisations sociales ET impôt sur le revenu. Hypothèses : 18 jours facturés par mois sur 11 mois, 3 000 € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.*
 
 Le TJM médian observé pour un expert en cybersécurité en France tourne autour de 650 €/jour en 2026, dans une fourchette d'environ 520 à 900 € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (EI au réel) laisse 5 663 €/mois net après impôt — l'équivalent d'un CDI à environ 106 500 € brut. La pénurie de profils place la cybersécurité parmi les TJM les plus hauts ; le pentest et la gouvernance sécurité se situent au sommet de la fourchette.
 

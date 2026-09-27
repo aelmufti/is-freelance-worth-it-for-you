@@ -22,6 +22,8 @@ import {
   tjmEquivalentCdi,
 } from "./engine";
 import type { FaqItem } from "../data/faq";
+import type { KeyTable } from "./keyTables";
+import { tjmGrid } from "./keyTables";
 import { FAQ } from "../data/faq";
 import { TJM_HUB, TJM_PAGES } from "../data/tjm";
 import { OBJECTIF_PAGES } from "../data/objectifNet";
@@ -43,7 +45,7 @@ export const CONTENT_UPDATED = "2026-07-03";
 // structure ou de maillage change le contenu sans que les barèmes bougent.
 // Alimente <lastmod> (sitemap) et dateModified (JSON-LD) — les deux signaux de
 // fraîcheur lus par les moteurs. Une page peut la surcharger via `updated`.
-export const SITE_UPDATED = "2026-08-18";
+export const SITE_UPDATED = "2026-09-27";
 
 // Date de première publication du site — `datePublished` du JSON-LD, qui ne
 // doit PAS être égale à dateModified (sinon la page paraît jamais révisée).
@@ -90,6 +92,9 @@ export interface StatutPage {
   updated?: string;
   // Première publication de la page (ISO). Par défaut SITE_PUBLISHED.
   published?: string;
+  // Tableau « chiffres clés » affiché sous « En bref » (cf. lib/keyTables.ts).
+  // Une FONCTION, évaluée uniquement pour la page affichée.
+  keyTable?: () => KeyTable;
 }
 
 // ----------------------------------------------------- REGROUPEMENT FOOTER
@@ -782,6 +787,31 @@ export const PAGES: StatutPage[] = [
   ...OBJECTIF_PAGES,
   ...METIER_PAGES,
 ];
+
+// Parent LOGIQUE d'une page, pour le fil d'Ariane (visible et JSON-LD). Les
+// URL de la longue traîne sont plates (/tjm-500/), mais leur place dans le site
+// ne l'est pas : un palier de TJM dépend du hub de conversion, une fiche métier
+// de l'observatoire. Exposer cette hiérarchie donne aux moteurs la structure
+// thématique du site, et à chaque hub un lien entrant depuis toutes ses pages.
+const PARENT_RULES: Array<[RegExp, string]> = [
+  [/^guides\//, "guides"],
+  [/^tjm-(\d+|pour-.+)$/, "tjm-en-salaire"],
+  [/^tjm-freelance-/, "observatoire-tjm-2026"],
+];
+
+export function parentOf(page: StatutPage): StatutPage | undefined {
+  const rule = PARENT_RULES.find(([re]) => re.test(page.slug));
+  return rule ? PAGES.find((p) => p.slug === rule[1]) : undefined;
+}
+
+// Pages statut et comparatifs : grille « net selon le TJM » sur les statuts
+// traités. Les pages TJM, métier et objectif fournissent leur propre tableau.
+for (const page of PAGES) {
+  const indep = (page.statuts ?? []).filter((s) => s !== "cdi");
+  if (!page.keyTable && indep.length > 0) {
+    page.keyTable = () => tjmGrid(indep);
+  }
+}
 
 export const ROUTE_SLUGS: string[] = PAGES.filter((p) => p.slug).map(
   (p) => p.slug,

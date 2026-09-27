@@ -19,6 +19,7 @@ import {
 } from "../lib/engine";
 import type { FiscalParams, SimulationInput } from "../lib/params";
 import type { StatutPage } from "../lib/pages";
+import { LABEL as KEY_LABEL } from "../lib/keyTables";
 import { TJMS } from "./tjm";
 
 const p = DEFAULT_PARAMS;
@@ -121,6 +122,17 @@ function makeObjectifPage(f: ObjFigures, prev?: number, next?: number): StatutPa
     tldr: `Pour toucher ${fmt(f.net)} € net par mois après cotisations et impôt, il faut facturer environ ${fmt(f.bestTjm)} € par jour en ${f.bestLabel}, à 18 jours facturés par mois sur 11 mois, soit ${fmt(f.bestCa)} € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. Taux 2026, calculs validés URSSAF.`,
     intro: `Pour toucher ${fmt(f.net)} € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par ${f.bestLabel} : il faut facturer environ ${fmt(f.bestTjm)} €/jour, à 18 jours par mois sur 11 mois, soit ${fmt(f.bestCa)} € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.`,
     inputOverrides: { tjm: f.bestTjm },
+    keyTable: () => ({
+      title: `${fmt(f.net)} € net par mois : le TJM à viser par statut`,
+      caption: `TJM minimal (arrondi à 5 €) pour toucher ${fmt(f.net)} € net par mois après cotisations sociales ET impôt sur le revenu, à ${ref.joursParMois} jours facturés par mois sur ${ref.moisFactures} mois, ${fmt(ref.fraisPro)} € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.`,
+      head: ["Statut", "TJM à viser", "CA annuel correspondant"],
+      rows: CALCS.map(([id]) => {
+        const t = f.tjm[id];
+        return t == null
+          ? [KEY_LABEL[id], "Inaccessible (plafond)", "—"]
+          : [KEY_LABEL[id], `${fmt(t)} €/jour`, `${fmt(caAnnuel({ ...ref, tjm: t }))} €`];
+      }),
+    }),
     sections: [
       {
         heading: `Le TJM à viser pour ${fmt(f.net)} €/mois net, statut par statut`,

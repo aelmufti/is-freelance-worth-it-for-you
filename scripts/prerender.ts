@@ -20,6 +20,7 @@ import {
   pageUrl,
   pagePublished,
   pageUpdated,
+  parentOf,
   ogImagePath,
   SITE,
   type StatutPage,
@@ -73,15 +74,14 @@ function rewriteHead(html: string, page: StatutPage): string {
     if (!re.test(h)) throw new Error(`rewriteHead: motif introuvable pour ${page.slug} → ${re}`);
     h = h.replace(re, val);
   }
-  // Le fil d'Ariane doit refléter l'URL : /guides/<x>/ passe par /guides/.
-  // Un fil à deux niveaux sur une URL à deux segments produit un fil d'Ariane
-  // faux dans les SERP (et un « parent » manquant pour le crawl).
+  // Fil d'Ariane hiérarchique : même parent que le fil visible (parentOf),
+  // pour que Google affiche le chemin thématique dans les SERP (Accueil ›
+  // Convertir un TJM en salaire › TJM 500 €) et que les deux concordent.
   const trail: Array<{ name: string; item: string }> = [
     { name: "Accueil", item: `${SITE}/` },
   ];
-  if (page.slug.startsWith("guides/")) {
-    trail.push({ name: "Guides", item: `${SITE}/guides/` });
-  }
+  const parent = parentOf(page);
+  if (parent) trail.push({ name: parent.breadcrumb!, item: pageUrl(parent) });
   trail.push({ name: page.breadcrumb!, item: url });
 
   const jsonLd: string[] = [

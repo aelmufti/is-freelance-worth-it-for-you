@@ -8,7 +8,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PAGES } from "../src/lib/pages";
+import { PAGES, pageUrl } from "../src/lib/pages";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dir, "..");
@@ -82,6 +82,14 @@ for (const page of PAGES) {
   if (fontPreloads) {
     out = out.replace("</head>", `  ${fontPreloads}\n  </head>`);
   }
+  // Jumeau Markdown de la page (généré par build-markdown.ts) : signalé aux
+  // agents IA qui suivent les <link rel="alternate">. Purgé puis réinjecté,
+  // comme les préchargements, pour rester idempotent.
+  out = out.replace(/\s*<link rel="alternate" type="text\/markdown"[^>]*>/g, "");
+  out = out.replace(
+    "</head>",
+    `  <link rel="alternate" type="text/markdown" href="${pageUrl(page)}index.html.md" title="Version Markdown">\n  </head>`,
+  );
   const dest = distPath(page.slug);
   mkdirSync(dirname(dest), { recursive: true });
   writeFileSync(dest, out);
