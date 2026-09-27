@@ -73,6 +73,9 @@ for (const page of PAGES) {
     /<link[^>]+href="\/assets\/index-[^"]+\.css"[^>]*>/g,
     newCssLink,
   );
+  // Script de mesure d'audience figé par une ancienne capture : retiré à
+  // chaque build, sinon il se charge sans tenir compte d'un refus.
+  out = out.replace(/\s*<script[^>]*src="\/_vercel\/insights\/[^"]*"[^>]*><\/script>/g, "");
   // Purge les préchargements du build précédent (hashes périmés = requêtes
   // gaspillées), puis réinjecte ceux du build courant.
   out = out.replace(
@@ -86,10 +89,12 @@ for (const page of PAGES) {
   // agents IA qui suivent les <link rel="alternate">. Purgé puis réinjecté,
   // comme les préchargements, pour rester idempotent.
   out = out.replace(/\s*<link rel="alternate" type="text\/markdown"[^>]*>/g, "");
-  out = out.replace(
-    "</head>",
-    `  <link rel="alternate" type="text/markdown" href="${pageUrl(page)}index.html.md" title="Version Markdown">\n  </head>`,
-  );
+  if (!page.noindex) {
+    out = out.replace(
+      "</head>",
+      `  <link rel="alternate" type="text/markdown" href="${pageUrl(page)}index.html.md" title="Version Markdown">\n  </head>`,
+    );
+  }
   const dest = distPath(page.slug);
   mkdirSync(dirname(dest), { recursive: true });
   writeFileSync(dest, out);

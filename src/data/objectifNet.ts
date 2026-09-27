@@ -117,14 +117,14 @@ function makeObjectifPage(f: ObjFigures, prev?: number, next?: number): StatutPa
     breadcrumb: `TJM pour ${fmt(f.net)} € net`,
     hideFromFooter: true,
     metaTitle: `Quel TJM pour ${fmt(f.net)} € net par mois en 2026 ?`,
-    metaDescription: `Pour ${fmt(f.net)} € net/mois : visez ~${fmt(f.bestTjm)} €/jour en ${f.bestLabel} (${fmt(f.bestCa)} € de CA/an), soit un CDI à ${fmt(f.brutEquivalent)} € brut. Validé URSSAF.`,
+    metaDescription: `Pour ${fmt(f.net)} € net/mois : visez ~${fmt(f.bestTjm)} €/jour en ${f.bestLabel} (${fmt(f.bestCa)} € de CA/an), soit un CDI à ${fmt(f.brutEquivalent)} € brut. Moteur open source.`,
     h1: `Quel TJM pour ${fmt(f.net)} € net par mois en 2026 ?`,
-    tldr: `Pour toucher ${fmt(f.net)} € net par mois après cotisations et impôt, il faut facturer environ ${fmt(f.bestTjm)} € par jour en ${f.bestLabel}, à 18 jours facturés par mois sur 11 mois, soit ${fmt(f.bestCa)} € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. Taux 2026, calculs validés URSSAF.`,
+    tldr: `Pour toucher ${fmt(f.net)} € net par mois après cotisations et impôt, il faut facturer environ ${fmt(f.bestTjm)} € par jour en ${f.bestLabel}, à 18 jours facturés par mois sur 11 mois, soit ${fmt(f.bestCa)} € de chiffre d'affaires annuel. C'est l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. Taux 2026, moteur de calcul open source.`,
     intro: `Pour toucher ${fmt(f.net)} € net par mois après cotisations ET impôt sur le revenu, le chemin le plus court passe par ${f.bestLabel} : il faut facturer environ ${fmt(f.bestTjm)} €/jour, à 18 jours par mois sur 11 mois, soit ${fmt(f.bestCa)} € de chiffre d'affaires dans l'année. C'est l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. Voici le TJM à viser statut par statut, calculé au taux 2026.`,
     inputOverrides: { tjm: f.bestTjm },
     keyTable: () => ({
       title: `${fmt(f.net)} € net par mois : le TJM à viser par statut`,
-      caption: `TJM minimal (arrondi à 5 €) pour toucher ${fmt(f.net)} € net par mois après cotisations sociales ET impôt sur le revenu, à ${ref.joursParMois} jours facturés par mois sur ${ref.moisFactures} mois, ${fmt(ref.fraisPro)} € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.`,
+      caption: `TJM minimal (arrondi à 5 €) pour toucher ${fmt(f.net)} € net par mois après cotisations sociales ET impôt sur le revenu, à ${ref.joursParMois} jours facturés par mois sur ${ref.moisFactures} mois, ${fmt(ref.fraisPro)} € de frais pro par an, célibataire sans enfant. Taux 2026, moteur de calcul open source.`,
       head: ["Statut", "TJM à viser", "CA annuel correspondant"],
       rows: CALCS.map(([id]) => {
         const t = f.tjm[id];
@@ -137,7 +137,7 @@ function makeObjectifPage(f: ObjFigures, prev?: number, next?: number): StatutPa
       {
         heading: `Le TJM à viser pour ${fmt(f.net)} €/mois net, statut par statut`,
         paragraphs: [
-          `Le même objectif de net demande un TJM très différent selon le statut, parce que chacun prélève des cotisations plus ou moins lourdes. Pour ${fmt(f.net)} € net par mois : ${microTxt(f)}, ${eiTxt}, ${sasuTxt} et ${portageTxt}. Ces seuils sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.`,
+          `Le même objectif de net demande un TJM très différent selon le statut, parce que chacun prélève des cotisations plus ou moins lourdes. Pour ${fmt(f.net)} € net par mois : ${microTxt(f)}, ${eiTxt}, ${sasuTxt} et ${portageTxt}. Ces seuils sortent du même moteur de calcul que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.`,
           f.tjm.micro == null
             ? `À ce niveau de revenu, la micro-entreprise est hors jeu : atteindre ${fmt(f.net)} € net supposerait un chiffre d'affaires supérieur à son plafond de ${fmt(p.microPlafondService)} €. Le choix se resserre sur l'EI au réel et l'EURL (cotisations TNS allégées, net maximal), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, TJM le plus élevé).`
             : `L'ordre n'est pas un hasard : la micro et l'EI, aux cotisations légères, atteignent l'objectif avec le TJM le plus bas ; la SASU et surtout le portage, qui financent une protection sociale complète, exigent de facturer sensiblement plus cher pour le même net dans votre poche.`,

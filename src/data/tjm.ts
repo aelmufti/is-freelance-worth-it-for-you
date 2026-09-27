@@ -127,9 +127,9 @@ function makeTjmPage(f: TjmFigures, prev?: number, next?: number): StatutPage {
     breadcrumb: `TJM ${f.tjm} €`,
     hideFromFooter: true,
     metaTitle: `TJM ${f.tjm} € : quel salaire net en 2026 ?`,
-    metaDescription: `Un TJM de ${f.tjm} € = ${fmt(f.ca)} € facturés/an. Meilleur net : ${fmt(f.bestNetMensuel)} €/mois (${f.bestLabel}), soit un CDI à ~${fmt(f.brutEquivalent)} € brut. Validé URSSAF.`,
+    metaDescription: `Un TJM de ${f.tjm} € = ${fmt(f.ca)} € facturés/an. Meilleur net : ${fmt(f.bestNetMensuel)} €/mois (${f.bestLabel}), soit un CDI à ~${fmt(f.brutEquivalent)} € brut. Moteur open source.`,
     h1: `TJM ${f.tjm} € : ce que ça fait en salaire net (2026)`,
-    tldr: `À ${f.tjm} € par jour, 18 jours facturés par mois sur 11 mois, vous facturez ${fmt(f.ca)} € par an et conservez au mieux ${fmt(f.bestNetMensuel)} € net par mois après cotisations et impôt (${f.bestLabel}) — l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut par an. Taux 2026, calculs validés URSSAF.`,
+    tldr: `À ${f.tjm} € par jour, 18 jours facturés par mois sur 11 mois, vous facturez ${fmt(f.ca)} € par an et conservez au mieux ${fmt(f.bestNetMensuel)} € net par mois après cotisations et impôt (${f.bestLabel}) — l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut par an. Taux 2026, moteur de calcul open source.`,
     intro: `À ${f.tjm} € par jour, 18 jours facturés par mois sur 11 mois, vous facturez ${fmt(f.ca)} € dans l'année. Une fois cotisations et impôt déduits, le meilleur statut (${f.bestLabel}) laisse ${fmt(f.bestNetMensuel)} €/mois — l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut par an. Le détail statut par statut, calculé au taux 2026.`,
     inputOverrides: { tjm: f.tjm },
     keyTable: () => statutsAtTjm(f.tjm),
@@ -137,7 +137,7 @@ function makeTjmPage(f: TjmFigures, prev?: number, next?: number): StatutPage {
       {
         heading: `Ce que ${f.tjm} € par jour rapportent vraiment, statut par statut`,
         paragraphs: [
-          `Sur ${fmt(f.ca)} € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : ${microTxt}, ${fmt(f.netEi)} € en EI au réel, ${fmt(f.netSasu)} € en SASU (100 % salaire) et ${fmt(f.netPortage)} € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.`,
+          `Sur ${fmt(f.ca)} € facturés dans l'année, le net mensuel après cotisations sociales ET impôt sur le revenu s'établit à : ${microTxt}, ${fmt(f.netEi)} € en EI au réel, ${fmt(f.netSasu)} € en SASU (100 % salaire) et ${fmt(f.netPortage)} € en portage salarial. Ces montants sortent du même moteur de calcul que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.`,
           f.microEligible
             ? `L'ordre n'est pas un hasard : la micro et l'EI, aux cotisations légères, convertissent le mieux le chiffre d'affaires en net ; la SASU et le portage paient leur protection sociale complète par des charges bien plus lourdes. À ce niveau de TJM, l'écart entre le premier et le dernier statut représente plusieurs centaines d'euros par mois — d'où l'intérêt de comparer avant de choisir.`
             : `À ce niveau de facturation, la micro-entreprise n'est plus une option : son plafond de ${fmt(p.microPlafondService)} € de chiffre d'affaires en prestations est dépassé. Le choix se joue entre l'EI au réel (net maximal, protection légère), la SASU (arbitrage salaire/dividendes possible) et le portage (protection du salariat, net minimal).`,
@@ -194,13 +194,13 @@ export const TJM_HUB: StatutPage = {
   slug: "tjm-en-salaire",
   breadcrumb: "Convertir un TJM en salaire",
   metaTitle: "Convertir un TJM en salaire : le tableau 2026",
-  metaDescription: `Le tableau de conversion 2026, de 250 à 1 000 €/jour : chiffre d'affaires, net mensuel par statut et salaire CDI équivalent. Validé URSSAF.`,
+  metaDescription: `Le tableau de conversion 2026, de 250 à 1 000 €/jour : chiffre d'affaires, net mensuel par statut et salaire CDI équivalent. Moteur open source.`,
   h1: "Convertir un TJM en salaire : le tableau 2026",
   // LE tableau de conversion que la page promet dans son titre : jusqu'ici
   // rendu en 19 paragraphes, illisible pour un extrait optimisé.
   keyTable: () => ({
     title: "Le tableau de conversion TJM → salaire 2026",
-    caption: `Chiffre d'affaires à ${ref.joursParMois} jours facturés par mois sur ${ref.moisFactures} mois. Net après cotisations sociales ET impôt sur le revenu, dans le statut qui laisse le plus. Équivalent CDI : salaire brut cadre donnant le même net après impôt (arrondi à 500 €). ${fmt(ref.fraisPro)} € de frais pro par an, célibataire sans enfant. Taux 2026, validé URSSAF.`,
+    caption: `Chiffre d'affaires à ${ref.joursParMois} jours facturés par mois sur ${ref.moisFactures} mois. Net après cotisations sociales ET impôt sur le revenu, dans le statut qui laisse le plus. Équivalent CDI : salaire brut cadre donnant le même net après impôt (arrondi à 500 €). ${fmt(ref.fraisPro)} € de frais pro par an, célibataire sans enfant. Taux 2026, moteur de calcul open source.`,
     head: ["TJM", "CA annuel", "Meilleur net/mois", "Statut", "Équivalent CDI brut/an"],
     rows: FIGURES.map((f) => [
       `${f.tjm} €`,

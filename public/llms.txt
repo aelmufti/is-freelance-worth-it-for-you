@@ -1,6 +1,6 @@
 # freelance-ou-cdi.fr
 
-> Simulateur gratuit qui compare votre revenu net en freelance (micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial) à votre revenu net en CDI cadre. Taux 2026 (barème impôt sur le revenu, flat tax 31,4 %, réforme assiette unique TNS). Calculs validés contre le moteur officiel URSSAF (modele-social). Aucune donnée collectée.
+> Simulateur gratuit qui compare votre revenu net en freelance (micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial) à votre revenu net en CDI cadre. Taux 2026 (barème impôt sur le revenu, flat tax 31,4 %, réforme assiette unique TNS). Calculs comparés automatiquement au moteur open source modele-social, qui équipe mon-entreprise.urssaf.fr — site indépendant, sans affiliation ni approbation de l'URSSAF. Aucune donnée saisie n'est collectée : les calculs se font dans le navigateur.
 
 Le simulateur prend en entrée un TJM (taux journalier moyen), un nombre de jours facturés par mois, un foyer fiscal (situation, parts, revenu du conjoint) et un salaire CDI de comparaison. Il calcule pour chacun des six statuts : le chiffre d'affaires, les cotisations sociales, l'impôt sur le revenu (et l'IS et la flat tax le cas échéant), le revenu net mensuel et annuel, et le seuil de TJM à partir duquel ce statut bat le CDI fourni.
 
@@ -8,12 +8,12 @@ Taux et barèmes vérifiés le 2026-07-03. Contenu intégral : https://freelance
 
 ## Pages
 
-- [Simulateur freelance vs CDI 2026](https://freelance-ou-cdi.fr/) : Comparez votre net en micro-entreprise, EURL, SASU, portage et CDI. Cotisations, impôt, flat tax et seuil de TJM. Gratuit, validé URSSAF.
-- [Simulateur micro-entreprise](https://freelance-ou-cdi.fr/simulateur-micro-entreprise/) : Cotisations en % du CA, abattement, plafond de 83 600 € et net après impôt. À quel TJM la micro bat votre CDI. Validé URSSAF.
+- [Simulateur freelance vs CDI 2026](https://freelance-ou-cdi.fr/) : Comparez votre net en micro-entreprise, EURL, SASU, portage et CDI. Cotisations, impôt, flat tax et seuil de TJM. Gratuit et open source.
+- [Simulateur micro-entreprise](https://freelance-ou-cdi.fr/simulateur-micro-entreprise/) : Cotisations en % du CA, abattement, plafond de 83 600 € et net après impôt. À quel TJM la micro bat votre CDI. Moteur open source.
 - [Simulateur EI au réel](https://freelance-ou-cdi.fr/simulateur-ei/) : Cotisations TNS, frais réellement déductibles, aucun plafond de chiffre d'affaires et net après impôt. À quel TJM l'EI bat votre CDI.
 - [Simulateur EURL](https://freelance-ou-cdi.fr/simulateur-eurl/) : Arbitrage rémunération TNS / dividendes, règle des 10 % du capital, IS et net après impôt. À quel TJM l'EURL bat votre CDI.
-- [Simulateur SASU](https://freelance-ou-cdi.fr/simulateur-sasu/) : Arbitrage salaire / dividendes, flat tax 31,4 %, impôt sur les sociétés et net après impôt. À quel TJM la SASU bat votre CDI. Validé URSSAF.
-- [Simulateur portage salarial](https://freelance-ou-cdi.fr/simulateur-portage-salarial/) : Frais de gestion, cotisations du régime général, net après impôt et le TJM à partir duquel le portage bat votre CDI. Validé URSSAF.
+- [Simulateur SASU](https://freelance-ou-cdi.fr/simulateur-sasu/) : Arbitrage salaire / dividendes, flat tax 31,4 %, impôt sur les sociétés et net après impôt. À quel TJM la SASU bat votre CDI. Moteur open source.
+- [Simulateur portage salarial](https://freelance-ou-cdi.fr/simulateur-portage-salarial/) : Frais de gestion, cotisations du régime général, net après impôt et le TJM à partir duquel le portage bat votre CDI. Moteur open source.
 - [SASU ou EURL](https://freelance-ou-cdi.fr/sasu-ou-eurl/) : Cotisations TNS contre assimilé salarié, dividendes à la flat tax contre règle des 10 %, cumul ARE : le comparatif chiffré 2026.
 - [Micro-entreprise ou SASU](https://freelance-ou-cdi.fr/micro-entreprise-ou-sasu/) : Net conservé, plafond de 83 600 €, cumul ARE et dividendes : le comparatif chiffré des deux statuts préférés des freelances.
 - [Portage ou micro-entreprise](https://freelance-ou-cdi.fr/portage-salarial-ou-micro-entreprise/) : À TJM égal, la micro conserve environ 59 % du CA en net contre 43 % en portage — mais le portage ouvre le chômage.
@@ -35,46 +35,46 @@ Taux et barèmes vérifiés le 2026-07-03. Contenu intégral : https://freelance
 - [ACRE : première année](https://freelance-ou-cdi.fr/guides/acre-premiere-annee/) : Qui y a droit, quelle exonération de cotisations la première année, comment ça marche en micro-entreprise et en société.
 - [Franchise de TVA](https://freelance-ou-cdi.fr/guides/franchise-tva-freelance/) : Seuils (37 500 € en services), ce que ça change pour vos factures et vos clients, quand la TVA devient obligatoire.
 - [De salarié à freelance](https://freelance-ou-cdi.fr/guides/passer-de-salarie-a-freelance/) : Rupture conventionnelle et chômage, choix du statut, TJM, trésorerie : les étapes pour sécuriser sa transition.
-- [Observatoire du TJM 2026](https://freelance-ou-cdi.fr/observatoire-tjm-2026/) : Les TJM médians par métier (dev, data, DevOps, product, conseil, design, cyber) croisés avec le net réel après impôt, statut par statut. Validé URSSAF.
-- [Méthodologie](https://freelance-ou-cdi.fr/methodologie/) : Comment sont calculés les nets : cotisations par statut, barème 2026, flat tax, IS, hypothèses, limites et validation URSSAF.
+- [Observatoire du TJM 2026](https://freelance-ou-cdi.fr/observatoire-tjm-2026/) : Les TJM médians par métier (dev, data, DevOps, product, conseil, design, cyber) croisés avec le net réel après impôt, statut par statut. Moteur open source.
+- [Méthodologie](https://freelance-ou-cdi.fr/methodologie/) : Comment sont calculés les nets : cotisations par statut, barème 2026, flat tax, IS, hypothèses, limites et contrôle des calculs.
 - [À propos](https://freelance-ou-cdi.fr/a-propos/) : Un simulateur gratuit, open source et sans collecte de données, édité par Ali El Mufti. Indépendant de toute administration.
 - [Glossaire](https://freelance-ou-cdi.fr/glossaire/) : TJM, chiffre d'affaires, cotisations, TNS, assimilé salarié, flat tax, abattement, plafond, franchise de TVA, ARE, ACRE : les définitions.
-- [Convertir un TJM en salaire](https://freelance-ou-cdi.fr/tjm-en-salaire/) : Le tableau de conversion 2026, de 250 à 1 000 €/jour : chiffre d'affaires, net mensuel par statut et salaire CDI équivalent. Validé URSSAF.
-- [TJM 250 €](https://freelance-ou-cdi.fr/tjm-250/) : Un TJM de 250 € = 49 500 € facturés/an. Meilleur net : 2 569 €/mois (micro-entreprise), soit un CDI à ~42 000 € brut. Validé URSSAF.
-- [TJM 300 €](https://freelance-ou-cdi.fr/tjm-300/) : Un TJM de 300 € = 59 400 € facturés/an. Meilleur net : 3 017 €/mois (micro-entreprise), soit un CDI à ~51 500 € brut. Validé URSSAF.
-- [TJM 325 €](https://freelance-ou-cdi.fr/tjm-325/) : Un TJM de 325 € = 64 350 € facturés/an. Meilleur net : 3 242 €/mois (micro-entreprise), soit un CDI à ~56 000 € brut. Validé URSSAF.
-- [TJM 350 €](https://freelance-ou-cdi.fr/tjm-350/) : Un TJM de 350 € = 69 300 € facturés/an. Meilleur net : 3 466 €/mois (micro-entreprise), soit un CDI à ~61 000 € brut. Validé URSSAF.
-- [TJM 375 €](https://freelance-ou-cdi.fr/tjm-375/) : Un TJM de 375 € = 74 250 € facturés/an. Meilleur net : 3 691 €/mois (micro-entreprise), soit un CDI à ~65 500 € brut. Validé URSSAF.
-- [TJM 400 €](https://freelance-ou-cdi.fr/tjm-400/) : Un TJM de 400 € = 79 200 € facturés/an. Meilleur net : 3 915 €/mois (micro-entreprise), soit un CDI à ~70 000 € brut. Validé URSSAF.
-- [TJM 425 €](https://freelance-ou-cdi.fr/tjm-425/) : Un TJM de 425 € = 84 150 € facturés/an. Meilleur net : 3 783 €/mois (EI au réel), soit un CDI à ~67 500 € brut. Validé URSSAF.
-- [TJM 450 €](https://freelance-ou-cdi.fr/tjm-450/) : Un TJM de 450 € = 89 100 € facturés/an. Meilleur net : 3 979 €/mois (EI au réel), soit un CDI à ~71 500 € brut. Validé URSSAF.
-- [TJM 475 €](https://freelance-ou-cdi.fr/tjm-475/) : Un TJM de 475 € = 94 050 € facturés/an. Meilleur net : 4 174 €/mois (EI au réel), soit un CDI à ~75 500 € brut. Validé URSSAF.
-- [TJM 500 €](https://freelance-ou-cdi.fr/tjm-500/) : Un TJM de 500 € = 99 000 € facturés/an. Meilleur net : 4 397 €/mois (EI au réel), soit un CDI à ~80 000 € brut. Validé URSSAF.
-- [TJM 525 €](https://freelance-ou-cdi.fr/tjm-525/) : Un TJM de 525 € = 103 950 € facturés/an. Meilleur net : 4 619 €/mois (EI au réel), soit un CDI à ~85 000 € brut. Validé URSSAF.
-- [TJM 550 €](https://freelance-ou-cdi.fr/tjm-550/) : Un TJM de 550 € = 108 900 € facturés/an. Meilleur net : 4 842 €/mois (EI au réel), soit un CDI à ~89 500 € brut. Validé URSSAF.
-- [TJM 600 €](https://freelance-ou-cdi.fr/tjm-600/) : Un TJM de 600 € = 118 800 € facturés/an. Meilleur net : 5 288 €/mois (EI au réel), soit un CDI à ~98 500 € brut. Validé URSSAF.
-- [TJM 650 €](https://freelance-ou-cdi.fr/tjm-650/) : Un TJM de 650 € = 128 700 € facturés/an. Meilleur net : 5 663 €/mois (EI au réel), soit un CDI à ~106 500 € brut. Validé URSSAF.
-- [TJM 700 €](https://freelance-ou-cdi.fr/tjm-700/) : Un TJM de 700 € = 138 600 € facturés/an. Meilleur net : 6 035 €/mois (EI au réel), soit un CDI à ~114 500 € brut. Validé URSSAF.
-- [TJM 750 €](https://freelance-ou-cdi.fr/tjm-750/) : Un TJM de 750 € = 148 500 € facturés/an. Meilleur net : 6 408 €/mois (EI au réel), soit un CDI à ~123 500 € brut. Validé URSSAF.
-- [TJM 800 €](https://freelance-ou-cdi.fr/tjm-800/) : Un TJM de 800 € = 158 400 € facturés/an. Meilleur net : 6 781 €/mois (EI au réel), soit un CDI à ~132 500 € brut. Validé URSSAF.
-- [TJM 900 €](https://freelance-ou-cdi.fr/tjm-900/) : Un TJM de 900 € = 178 200 € facturés/an. Meilleur net : 7 527 €/mois (EI au réel), soit un CDI à ~150 500 € brut. Validé URSSAF.
-- [TJM 1000 €](https://freelance-ou-cdi.fr/tjm-1000/) : Un TJM de 1000 € = 198 000 € facturés/an. Meilleur net : 8 272 €/mois (EI au réel), soit un CDI à ~168 500 € brut. Validé URSSAF.
-- [TJM pour 3 000 € net](https://freelance-ou-cdi.fr/tjm-pour-3000-euros-net/) : Pour 3 000 € net/mois : visez ~300 €/jour en micro-entreprise (59 400 € de CA/an), soit un CDI à 51 000 € brut. Validé URSSAF.
-- [TJM pour 3 500 € net](https://freelance-ou-cdi.fr/tjm-pour-3500-euros-net/) : Pour 3 500 € net/mois : visez ~355 €/jour en micro-entreprise (70 290 € de CA/an), soit un CDI à 61 500 € brut. Validé URSSAF.
-- [TJM pour 4 000 € net](https://freelance-ou-cdi.fr/tjm-pour-4000-euros-net/) : Pour 4 000 € net/mois : visez ~410 €/jour en micro-entreprise (81 180 € de CA/an), soit un CDI à 72 000 € brut. Validé URSSAF.
-- [TJM pour 4 500 € net](https://freelance-ou-cdi.fr/tjm-pour-4500-euros-net/) : Pour 4 500 € net/mois : visez ~515 €/jour en EI au réel (101 970 € de CA/an), soit un CDI à 82 500 € brut. Validé URSSAF.
-- [TJM pour 5 000 € net](https://freelance-ou-cdi.fr/tjm-pour-5000-euros-net/) : Pour 5 000 € net/mois : visez ~570 €/jour en EI au réel (112 860 € de CA/an), soit un CDI à 92 500 € brut. Validé URSSAF.
-- [TJM pour 6 000 € net](https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/) : Pour 6 000 € net/mois : visez ~700 €/jour en EI au réel (138 600 € de CA/an), soit un CDI à 113 500 € brut. Validé URSSAF.
-- [TJM développeur web](https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/) : TJM développeur web freelance 2026 : médiane ~535 €/jour (350–900 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM DevOps / cloud](https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/) : TJM DevOps / cloud freelance 2026 : médiane ~600 €/jour (500–800 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM data scientist](https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/) : TJM data scientist freelance 2026 : médiane ~645 €/jour (500–850 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM data engineer](https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/) : TJM data engineer freelance 2026 : médiane ~600 €/jour (450–800 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM product manager](https://freelance-ou-cdi.fr/tjm-freelance-product-manager/) : TJM product manager freelance 2026 : médiane ~595 €/jour (450–800 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM consultant stratégie](https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/) : TJM consultant stratégie freelance 2026 : médiane ~650 €/jour (450–950 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM consultant marketing](https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/) : TJM consultant marketing freelance 2026 : médiane ~590 €/jour (350–800 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM consultant SEO](https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/) : TJM consultant SEO freelance 2026 : médiane ~450 €/jour (350–650 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM designer UX/UI](https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/) : TJM designer UX/UI freelance 2026 : médiane ~450 €/jour (300–650 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
-- [TJM expert cybersécurité](https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/) : TJM expert cybersécurité freelance 2026 : médiane ~650 €/jour (520–900 €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.
+- [Convertir un TJM en salaire](https://freelance-ou-cdi.fr/tjm-en-salaire/) : Le tableau de conversion 2026, de 250 à 1 000 €/jour : chiffre d'affaires, net mensuel par statut et salaire CDI équivalent. Moteur open source.
+- [TJM 250 €](https://freelance-ou-cdi.fr/tjm-250/) : Un TJM de 250 € = 49 500 € facturés/an. Meilleur net : 2 569 €/mois (micro-entreprise), soit un CDI à ~42 000 € brut. Moteur open source.
+- [TJM 300 €](https://freelance-ou-cdi.fr/tjm-300/) : Un TJM de 300 € = 59 400 € facturés/an. Meilleur net : 3 017 €/mois (micro-entreprise), soit un CDI à ~51 500 € brut. Moteur open source.
+- [TJM 325 €](https://freelance-ou-cdi.fr/tjm-325/) : Un TJM de 325 € = 64 350 € facturés/an. Meilleur net : 3 242 €/mois (micro-entreprise), soit un CDI à ~56 000 € brut. Moteur open source.
+- [TJM 350 €](https://freelance-ou-cdi.fr/tjm-350/) : Un TJM de 350 € = 69 300 € facturés/an. Meilleur net : 3 466 €/mois (micro-entreprise), soit un CDI à ~61 000 € brut. Moteur open source.
+- [TJM 375 €](https://freelance-ou-cdi.fr/tjm-375/) : Un TJM de 375 € = 74 250 € facturés/an. Meilleur net : 3 691 €/mois (micro-entreprise), soit un CDI à ~65 500 € brut. Moteur open source.
+- [TJM 400 €](https://freelance-ou-cdi.fr/tjm-400/) : Un TJM de 400 € = 79 200 € facturés/an. Meilleur net : 3 915 €/mois (micro-entreprise), soit un CDI à ~70 000 € brut. Moteur open source.
+- [TJM 425 €](https://freelance-ou-cdi.fr/tjm-425/) : Un TJM de 425 € = 84 150 € facturés/an. Meilleur net : 3 783 €/mois (EI au réel), soit un CDI à ~67 500 € brut. Moteur open source.
+- [TJM 450 €](https://freelance-ou-cdi.fr/tjm-450/) : Un TJM de 450 € = 89 100 € facturés/an. Meilleur net : 3 979 €/mois (EI au réel), soit un CDI à ~71 500 € brut. Moteur open source.
+- [TJM 475 €](https://freelance-ou-cdi.fr/tjm-475/) : Un TJM de 475 € = 94 050 € facturés/an. Meilleur net : 4 174 €/mois (EI au réel), soit un CDI à ~75 500 € brut. Moteur open source.
+- [TJM 500 €](https://freelance-ou-cdi.fr/tjm-500/) : Un TJM de 500 € = 99 000 € facturés/an. Meilleur net : 4 397 €/mois (EI au réel), soit un CDI à ~80 000 € brut. Moteur open source.
+- [TJM 525 €](https://freelance-ou-cdi.fr/tjm-525/) : Un TJM de 525 € = 103 950 € facturés/an. Meilleur net : 4 619 €/mois (EI au réel), soit un CDI à ~85 000 € brut. Moteur open source.
+- [TJM 550 €](https://freelance-ou-cdi.fr/tjm-550/) : Un TJM de 550 € = 108 900 € facturés/an. Meilleur net : 4 842 €/mois (EI au réel), soit un CDI à ~89 500 € brut. Moteur open source.
+- [TJM 600 €](https://freelance-ou-cdi.fr/tjm-600/) : Un TJM de 600 € = 118 800 € facturés/an. Meilleur net : 5 288 €/mois (EI au réel), soit un CDI à ~98 500 € brut. Moteur open source.
+- [TJM 650 €](https://freelance-ou-cdi.fr/tjm-650/) : Un TJM de 650 € = 128 700 € facturés/an. Meilleur net : 5 663 €/mois (EI au réel), soit un CDI à ~106 500 € brut. Moteur open source.
+- [TJM 700 €](https://freelance-ou-cdi.fr/tjm-700/) : Un TJM de 700 € = 138 600 € facturés/an. Meilleur net : 6 035 €/mois (EI au réel), soit un CDI à ~114 500 € brut. Moteur open source.
+- [TJM 750 €](https://freelance-ou-cdi.fr/tjm-750/) : Un TJM de 750 € = 148 500 € facturés/an. Meilleur net : 6 408 €/mois (EI au réel), soit un CDI à ~123 500 € brut. Moteur open source.
+- [TJM 800 €](https://freelance-ou-cdi.fr/tjm-800/) : Un TJM de 800 € = 158 400 € facturés/an. Meilleur net : 6 781 €/mois (EI au réel), soit un CDI à ~132 500 € brut. Moteur open source.
+- [TJM 900 €](https://freelance-ou-cdi.fr/tjm-900/) : Un TJM de 900 € = 178 200 € facturés/an. Meilleur net : 7 527 €/mois (EI au réel), soit un CDI à ~150 500 € brut. Moteur open source.
+- [TJM 1000 €](https://freelance-ou-cdi.fr/tjm-1000/) : Un TJM de 1000 € = 198 000 € facturés/an. Meilleur net : 8 272 €/mois (EI au réel), soit un CDI à ~168 500 € brut. Moteur open source.
+- [TJM pour 3 000 € net](https://freelance-ou-cdi.fr/tjm-pour-3000-euros-net/) : Pour 3 000 € net/mois : visez ~300 €/jour en micro-entreprise (59 400 € de CA/an), soit un CDI à 51 000 € brut. Moteur open source.
+- [TJM pour 3 500 € net](https://freelance-ou-cdi.fr/tjm-pour-3500-euros-net/) : Pour 3 500 € net/mois : visez ~355 €/jour en micro-entreprise (70 290 € de CA/an), soit un CDI à 61 500 € brut. Moteur open source.
+- [TJM pour 4 000 € net](https://freelance-ou-cdi.fr/tjm-pour-4000-euros-net/) : Pour 4 000 € net/mois : visez ~410 €/jour en micro-entreprise (81 180 € de CA/an), soit un CDI à 72 000 € brut. Moteur open source.
+- [TJM pour 4 500 € net](https://freelance-ou-cdi.fr/tjm-pour-4500-euros-net/) : Pour 4 500 € net/mois : visez ~515 €/jour en EI au réel (101 970 € de CA/an), soit un CDI à 82 500 € brut. Moteur open source.
+- [TJM pour 5 000 € net](https://freelance-ou-cdi.fr/tjm-pour-5000-euros-net/) : Pour 5 000 € net/mois : visez ~570 €/jour en EI au réel (112 860 € de CA/an), soit un CDI à 92 500 € brut. Moteur open source.
+- [TJM pour 6 000 € net](https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/) : Pour 6 000 € net/mois : visez ~700 €/jour en EI au réel (138 600 € de CA/an), soit un CDI à 113 500 € brut. Moteur open source.
+- [TJM développeur web](https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/) : TJM développeur web freelance 2026 : médiane ~535 €/jour (350–900 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM DevOps / cloud](https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/) : TJM DevOps / cloud freelance 2026 : médiane ~600 €/jour (500–800 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM data scientist](https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/) : TJM data scientist freelance 2026 : médiane ~645 €/jour (500–850 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM data engineer](https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/) : TJM data engineer freelance 2026 : médiane ~600 €/jour (450–800 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM product manager](https://freelance-ou-cdi.fr/tjm-freelance-product-manager/) : TJM product manager freelance 2026 : médiane ~595 €/jour (450–800 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM consultant stratégie](https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/) : TJM consultant stratégie freelance 2026 : médiane ~650 €/jour (450–950 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM consultant marketing](https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/) : TJM consultant marketing freelance 2026 : médiane ~590 €/jour (350–800 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM consultant SEO](https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/) : TJM consultant SEO freelance 2026 : médiane ~450 €/jour (350–650 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM designer UX/UI](https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/) : TJM designer UX/UI freelance 2026 : médiane ~450 €/jour (300–650 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM expert cybersécurité](https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/) : TJM expert cybersécurité freelance 2026 : médiane ~650 €/jour (520–900 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
 
 ## Données et hypothèses
 
@@ -95,4 +95,4 @@ Taux et barèmes vérifiés le 2026-07-03. Contenu intégral : https://freelance
 
 ## Citation et reproduction
 
-Le contenu peut être cité et reproduit librement. Mentionner la source (freelance-ou-cdi.fr) est apprécié mais non obligatoire. Le simulateur n'a aucune affiliation avec l'URSSAF ou toute autre administration.
+Le contenu est diffusé sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : il peut être cité, reproduit et adapté librement, y compris à des fins commerciales, à condition de citer la source — « freelance-ou-cdi.fr (Ali El Mufti) », avec un lien vers la page. Les TJM de marché issus de baromètres tiers (Malt, Blog du Modérateur, tjmetre.fr) restent la propriété de leurs auteurs. Le site est indépendant : il n'a aucune affiliation avec l'URSSAF ou une autre administration, et ses calculs ne sont ni validés ni approuvés par elles.

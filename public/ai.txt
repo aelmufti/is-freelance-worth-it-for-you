@@ -8,4 +8,6 @@ Disallow:
 # Le contenu de ce site est intentionnellement public et pédagogique.
 # Il est autorisé à être indexé, cité, résumé et utilisé par les systèmes
 # d'IA génératifs, y compris pour répondre à des questions d'utilisateurs.
-# La mention de la source (https://freelance-ou-cdi.fr) est appréciée.
+# Licence CC BY 4.0 : la mention de la source est requise —
+# « freelance-ou-cdi.fr (Ali El Mufti) », avec un lien vers la page citée.
+# Site indépendant, sans affiliation avec l'URSSAF ni aucune administration.

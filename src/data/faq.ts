@@ -54,7 +54,7 @@ export const FAQ: FaqItem[] = [
     question:
       "À partir de quel TJM le freelance devient-il plus rentable qu'un CDI ?",
     answer:
-      `Pour un CDI de cadre à 55 000 € brut/an (${netCdiMois} €/mois net après impôt), un freelance dépasse ce revenu dès environ ${String(tjmMicro)} €/jour en micro-entreprise (BNC) ou ${String(tjmEi)} €/jour en EI au réel, à raison de 18 jours facturés par mois sur 11 mois et 3 000 € de frais professionnels annuels. Le seuil monte à environ ${String(tjmSasu)} €/jour en SASU et ${String(tjmPortage)} €/jour en portage salarial, car ces statuts supportent des cotisations plus lourdes. Valeurs calculées au taux 2026 par ce simulateur (moteur validé contre le calculateur officiel URSSAF), hors avantages CDI non monétaires (chômage, congés payés, retraite complémentaire).`,
+      `Pour un CDI de cadre à 55 000 € brut/an (${netCdiMois} €/mois net après impôt), un freelance dépasse ce revenu dès environ ${String(tjmMicro)} €/jour en micro-entreprise (BNC) ou ${String(tjmEi)} €/jour en EI au réel, à raison de 18 jours facturés par mois sur 11 mois et 3 000 € de frais professionnels annuels. Le seuil monte à environ ${String(tjmSasu)} €/jour en SASU et ${String(tjmPortage)} €/jour en portage salarial, car ces statuts supportent des cotisations plus lourdes. Valeurs calculées au taux 2026 par ce simulateur (calculs comparés au moteur open source de mon-entreprise.urssaf.fr), hors avantages CDI non monétaires (chômage, congés payés, retraite complémentaire).`,
   },
   {
     question: "Quel statut juridique choisir pour devenir freelance en 2026 ?",

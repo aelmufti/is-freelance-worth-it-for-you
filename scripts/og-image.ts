@@ -1,8 +1,11 @@
 // Génère les images Open Graph (1200×630) : public/og.png (home) et
 // public/og-<slug>.png pour chaque page du registre.
 // Ouvre une page Playwright sur un HTML inline néo-brutaliste et la capture.
-// Les chiffres des cartes sont CALCULÉS par le moteur (scénario par défaut) :
-// impossible qu'ils divergent du simulateur.
+// Les chiffres des cartes sont CALCULÉS par le moteur, au TJM de la page
+// (scénario par défaut + inputOverrides) : ce sont ceux que la page affiche.
+// Avant, toutes les images reprenaient les chiffres du TJM par défaut (550 €),
+// y compris un net micro-entreprise alors que la micro y est inaccessible
+// (plafond dépassé) : un revenu impossible, publié sur toutes les images.
 // Usage : npx tsx scripts/og-image.ts
 import { chromium } from "playwright";
 import { writeFileSync } from "node:fs";
@@ -24,10 +27,25 @@ const fmt = (n: number): string => {
   return s.length > 3 ? `${s.slice(0, -3)} ${s.slice(-3)}` : s;
 };
 
-const netMicro = fmt(calcMicro(DEFAULT_INPUT, DEFAULT_PARAMS).netMensuel);
-const netSasu = fmt(calcSasu(DEFAULT_INPUT, DEFAULT_PARAMS).netMensuel);
-const netCdi = fmt(calcCdi(DEFAULT_INPUT, DEFAULT_PARAMS).netMensuel);
 const cdiKe = Math.round(DEFAULT_INPUT.cdiBrutAnnuel / 1000);
+
+// Cartes chiffrées au TJM de la page ; aucune sur les pages légales.
+function cartes(page: StatutPage): string {
+  if (page.layout === "legal") return "";
+  const input = { ...DEFAULT_INPUT, ...page.inputOverrides };
+  const micro = calcMicro(input, DEFAULT_PARAMS);
+  const sasu = calcSasu(input, DEFAULT_PARAMS);
+  const cdi = calcCdi(input, DEFAULT_PARAMS);
+  const tjm = `TJM ${input.tjm} €`;
+  const microVal = micro.eligible
+    ? `${fmt(micro.netMensuel)} €/mois`
+    : "Plafond dépassé";
+  return `<div class="cards">
+      <div class="card micro"><div class="lbl">Micro-entreprise · ${tjm}</div><div class="val">${microVal}</div></div>
+      <div class="card sasu"><div class="lbl">SASU · ${tjm}</div><div class="val">${fmt(sasu.netMensuel)} €/mois</div></div>
+      <div class="card cdi"><div class="lbl">CDI ${cdiKe} k€ brut</div><div class="val">${fmt(cdi.netMensuel)} €/mois</div></div>
+    </div>`;
+}
 
 const HOME_TITLE = `Freelance ou CDI :<br><span class="hl">combien il vous reste vraiment</span>`;
 const HOME_SUB =
@@ -78,15 +96,11 @@ function htmlFor(page: StatutPage): string {
     <div class="badges">
       <span class="badge y">100 % gratuit</span>
       <span class="badge g">taux 2026</span>
-      <span class="badge w">validé URSSAF</span>
+      <span class="badge w">open source</span>
     </div>
     <h1>${title}</h1>
     <p class="sub">${sub}</p>
-    <div class="cards">
-      <div class="card micro"><div class="lbl">Micro-entreprise</div><div class="val">${netMicro} €/mois</div></div>
-      <div class="card sasu"><div class="lbl">SASU</div><div class="val">${netSasu} €/mois</div></div>
-      <div class="card cdi"><div class="lbl">CDI ${cdiKe} k€</div><div class="val">${netCdi} €/mois</div></div>
-    </div>
+    ${cartes(page)}
     <div class="url">freelance-ou-cdi.fr</div>
   </div>
 </body></html>`;

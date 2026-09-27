@@ -32,6 +32,10 @@ const root = resolve(__dir, "..");
 
 const PORT = 4321;
 
+// Licence des CONTENUS (textes, tableaux, chiffres calculés) : CC BY 4.0,
+// cf. LICENSE-CONTENT.md. Le code, lui, est MIT (WebApplication).
+const CONTENT_LICENSE = "https://creativecommons.org/licenses/by/4.0/";
+
 function esc(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -69,6 +73,14 @@ function rewriteHead(html: string, page: StatutPage): string {
     [/<meta name="twitter:image" content="[^"]*"\s*\/?>/, `<meta name="twitter:image" content="${og}">`],
     [/<meta name="twitter:image:alt" content="[^"]*"\s*\/?>/, `<meta name="twitter:image:alt" content="${ogAlt}">`],
   ];
+  // Pages exclues des moteurs (pages légales) : noindex, liens suivis.
+  if (page.noindex) {
+    repl.push(
+      [/<meta name="robots" content="[^"]*"\s*\/?>/, `<meta name="robots" content="noindex, follow">`],
+      [/<meta name="googlebot" content="[^"]*"\s*\/?>/, `<meta name="googlebot" content="noindex, follow">`],
+      [/<meta name="bingbot" content="[^"]*"\s*\/?>/, `<meta name="bingbot" content="noindex, follow">`],
+    );
+  }
   let h = html;
   for (const [re, val] of repl) {
     if (!re.test(h)) throw new Error(`rewriteHead: motif introuvable pour ${page.slug} → ${re}`);
@@ -115,6 +127,7 @@ function rewriteHead(html: string, page: StatutPage): string {
       JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
+        license: CONTENT_LICENSE,
         headline: page.h1,
         description: page.metaDescription,
         abstract: page.tldr,
@@ -158,12 +171,19 @@ function rewriteHead(html: string, page: StatutPage): string {
         "@type": "Dataset",
         name: "Observatoire du TJM freelance 2026",
         description:
-          "TJM médians observés par métier chez les freelances français en 2026, croisés avec le revenu net après cotisations et impôt pour chaque statut juridique.",
+          "TJM médians indicatifs par métier chez les freelances français en 2026 (synthèse de baromètres publics), croisés avec le revenu net après cotisations et impôt calculé pour chaque statut juridique.",
         url,
         inLanguage: "fr-FR",
-        license: "https://opensource.org/licenses/MIT",
+        // CC BY 4.0 couvre les nets calculés ; les TJM de marché restent la
+        // propriété des baromètres sources, déclarés en isBasedOn.
+        license: CONTENT_LICENSE,
         isAccessibleForFree: true,
         creator: AUTHOR,
+        isBasedOn: [
+          { "@type": "CreativeWork", name: "Baromètre des tarifs freelance 2026", publisher: { "@type": "Organization", name: "Malt" } },
+          { "@type": "CreativeWork", name: "Baromètre TJM freelance 2026", publisher: { "@type": "Organization", name: "Blog du Modérateur" } },
+          { "@type": "CreativeWork", name: "Baromètre TJM freelance 2026", publisher: { "@type": "Organization", name: "tjmetre.fr" } },
+        ],
         datePublished: pagePublished(page),
         dateModified: pageUpdated(page),
         temporalCoverage: "2026",
@@ -192,7 +212,7 @@ function rewriteHead(html: string, page: StatutPage): string {
 function injectGraph(html: string, page: StatutPage): string {
   const url = pageUrl(page);
   const og = `${SITE}${ogImagePath(page)}`;
-  const hasSimulateur = page.layout !== "content";
+  const hasSimulateur = !page.layout;
   const person = { "@id": `${SITE}/#person` };
 
   const graph: unknown[] = [
@@ -230,8 +250,8 @@ function injectGraph(html: string, page: StatutPage): string {
         "Flat tax 31,4 % et impôt sur les sociétés",
         "Réforme assiette unique TNS 2026",
         "Seuil de TJM équivalent au CDI",
-        "Calculs validés contre le moteur officiel URSSAF",
-        "Aucune donnée collectée — calculs dans le navigateur",
+        "Calculs testés contre le moteur open source modele-social",
+        "Aucune donnée saisie collectée — calculs dans le navigateur",
       ],
       author: person,
       publisher: person,
@@ -244,6 +264,7 @@ function injectGraph(html: string, page: StatutPage): string {
     },
     {
       "@type": "WebPage",
+      license: CONTENT_LICENSE,
       "@id": `${url}#webpage`,
       url,
       name: page.metaTitle,
@@ -328,6 +349,13 @@ try {
     let html = await tab.evaluate(() => {
       document
         .querySelectorAll("script[data-prerender-ignore]")
+        .forEach((n) => n.remove());
+      // Le composant <Analytics> injecte son script au montage : capturé, il
+      // serait chargé en dur par chaque page, AVANT que le code puisse lire un
+      // refus de mesure d'audience — l'opposition serait sans effet. Seul le
+      // composant, côté client, doit l'injecter (cf. src/lib/consent.ts).
+      document
+        .querySelectorAll('script[src*="/_vercel/insights"]')
         .forEach((n) => n.remove());
       return "<!doctype html>\n" + document.documentElement.outerHTML;
     });

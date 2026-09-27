@@ -12,7 +12,7 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PAGES } from "../src/lib/pages";
+import { INDEXABLE_PAGES as PAGES } from "../src/lib/pages";
 import { pageToMarkdown } from "./lib/pageMarkdown";
 
 const __dir = dirname(fileURLToPath(import.meta.url));

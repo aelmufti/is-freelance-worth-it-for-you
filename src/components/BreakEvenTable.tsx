@@ -54,7 +54,7 @@ export function BreakEvenTable({ statuts }: { statuts?: StatutId[] } = {}) {
     `Face à un CDI cadre de 55 000 € brut (${euro(ref.netCdiMensuel)}/mois net après impôt), il faut facturer environ ` +
     `${seuils} — à ${String(joursParMois)} jours facturés par mois sur ${String(moisFactures)} mois, ` +
     `${euro(fraisPro)} de frais professionnels, célibataire sans enfant. ` +
-    `Seuils calculés au taux 2026 par ce simulateur (moteur validé contre le calculateur officiel URSSAF).`;
+    `Seuils calculés au taux 2026 par ce simulateur (calculs comparés au moteur open source de mon-entreprise.urssaf.fr).`;
 
   const notes =
     `Hypothèses : ${String(joursParMois)} jours facturés/mois × ${String(moisFactures)} mois, ${euro(fraisPro)} de frais pro/an, ` +

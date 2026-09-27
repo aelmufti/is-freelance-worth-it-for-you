@@ -5,11 +5,11 @@ GitHub : https://github.com/aelmufti
 
 /* SITE */
 Stack : React 19, TypeScript, Tailwind v4, Vite, Recharts
-Validation : publicodes + modele-social (URSSAF)
+Contrôle : publicodes + modele-social (moteur open source de mon-entreprise.urssaf.fr)
 Hébergeur : Vercel
-Standards : HTML5, WCAG 2.2, Schema.org, Open Graph
+Standards : HTML5, Schema.org, Open Graph
 Doctype : modèle néo-brutaliste, JetBrains Mono, palette plate haute contraste.
 
 /* MERCI */
 À l'équipe mon-entreprise.urssaf.fr pour leur moteur open source,
-sans lequel la validation des chiffres serait impossible.
+sans lequel le contrôle des chiffres serait impossible.

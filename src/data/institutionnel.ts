@@ -10,9 +10,9 @@ const METHODOLOGIE: StatutPage = {
   breadcrumb: "Méthodologie",
   layout: "content",
   metaTitle: "Méthodologie du simulateur freelance vs CDI 2026",
-  metaDescription: `Comment sont calculés les nets : cotisations par statut, barème 2026, flat tax, IS, hypothèses, limites et validation URSSAF.`,
+  metaDescription: `Comment sont calculés les nets : cotisations par statut, barème 2026, flat tax, IS, hypothèses, limites et contrôle des calculs.`,
   h1: "Méthodologie : comment les calculs sont faits",
-  tldr: `Le simulateur part du chiffre d'affaires (TJM × jours facturés), applique les cotisations propres à chaque statut, l'impôt sur le revenu au barème 2026 (plus l'impôt sur les sociétés et la flat tax de 31,4 % le cas échéant), puis déduit les frais professionnels. Les résultats sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF, avec des écarts inférieurs à 2 % sur les cas testés.`,
+  tldr: `Le simulateur part du chiffre d'affaires (TJM × jours facturés), applique les cotisations propres à chaque statut, l'impôt sur le revenu au barème 2026 (plus l'impôt sur les sociétés et la flat tax de 31,4 % le cas échéant), puis déduit les frais professionnels. Les résultats sont comparés automatiquement au moteur open source « modele-social », qui équipe mon-entreprise.urssaf.fr, avec des écarts inférieurs à 2 % sur les cas testés.`,
   intro: `Ce simulateur compare, pour un même chiffre d'affaires, le revenu net réellement disponible dans six statuts : micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial et CDI cadre. Cette page détaille exactement ce qui est calculé, avec quelles hypothèses, quelles sources et quelles limites — pour que vous puissiez juger de la fiabilité des chiffres, et les reproduire.`,
   sections: [
     {
@@ -89,7 +89,7 @@ const A_PROPOS: StatutPage = {
     {
       heading: "Nos principes",
       paragraphs: [
-        `Gratuité et sans compte : aucune inscription, aucun paywall. Respect de la vie privée : tous les calculs se font dans votre navigateur, aucune donnée saisie n'est envoyée ni stockée sur un serveur. Justesse : les résultats sont validés contre le moteur officiel de l'URSSAF et les taux sont datés.`,
+        `Gratuité et sans compte : aucune inscription, aucun paywall. Respect de la vie privée : tous les calculs se font dans votre navigateur, aucune donnée saisie n'est envoyée ni stockée sur un serveur. Justesse : les résultats sont comparés automatiquement au moteur open source de mon-entreprise.urssaf.fr et les taux sont datés.`,
         `Indépendance : ce site n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration. Il ne remplace pas un expert-comptable pour votre situation précise, mais vous donne un point de départ fiable pour en discuter — ou simplement pour y voir clair avant de vous lancer.`,
       ],
     },

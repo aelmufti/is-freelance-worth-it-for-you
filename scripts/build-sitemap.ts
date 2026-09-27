@@ -4,7 +4,7 @@
 import { writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PAGES, pageUpdated, pageUrl, type StatutPage } from "../src/lib/pages";
+import { INDEXABLE_PAGES as PAGES, pageUpdated, pageUrl, type StatutPage } from "../src/lib/pages";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const out = resolve(__dir, "..", "public", "sitemap.xml");

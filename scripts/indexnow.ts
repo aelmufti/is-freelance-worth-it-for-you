@@ -12,7 +12,7 @@
 //
 // La clé est publique par conception : IndexNow vérifie que le fichier
 // public/<clé>.txt est servi par le domaine notifié.
-import { PAGES, SITE, pageUpdated, pageUrl } from "../src/lib/pages";
+import { INDEXABLE_PAGES as PAGES, SITE, pageUpdated, pageUrl } from "../src/lib/pages";
 
 const KEY = "90caac6dd72f898889e93797df5aa379";
 

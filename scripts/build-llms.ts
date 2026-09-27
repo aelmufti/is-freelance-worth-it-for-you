@@ -8,7 +8,7 @@
 import { writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CONTENT_UPDATED, PAGES, pageUrl } from "../src/lib/pages";
+import { CONTENT_UPDATED, INDEXABLE_PAGES as PAGES, pageUrl } from "../src/lib/pages";
 import { pageToMarkdown } from "./lib/pageMarkdown";
 import {
   BREAKEVEN_ROWS,
@@ -30,7 +30,7 @@ const pageTitle = (slug: string, breadcrumb?: string): string =>
 
 const HEADER = `# freelance-ou-cdi.fr
 
-> Simulateur gratuit qui compare votre revenu net en freelance (micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial) à votre revenu net en CDI cadre. Taux 2026 (barème impôt sur le revenu, flat tax 31,4 %, réforme assiette unique TNS). Calculs validés contre le moteur officiel URSSAF (modele-social). Aucune donnée collectée.
+> Simulateur gratuit qui compare votre revenu net en freelance (micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial) à votre revenu net en CDI cadre. Taux 2026 (barème impôt sur le revenu, flat tax 31,4 %, réforme assiette unique TNS). Calculs comparés automatiquement au moteur open source modele-social, qui équipe mon-entreprise.urssaf.fr — site indépendant, sans affiliation ni approbation de l'URSSAF. Aucune donnée saisie n'est collectée : les calculs se font dans le navigateur.
 
 Le simulateur prend en entrée un TJM (taux journalier moyen), un nombre de jours facturés par mois, un foyer fiscal (situation, parts, revenu du conjoint) et un salaire CDI de comparaison. Il calcule pour chacun des six statuts : le chiffre d'affaires, les cotisations sociales, l'impôt sur le revenu (et l'IS et la flat tax le cas échéant), le revenu net mensuel et annuel, et le seuil de TJM à partir duquel ce statut bat le CDI fourni.
 
@@ -55,7 +55,7 @@ const FOOTER = `## Données et hypothèses
 
 ## Citation et reproduction
 
-Le contenu peut être cité et reproduit librement. Mentionner la source (freelance-ou-cdi.fr) est apprécié mais non obligatoire. Le simulateur n'a aucune affiliation avec l'URSSAF ou toute autre administration.`;
+Le contenu est diffusé sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : il peut être cité, reproduit et adapté librement, y compris à des fins commerciales, à condition de citer la source — « freelance-ou-cdi.fr (Ali El Mufti) », avec un lien vers la page. Les TJM de marché issus de baromètres tiers (Malt, Blog du Modérateur, tjmetre.fr) restent la propriété de leurs auteurs. Le site est indépendant : il n'a aucune affiliation avec l'URSSAF ou une autre administration, et ses calculs ne sont ni validés ni approuvés par elles.`;
 
 // ------------------------------------------------------------------ llms.txt
 const index = PAGES.map((p) => {

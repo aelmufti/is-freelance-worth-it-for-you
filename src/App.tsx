@@ -50,7 +50,7 @@ const SLOT_SEUILS =
   "flex min-h-[757px] flex-col min-[360px]:min-h-[741px] min-[480px]:min-h-[721px] min-[540px]:min-h-[705px] sm:min-h-[595px] min-[900px]:min-h-[579px] lg:min-h-[469px]";
 import { Faq } from "./components/Faq";
 import { BreakEvenTable } from "./components/BreakEvenTable";
-import { MentionsLegales } from "./components/MentionsLegales";
+import { ConfidentialiteContenu, MentionsLegalesContenu } from "./components/Legal";
 import { SectionTitle, euro } from "./components/ui";
 import {
   CONTENT_UPDATED,
@@ -140,7 +140,6 @@ export default function App({ page }: { page: StatutPage }) {
     ...page.inputOverrides,
   }));
   const [params, setParams] = useState<FiscalParams>(DEFAULT_PARAMS);
-  const [showLegal, setShowLegal] = useState(false);
   const [focusStatuts, setFocusStatuts] = useState<StatutId[] | null>(
     page.statuts ?? null,
   );
@@ -148,7 +147,9 @@ export default function App({ page }: { page: StatutPage }) {
   const parent = parentOf(page);
   // Calculé pour la seule page affichée (cf. lib/keyTables.ts).
   const keyTable = useMemo(() => page.keyTable?.(), [page]);
-  const isContent = page.layout === "content";
+  const isLegal = page.layout === "legal";
+  // Pages sans simulateur : éditoriales et légales.
+  const isContent = page.layout === "content" || isLegal;
   const focusStatutsPage = page.statuts ?? [];
   // Libellé des statuts traités, pour des intertitres propres à la page.
   const focusLabel = joinFr(
@@ -318,9 +319,13 @@ export default function App({ page }: { page: StatutPage }) {
             <span aria-hidden="true">{" · "}</span>
             <span>{"Mis à jour le "}</span>
             <time dateTime={pageUpdated(page)}>{frDate(pageUpdated(page))}</time>
-            <span aria-hidden="true">{" · "}</span>
-            <span>{"Taux vérifiés le "}</span>
-            <time dateTime={CONTENT_UPDATED}>{updatedLabel}</time>
+            {!isLegal && (
+              <>
+                <span aria-hidden="true">{" · "}</span>
+                <span>{"Taux vérifiés le "}</span>
+                <time dateTime={CONTENT_UPDATED}>{updatedLabel}</time>
+              </>
+            )}
           </p>
         </div>
       </header>
@@ -433,6 +438,10 @@ export default function App({ page }: { page: StatutPage }) {
             </section>
           </>
         )}
+
+        {/* CONTENU LÉGAL — vraies pages, cf. src/data/legal.ts */}
+        {page.slug === "mentions-legales" && <MentionsLegalesContenu />}
+        {page.slug === "confidentialite" && <ConfidentialiteContenu />}
 
         {/* CONTENU ÉDITORIAL — unique par page statut (anti-doorway) */}
         {page.sections.length > 0 && (
@@ -585,73 +594,75 @@ export default function App({ page }: { page: StatutPage }) {
           </section>
         )}
 
-        {/* SOURCES + DISCLAIMER */}
-        <section className="border-[3px] border-ink bg-white p-5 shadow-brutal">
-          <h3 className="text-sm font-extrabold uppercase tracking-[0.12em]">
-            Sources officielles (taux 2026)
-          </h3>
-          <p className="mt-1 text-xs font-bold opacity-70">
-            {`Taux et barèmes vérifiés le ${updatedLabel}.`}
-          </p>
-          {fullSources ? (
-            <>
-              <ul className="mt-2 grid gap-1 text-xs md:grid-cols-2">
-                {SOURCES.map((s) => (
-                  <li key={s.url}>
-                    <a
-                      href={s.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
-                    >
-                      {`▸ ${s.label}`}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
-                ⚠ Simulation indicative, à jour des principaux taux 2026 (barème
-                IR sur revenus 2025, PFU 31,4 %, réforme de l'assiette TNS). Elle
-                ne remplace pas un expert-comptable : CFE, plafonnement du
-                quotient familial, réduction générale de cotisations, mutuelle
-                obligatoire, prévoyance et cas particuliers ne sont pas tous
-                modélisés. Les avantages salarié (titres-resto, transport,
-                mutuelle) sont une estimation indicative, affichée à part et
-                exclue du net comparé. Aucune donnée n'est envoyée : tout est
-                calculé dans votre navigateur.
-              </p>
-              <p className="mt-2 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
-                ✓ Contrôle qualité : nos résultats sont comparés automatiquement
-                au moteur de calcul open source « modele-social » qui équipe
-                mon-entreprise.urssaf.fr (écarts inférieurs à 2 % sur les cas
-                testés). Cette démarche est purement technique : ce site est
-                indépendant et n'est ni édité, ni approuvé, ni soutenu par
-                l'URSSAF ou toute autre administration.
-              </p>
-            </>
-          ) : (
-            <>
-              <p className="mt-2 text-xs font-bold">
-                <a
-                  href="/methodologie/"
-                  className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
-                >
-                  ▸ Méthodologie détaillée, sources officielles et limites du
-                  calcul
-                </a>
-              </p>
-              <p className="mt-3 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
-                ⚠ Simulation indicative : elle ne remplace pas un
-                expert-comptable et ne modélise pas tous les cas particuliers.
-                Les résultats sont comparés au moteur open source
-                « modele-social » de l'URSSAF (écarts inférieurs à 2 %) ; ce
-                site reste indépendant et sans lien avec l'administration.
-                Aucune donnée n'est envoyée : tout est calculé dans votre
-                navigateur.
-              </p>
-            </>
-          )}
-        </section>
+        {/* SOURCES + DISCLAIMER (sans objet sur les pages légales) */}
+        {!isLegal && (
+          <section className="border-[3px] border-ink bg-white p-5 shadow-brutal">
+            <h3 className="text-sm font-extrabold uppercase tracking-[0.12em]">
+              Sources officielles (taux 2026)
+            </h3>
+            <p className="mt-1 text-xs font-bold opacity-70">
+              {`Taux et barèmes vérifiés le ${updatedLabel}.`}
+            </p>
+            {fullSources ? (
+              <>
+                <ul className="mt-2 grid gap-1 text-xs md:grid-cols-2">
+                  {SOURCES.map((s) => (
+                    <li key={s.url}>
+                      <a
+                        href={s.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-bold underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                      >
+                        {`▸ ${s.label}`}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
+                  ⚠ Simulation indicative, à jour des principaux taux 2026 (barème
+                  IR sur revenus 2025, PFU 31,4 %, réforme de l'assiette TNS). Elle
+                  ne remplace pas un expert-comptable : CFE, plafonnement du
+                  quotient familial, réduction générale de cotisations, mutuelle
+                  obligatoire, prévoyance et cas particuliers ne sont pas tous
+                  modélisés. Les avantages salarié (titres-resto, transport,
+                  mutuelle) sont une estimation indicative, affichée à part et
+                  exclue du net comparé. Aucune donnée saisie n'est envoyée : tout est
+                  calculé dans votre navigateur.
+                </p>
+                <p className="mt-2 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
+                  ✓ Contrôle qualité : nos résultats sont comparés automatiquement
+                  au moteur de calcul open source « modele-social » qui équipe
+                  mon-entreprise.urssaf.fr (écarts inférieurs à 2 % sur les cas
+                  testés). Cette démarche est purement technique : ce site est
+                  indépendant et n'est ni édité, ni approuvé, ni soutenu par
+                  l'URSSAF ou toute autre administration.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="mt-2 text-xs font-bold">
+                  <a
+                    href="/methodologie/"
+                    className="underline decoration-2 underline-offset-2 hover:bg-tag-yellow"
+                  >
+                    ▸ Méthodologie détaillée, sources officielles et limites du
+                    calcul
+                  </a>
+                </p>
+                <p className="mt-3 border-2 border-ink bg-tag-offwhite px-3 py-2 text-[11px] font-bold opacity-80">
+                  ⚠ Simulation indicative : elle ne remplace pas un
+                  expert-comptable et ne modélise pas tous les cas particuliers.
+                  Les résultats sont comparés au moteur open source
+                  « modele-social » de l'URSSAF (écarts inférieurs à 2 %) ; ce
+                  site reste indépendant et sans lien avec l'administration.
+                  Aucune donnée saisie n'est envoyée : tout est calculé dans votre
+                  navigateur.
+                </p>
+              </>
+            )}
+          </section>
+        )}
 
       </main>
 
@@ -731,18 +742,25 @@ export default function App({ page }: { page: StatutPage }) {
             ALI EL MUFTI
           </a>
         </div>
-        <div className="mt-3 flex justify-center gap-4">
-          <button
-            type="button"
-            onClick={() => setShowLegal(true)}
+        {/* Accès « direct et permanent » exigé par la LCEN : de vrais liens,
+            présents dans le HTML de chaque page, pas un bouton JavaScript. */}
+        <nav aria-label="Informations légales" className="mt-3 flex justify-center gap-4">
+          <a
+            href="/mentions-legales/"
+            aria-current={page.slug === "mentions-legales" ? "page" : undefined}
             className="text-[10px] font-bold uppercase tracking-[0.12em] underline decoration-1 underline-offset-2 opacity-60 hover:opacity-100"
           >
             Mentions légales
-          </button>
-        </div>
+          </a>
+          <a
+            href="/confidentialite/"
+            aria-current={page.slug === "confidentialite" ? "page" : undefined}
+            className="text-[10px] font-bold uppercase tracking-[0.12em] underline decoration-1 underline-offset-2 opacity-60 hover:opacity-100"
+          >
+            Confidentialité
+          </a>
+        </nav>
       </footer>
-
-      {showLegal && <MentionsLegales onClose={() => setShowLegal(false)} />}
     </div>
   );
 }

@@ -31,6 +31,7 @@ import { COMPARATIF_PAGES } from "../data/comparatifs";
 import { GUIDE_PAGES } from "../data/guides";
 import { INSTITUTIONNEL_PAGES } from "../data/institutionnel";
 import { METIER_PAGES, OBSERVATOIRE_TJM } from "../data/tjmMetiers";
+import { LEGAL_PAGES } from "../data/legal";
 
 export const SITE = "https://freelance-ou-cdi.fr";
 
@@ -85,7 +86,12 @@ export interface StatutPage {
   // glossaire) : App.tsx masque le verdict, le simulateur, les graphiques, le
   // tableau de seuils et les forces/faiblesses, et prerender.ts injecte un
   // schema Article au lieu du WebApplication.
-  layout?: "content";
+  // « legal » = mentions légales et confidentialité : même gabarit que
+  // « content », contenu rendu par components/Legal.tsx.
+  layout?: "content" | "legal";
+  // Exclue des moteurs : <meta robots noindex>, et absente du sitemap, de
+  // llms.txt, des jumeaux Markdown et d'IndexNow (voir INDEXABLE_PAGES).
+  noindex?: boolean;
   // Dernière révision éditoriale PROPRE à cette page (ISO). Par défaut
   // SITE_UPDATED. Permet un <lastmod> et un dateModified justes page par page
   // au lieu d'une date unique recopiée sur 67 URL (signal de fraîcheur nul).
@@ -193,9 +199,9 @@ const HOME: StatutPage = {
   slug: "",
   metaTitle: "Freelance ou CDI 2026 : simulateur de revenu net",
   metaDescription:
-    "Comparez votre net en micro-entreprise, EURL, SASU, portage et CDI. Cotisations, impôt, flat tax et seuil de TJM. Gratuit, validé URSSAF.",
+    "Comparez votre net en micro-entreprise, EURL, SASU, portage et CDI. Cotisations, impôt, flat tax et seuil de TJM. Gratuit et open source.",
   h1: "Freelance ou CDI : combien il vous reste vraiment",
-  tldr: `Pour égaler un CDI cadre à 55 000 € brut (${NET_CDI_MOIS} € net par mois après impôt), il faut facturer environ ${TJM_MICRO_CDI} € par jour en micro-entreprise, ${TJM_SASU_CDI} € en SASU et jusqu'à ${TJM_PORTAGE_CDI} € en portage salarial — à 18 jours facturés par mois sur 11 mois. Taux 2026, calculs validés URSSAF.`,
+  tldr: `Pour égaler un CDI cadre à 55 000 € brut (${NET_CDI_MOIS} € net par mois après impôt), il faut facturer environ ${TJM_MICRO_CDI} € par jour en micro-entreprise, ${TJM_SASU_CDI} € en SASU et jusqu'à ${TJM_PORTAGE_CDI} € en portage salarial — à 18 jours facturés par mois sur 11 mois. Taux 2026, moteur de calcul open source.`,
   intro:
     "Micro-entreprise, EI au réel, EURL, SASU, portage salarial — net après cotisations ET impôt sur le revenu, comparé à votre CDI. Barème IR 2026, flat tax 31,4 %, réforme TNS incluse.",
   sections: [],
@@ -218,7 +224,7 @@ const PORTAGE: StatutPage = {
   breadcrumb: "Simulateur portage salarial",
   metaTitle: "Simulateur portage salarial 2026 : salaire net réel",
   metaDescription:
-    "Frais de gestion, cotisations du régime général, net après impôt et le TJM à partir duquel le portage bat votre CDI. Validé URSSAF.",
+    "Frais de gestion, cotisations du régime général, net après impôt et le TJM à partir duquel le portage bat votre CDI. Moteur open source.",
   h1: "Simulateur portage salarial 2026 : ce qu'il vous reste vraiment",
   tldr: `En portage salarial, la société de portage prélève 5 à 10 % de frais de gestion, puis l'enveloppe restante supporte les cotisations patronales et salariales du régime général : il reste environ ${PCT_PORTAGE_400} % du chiffre d'affaires en net. Pour égaler un CDI à 55 000 € brut, il faut facturer environ ${TJM_PORTAGE_CDI} € par jour, soit ${CA_PORTAGE_CDI} € par an. C'est le seul statut freelance qui ouvre droit au chômage.`,
   intro:
@@ -282,7 +288,7 @@ const SASU: StatutPage = {
   breadcrumb: "Simulateur SASU",
   metaTitle: "Simulateur SASU 2026 : salaire, dividendes et net réel",
   metaDescription:
-    "Arbitrage salaire / dividendes, flat tax 31,4 %, impôt sur les sociétés et net après impôt. À quel TJM la SASU bat votre CDI. Validé URSSAF.",
+    "Arbitrage salaire / dividendes, flat tax 31,4 %, impôt sur les sociétés et net après impôt. À quel TJM la SASU bat votre CDI. Moteur open source.",
   h1: "Simulateur SASU 2026 : salaire, dividendes et ce qu'il vous reste",
   tldr: `Le président de SASU est assimilé salarié : 75 à 80 % de charges sur le salaire versé, en échange d'une protection sociale de cadre — mais sans assurance chômage. Son vrai levier est l'arbitrage salaire/dividendes, ces derniers étant taxés à la flat tax de 31,4 % après impôt sur les sociétés. Pour égaler un CDI à 55 000 € brut en rémunération intégrale, comptez environ ${TJM_SASU_CDI} € par jour. Taux 2026.`,
   intro:
@@ -342,7 +348,7 @@ const MICRO: StatutPage = {
   breadcrumb: "Simulateur micro-entreprise",
   metaTitle: "Simulateur micro-entreprise 2026 : net réel et plafonds",
   metaDescription:
-    "Cotisations en % du CA, abattement, plafond de 83 600 € et net après impôt. À quel TJM la micro bat votre CDI. Validé URSSAF.",
+    "Cotisations en % du CA, abattement, plafond de 83 600 € et net après impôt. À quel TJM la micro bat votre CDI. Moteur open source.",
   h1: "Simulateur micro-entreprise 2026 : votre net réel et vos plafonds",
   tldr: `En micro-entreprise, les cotisations sont un pourcentage du chiffre d'affaires encaissé (environ 24,6 % en BNC) et l'impôt se calcule après un abattement forfaitaire de 34 %. C'est le statut qui laisse le plus de net tant qu'on reste sous son plafond de ${_fmt(_p.microPlafondService)} € de chiffre d'affaires en prestations : pour égaler un CDI à 55 000 € brut, environ ${TJM_MICRO_CDI} € par jour suffisent. Taux 2026.`,
   intro:
@@ -786,7 +792,11 @@ export const PAGES: StatutPage[] = [
   ...TJM_PAGES,
   ...OBJECTIF_PAGES,
   ...METIER_PAGES,
+  ...LEGAL_PAGES,
 ];
+
+// Pages destinées aux moteurs (sitemap, llms.txt, jumeaux Markdown, IndexNow).
+export const INDEXABLE_PAGES: StatutPage[] = PAGES.filter((p) => !p.noindex);
 
 // Parent LOGIQUE d'une page, pour le fil d'Ariane (visible et JSON-LD). Les
 // URL de la longue traîne sont plates (/tjm-500/), mais leur place dans le site

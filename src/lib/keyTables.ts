@@ -38,7 +38,7 @@ export const LABEL: Record<StatutId, string> = {
 
 const ref = DEFAULT_INPUT;
 const p = DEFAULT_PARAMS;
-const SCENARIO = `${ref.joursParMois} jours facturés par mois sur ${ref.moisFactures} mois, ${fmt(ref.fraisPro)} € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur validé contre le calculateur officiel URSSAF.`;
+const SCENARIO = `${ref.joursParMois} jours facturés par mois sur ${ref.moisFactures} mois, ${fmt(ref.fraisPro)} € de frais professionnels par an, célibataire sans enfant, rémunération intégrale (sans dividendes). Taux 2026, moteur de calcul open source.`;
 
 // Net de chaque statut à un TJM donné : pages palier, métier, objectif.
 export function statutsAtTjm(tjm: number): KeyTable {

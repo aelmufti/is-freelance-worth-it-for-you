@@ -102,7 +102,7 @@ const METIERS: Metier[] = [
     bas: 350,
     haut: 800,
     contexte:
-      "Le baromètre Malt situe le TJM médian d'un consultant marketing confirmé autour de 590 €/jour, avec des juniors vers 300 € et des seniors au-delà de 800 €.",
+      "Le baromètre Malt situe le TJM médian d'un consultant marketing confirmé autour de 590 €/jour, avec des juniors vers 310 € et des seniors autour de 780 € et plus.",
   },
   {
     slug: "consultant-seo",
@@ -163,10 +163,10 @@ function makeMetierPage(m: Metier, prev?: Metier, next?: Metier): StatutPage {
       title: `${m.court.charAt(0).toUpperCase()}${m.court.slice(1)} freelance à ${m.tjm} €/jour : le net de chaque statut`,
     }),
     metaTitle: `TJM ${m.court} freelance 2026 : tarif et net réel`,
-    metaDescription: `TJM ${m.court} freelance 2026 : médiane ~${m.tjm} €/jour (${m.bas}–${m.haut} €). Ce qu'il reste vraiment en net par statut. Validé URSSAF.`,
+    metaDescription: `TJM ${m.court} freelance 2026 : médiane ~${m.tjm} €/jour (${m.bas}–${m.haut} €). Ce qu'il reste vraiment en net par statut. Moteur open source.`,
     h1: `TJM ${m.court} freelance : tarif moyen et net réel (2026)`,
     tldr: `En 2026, un ${m.nom} freelance facture en médiane environ ${m.tjm} € par jour en France (fourchette ${m.bas} à ${m.haut} € selon séniorité et spécialité, d'après les ${TJM_METIERS_SOURCE}). À ce tarif et 18 jours facturés par mois sur 11 mois, il lui reste au mieux ${fmt(f.bestNetMensuel)} € net par mois après cotisations et impôt (${f.bestLabel}), soit l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut.`,
-    intro: `Le TJM médian observé pour un ${m.nom} en France tourne autour de ${m.tjm} €/jour en 2026, dans une fourchette d'environ ${m.bas} à ${m.haut} € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (${f.bestLabel}) laisse ${fmt(f.bestNetMensuel)} €/mois net après impôt — l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. ${m.contexte}`,
+    intro: `Le TJM médian indicatif d'un ${m.nom} en France tourne autour de ${m.tjm} €/jour en 2026, dans une fourchette d'environ ${m.bas} à ${m.haut} € selon l'expérience et la spécialité. À ce tarif, 18 jours facturés par mois sur 11 mois, le meilleur statut (${f.bestLabel}) laisse ${fmt(f.bestNetMensuel)} €/mois net après impôt — l'équivalent d'un CDI à environ ${fmt(f.brutEquivalent)} € brut. ${m.contexte}`,
     sections: [
       {
         heading: `Le TJM d'un ${m.court} en 2026`,
@@ -178,7 +178,7 @@ function makeMetierPage(m: Metier, prev?: Metier, next?: Metier): StatutPage {
       {
         heading: `Ce que ${m.tjm} €/jour laissent en net, statut par statut`,
         paragraphs: [
-          `Sur ${fmt(f.ca)} € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : ${microTxt}, ${fmt(f.netEi)} € en EI au réel, ${fmt(f.netSasu)} € en SASU (100 % salaire) et ${fmt(f.netPortage)} € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, validé contre le calculateur officiel de l'URSSAF.`,
+          `Sur ${fmt(f.ca)} € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : ${microTxt}, ${fmt(f.netEi)} € en EI au réel, ${fmt(f.netSasu)} € en SASU (100 % salaire) et ${fmt(f.netPortage)} € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.`,
           f.microEligible
             ? `À ce niveau de TJM, la micro et l'EI convertissent le mieux le chiffre d'affaires en net ; la SASU et le portage paient leur protection sociale complète par des charges plus lourdes. L'écart entre le premier et le dernier statut se compte en centaines d'euros par mois — d'où l'intérêt de simuler avant de choisir.`
             : `À ce niveau de facturation, la micro-entreprise n'est plus accessible (plafond de chiffre d'affaires dépassé). Le choix se joue entre l'EI au réel et l'EURL (net maximal, cotisations TNS), la SASU (arbitrage salaire/dividendes) et le portage (protection du salariat, chômage compris).`,
@@ -226,13 +226,13 @@ export const OBSERVATOIRE_TJM: StatutPage = {
   breadcrumb: "Observatoire du TJM 2026",
   layout: "content",
   metaTitle: "Observatoire du TJM freelance 2026 : tarifs par métier",
-  metaDescription: `Les TJM médians par métier (dev, data, DevOps, product, conseil, design, cyber) croisés avec le net réel après impôt, statut par statut. Validé URSSAF.`,
+  metaDescription: `Les TJM médians par métier (dev, data, DevOps, product, conseil, design, cyber) croisés avec le net réel après impôt, statut par statut. Moteur open source.`,
   h1: "Observatoire du TJM freelance 2026",
   // Le jeu de données de la page (déclaré en schema Dataset au prerender) sous
   // sa forme la plus citable : une ligne par métier.
   keyTable: () => ({
     title: "TJM freelance par métier en 2026 : tarif et net réel",
-    caption: `TJM médian et fourchette junior–senior d'après les ${TJM_METIERS_SOURCE}. Net : meilleur statut, après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, célibataire sans enfant. Équivalent CDI : brut cadre donnant le même net. Taux 2026, validé URSSAF.`,
+    caption: `TJM médian et fourchette junior–senior indicatifs : synthèse des ${TJM_METIERS_SOURCE}, dont les chiffres peuvent différer entre eux. Net : meilleur statut, après cotisations sociales ET impôt sur le revenu, à 18 jours facturés par mois sur 11 mois, célibataire sans enfant. Équivalent CDI : brut cadre donnant le même net. Taux 2026, moteur de calcul open source.`,
     head: ["Métier", "TJM médian", "Fourchette", "Meilleur net/mois", "Équivalent CDI brut/an"],
     rows: RANKED.map((m) => {
       const f = figuresFor(m.tjm);
@@ -246,7 +246,7 @@ export const OBSERVATOIRE_TJM: StatutPage = {
     }),
   }),
   tldr: `En 2026, les TJM médians des freelances français vont d'environ 450 €/jour (design, SEO) à 650 €/jour (conseil en stratégie, cybersécurité), le développement web se situant autour de 535 € et la data science autour de 645 € (d'après les ${TJM_METIERS_SOURCE}). À TJM égal, le net conservé varie de plus de 1 000 € par mois selon le statut choisi.`,
-  intro: `Combien facture vraiment un freelance selon son métier — et surtout, combien lui reste-t-il en net ? Cet observatoire croise les TJM médians observés sur le marché en 2026 (d'après les ${TJM_METIERS_SOURCE}) avec le revenu net réellement disponible après cotisations et impôt, calculé par notre moteur validé URSSAF. Chaque métier a sa page détaillée, statut par statut.`,
+  intro: `Combien facture vraiment un freelance selon son métier — et surtout, combien lui reste-t-il en net ? Cet observatoire croise les TJM médians indicatifs de 2026 (synthèse des ${TJM_METIERS_SOURCE}) avec le revenu net réellement disponible après cotisations et impôt, calculé par notre moteur open source. Chaque métier a sa page détaillée, statut par statut.`,
   sections: [
     {
       heading: "Ce que gagnent les freelances par métier (médiane 2026)",
@@ -281,7 +281,7 @@ export const OBSERVATOIRE_TJM: StatutPage = {
     },
     {
       question: "D'où viennent ces TJM par métier ?",
-      answer: `Ce sont des médianes indicatives issues des baromètres freelance publics 2026 (Malt, Blog du Modérateur, tjmetre.fr). Elles servent de repère de marché. Les revenus nets associés, eux, sont calculés par notre moteur, validé contre le simulateur officiel de l'URSSAF. Vérifiez le baromètre Malt pour un chiffrage à jour de votre spécialité.`,
+      answer: `Ce sont des médianes indicatives issues des baromètres freelance publics 2026 (Malt, Blog du Modérateur, tjmetre.fr). Elles servent de repère de marché. Les revenus nets associés, eux, sont calculés par notre moteur, comparé au moteur open source de mon-entreprise.urssaf.fr. Vérifiez le baromètre Malt pour un chiffrage à jour de votre spécialité.`,
     },
   ],
   related: [

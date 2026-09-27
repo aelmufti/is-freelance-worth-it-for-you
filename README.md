@@ -5,7 +5,7 @@
 ║  FREELANCE OU CDI ? COMBIEN IL VOUS RESTE VRAIMENT.              ║
 ║                                                                  ║
 ║  Un simulateur 2026 sans bullshit : taux officiels, comparaison  ║
-║  honnête, calculs validés contre le moteur de l'URSSAF.          ║
+║  honnête, calculs comparés au moteur open source de l'URSSAF.    ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -46,7 +46,7 @@ Plus : **barème IR 2026** (revenus 2025), quotient familial, décote, flat tax 
 
 ## Comment on sait que les chiffres sont justes
 
-On compare nos résultats au **moteur officiel `modele-social`** — c'est le moteur open source qui fait tourner [mon-entreprise.urssaf.fr](https://mon-entreprise.urssaf.fr). Une suite de tests automatisés vérifie l'écart sur des dizaines de scénarios :
+On compare nos résultats au **moteur open source `modele-social`** — celui qui fait tourner [mon-entreprise.urssaf.fr](https://mon-entreprise.urssaf.fr). Une suite de tests automatisés vérifie l'écart sur des dizaines de scénarios :
 
 ```bash
 npm test
@@ -77,7 +77,7 @@ npm run compare
 - **Tailwind CSS v4** avec design tokens néo-brutalistes
 - **recharts** pour les graphiques
 - **publicodes / modele-social** + **vitest** pour la validation contre l'URSSAF
-- **Vercel** (hébergement) + **Vercel Analytics** (sans cookie, exempté de consentement)
+- **Vercel** (hébergement) + **Vercel Analytics** (sans cookie, avec droit d'opposition — cf. [/confidentialite/](https://freelance-ou-cdi.fr/confidentialite/))
 
 Charte graphique : **néo-brutalisme strict** — JetBrains Mono partout, border-radius 0, ombres dures décalées sans blur, aucun dégradé, palette plate à fort contraste.
 
@@ -216,16 +216,22 @@ Pour rester lisible, on simplifie. Sont **hors périmètre** :
 
 ## Vie privée
 
-- **Aucune donnée** saisie dans le simulateur ne quitte votre navigateur.
-- **Aucun cookie** ni traceur : mesure d'audience anonyme via Vercel Analytics, sans consentement requis.
+- **Aucune donnée saisie** dans le simulateur ne quitte votre navigateur.
+- **Aucun cookie**, rien d'écrit sur l'appareil — sauf, si vous refusez la mesure d'audience, la mémorisation de ce refus.
+- **Mesure d'audience agrégée** via Vercel Web Analytics (sans cookie, empreinte renouvelée toutes les 24 h), avec un interrupteur d'opposition sur [/confidentialite/](https://freelance-ou-cdi.fr/confidentialite/) ; le signal Global Privacy Control vaut refus.
 - **Code source intégral** disponible ici — vérifiez vous-même.
+
+Les textes légaux ([mentions légales](https://freelance-ou-cdi.fr/mentions-legales/), [confidentialité](https://freelance-ou-cdi.fr/confidentialite/)) sont dans `src/components/Legal.tsx` : **toute modification des traceurs, de l'outil d'audience ou de l'hébergeur doit les mettre à jour dans le même commit.**
 
 ---
 
 ## Licence
 
-Le **code** est public sous licence MIT. Reprenez-le, forkez-le, améliorez-le.
-Le **contenu éditorial** (textes, formulations) est diffusé sous CC BY 4.0.
+Libre de réutilisation, à une condition : citer la source.
+
+- Le **code** est sous licence MIT ([`LICENSE`](LICENSE)) : la notice de copyright doit être conservée.
+- Les **contenus** (textes, tableaux, chiffres calculés, y compris dans `src/data/`) sont sous CC BY 4.0 ([`LICENSE-CONTENT.md`](LICENSE-CONTENT.md)) : « Source : freelance-ou-cdi.fr (Ali El Mufti) ».
+- Les TJM de marché issus de baromètres tiers (Malt, Blog du Modérateur, tjmetre.fr) restent la propriété de leurs auteurs.
 
 ---
 

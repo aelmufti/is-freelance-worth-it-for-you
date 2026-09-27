@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./index.css";
 import App from "./App";
 import { getPage } from "./lib/pages";
+import { audienceRefusee } from "./lib/consent";
 
 const container = document.getElementById("root")!;
 // La page est choisie d'après l'URL : modèle multi-document, pas de routing
@@ -16,7 +17,12 @@ const page = getPage(
 const tree = (
   <StrictMode>
     <App page={page} />
-    <Analytics />
+    {/* Refus déjà exprimé (interrupteur ou Global Privacy Control) : le
+        script de mesure n'est même pas chargé. Refus en cours de visite :
+        beforeSend annule chaque envoi. Cf. lib/consent.ts. */}
+    {!audienceRefusee() && (
+      <Analytics beforeSend={(e) => (audienceRefusee() ? null : e)} />
+    )}
   </StrictMode>
 );
 
