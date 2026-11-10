@@ -4,6 +4,14 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "is-freelance-worth-it-for-you.vercel.app" }],
+      "destination": "https://freelance-ou-cdi.fr/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

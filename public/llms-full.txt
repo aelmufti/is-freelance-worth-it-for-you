@@ -1572,7 +1572,7 @@ Ce sont des médianes indicatives issues des baromètres freelance publics 2026 
 
 URL : https://freelance-ou-cdi.fr/methodologie/
 
-**En bref.** Le simulateur part du chiffre d'affaires (TJM × jours facturés), applique les cotisations propres à chaque statut, l'impôt sur le revenu au barème 2026 (plus l'impôt sur les sociétés et la flat tax de 31,4 % le cas échéant), puis déduit les frais professionnels. Les résultats sont comparés automatiquement au moteur open source « modele-social », qui équipe mon-entreprise.urssaf.fr, avec des écarts inférieurs à 2 % sur les cas testés.
+**En bref.** Le simulateur part du chiffre d'affaires (TJM × jours facturés), applique les cotisations propres à chaque statut, l'impôt sur le revenu au barème 2026 (plus l'impôt sur les sociétés et la flat tax de 31,4 % le cas échéant), puis déduit les frais professionnels. Les résultats sont comparés automatiquement au moteur open source « modele-social », qui équipe mon-entreprise.urssaf.fr, avec des écarts inférieurs à 2 % sur les cas courants testés (limites détaillées plus bas).
 
 Ce simulateur compare, pour un même chiffre d'affaires, le revenu net réellement disponible dans six statuts : micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial et CDI cadre. Cette page détaille exactement ce qui est calculé, avec quelles hypothèses, quelles sources et quelles limites — pour que vous puissiez juger de la fiabilité des chiffres, et les reproduire.
 
@@ -1594,9 +1594,9 @@ Sauf réglage de votre part, les chiffres cités dans les pages reposent sur un 
 
 Le CDI « équivalent » affiché est calculé à net égal : c'est le salaire brut qui laisserait le même montant sur le compte après cotisations salariales et impôt. Cette équivalence ne valorise pas l'assurance chômage, les congés payés ni la retraite du salarié — elle sert de repère, pas de verdict.
 
-## Validation, limites et fraîcheur
+## Contrôle des calculs, limites et fraîcheur
 
-Les résultats sont comparés automatiquement au moteur de calcul open source « modele-social », celui qui équipe le simulateur officiel mon-entreprise.urssaf.fr : les écarts sont inférieurs à 2 % sur les cas testés. Cette démarche est purement technique — ce site est indépendant et n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration.
+Les résultats sont comparés automatiquement au moteur de calcul open source « modele-social », celui qui équipe le simulateur officiel mon-entreprise.urssaf.fr : sur les cas courants testés, les écarts sont inférieurs à 2 % ; ils atteignent environ 3 % sur les cotisations d'un indépendant à très haut revenu (160 000 € de rémunération). Une limite connue : le coût total employeur affiché pour le CDI applique un taux patronal moyen, sans la réduction générale de cotisations patronales ; il est donc surestimé pour les salaires bruts de 40 000 € et moins (d'environ 3 à 5 % à 40 000 €, de 12 à 13 % à 30 000 €). Le salaire net du CDI, lui, reste à moins de 1 % du moteur de référence. Cette démarche est purement technique — ce site est indépendant et n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration.
 
 Certains éléments ne sont pas tous modélisés : cotisation foncière des entreprises (CFE), plafonnement du quotient familial, réduction générale de cotisations, mutuelle obligatoire, prévoyance et cas particuliers. Les avantages salarié (titres-restaurant, transport, mutuelle) sont une estimation indicative, affichée à part et exclue du net comparé. Le simulateur est une aide à la décision, pas un substitut à un expert-comptable. Les taux et barèmes sont datés dans le pied de page « Sources » et mis à jour à chaque évolution réglementaire.
 
@@ -1604,7 +1604,7 @@ Certains éléments ne sont pas tous modélisés : cotisation foncière des entr
 
 ### Les calculs de ce simulateur sont-ils fiables ?
 
-Ils sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF (celui de mon-entreprise.urssaf.fr), avec des écarts inférieurs à 2 % sur les cas testés. Le code du moteur et tous les taux 2026 sont publics. C'est une aide à la décision indicative, pas un avis d'expert-comptable : certains cas particuliers ne sont pas modélisés.
+Ils sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF (celui de mon-entreprise.urssaf.fr), avec des écarts inférieurs à 2 % sur les cas courants testés ; les limites connues (coût employeur du CDI à bas salaire, indépendants à très haut revenu) sont détaillées sur la page méthodologie. Le code du moteur et tous les taux 2026 sont publics. C'est une aide à la décision indicative, pas un avis d'expert-comptable : certains cas particuliers ne sont pas modélisés.
 
 ### Ce site est-il affilié à l'URSSAF ?
 
@@ -3312,6 +3312,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 535 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un développeur web
+
+Le tarif d'un développeur web se joue d'abord sur la profondeur technique et la capacité à tenir un produit de bout en bout. Une expertise reconnue sur un framework front moderne, une solide maîtrise de TypeScript côté serveur, ou la connaissance des enjeux de performance, d'accessibilité et de sécurité applicative, justifient un tarif au-dessus de la médiane. À l'inverse, des intégrations simples sur un CMS ou des sites vitrines se négocient plus bas, car le client les compare à une offre abondante.
+
+Les missions vont de la construction d'un produit à partir de zéro pour une jeune entreprise à la reprise d'une application existante chez un grand compte, en passant par la refonte d'un front ou l'écriture d'API. En régie, vous êtes intégré à l'équipe du client et facturé au temps passé, ce qui donne un revenu stable. Au forfait, vous vendez un livrable défini : le prix doit alors absorber les imprévus et les allers-retours, mais il rémunère mieux un freelance qui livre vite.
+
 ## Ce que 535 €/jour laissent en net, statut par statut
 
 Sur 105 930 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 4 708 € en EI au réel, 4 025 € en SASU (100 % salaire) et 3 677 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3320,7 +3326,7 @@ Sur 105 930 € facturés dans l'année, le net mensuel après cotisations ET im
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un développeur web qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+On monte en tarif en passant de l'exécution de tickets à la responsabilité des choix d'architecture. Un profil qui débute prend des tâches cadrées au sein d'une équipe ; avec l'expérience, il porte un produit entier, arbitre la dette technique et accompagne d'autres développeurs. Se spécialiser sur une stack ou un domaine métier précis, plutôt que rester généraliste, ouvre l'accès aux missions les mieux rémunérées.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3370,6 +3376,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 600 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un DevOps / cloud
+
+Chez les profils DevOps et cloud, le tarif suit le périmètre de responsabilité. Les certifications d'un fournisseur cloud, la maîtrise de Kubernetes et de l'infrastructure as code, puis des acquis en observabilité ou en sécurité des plateformes, placent un profil au-dessus de la médiane. Celui qui sait concevoir une plateforme complète se facture plus cher que celui qui exécute des déploiements sur un outillage existant. Les environnements réglementés ou à forte disponibilité, où une erreur coûte cher, tirent aussi les tarifs vers le haut.
+
+Les missions typiques : migrer des applications vers le cloud, construire des chaînes d'intégration et de livraison continues, industrialiser l'infrastructure ou fiabiliser l'exploitation d'un produit. Beaucoup se déroulent en régie longue au sein d'une équipe plateforme. Les audits d'architecture ou de coûts cloud sont plus courts et se vendent souvent au forfait. Les astreintes et le support de production sont un élément de négociation à part : mieux vaut les cadrer dans le contrat plutôt que les absorber dans le tarif.
+
 ## Ce que 600 €/jour laissent en net, statut par statut
 
 Sur 118 800 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 288 € en EI au réel, 4 457 € en SASU (100 % salaire) et 4 066 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3378,7 +3390,7 @@ Sur 118 800 € facturés dans l'année, le net mensuel après cotisations ET im
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un DevOps / cloud qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+Le point de départ est l'exécution d'un outillage déjà en place, comme maintenir des pipelines et des déploiements. Le haut de fourchette s'atteint quand vous concevez l'architecture elle-même, choisissez les services et assumez la fiabilité de la production. Une certification cloud, une compétence en sécurité et une référence sur une migration complète accélèrent ce passage.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3428,6 +3440,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 645 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un data scientist
+
+Dans la data science, ce qui sépare un profil standard d'un profil mieux payé, c'est la distance entre le modèle et son usage. Savoir déployer un modèle et le suivre en production (MLOps), maîtriser le traitement du langage ou l'apprentissage profond, ou connaître le domaine du client (santé, finance, industrie) pèse davantage que la liste des bibliothèques connues. Une formation de recherche, comme un doctorat, aide à décrocher des sujets difficiles, mais le client paie surtout un résultat exploitable.
+
+Un data scientist freelance intervient pour cadrer un cas d'usage, prototyper un modèle de prédiction ou de classification, évaluer sa fiabilité puis le transmettre aux équipes qui l'exploiteront. Les phases d'exploration ou de preuve de concept sont courtes et souvent au forfait ; l'industrialisation s'étend plutôt en régie. Un client qui ne dispose pas encore de données propres demandera d'abord un travail de préparation, moins valorisé mais indispensable pour obtenir un bon tarif sur la suite.
+
 ## Ce que 645 €/jour laissent en net, statut par statut
 
 Sur 127 710 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 625 € en EI au réel, 4 755 € en SASU (100 % salaire) et 4 335 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3436,7 +3454,7 @@ Sur 127 710 € facturés dans l'année, le net mensuel après cotisations ET im
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un data scientist qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+Un profil débutant applique des méthodes connues sur des données déjà préparées, sous la direction d'un responsable. Pour viser le haut de la fourchette, il faut savoir cadrer le problème avec le métier, justifier ses choix de modélisation et amener un modèle jusqu'à la production. Une spécialité reconnue, en langage naturel ou en séries temporelles par exemple, renforce le positionnement.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3486,6 +3504,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 600 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un data engineer
+
+Le tarif d'un data engineer dépend de la taille et de la criticité des plateformes qu'il sait construire. La maîtrise d'un entrepôt de données cloud, d'outils de transformation et d'orchestration, du traitement en flux avec Kafka ou Spark, puis des bonnes pratiques de qualité et de gouvernance des données, fait la différence. Un profil qui sait maîtriser les coûts et la performance d'une plateforme se facture mieux que celui qui écrit uniquement des requêtes. Le versant analyste, plus proche du reporting, se situe plutôt en bas de la fourchette.
+
+Les missions consistent à bâtir des pipelines d'ingestion, modéliser un entrepôt de données, migrer un système décisionnel historique vers le cloud ou fiabiliser des flux existants. Les clients vont de la scale-up qui structure sa donnée au grand groupe qui modernise son système d'information. Les chantiers de migration durent longtemps et se prêtent à la régie ; la mise en place d'un socle de données ou un audit de qualité se vend plus volontiers au forfait.
+
 ## Ce que 600 €/jour laissent en net, statut par statut
 
 Sur 118 800 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 288 € en EI au réel, 4 457 € en SASU (100 % salaire) et 4 066 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3494,7 +3518,7 @@ Sur 118 800 € facturés dans l'année, le net mensuel après cotisations ET im
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un data engineer qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+On démarre en maintenant et en enrichissant des pipelines conçus par d'autres. On monte en choisissant l'architecture de la plateforme, en dimensionnant les coûts et en posant des règles de qualité que toute l'équipe suit. Passer de l'analyse à la conception, puis à la conduite de chantiers de migration, est le chemin le plus direct vers le haut de la fourchette.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3544,6 +3568,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 595 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un product manager
+
+En product management, le tarif reflète la responsabilité sur les résultats plus que la maîtrise d'outils. Un profil qui a lancé et fait grandir un produit, qui sait arbitrer entre des demandes concurrentes et parler aux équipes techniques comme à la direction, se facture au-dessus de la médiane. L'expérience dans un domaine précis (paiement, marketplace, logiciel pour entreprises) compte beaucoup. Un chef de projet digital qui coordonne surtout des délais et des prestataires se situe plus bas qu'un product manager qui définit la stratégie du produit.
+
+Les missions typiques : structurer la démarche produit d'une jeune entreprise, prendre en charge un produit en l'absence de responsable, cadrer un lancement ou piloter une refonte. Elles se déroulent presque toujours en régie, intégrées à l'équipe, sur plusieurs mois. Les missions de cadrage ou de conseil en organisation produit sont plus courtes. Le client juge la valeur sur l'impact apporté, ce qui permet de défendre un tarif plus élevé quand vous pouvez montrer des résultats passés.
+
 ## Ce que 595 €/jour laissent en net, statut par statut
 
 Sur 117 810 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 243 € en EI au réel, 4 424 € en SASU (100 % salaire) et 4 036 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3552,7 +3582,7 @@ Sur 117 810 € facturés dans l'année, le net mensuel après cotisations ET im
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un product manager qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+Un profil qui débute gère un périmètre limité, rédige des spécifications et suit la réalisation. Le haut de la fourchette est réservé à ceux qui définissent la vision du produit, fixent les priorités et rendent des comptes sur les résultats. Documenter vos lancements passés et leur effet sur l'activité du client est l'argument le plus solide en négociation.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3602,6 +3632,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 650 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un consultant stratégie
+
+Le TJM d'un consultant en stratégie ou en transition dépend de la séniorité du poste occupé et de la confiance accordée par la direction. Un parcours d'ancien dirigeant ou d'ancien consultant d'un cabinet reconnu, une expertise sectorielle pointue (énergie, santé, distribution) ou une expérience de redressement, de fusion ou de réorganisation justifient les tarifs les plus hauts. Le conseil généraliste sans spécialité claire se vend plus difficilement, car le client le compare à l'offre des grands cabinets.
+
+Les missions vont de l'étude de marché ou du plan stratégique, livré sous forme de recommandations, au management de transition, où vous dirigez une activité ou conduisez un changement pendant une période définie. Les études se vendent plutôt au forfait, sur un livrable précis. Le management de transition se facture au jour, en régie, et se négocie en fonction du niveau de responsabilité et de l'urgence du besoin.
+
 ## Ce que 650 €/jour laissent en net, statut par statut
 
 Sur 128 700 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 663 € en EI au réel, 4 789 € en SASU (100 % salaire) et 4 365 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3610,7 +3646,7 @@ Sur 128 700 € facturés dans l'année, le net mensuel après cotisations ET im
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un consultant stratégie qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+Un consultant qui débute travaille sur des analyses cadrées par un associé ou un client. Il monte en tarif en assumant des décisions : présenter directement au comité de direction, conduire un changement jusqu'à son terme, puis être sollicité pour des postes de direction temporaire. Une réputation dans un secteur précis et le bouche-à-oreille entre dirigeants pèsent souvent autant que les plateformes de mise en relation.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3660,6 +3696,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 590 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un consultant marketing
+
+Le marketing digital regroupe des métiers très différents, et la spécialité explique l'essentiel de l'écart. L'acquisition payante, l'automatisation du marketing, l'analyse de données et la stratégie de marque ne se facturent pas de la même façon. Un consultant qui sait relier ses actions à des résultats mesurables (prospects, ventes, fidélisation) et qui maîtrise les outils d'analyse se positionne plus haut qu'un exécutant de campagnes. La connaissance d'un secteur, comme le logiciel en ligne ou l'e-commerce, est aussi valorisée.
+
+Un consultant marketing audite une stratégie existante, structure l'acquisition d'une jeune entreprise, met en place des outils d'automatisation ou accompagne une équipe interne pendant quelques mois. Les audits et les ateliers sont courts et se vendent bien au forfait. L'accompagnement de longue durée, comme le pilotage de campagnes, se prête à la régie ou à un forfait mensuel. Un client qui attend un résultat chiffré négociera plus durement qu'un client qui achète du temps d'expertise.
+
 ## Ce que 590 €/jour laissent en net, statut par statut
 
 Sur 116 820 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 199 € en EI au réel, 4 390 € en SASU (100 % salaire) et 4 006 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3668,7 +3710,7 @@ Sur 116 820 € facturés dans l'année, le net mensuel après cotisations ET im
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un consultant marketing qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+Au début, on exécute des actions décidées par d'autres : paramétrage de campagnes, rédaction, reporting. La progression passe par le choix d'un domaine où l'on obtient des résultats prouvables, puis par la capacité à construire la stratégie, répartir un budget et convaincre une direction. Des études de cas avant-après, présentées sans exagération, valent plus qu'une liste d'outils.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3718,6 +3760,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 450 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un consultant SEO
+
+En SEO, le tarif distingue le conseil éditorial du travail technique. L'audit technique de grands sites, la gestion des migrations, l'analyse des journaux serveur, l'automatisation par script ou la maîtrise des données de recherche placent un consultant plus haut qu'un accompagnement centré sur la rédaction et les mots-clés. Une expérience sur des sites comptant énormément de pages, ou sur plusieurs langues, est précieuse. Le client juge surtout la capacité à expliquer les priorités aux développeurs et à la direction.
+
+Les missions courantes sont l'audit de référencement, la refonte d'un site sans perte de visibilité, la définition d'une stratégie de contenus et la formation d'équipes internes. L'audit est un livrable court et se vend au forfait. Le suivi mensuel prend la forme d'un accompagnement régulier. Comme les effets du SEO mettent du temps à apparaître et dépendent aussi du moteur de recherche, un engagement de résultat est risqué : mieux vaut vendre une méthode et un plan d'action.
+
 ## Ce que 450 €/jour laissent en net, statut par statut
 
 Sur 89 100 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 3 979 € en EI au réel, 3 461 € en SASU (100 % salaire) et 3 169 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3726,7 +3774,7 @@ Sur 89 100 € facturés dans l'année, le net mensuel après cotisations ET imp
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un consultant SEO qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+Un débutant produit des audits à partir de listes de contrôle et rédige des recommandations. Le haut de la fourchette est atteint quand on traite les problèmes techniques complexes, qu'on dialogue d'égal à égal avec les développeurs et qu'on relie le référencement aux objectifs de l'entreprise. Un site personnel ou des cas clients documentés servent de preuve concrète de compétence.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3776,6 +3824,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 450 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un designer UX/UI
+
+Un designer UX/UI se fait payer davantage quand son travail va au-delà de l'écran. La recherche utilisateur, la conception de systèmes de design partagés avec les développeurs, le design de produits complexes comme les outils professionnels, et l'aisance en prototypage ou en tests d'usage font monter le tarif. Un profil purement graphique, qui livre des maquettes sans lien avec la réalité du produit, se négocie plus bas. La qualité du portfolio compte plus ici que les diplômes.
+
+Les missions typiques sont la conception d'un parcours d'application mobile ou web, la refonte d'une interface vieillissante, la création ou l'évolution d'un design system, ou la conduite d'entretiens et de tests avec des utilisateurs. Les sprints de conception se vendent au forfait avec des livrables clairs ; l'intégration dans une équipe produit se fait en régie. Précisez le nombre d'itérations dans le devis, sinon les retours successifs rognent votre rémunération réelle.
+
 ## Ce que 450 €/jour laissent en net, statut par statut
 
 Sur 89 100 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 3 979 € en EI au réel, 3 461 € en SASU (100 % salaire) et 3 169 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3784,7 +3838,7 @@ Sur 89 100 € facturés dans l'année, le net mensuel après cotisations ET imp
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un designer UX/UI qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+Un designer qui débute produit des écrans à partir d'un brief précis. Il monte en tarif en prenant en charge le problème avant la maquette : comprendre les utilisateurs, justifier ses choix devant une équipe et mesurer l'effet de ses décisions. Des études de cas détaillées, montrant le raisonnement autant que le résultat final, sont la base d'une négociation réussie.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3834,6 +3888,12 @@ D'après les baromètres TJM freelance 2026 (Malt, Blog du Modérateur, tjmetre.
 
 La géographie joue aussi : hors Île-de-France, les TJM des métiers du numérique sont en moyenne inférieurs de 7 à 10 %. À l'inverse, une compétence rare ou une mission urgente peut faire monter le tarif bien au-dessus de la médiane. Prenez 650 €/jour comme un repère de marché, pas comme un plafond.
 
+## Ce qui fait varier le TJM d'un expert cybersécurité
+
+En cybersécurité, le tarif suit le niveau de responsabilité et la rareté de la spécialité. Les tests d'intrusion, la réponse à incident, l'architecture de sécurité cloud, la sécurité des applications et la conformité (normes ISO, cadre réglementaire européen) ne s'adressent pas aux mêmes clients. Les certifications reconnues du domaine rassurent les directions et sont souvent exigées dans les appels d'offres. Les profils qui gèrent une crise, ou qui conseillent la direction sur le risque, se situent en haut de fourchette.
+
+Un expert intervient pour auditer un système, conduire des tests d'intrusion, mettre en place une démarche de gouvernance ou accompagner une certification, et parfois pour gérer une crise après une attaque. Les audits et tests sont des missions courtes au forfait, avec un rapport comme livrable. Le pilotage d'un programme de sécurité s'étend sur la durée en régie. Les missions d'urgence se facturent plus cher, car la disponibilité immédiate fait partie de la prestation.
+
 ## Ce que 650 €/jour laissent en net, statut par statut
 
 Sur 128 700 € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : micro-entreprise inaccessible (le chiffre d'affaires dépasse le plafond en prestations), 5 663 € en EI au réel, 4 789 € en SASU (100 % salaire) et 4 365 € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.
@@ -3842,7 +3902,7 @@ Sur 128 700 € facturés dans l'année, le net mensuel après cotisations ET im
 
 ## Faire évoluer son TJM
 
-Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un expert cybersécurité qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.
+Un débutant réalise des audits cadrés et applique des référentiels. Il monte en tarif en prenant la responsabilité d'un périmètre complet, en menant des interventions sensibles et en parlant le langage du risque à la direction. Les certifications du métier et les retours d'expérience sur des incidents réels, présentés dans le respect de la confidentialité des clients, ouvrent les missions les mieux rémunérées.
 
 Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.
 
@@ -3870,7 +3930,7 @@ Oui : les baromètres montrent des TJM en moyenne inférieurs de 7 à 10 % hors 
 
 - [Code source du moteur fiscal](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/src/lib/engine.ts)
 - [Tous les taux 2026 utilisés](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/src/lib/params.ts)
-- [Tests de validation contre le moteur URSSAF](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/tests/urssaf.test.ts)
+- [Tests de comparaison avec le moteur open source modele-social (mon-entreprise.urssaf.fr)](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/tests/urssaf.test.ts)
 
 ## Sources officielles
 

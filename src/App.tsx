@@ -634,7 +634,7 @@ export default function App({ page }: { page: StatutPage }) {
                   ✓ Contrôle qualité : nos résultats sont comparés automatiquement
                   au moteur de calcul open source « modele-social » qui équipe
                   mon-entreprise.urssaf.fr (écarts inférieurs à 2 % sur les cas
-                  testés). Cette démarche est purement technique : ce site est
+                  courants testés ; limites détaillées dans la méthodologie). Cette démarche est purement technique : ce site est
                   indépendant et n'est ni édité, ni approuvé, ni soutenu par
                   l'URSSAF ou toute autre administration.
                 </p>
@@ -654,7 +654,7 @@ export default function App({ page }: { page: StatutPage }) {
                   ⚠ Simulation indicative : elle ne remplace pas un
                   expert-comptable et ne modélise pas tous les cas particuliers.
                   Les résultats sont comparés au moteur open source
-                  « modele-social » de l'URSSAF (écarts inférieurs à 2 %) ; ce
+                  « modele-social » de l'URSSAF (écarts inférieurs à 2 % sur les cas courants testés) ; ce
                   site reste indépendant et sans lien avec l'administration.
                   Aucune donnée saisie n'est envoyée : tout est calculé dans votre
                   navigateur.

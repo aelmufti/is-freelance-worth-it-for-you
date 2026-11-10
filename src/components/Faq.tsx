@@ -45,12 +45,13 @@ export function Faq({
                 className="brutal-press flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-extrabold uppercase tracking-tight"
               >
                 <span>{item.question}</span>
+                {/* Glyphe via CSS ::after : aucun nœud texte dans le <h3>. */}
                 <span
                   aria-hidden="true"
-                  className="shrink-0 border-2 border-ink bg-tag-yellow px-2 text-xs"
-                >
-                  {expanded ? "−" : "+"}
-                </span>
+                  className={`shrink-0 border-2 border-ink bg-tag-yellow px-2 text-xs ${
+                    expanded ? "after:content-['−']" : "after:content-['+']"
+                  }`}
+                />
               </button>
             </h3>
             <div

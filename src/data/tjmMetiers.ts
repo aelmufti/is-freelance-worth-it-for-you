@@ -30,6 +30,11 @@ interface Metier {
   bas: number; // bas de fourchette (junior)
   haut: number; // haut de fourchette (senior)
   contexte: string; // 1-2 phrases spécifiques au métier (anti-templating)
+  // Prose propre au métier, strictement qualitative (aucun chiffre) : sans elle,
+  // deux métiers de même TJM médian produiraient des pages quasi identiques.
+  specialites: string; // ce qui fait varier le TJM (spécialités, compétences, certifications)
+  missions: string; // types de missions, livrables, clients, régie vs forfait
+  progression: string; // trajectoire réaliste du bas vers le haut de la fourchette
 }
 
 // Fourchettes indicatives 2026 issues des baromètres publics.
@@ -43,6 +48,12 @@ const METIERS: Metier[] = [
     haut: 900,
     contexte:
       "C'est le métier le plus demandé de la tech freelance : les profils full-stack maîtrisant les frameworks récents (React, Node, TypeScript) tirent les tarifs vers le haut, et les seniors dépassent souvent 700 €/jour.",
+    specialites:
+      "Le tarif d'un développeur web se joue d'abord sur la profondeur technique et la capacité à tenir un produit de bout en bout. Une expertise reconnue sur un framework front moderne, une solide maîtrise de TypeScript côté serveur, ou la connaissance des enjeux de performance, d'accessibilité et de sécurité applicative, justifient un tarif au-dessus de la médiane. À l'inverse, des intégrations simples sur un CMS ou des sites vitrines se négocient plus bas, car le client les compare à une offre abondante.",
+    missions:
+      "Les missions vont de la construction d'un produit à partir de zéro pour une jeune entreprise à la reprise d'une application existante chez un grand compte, en passant par la refonte d'un front ou l'écriture d'API. En régie, vous êtes intégré à l'équipe du client et facturé au temps passé, ce qui donne un revenu stable. Au forfait, vous vendez un livrable défini : le prix doit alors absorber les imprévus et les allers-retours, mais il rémunère mieux un freelance qui livre vite.",
+    progression:
+      "On monte en tarif en passant de l'exécution de tickets à la responsabilité des choix d'architecture. Un profil qui débute prend des tâches cadrées au sein d'une équipe ; avec l'expérience, il porte un produit entier, arbitre la dette technique et accompagne d'autres développeurs. Se spécialiser sur une stack ou un domaine métier précis, plutôt que rester généraliste, ouvre l'accès aux missions les mieux rémunérées.",
   },
   {
     slug: "devops-cloud",
@@ -53,6 +64,12 @@ const METIERS: Metier[] = [
     haut: 800,
     contexte:
       "La rareté des compétences cloud (AWS, Kubernetes, Terraform) maintient les tarifs élevés ; les architectes cloud expérimentés dépassent régulièrement 750 €/jour.",
+    specialites:
+      "Chez les profils DevOps et cloud, le tarif suit le périmètre de responsabilité. Les certifications d'un fournisseur cloud, la maîtrise de Kubernetes et de l'infrastructure as code, puis des acquis en observabilité ou en sécurité des plateformes, placent un profil au-dessus de la médiane. Celui qui sait concevoir une plateforme complète se facture plus cher que celui qui exécute des déploiements sur un outillage existant. Les environnements réglementés ou à forte disponibilité, où une erreur coûte cher, tirent aussi les tarifs vers le haut.",
+    missions:
+      "Les missions typiques : migrer des applications vers le cloud, construire des chaînes d'intégration et de livraison continues, industrialiser l'infrastructure ou fiabiliser l'exploitation d'un produit. Beaucoup se déroulent en régie longue au sein d'une équipe plateforme. Les audits d'architecture ou de coûts cloud sont plus courts et se vendent souvent au forfait. Les astreintes et le support de production sont un élément de négociation à part : mieux vaut les cadrer dans le contrat plutôt que les absorber dans le tarif.",
+    progression:
+      "Le point de départ est l'exécution d'un outillage déjà en place, comme maintenir des pipelines et des déploiements. Le haut de fourchette s'atteint quand vous concevez l'architecture elle-même, choisissez les services et assumez la fiabilité de la production. Une certification cloud, une compétence en sécurité et une référence sur une migration complète accélèrent ce passage.",
   },
   {
     slug: "data-scientist",
@@ -63,6 +80,12 @@ const METIERS: Metier[] = [
     haut: 850,
     contexte:
       "L'un des TJM médians les plus hauts de la tech. La maîtrise de la mise en production (MLOps) et des sujets d'intelligence artificielle pousse les seniors au-delà de 800 €/jour.",
+    specialites:
+      "Dans la data science, ce qui sépare un profil standard d'un profil mieux payé, c'est la distance entre le modèle et son usage. Savoir déployer un modèle et le suivre en production (MLOps), maîtriser le traitement du langage ou l'apprentissage profond, ou connaître le domaine du client (santé, finance, industrie) pèse davantage que la liste des bibliothèques connues. Une formation de recherche, comme un doctorat, aide à décrocher des sujets difficiles, mais le client paie surtout un résultat exploitable.",
+    missions:
+      "Un data scientist freelance intervient pour cadrer un cas d'usage, prototyper un modèle de prédiction ou de classification, évaluer sa fiabilité puis le transmettre aux équipes qui l'exploiteront. Les phases d'exploration ou de preuve de concept sont courtes et souvent au forfait ; l'industrialisation s'étend plutôt en régie. Un client qui ne dispose pas encore de données propres demandera d'abord un travail de préparation, moins valorisé mais indispensable pour obtenir un bon tarif sur la suite.",
+    progression:
+      "Un profil débutant applique des méthodes connues sur des données déjà préparées, sous la direction d'un responsable. Pour viser le haut de la fourchette, il faut savoir cadrer le problème avec le métier, justifier ses choix de modélisation et amener un modèle jusqu'à la production. Une spécialité reconnue, en langage naturel ou en séries temporelles par exemple, renforce le positionnement.",
   },
   {
     slug: "data-engineer",
@@ -73,6 +96,12 @@ const METIERS: Metier[] = [
     haut: 800,
     contexte:
       "Data engineering et analytics (BigQuery, Snowflake, dbt) : demande forte et tarifs proches des data scientists. Hors Île-de-France, comptez environ 9 % de moins sur ces profils.",
+    specialites:
+      "Le tarif d'un data engineer dépend de la taille et de la criticité des plateformes qu'il sait construire. La maîtrise d'un entrepôt de données cloud, d'outils de transformation et d'orchestration, du traitement en flux avec Kafka ou Spark, puis des bonnes pratiques de qualité et de gouvernance des données, fait la différence. Un profil qui sait maîtriser les coûts et la performance d'une plateforme se facture mieux que celui qui écrit uniquement des requêtes. Le versant analyste, plus proche du reporting, se situe plutôt en bas de la fourchette.",
+    missions:
+      "Les missions consistent à bâtir des pipelines d'ingestion, modéliser un entrepôt de données, migrer un système décisionnel historique vers le cloud ou fiabiliser des flux existants. Les clients vont de la scale-up qui structure sa donnée au grand groupe qui modernise son système d'information. Les chantiers de migration durent longtemps et se prêtent à la régie ; la mise en place d'un socle de données ou un audit de qualité se vend plus volontiers au forfait.",
+    progression:
+      "On démarre en maintenant et en enrichissant des pipelines conçus par d'autres. On monte en choisissant l'architecture de la plateforme, en dimensionnant les coûts et en posant des règles de qualité que toute l'équipe suit. Passer de l'analyse à la conception, puis à la conduite de chantiers de migration, est le chemin le plus direct vers le haut de la fourchette.",
   },
   {
     slug: "product-manager",
@@ -83,6 +112,12 @@ const METIERS: Metier[] = [
     haut: 800,
     contexte:
       "Le TJM médian d'un product manager ou chef de projet digital est solide, mais très dépendant du secteur client : une scale-up bien financée paie souvent mieux qu'un grand compte traditionnel.",
+    specialites:
+      "En product management, le tarif reflète la responsabilité sur les résultats plus que la maîtrise d'outils. Un profil qui a lancé et fait grandir un produit, qui sait arbitrer entre des demandes concurrentes et parler aux équipes techniques comme à la direction, se facture au-dessus de la médiane. L'expérience dans un domaine précis (paiement, marketplace, logiciel pour entreprises) compte beaucoup. Un chef de projet digital qui coordonne surtout des délais et des prestataires se situe plus bas qu'un product manager qui définit la stratégie du produit.",
+    missions:
+      "Les missions typiques : structurer la démarche produit d'une jeune entreprise, prendre en charge un produit en l'absence de responsable, cadrer un lancement ou piloter une refonte. Elles se déroulent presque toujours en régie, intégrées à l'équipe, sur plusieurs mois. Les missions de cadrage ou de conseil en organisation produit sont plus courtes. Le client juge la valeur sur l'impact apporté, ce qui permet de défendre un tarif plus élevé quand vous pouvez montrer des résultats passés.",
+    progression:
+      "Un profil qui débute gère un périmètre limité, rédige des spécifications et suit la réalisation. Le haut de la fourchette est réservé à ceux qui définissent la vision du produit, fixent les priorités et rendent des comptes sur les résultats. Documenter vos lancements passés et leur effet sur l'activité du client est l'argument le plus solide en négociation.",
   },
   {
     slug: "consultant-strategie",
@@ -93,6 +128,12 @@ const METIERS: Metier[] = [
     haut: 950,
     contexte:
       "La fourchette est large : un consultant junior tourne autour de 450 €/jour, tandis que les managers de transition atteignent couramment 1 000 à 1 200 €/jour.",
+    specialites:
+      "Le TJM d'un consultant en stratégie ou en transition dépend de la séniorité du poste occupé et de la confiance accordée par la direction. Un parcours d'ancien dirigeant ou d'ancien consultant d'un cabinet reconnu, une expertise sectorielle pointue (énergie, santé, distribution) ou une expérience de redressement, de fusion ou de réorganisation justifient les tarifs les plus hauts. Le conseil généraliste sans spécialité claire se vend plus difficilement, car le client le compare à l'offre des grands cabinets.",
+    missions:
+      "Les missions vont de l'étude de marché ou du plan stratégique, livré sous forme de recommandations, au management de transition, où vous dirigez une activité ou conduisez un changement pendant une période définie. Les études se vendent plutôt au forfait, sur un livrable précis. Le management de transition se facture au jour, en régie, et se négocie en fonction du niveau de responsabilité et de l'urgence du besoin.",
+    progression:
+      "Un consultant qui débute travaille sur des analyses cadrées par un associé ou un client. Il monte en tarif en assumant des décisions : présenter directement au comité de direction, conduire un changement jusqu'à son terme, puis être sollicité pour des postes de direction temporaire. Une réputation dans un secteur précis et le bouche-à-oreille entre dirigeants pèsent souvent autant que les plateformes de mise en relation.",
   },
   {
     slug: "consultant-marketing",
@@ -103,6 +144,12 @@ const METIERS: Metier[] = [
     haut: 800,
     contexte:
       "Le baromètre Malt situe le TJM médian d'un consultant marketing confirmé autour de 590 €/jour, avec des juniors vers 310 € et des seniors autour de 780 € et plus.",
+    specialites:
+      "Le marketing digital regroupe des métiers très différents, et la spécialité explique l'essentiel de l'écart. L'acquisition payante, l'automatisation du marketing, l'analyse de données et la stratégie de marque ne se facturent pas de la même façon. Un consultant qui sait relier ses actions à des résultats mesurables (prospects, ventes, fidélisation) et qui maîtrise les outils d'analyse se positionne plus haut qu'un exécutant de campagnes. La connaissance d'un secteur, comme le logiciel en ligne ou l'e-commerce, est aussi valorisée.",
+    missions:
+      "Un consultant marketing audite une stratégie existante, structure l'acquisition d'une jeune entreprise, met en place des outils d'automatisation ou accompagne une équipe interne pendant quelques mois. Les audits et les ateliers sont courts et se vendent bien au forfait. L'accompagnement de longue durée, comme le pilotage de campagnes, se prête à la régie ou à un forfait mensuel. Un client qui attend un résultat chiffré négociera plus durement qu'un client qui achète du temps d'expertise.",
+    progression:
+      "Au début, on exécute des actions décidées par d'autres : paramétrage de campagnes, rédaction, reporting. La progression passe par le choix d'un domaine où l'on obtient des résultats prouvables, puis par la capacité à construire la stratégie, répartir un budget et convaincre une direction. Des études de cas avant-après, présentées sans exagération, valent plus qu'une liste d'outils.",
   },
   {
     slug: "consultant-seo",
@@ -113,6 +160,12 @@ const METIERS: Metier[] = [
     haut: 650,
     contexte:
       "Les tarifs SEO sont plus accessibles que le développement, mais les experts en SEO technique ou en data SEO montent au-delà de 600 €/jour.",
+    specialites:
+      "En SEO, le tarif distingue le conseil éditorial du travail technique. L'audit technique de grands sites, la gestion des migrations, l'analyse des journaux serveur, l'automatisation par script ou la maîtrise des données de recherche placent un consultant plus haut qu'un accompagnement centré sur la rédaction et les mots-clés. Une expérience sur des sites comptant énormément de pages, ou sur plusieurs langues, est précieuse. Le client juge surtout la capacité à expliquer les priorités aux développeurs et à la direction.",
+    missions:
+      "Les missions courantes sont l'audit de référencement, la refonte d'un site sans perte de visibilité, la définition d'une stratégie de contenus et la formation d'équipes internes. L'audit est un livrable court et se vend au forfait. Le suivi mensuel prend la forme d'un accompagnement régulier. Comme les effets du SEO mettent du temps à apparaître et dépendent aussi du moteur de recherche, un engagement de résultat est risqué : mieux vaut vendre une méthode et un plan d'action.",
+    progression:
+      "Un débutant produit des audits à partir de listes de contrôle et rédige des recommandations. Le haut de la fourchette est atteint quand on traite les problèmes techniques complexes, qu'on dialogue d'égal à égal avec les développeurs et qu'on relie le référencement aux objectifs de l'entreprise. Un site personnel ou des cas clients documentés servent de preuve concrète de compétence.",
   },
   {
     slug: "designer-ux-ui",
@@ -123,6 +176,12 @@ const METIERS: Metier[] = [
     haut: 650,
     contexte:
       "En design produit, les juniors démarrent autour de 300 €/jour ; les seniors dotés d'un vrai portfolio produit et de compétences en design system dépassent 550 €.",
+    specialites:
+      "Un designer UX/UI se fait payer davantage quand son travail va au-delà de l'écran. La recherche utilisateur, la conception de systèmes de design partagés avec les développeurs, le design de produits complexes comme les outils professionnels, et l'aisance en prototypage ou en tests d'usage font monter le tarif. Un profil purement graphique, qui livre des maquettes sans lien avec la réalité du produit, se négocie plus bas. La qualité du portfolio compte plus ici que les diplômes.",
+    missions:
+      "Les missions typiques sont la conception d'un parcours d'application mobile ou web, la refonte d'une interface vieillissante, la création ou l'évolution d'un design system, ou la conduite d'entretiens et de tests avec des utilisateurs. Les sprints de conception se vendent au forfait avec des livrables clairs ; l'intégration dans une équipe produit se fait en régie. Précisez le nombre d'itérations dans le devis, sinon les retours successifs rognent votre rémunération réelle.",
+    progression:
+      "Un designer qui débute produit des écrans à partir d'un brief précis. Il monte en tarif en prenant en charge le problème avant la maquette : comprendre les utilisateurs, justifier ses choix devant une équipe et mesurer l'effet de ses décisions. Des études de cas détaillées, montrant le raisonnement autant que le résultat final, sont la base d'une négociation réussie.",
   },
   {
     slug: "expert-cybersecurite",
@@ -133,6 +192,12 @@ const METIERS: Metier[] = [
     haut: 900,
     contexte:
       "La pénurie de profils place la cybersécurité parmi les TJM les plus hauts ; le pentest et la gouvernance sécurité se situent au sommet de la fourchette.",
+    specialites:
+      "En cybersécurité, le tarif suit le niveau de responsabilité et la rareté de la spécialité. Les tests d'intrusion, la réponse à incident, l'architecture de sécurité cloud, la sécurité des applications et la conformité (normes ISO, cadre réglementaire européen) ne s'adressent pas aux mêmes clients. Les certifications reconnues du domaine rassurent les directions et sont souvent exigées dans les appels d'offres. Les profils qui gèrent une crise, ou qui conseillent la direction sur le risque, se situent en haut de fourchette.",
+    missions:
+      "Un expert intervient pour auditer un système, conduire des tests d'intrusion, mettre en place une démarche de gouvernance ou accompagner une certification, et parfois pour gérer une crise après une attaque. Les audits et tests sont des missions courtes au forfait, avec un rapport comme livrable. Le pilotage d'un programme de sécurité s'étend sur la durée en régie. Les missions d'urgence se facturent plus cher, car la disponibilité immédiate fait partie de la prestation.",
+    progression:
+      "Un débutant réalise des audits cadrés et applique des référentiels. Il monte en tarif en prenant la responsabilité d'un périmètre complet, en menant des interventions sensibles et en parlant le langage du risque à la direction. Les certifications du métier et les retours d'expérience sur des incidents réels, présentés dans le respect de la confidentialité des clients, ouvrent les missions les mieux rémunérées.",
   },
 ];
 
@@ -155,6 +220,7 @@ function makeMetierPage(m: Metier, prev?: Metier, next?: Metier): StatutPage {
   ];
   return {
     slug: `tjm-freelance-${m.slug}`,
+    updated: "2026-11-10",
     breadcrumb: `TJM ${m.court}`,
     hideFromFooter: true,
     inputOverrides: { tjm: m.tjm },
@@ -176,6 +242,10 @@ function makeMetierPage(m: Metier, prev?: Metier, next?: Metier): StatutPage {
         ],
       },
       {
+        heading: `Ce qui fait varier le TJM d'un ${m.court}`,
+        paragraphs: [m.specialites, m.missions],
+      },
+      {
         heading: `Ce que ${m.tjm} €/jour laissent en net, statut par statut`,
         paragraphs: [
           `Sur ${fmt(f.ca)} € facturés dans l'année, le net mensuel après cotisations ET impôt s'établit à : ${microTxt}, ${fmt(f.netEi)} € en EI au réel, ${fmt(f.netSasu)} € en SASU (100 % salaire) et ${fmt(f.netPortage)} € en portage salarial. Ces chiffres sortent du même moteur que le simulateur ci-dessus, comparé au moteur open source de mon-entreprise.urssaf.fr.`,
@@ -187,7 +257,7 @@ function makeMetierPage(m: Metier, prev?: Metier, next?: Metier): StatutPage {
       {
         heading: "Faire évoluer son TJM",
         paragraphs: [
-          `Trois leviers font monter un TJM au-dessus de la médiane : la séniorité (un portfolio et des références solides), la spécialisation sur une compétence rare et bien valorisée, et la capacité à parler « impact business » plutôt que « jours-homme ». Un ${m.court} qui démarre vise le bas de la fourchette ; avec quelques années et une niche, le haut devient atteignable.`,
+          m.progression,
           `Réglez le simulateur en haut de page sur votre TJM réel et vos jours facturés pour voir votre net exact, statut par statut, et le salaire CDI qu'il faudrait pour l'égaler. C'est le meilleur argument, chiffré, pour négocier votre prochaine mission au-dessus de votre seuil de rentabilité.`,
         ],
       },

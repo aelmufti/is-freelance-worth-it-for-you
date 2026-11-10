@@ -7,12 +7,13 @@ import type { StatutPage } from "../lib/pages";
 // -------------------------------------------------- MÉTHODOLOGIE
 const METHODOLOGIE: StatutPage = {
   slug: "methodologie",
+  updated: "2026-11-10",
   breadcrumb: "Méthodologie",
   layout: "content",
   metaTitle: "Méthodologie du simulateur freelance vs CDI 2026",
   metaDescription: `Comment sont calculés les nets : cotisations par statut, barème 2026, flat tax, IS, hypothèses, limites et contrôle des calculs.`,
   h1: "Méthodologie : comment les calculs sont faits",
-  tldr: `Le simulateur part du chiffre d'affaires (TJM × jours facturés), applique les cotisations propres à chaque statut, l'impôt sur le revenu au barème 2026 (plus l'impôt sur les sociétés et la flat tax de 31,4 % le cas échéant), puis déduit les frais professionnels. Les résultats sont comparés automatiquement au moteur open source « modele-social », qui équipe mon-entreprise.urssaf.fr, avec des écarts inférieurs à 2 % sur les cas testés.`,
+  tldr: `Le simulateur part du chiffre d'affaires (TJM × jours facturés), applique les cotisations propres à chaque statut, l'impôt sur le revenu au barème 2026 (plus l'impôt sur les sociétés et la flat tax de 31,4 % le cas échéant), puis déduit les frais professionnels. Les résultats sont comparés automatiquement au moteur open source « modele-social », qui équipe mon-entreprise.urssaf.fr, avec des écarts inférieurs à 2 % sur les cas courants testés (limites détaillées plus bas).`,
   intro: `Ce simulateur compare, pour un même chiffre d'affaires, le revenu net réellement disponible dans six statuts : micro-entreprise, EI au réel, EURL à l'IS, SASU à l'IS, portage salarial et CDI cadre. Cette page détaille exactement ce qui est calculé, avec quelles hypothèses, quelles sources et quelles limites — pour que vous puissiez juger de la fiabilité des chiffres, et les reproduire.`,
   sections: [
     {
@@ -37,9 +38,9 @@ const METHODOLOGIE: StatutPage = {
       ],
     },
     {
-      heading: "Validation, limites et fraîcheur",
+      heading: "Contrôle des calculs, limites et fraîcheur",
       paragraphs: [
-        `Les résultats sont comparés automatiquement au moteur de calcul open source « modele-social », celui qui équipe le simulateur officiel mon-entreprise.urssaf.fr : les écarts sont inférieurs à 2 % sur les cas testés. Cette démarche est purement technique — ce site est indépendant et n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration.`,
+        `Les résultats sont comparés automatiquement au moteur de calcul open source « modele-social », celui qui équipe le simulateur officiel mon-entreprise.urssaf.fr : sur les cas courants testés, les écarts sont inférieurs à 2 % ; ils atteignent environ 3 % sur les cotisations d'un indépendant à très haut revenu (160 000 € de rémunération). Une limite connue : le coût total employeur affiché pour le CDI applique un taux patronal moyen, sans la réduction générale de cotisations patronales ; il est donc surestimé pour les salaires bruts de 40 000 € et moins (d'environ 3 à 5 % à 40 000 €, de 12 à 13 % à 30 000 €). Le salaire net du CDI, lui, reste à moins de 1 % du moteur de référence. Cette démarche est purement technique — ce site est indépendant et n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration.`,
         `Certains éléments ne sont pas tous modélisés : cotisation foncière des entreprises (CFE), plafonnement du quotient familial, réduction générale de cotisations, mutuelle obligatoire, prévoyance et cas particuliers. Les avantages salarié (titres-restaurant, transport, mutuelle) sont une estimation indicative, affichée à part et exclue du net comparé. Le simulateur est une aide à la décision, pas un substitut à un expert-comptable. Les taux et barèmes sont datés dans le pied de page « Sources » et mis à jour à chaque évolution réglementaire.`,
       ],
     },
@@ -47,7 +48,7 @@ const METHODOLOGIE: StatutPage = {
   faq: [
     {
       question: "Les calculs de ce simulateur sont-ils fiables ?",
-      answer: `Ils sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF (celui de mon-entreprise.urssaf.fr), avec des écarts inférieurs à 2 % sur les cas testés. Le code du moteur et tous les taux 2026 sont publics. C'est une aide à la décision indicative, pas un avis d'expert-comptable : certains cas particuliers ne sont pas modélisés.`,
+      answer: `Ils sont comparés automatiquement au moteur open source « modele-social » de l'URSSAF (celui de mon-entreprise.urssaf.fr), avec des écarts inférieurs à 2 % sur les cas courants testés ; les limites connues (coût employeur du CDI à bas salaire, indépendants à très haut revenu) sont détaillées sur la page méthodologie. Le code du moteur et tous les taux 2026 sont publics. C'est une aide à la décision indicative, pas un avis d'expert-comptable : certains cas particuliers ne sont pas modélisés.`,
     },
     {
       question: "Ce site est-il affilié à l'URSSAF ?",

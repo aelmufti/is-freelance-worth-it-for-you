@@ -54,11 +54,11 @@ npm test
 
 ```
 ✓ Micro BNC cotisations             écart < 0,1 %
-✓ TNS (EI/EURL) cotisations         écart < 2 %  (jusqu'à 110 k€)
+✓ TNS (EI/EURL) cotisations         écart < 2 %  (jusqu'à 110 k€ ; environ 3 % à 160 k€)
 ✓ Impôt sur le revenu               écart 0,0 %  (exact à l'euro)
 ✓ SASU coût total → net             écart < 1 %
 ✓ CDI brut → net                    écart < 1 %
-✓ CDI coût employeur                écart < 4 %
+✓ CDI coût employeur                écart < 2 % dès 55 k€ brut ; surestimé à bas salaire
 ```
 
 Pour voir les comparaisons en détail :
@@ -67,7 +67,7 @@ Pour voir les comparaisons en détail :
 npm run compare
 ```
 
-> ⚠ Ce site est **strictement indépendant**. Il n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration. La comparaison avec `modele-social` est purement technique.
+> ⚠ Ce site est **strictement indépendant**. Il n'est ni édité, ni approuvé, ni soutenu par l'URSSAF ou toute autre administration. La comparaison avec `modele-social` est purement technique. Limite connue : le coût total employeur du CDI applique un taux patronal moyen, sans la réduction générale de cotisations ; il est surestimé pour les bruts de 40 000 € et moins. Le net du CDI reste à moins de 1 % du moteur de référence.
 
 ---
 
@@ -76,7 +76,7 @@ npm run compare
 - **React 19** + **TypeScript** + **Vite 6**
 - **Tailwind CSS v4** avec design tokens néo-brutalistes
 - **recharts** pour les graphiques
-- **publicodes / modele-social** + **vitest** pour la validation contre l'URSSAF
+- **publicodes / modele-social** + **vitest** pour la comparaison avec modele-social (moteur open source de mon-entreprise.urssaf.fr)
 - **Vercel** (hébergement) + **Vercel Analytics** (sans cookie, avec droit d'opposition — cf. [/confidentialite/](https://freelance-ou-cdi.fr/confidentialite/))
 
 Charte graphique : **néo-brutalisme strict** — JetBrains Mono partout, border-radius 0, ombres dures décalées sans blur, aucun dégradé, palette plate à fort contraste.
@@ -113,7 +113,7 @@ src/
 │   └── MentionsLegales.tsx
 ├── data/                  # contenu éditorial (statuts, comparatifs, guides, TJM)
 └── App.tsx
-tests/urssaf.test.ts       # validation contre le moteur URSSAF
+tests/urssaf.test.ts       # comparaison avec modele-social (moteur open source de mon-entreprise.urssaf.fr)
 scripts/compare-urssaf.ts  # rapport humain des écarts
 scripts/prerender.ts       # capture Playwright + <head> et JSON-LD par route
 scripts/apply-prerender.ts # réapplique le HTML committé sur le dist/ Vercel
