@@ -231,7 +231,7 @@ Libre de réutilisation, à une condition : citer la source.
 
 - Le **code** est sous licence MIT ([`LICENSE`](LICENSE)) : la notice de copyright doit être conservée.
 - Les **contenus** (textes, tableaux, chiffres calculés, y compris dans `src/data/`) sont sous CC BY 4.0 ([`LICENSE-CONTENT.md`](LICENSE-CONTENT.md)) : « Source : freelance-ou-cdi.fr (Ali El Mufti) ».
-- Les TJM de marché issus de baromètres tiers (Malt, Blog du Modérateur, tjmetre.fr) restent la propriété de leurs auteurs.
+- Les TJM par métier du site sont des exemples choisis pour illustrer le calcul, pas des statistiques de marché.
 
 ---
 

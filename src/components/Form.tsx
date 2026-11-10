@@ -378,13 +378,13 @@ export function MainForm({
               onChange={(v) => set("caisse", v)}
               options={[
                 { value: "regime-general", label: "Régime général (25,6 %)" },
-                { value: "cipav", label: "CIPAV (23,1 %)" },
+                { value: "cipav", label: "CIPAV (23,2 %)" },
               ]}
             />
           )}
           <Toggle
             label="ACRE (1ʳᵉ année)"
-            hint="Exonération partielle des cotisations la première année"
+            hint="Micro, création depuis juillet 2026 : cotisations réduites de 25 %"
             checked={input.acre}
             onChange={(v) => set("acre", v)}
           />

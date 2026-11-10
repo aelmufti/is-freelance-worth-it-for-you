@@ -18,6 +18,7 @@ const PLAFOND = fmt(p.microPlafondService);
 // -------------------------------------------------- FIXER SON TJM
 const FIXER_TJM: StatutPage = {
   slug: "guides/comment-fixer-son-tjm",
+  updated: "2026-11-10",
   breadcrumb: "Comment fixer son TJM",
   metaTitle: "Comment fixer son TJM en freelance : la méthode 2026",
   metaDescription: `Partir du salaire cible, compter les jours réellement facturables, ajouter charges, frais et marge : la méthode pas à pas.`,
@@ -60,7 +61,7 @@ const FIXER_TJM: StatutPage = {
     {
       heading: "Ajouter les charges, les frais et une vraie marge",
       paragraphs: [
-        `Le TJM est un prix de vente hors taxes, pas un salaire journalier. Il doit financer les cotisations sociales (de 24,6 % du chiffre d'affaires en micro BNC à 75-80 % de charges sur le salaire en SASU), l'impôt, vos frais professionnels (matériel, logiciels, assurance, comptable) et une marge de sécurité pour les creux. Selon le statut, il ne reste au final qu'entre 40 et 60 % du TJM en net disponible.`,
+        `Le TJM est un prix de vente hors taxes, pas un salaire journalier. Il doit financer les cotisations sociales (de 25,6 % du chiffre d'affaires en micro BNC à 75-80 % de charges sur le salaire en SASU), l'impôt, vos frais professionnels (matériel, logiciels, assurance, comptable) et une marge de sécurité pour les creux. Selon le statut, il ne reste au final qu'entre 40 et 60 % du TJM en net disponible.`,
         `Ajoutez enfin ce que le salariat vous offrait gratuitement et que vous devez désormais autofinancer : mutuelle, prévoyance, retraite complémentaire, jours de maladie. Un TJM correctement fixé intègre ces coûts invisibles — c'est la différence entre un tarif qui « paraît » élevé et un tarif qui vous laisse réellement mieux qu'un CDI.`,
       ],
     },
@@ -96,18 +97,19 @@ const FIXER_TJM: StatutPage = {
 // -------------------------------------------------- CHARGES SOCIALES
 const CHARGES_SOCIALES: StatutPage = {
   slug: "guides/charges-sociales-freelance",
+  updated: "2026-11-10",
   breadcrumb: "Charges sociales du freelance",
   metaTitle: "Charges sociales du freelance 2026 : combien par statut ?",
-  metaDescription: `Micro (24,6 % du CA), TNS (~45 % du revenu), assimilé salarié (75-80 %) : ce que chaque statut prélève et ce qu'il couvre vraiment.`,
+  metaDescription: `Micro (25,6 % du CA), TNS (~45 % du revenu), assimilé salarié (75-80 %) : ce que chaque statut prélève et ce qu'il couvre vraiment.`,
   h1: "Charges sociales du freelance : combien, selon le statut ?",
-  tldr: `Les charges sociales du freelance ne se comparent pas directement, car elles ne portent pas sur la même base : environ 24,6 % du chiffre d'affaires en micro-entreprise (BNC), environ 45 % du revenu en TNS (EI, EURL) après l'abattement d'assiette de 26 % de la réforme 2026, et 75 à 80 % de charges sur le salaire en assimilé salarié (SASU, portage). Le seul repère fiable est le net final après impôt.`,
+  tldr: `Les charges sociales du freelance ne se comparent pas directement, car elles ne portent pas sur la même base : environ 25,6 % du chiffre d'affaires en micro-entreprise (BNC), environ 45 % du revenu en TNS (EI, EURL) après l'abattement d'assiette de 26 % de la réforme 2026, et 75 à 80 % de charges sur le salaire en assimilé salarié (SASU, portage). Le seul repère fiable est le net final après impôt.`,
   intro: `« Combien de charges ? » est la première question de tout futur freelance — et la réponse dépend entièrement du statut. On ne compare pas les mêmes choses : la micro cotise en pourcentage du chiffre d'affaires, le TNS sur son revenu, l'assimilé salarié sur son salaire net. Voici comment lire ces taux sans se tromper, et ce qu'ils achètent vraiment.`,
   sections: [
     {
       heading: "Trois bases de calcul, trois niveaux de charges",
       paragraphs: [
-        `En micro-entreprise, les cotisations sont un pourcentage du chiffre d'affaires encaissé : environ 24,6 % en prestations BNC, 21,2 % en prestations BIC, sans comptabilité. En entreprise individuelle au réel et en EURL, le dirigeant est travailleur non salarié (TNS) : ses cotisations tournent autour de 45 % de son revenu, calculées sur le bénéfice après l'abattement d'assiette de 26 % de la réforme 2026.`,
-        `En SASU et en portage salarial, le dirigeant est assimilé salarié : il supporte cotisations patronales ET salariales du régime général, soit 75 à 80 % de charges rapportées au net versé. Attention à ne pas comparer ces pourcentages entre eux : 24,6 % du chiffre d'affaires et 75 % du net ne portent pas sur la même base. Le seul repère fiable est le net final, que le simulateur calcule pour chaque statut.`,
+        `En micro-entreprise, les cotisations sont un pourcentage du chiffre d'affaires encaissé : environ 25,6 % en prestations BNC, 21,2 % en prestations BIC, sans comptabilité. En entreprise individuelle au réel et en EURL, le dirigeant est travailleur non salarié (TNS) : ses cotisations tournent autour de 45 % de son revenu, calculées sur le bénéfice après l'abattement d'assiette de 26 % de la réforme 2026.`,
+        `En SASU et en portage salarial, le dirigeant est assimilé salarié : il supporte cotisations patronales ET salariales du régime général, soit 75 à 80 % de charges rapportées au net versé. Attention à ne pas comparer ces pourcentages entre eux : 25,6 % du chiffre d'affaires et 75 % du net ne portent pas sur la même base. Le seul repère fiable est le net final, que le simulateur calcule pour chaque statut.`,
       ],
     },
     {
@@ -128,7 +130,7 @@ const CHARGES_SOCIALES: StatutPage = {
   faq: [
     {
       question: "Combien de charges sociales paie un micro-entrepreneur en 2026 ?",
-      answer: `Environ 24,6 % du chiffre d'affaires encaissé en prestations de services BNC, 21,2 % en prestations BIC, plus une petite contribution à la formation. Ces cotisations sont prélevées directement sur le chiffre d'affaires, sans comptabilité, mais ouvrent une protection sociale réduite — notamment pour la retraite.`,
+      answer: `Environ 25,6 % du chiffre d'affaires encaissé en prestations de services BNC, 21,2 % en prestations BIC, plus une petite contribution à la formation. Ces cotisations sont prélevées directement sur le chiffre d'affaires, sans comptabilité, mais ouvrent une protection sociale réduite — notamment pour la retraite.`,
     },
     {
       question: "Pourquoi la SASU a-t-elle des charges si élevées ?",
@@ -156,6 +158,7 @@ const CHARGES_SOCIALES: StatutPage = {
 // -------------------------------------------------- FREELANCE ET CHÔMAGE
 const CHOMAGE_ARE: StatutPage = {
   slug: "guides/freelance-et-chomage-are",
+  updated: "2026-11-10",
   breadcrumb: "Freelance et chômage (ARE)",
   metaTitle: "Freelance et chômage (ARE) 2026 : quels droits ?",
   metaDescription: `Seul le portage salarial ouvre des droits ; micro, EI, EURL et SASU non. Maintien de l'ARE d'un CDI, cumul et ARCE expliqués.`,
@@ -192,7 +195,7 @@ const CHOMAGE_ARE: StatutPage = {
     },
     {
       question: "Peut-on cumuler l'ARE et une activité freelance ?",
-      answer: `Oui. Avec un reliquat d'ARE issu d'un CDI, le cumul est possible dans tous les statuts, avec un ajustement du montant selon vos revenus. En SASU sans salaire, l'ARE est maintenue à 100 % (revenus en dividendes) ; en micro ou EI, elle est réduite selon le chiffre d'affaires ou le bénéfice. Le cumul adoucit fortement un lancement.`,
+      answer: `Oui. Avec un reliquat d'ARE issu d'un CDI, le cumul est possible dans tous les statuts, avec un ajustement du montant selon vos revenus. En SASU sans salaire, l'ARE est maintenue à 100 % (revenus en dividendes) ; en micro ou EI, elle est réduite selon le chiffre d'affaires ou le bénéfice. Le cumul adoucit fortement un lancement. Ces règles relèvent de France Travail et peuvent évoluer : vérifiez-les avant de bâtir votre projet dessus.`,
     },
     {
       question: "Le portage salarial ouvre-t-il vraiment droit au chômage ?",
@@ -216,31 +219,32 @@ const CHOMAGE_ARE: StatutPage = {
 // -------------------------------------------------- ACRE
 const ACRE: StatutPage = {
   slug: "guides/acre-premiere-annee",
+  updated: "2026-11-10",
   breadcrumb: "ACRE : première année",
   metaTitle: "ACRE 2026 : l'exonération de cotisations, mode d'emploi",
   metaDescription: `Qui y a droit, quelle exonération de cotisations la première année, comment ça marche en micro-entreprise et en société.`,
   h1: "ACRE : l'exonération de cotisations de la première année",
-  tldr: `L'ACRE est une exonération partielle des cotisations sociales sur la première année d'activité, destinée aux créateurs et repreneurs d'entreprise. En micro-entreprise, elle prend la forme de taux de cotisations réduits sur le chiffre d'affaires ; en société ou en EI, d'une exonération sur les cotisations du dirigeant. Elle est dégressive selon le revenu et se cumule avec le maintien de l'ARE ou l'ARCE.`,
-  intro: `L'ACRE (aide aux créateurs et repreneurs d'entreprise) allège les cotisations sociales de votre première année d'activité. Mal connue ou oubliée, elle représente pourtant plusieurs milliers d'euros au démarrage — le moment où la trésorerie est la plus fragile. Voici qui y a droit, ce qu'elle exonère et comment elle s'applique selon le statut.`,
+  tldr: `L'ACRE est une exonération partielle des cotisations sociales sur la première année d'activité, destinée aux créateurs et repreneurs d'entreprise. En micro-entreprise, elle prend la forme de taux de cotisations réduits sur le chiffre d'affaires ; en société ou en EI, d'une exonération sur les cotisations du dirigeant. Elle est dégressive selon le revenu et se cumule avec le maintien de l'ARE ou l'ARCE. Depuis 2026, elle se demande à l'Urssaf et son taux est réduit pour les créations à partir du 1er juillet.`,
+  intro: `L'ACRE (aide aux créateurs et repreneurs d'entreprise) allège les cotisations sociales de votre première année d'activité. Mal connue ou oubliée, elle peut pourtant représenter jusqu'à quelques milliers d'euros au démarrage — le moment où la trésorerie est la plus fragile. Voici qui y a droit, ce qu'elle exonère et comment elle s'applique selon le statut.`,
   sections: [
     {
       heading: "Ce que l'ACRE exonère, et pour combien de temps",
       paragraphs: [
-        `L'ACRE consiste en une exonération partielle des cotisations sociales sur la première période d'activité — de l'ordre de douze mois. Elle ne supprime pas toutes les charges, mais en efface une bonne partie tant que votre revenu reste sous certains plafonds. Sur un lancement, cela améliore nettement le net conservé au moment où chaque euro compte.`,
+        `L'ACRE consiste en une exonération partielle des cotisations sociales sur la première période d'activité : en micro-entreprise, jusqu'à la fin du troisième trimestre civil suivant le début d'activité, soit douze mois au plus. Elle ne supprime pas toutes les charges, mais en efface une bonne partie tant que votre revenu reste sous certains plafonds. Sur un lancement, cela améliore nettement le net conservé au moment où chaque euro compte.`,
         `L'exonération est dégressive selon le revenu : pleine sous un premier seuil, réduite ensuite, puis nulle au-delà d'un plafond. Concrètement, plus votre première année démarre fort, moins l'avantage est important — mais il reste presque toujours bon à prendre pour les premiers mois, souvent plus modestes.`,
       ],
     },
     {
       heading: "Comment ça marche selon le statut",
       paragraphs: [
-        `En micro-entreprise, l'ACRE se traduit par des taux de cotisations réduits pendant la première année : au lieu des 24,6 % habituels en BNC, vous payez un pourcentage abaissé sur votre chiffre d'affaires. En société (EURL, SASU) ou en EI, l'exonération porte sur les cotisations calculées sur le revenu ou le salaire du dirigeant, dans les mêmes limites de plafond.`,
-        `L'ACRE est en principe attribuée automatiquement à la création pour les micro-entrepreneurs éligibles, mais mieux vaut le vérifier : un oubli de l'administration ou une condition non remplie peut vous faire payer le plein tarif dès le départ. Gardez la trace de votre demande et contrôlez vos premiers appels de cotisations.`,
+        `En micro-entreprise, l'ACRE se traduit par des taux de cotisations réduits pendant la première année : au lieu des 25,6 % habituels en BNC, vous payez un pourcentage abaissé sur votre chiffre d'affaires. Pour les micro-entreprises créées à partir du 1er juillet 2026, la réduction est de 25 % des cotisations, contre 50 % auparavant. En société (EURL, SASU) ou en EI, l'exonération porte sur les cotisations calculées sur le revenu ou le salaire du dirigeant, dans les mêmes limites de plafond.`,
+        `L'ACRE n'est pas automatique : elle se demande à l'Urssaf dans les 60 jours suivant le début d'activité, et un dossier hors délai ou une condition non remplie vous fait payer le plein tarif dès le départ. Gardez la trace de votre demande et contrôlez vos premiers appels de cotisations.`,
       ],
     },
     {
       heading: "Qui peut en bénéficier",
       paragraphs: [
-        `L'ACRE vise les créateurs et repreneurs d'entreprise sous conditions : notamment ne pas en avoir bénéficié dans les trois années précédentes, et remplir certains critères tenant à votre situation (demandeur d'emploi, jeune, bénéficiaire de minima sociaux, ou création classique selon les règles en vigueur). Les conditions évoluent régulièrement : vérifiez votre éligibilité au moment de la création.`,
+        `L'ACRE vise les créateurs et repreneurs d'entreprise sous conditions : notamment ne pas en avoir bénéficié dans les trois années précédentes, et appartenir à l'un des publics visés (par exemple demandeur d'emploi, jeune créateur ou bénéficiaire de minima sociaux) : depuis 2026, l'aide est recentrée sur ces publics et n'est plus ouverte à toute création. Les conditions évoluent régulièrement : vérifiez votre éligibilité sur urssaf.fr au moment de la création.`,
         `Cumulée avec le maintien de l'ARE ou l'ARCE de France Travail, l'ACRE forme un package de démarrage puissant : charges allégées d'un côté, filet chômage de l'autre. C'est souvent ce qui rend viable une première année à chiffre d'affaires modeste — d'où l'intérêt de bien articuler les deux dispositifs dès le lancement.`,
       ],
     },
@@ -252,11 +256,11 @@ const ACRE: StatutPage = {
     },
     {
       question: "L'ACRE est-elle automatique en micro-entreprise ?",
-      answer: `Pour les micro-entrepreneurs éligibles, l'ACRE est en principe attribuée automatiquement à la création, mais il faut le vérifier : contrôlez vos premiers appels de cotisations pour vous assurer que les taux réduits sont bien appliqués. Une condition non remplie ou une erreur peut vous faire payer le plein tarif.`,
+      answer: `Non. L'ACRE doit être demandée à l'Urssaf dans les 60 jours suivant le début d'activité, et elle n'est accordée qu'aux créateurs qui remplissent les conditions d'éligibilité. Contrôlez ensuite vos premiers appels de cotisations pour vous assurer que les taux réduits sont bien appliqués, et vérifiez le délai et les conditions en vigueur sur urssaf.fr au moment de votre création.`,
     },
     {
       question: "Combien de temps dure l'ACRE ?",
-      answer: `L'exonération porte sur la première période d'activité, de l'ordre de douze mois, avec un montant dégressif selon le revenu : pleine sous un premier seuil, réduite au-delà, puis nulle au-dessus d'un plafond. Les modalités exactes évoluent : vérifiez les règles en vigueur au moment de votre création.`,
+      answer: `L'exonération porte sur la première période d'activité (en micro-entreprise, jusqu'à la fin du troisième trimestre civil suivant le début d'activité, soit douze mois au plus), avec un montant dégressif selon le revenu : pleine sous un premier seuil, réduite au-delà, puis nulle au-dessus d'un plafond. Les modalités exactes évoluent : vérifiez les règles en vigueur au moment de votre création.`,
     },
     {
       question: "Peut-on cumuler l'ACRE et le chômage ?",
@@ -415,6 +419,7 @@ const SALARIE_FREELANCE: StatutPage = {
 // (sans elle, /guides/ renvoyait un 404 et plusieurs guides étaient orphelins).
 const GUIDES_HUB: StatutPage = {
   slug: "guides",
+  updated: "2026-11-10",
   breadcrumb: "Guides",
   layout: "content",
   metaTitle: "Guides du freelance 2026 : TJM, charges, chômage, TVA",
@@ -432,7 +437,7 @@ const GUIDES_HUB: StatutPage = {
     {
       heading: "Comprendre ses charges sociales",
       paragraphs: [
-        "Micro à 24,6 % du chiffre d'affaires, TNS à environ 45 % du revenu, assimilé salarié à 75-80 % de charges sur le salaire : trois bases de calcul différentes qu'on ne peut pas comparer directement. Le guide explique ce que chacune prélève et ce qu'elle couvre.",
+        "Micro à 25,6 % du chiffre d'affaires, TNS à environ 45 % du revenu, assimilé salarié à 75-80 % de charges sur le salaire : trois bases de calcul différentes qu'on ne peut pas comparer directement. Le guide explique ce que chacune prélève et ce qu'elle couvre.",
       ],
     },
     {

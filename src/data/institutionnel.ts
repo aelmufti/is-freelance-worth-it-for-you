@@ -20,7 +20,7 @@ const METHODOLOGIE: StatutPage = {
       heading: "Ce que le moteur calcule, étape par étape",
       paragraphs: [
         `Le point de départ est le chiffre d'affaires : taux journalier moyen (TJM) multiplié par le nombre de jours réellement facturés dans l'année. Le moteur en déduit, pour chaque statut, les cotisations sociales, l'impôt sur le revenu (et, le cas échéant, l'impôt sur les sociétés et la flat tax sur les dividendes), puis les frais professionnels, pour arriver au revenu net mensuel et annuel après impôt.`,
-        `Les cotisations dépendent du régime : un pourcentage du chiffre d'affaires en micro-entreprise (environ 24,6 % en BNC), des cotisations TNS en EI et EURL (de l'ordre de 45 % du revenu après l'abattement d'assiette de 26 % de la réforme 2026), et des cotisations du régime général en SASU et portage (75 à 80 % de charges sur le salaire, part patronale comprise). L'impôt sur le revenu applique le barème progressif 2026 avec le quotient familial du foyer renseigné.`,
+        `Les cotisations dépendent du régime : un pourcentage du chiffre d'affaires en micro-entreprise (environ 25,6 % en BNC), des cotisations TNS en EI et EURL (de l'ordre de 45 % du revenu après l'abattement d'assiette de 26 % de la réforme 2026), et des cotisations du régime général en SASU et portage (75 à 80 % de charges sur le salaire, part patronale comprise). L'impôt sur le revenu applique le barème progressif 2026 avec le quotient familial du foyer renseigné.`,
       ],
     },
     {
@@ -112,6 +112,7 @@ const A_PROPOS: StatutPage = {
 // Chaque terme = une section (heading = terme, paragraphs = définition).
 const GLOSSAIRE: StatutPage = {
   slug: "glossaire",
+  updated: "2026-11-10",
   breadcrumb: "Glossaire",
   layout: "content",
   metaTitle: "Glossaire du freelance 2026 : TJM, TNS, flat tax, ARE",
@@ -219,7 +220,7 @@ const GLOSSAIRE: StatutPage = {
     {
       heading: "ACRE",
       paragraphs: [
-        `L'aide aux créateurs et repreneurs d'entreprise : une exonération partielle de cotisations sociales sur la première année d'activité, sous conditions. En micro, elle prend la forme de taux de cotisations réduits ; ailleurs, d'une exonération sur les cotisations du dirigeant.`,
+        `L'aide aux créateurs et repreneurs d'entreprise : une exonération partielle de cotisations sociales sur la première année d'activité, sous conditions. En micro, elle prend la forme de taux de cotisations réduits ; ailleurs, d'une exonération sur les cotisations du dirigeant. Depuis 2026, elle se demande à l'Urssaf et est réservée à certains publics.`,
       ],
     },
     {

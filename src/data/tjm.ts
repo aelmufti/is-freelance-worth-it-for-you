@@ -124,6 +124,8 @@ function makeTjmPage(f: TjmFigures, prev?: number, next?: number): StatutPage {
   ];
   return {
     slug: `tjm-${f.tjm}`,
+    // Texte modifié le 2026-11-10 uniquement sur les pages où la micro est accessible.
+    ...(f.microEligible ? { updated: "2026-11-10" } : {}),
     breadcrumb: `TJM ${f.tjm} €`,
     hideFromFooter: true,
     metaTitle: `TJM ${f.tjm} € : quel salaire net en 2026 ?`,
@@ -166,7 +168,7 @@ function makeTjmPage(f: TjmFigures, prev?: number, next?: number): StatutPage {
       {
         question: `Quel revenu net avec un TJM de ${f.tjm} € en micro-entreprise ?`,
         answer: f.microEligible
-          ? `Environ ${fmt(f.netMicro)} € par mois net après cotisations (24,6 % du CA en BNC) et impôt sur le revenu, pour ${fmt(f.ca)} € facturés dans l'année (18 jours par mois, 11 mois, célibataire sans enfant). Au-delà de 37 500 € de chiffre d'affaires, la TVA devient exigible mais ne change pas ce net si vos clients sont des entreprises.`
+          ? `Environ ${fmt(f.netMicro)} € par mois net après cotisations (25,6 % du CA en BNC) et impôt sur le revenu, pour ${fmt(f.ca)} € facturés dans l'année (18 jours par mois, 11 mois, célibataire sans enfant). Au-delà de 37 500 € de chiffre d'affaires, la TVA devient exigible mais ne change pas ce net si vos clients sont des entreprises.`
           : `Aucun : avec ${fmt(f.ca)} € de chiffre d'affaires annuel, le plafond de la micro-entreprise en prestations de services (${fmt(p.microPlafondService)} €) est dépassé. À ce niveau de TJM, les statuts accessibles sont l'EI au réel (${fmt(f.netEi)} €/mois net), la SASU (${fmt(f.netSasu)} €/mois à 100 % salaire) et le portage salarial (${fmt(f.netPortage)} €/mois).`,
       },
       {
@@ -192,6 +194,7 @@ const TJM_3000 = tjmPourNetMensuel(3000);
 
 export const TJM_HUB: StatutPage = {
   slug: "tjm-en-salaire",
+  updated: "2026-11-10",
   breadcrumb: "Convertir un TJM en salaire",
   metaTitle: "Convertir un TJM en salaire : le tableau 2026",
   metaDescription: `Le tableau de conversion 2026, de 250 à 1 000 €/jour : chiffre d'affaires, net mensuel par statut et salaire CDI équivalent. Moteur open source.`,
@@ -239,7 +242,7 @@ export const TJM_HUB: StatutPage = {
     {
       question: "Comment convertir un TJM en salaire ?",
       answer:
-        "Multipliez le TJM par les jours réellement facturés dans l'année (18 par mois sur 11 mois est un rythme réaliste, soit 198 jours) pour obtenir le chiffre d'affaires. Retirez les cotisations sociales du statut (de 24,6 % du CA en micro BNC à 75-80 % de charges sur salaire en SASU), les frais professionnels puis l'impôt sur le revenu : le résultat est votre net mensuel, à comparer au net après impôt d'un salaire. Un simulateur fait ce calcul statut par statut — c'est l'objet de ce site.",
+        "Multipliez le TJM par les jours réellement facturés dans l'année (18 par mois sur 11 mois est un rythme réaliste, soit 198 jours) pour obtenir le chiffre d'affaires. Retirez les cotisations sociales du statut (de 25,6 % du CA en micro BNC à 75-80 % de charges sur salaire en SASU), les frais professionnels puis l'impôt sur le revenu : le résultat est votre net mensuel, à comparer au net après impôt d'un salaire. Un simulateur fait ce calcul statut par statut — c'est l'objet de ce site.",
     },
     {
       question: "Quel TJM pour gagner 4 000 € net par mois ?",

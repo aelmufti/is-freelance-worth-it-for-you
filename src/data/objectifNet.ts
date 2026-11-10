@@ -114,6 +114,7 @@ function makeObjectifPage(f: ObjFigures, prev?: number, next?: number): StatutPa
 
   return {
     slug: `tjm-pour-${f.net}-euros-net`,
+    updated: "2026-11-10",
     breadcrumb: `TJM pour ${fmt(f.net)} € net`,
     hideFromFooter: true,
     metaTitle: `Quel TJM pour ${fmt(f.net)} € net par mois en 2026 ?`,
@@ -154,7 +155,7 @@ function makeObjectifPage(f: ObjFigures, prev?: number, next?: number): StatutPa
         heading: "Ce qui fait bouger ce seuil",
         paragraphs: [
           `Trois curseurs comptent autant que le statut. Les jours réellement facturés d'abord : ${fmt(f.bestTjm)} €/jour vise ${fmt(f.net)} € net à 18 jours par mois ; à 15 jours, il faut monter le TJM d'environ 20 % pour le même revenu, car prospection, intermission et congés ne se facturent pas. Les frais professionnels ensuite (${fmt(ref.fraisPro)} € par an dans ce scénario), qui pèsent différemment en micro (non déductibles) et au réel. Votre foyer fiscal enfin : un couple avec enfants paie moins d'impôt qu'un célibataire, donc atteint ${fmt(f.net)} € net avec un TJM plus bas.`,
-          `Le simulateur en haut de page est préréglé sur ${fmt(f.bestTjm)} € (le seuil du meilleur statut) : modifiez les jours facturés, les frais ou la situation familiale pour voir le TJM exact qu'il vous faut, statut par statut, pour votre objectif de ${fmt(f.net)} € net par mois.`,
+          `Le simulateur en haut de page est préréglé sur ${fmt(f.bestTjm)} € (le seuil du meilleur statut) : modifiez les jours facturés, les frais ou la situation familiale pour estimer le TJM qu'il vous faut, statut par statut, pour votre objectif de ${fmt(f.net)} € net par mois.`,
         ],
       },
     ],
@@ -168,7 +169,7 @@ function makeObjectifPage(f: ObjFigures, prev?: number, next?: number): StatutPa
         answer:
           f.tjm.micro == null
             ? `Non. Pour ${fmt(f.net)} € net par mois, le chiffre d'affaires nécessaire dépasse le plafond de la micro-entreprise (${fmt(p.microPlafondService)} € en prestations de services). À ce niveau de revenu, il faut passer à l'EI au réel (${fmt(f.tjm.ei!)} €/jour), à l'EURL ou à la SASU, qui n'ont pas de plafond de chiffre d'affaires.`
-            : `Oui : il faut viser environ ${fmt(f.tjm.micro)} €/jour, ce qui reste sous le plafond de ${fmt(p.microPlafondService)} € de chiffre d'affaires en prestations. La micro est même le statut qui atteint ${fmt(f.net)} € net avec le TJM le plus bas, grâce à ses cotisations légères (24,6 % du CA en BNC) et à l'abattement forfaitaire de 34 % — à condition d'avoir peu de frais professionnels réels.`,
+            : `Oui : il faut viser environ ${fmt(f.tjm.micro)} €/jour, ce qui reste sous le plafond de ${fmt(p.microPlafondService)} € de chiffre d'affaires en prestations. La micro est même le statut qui atteint ${fmt(f.net)} € net avec le TJM le plus bas, grâce à ses cotisations légères (25,6 % du CA en BNC) et à l'abattement forfaitaire de 34 % — à condition d'avoir peu de frais professionnels réels.`,
       },
       {
         question: `${fmt(f.net)} € net par mois, c'est quel chiffre d'affaires annuel ?`,

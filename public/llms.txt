@@ -30,12 +30,12 @@ Taux et barèmes vérifiés le 2026-07-03. Contenu intégral : https://freelance
 - [EI au réel ou CDI](https://freelance-ou-cdi.fr/ei-ou-cdi/) : Cotisations TNS et frais déductibles contre sécurité du salariat. Le TJM d'équivalence : environ 355 €/jour pour 55 000 € brut.
 - [Guides](https://freelance-ou-cdi.fr/guides/) : Les guides pratiques pour se lancer et gérer son activité : fixer son TJM, charges sociales, ARE, ACRE, franchise de TVA, passer de salarié à freelance.
 - [Comment fixer son TJM](https://freelance-ou-cdi.fr/guides/comment-fixer-son-tjm/) : Partir du salaire cible, compter les jours réellement facturables, ajouter charges, frais et marge : la méthode pas à pas.
-- [Charges sociales du freelance](https://freelance-ou-cdi.fr/guides/charges-sociales-freelance/) : Micro (24,6 % du CA), TNS (~45 % du revenu), assimilé salarié (75-80 %) : ce que chaque statut prélève et ce qu'il couvre vraiment.
+- [Charges sociales du freelance](https://freelance-ou-cdi.fr/guides/charges-sociales-freelance/) : Micro (25,6 % du CA), TNS (~45 % du revenu), assimilé salarié (75-80 %) : ce que chaque statut prélève et ce qu'il couvre vraiment.
 - [Freelance et chômage (ARE)](https://freelance-ou-cdi.fr/guides/freelance-et-chomage-are/) : Seul le portage salarial ouvre des droits ; micro, EI, EURL et SASU non. Maintien de l'ARE d'un CDI, cumul et ARCE expliqués.
 - [ACRE : première année](https://freelance-ou-cdi.fr/guides/acre-premiere-annee/) : Qui y a droit, quelle exonération de cotisations la première année, comment ça marche en micro-entreprise et en société.
 - [Franchise de TVA](https://freelance-ou-cdi.fr/guides/franchise-tva-freelance/) : Seuils (37 500 € en services), ce que ça change pour vos factures et vos clients, quand la TVA devient obligatoire.
 - [De salarié à freelance](https://freelance-ou-cdi.fr/guides/passer-de-salarie-a-freelance/) : Rupture conventionnelle et chômage, choix du statut, TJM, trésorerie : les étapes pour sécuriser sa transition.
-- [Observatoire du TJM 2026](https://freelance-ou-cdi.fr/observatoire-tjm-2026/) : Les TJM médians par métier (dev, data, DevOps, product, conseil, design, cyber) croisés avec le net réel après impôt, statut par statut. Moteur open source.
+- [TJM par métier](https://freelance-ou-cdi.fr/observatoire-tjm-2026/) : Dix métiers freelance, un TJM d'exemple chacun, et le net réel après cotisations et impôt, statut par statut. Moteur de calcul open source.
 - [Méthodologie](https://freelance-ou-cdi.fr/methodologie/) : Comment sont calculés les nets : cotisations par statut, barème 2026, flat tax, IS, hypothèses, limites et contrôle des calculs.
 - [À propos](https://freelance-ou-cdi.fr/a-propos/) : Un simulateur gratuit, open source et sans collecte de données, édité par Ali El Mufti. Indépendant de toute administration.
 - [Glossaire](https://freelance-ou-cdi.fr/glossaire/) : TJM, chiffre d'affaires, cotisations, TNS, assimilé salarié, flat tax, abattement, plafond, franchise de TVA, ARE, ACRE : les définitions.
@@ -65,16 +65,16 @@ Taux et barèmes vérifiés le 2026-07-03. Contenu intégral : https://freelance
 - [TJM pour 4 500 € net](https://freelance-ou-cdi.fr/tjm-pour-4500-euros-net/) : Pour 4 500 € net/mois : visez ~515 €/jour en EI au réel (101 970 € de CA/an), soit un CDI à 82 500 € brut. Moteur open source.
 - [TJM pour 5 000 € net](https://freelance-ou-cdi.fr/tjm-pour-5000-euros-net/) : Pour 5 000 € net/mois : visez ~570 €/jour en EI au réel (112 860 € de CA/an), soit un CDI à 92 500 € brut. Moteur open source.
 - [TJM pour 6 000 € net](https://freelance-ou-cdi.fr/tjm-pour-6000-euros-net/) : Pour 6 000 € net/mois : visez ~700 €/jour en EI au réel (138 600 € de CA/an), soit un CDI à 113 500 € brut. Moteur open source.
-- [TJM développeur web](https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/) : TJM développeur web freelance 2026 : médiane ~535 €/jour (350–900 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM DevOps / cloud](https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/) : TJM DevOps / cloud freelance 2026 : médiane ~600 €/jour (500–800 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM data scientist](https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/) : TJM data scientist freelance 2026 : médiane ~645 €/jour (500–850 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM data engineer](https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/) : TJM data engineer freelance 2026 : médiane ~600 €/jour (450–800 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM product manager](https://freelance-ou-cdi.fr/tjm-freelance-product-manager/) : TJM product manager freelance 2026 : médiane ~595 €/jour (450–800 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM consultant stratégie](https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/) : TJM consultant stratégie freelance 2026 : médiane ~650 €/jour (450–950 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM consultant marketing](https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/) : TJM consultant marketing freelance 2026 : médiane ~590 €/jour (350–800 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM consultant SEO](https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/) : TJM consultant SEO freelance 2026 : médiane ~450 €/jour (350–650 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM designer UX/UI](https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/) : TJM designer UX/UI freelance 2026 : médiane ~450 €/jour (300–650 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
-- [TJM expert cybersécurité](https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/) : TJM expert cybersécurité freelance 2026 : médiane ~650 €/jour (520–900 €). Ce qu'il reste vraiment en net par statut. Moteur open source.
+- [TJM développeur web](https://freelance-ou-cdi.fr/tjm-freelance-developpeur-web/) : TJM développeur web freelance : exemple à 535 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM DevOps / cloud](https://freelance-ou-cdi.fr/tjm-freelance-devops-cloud/) : TJM DevOps / cloud freelance : exemple à 600 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM data scientist](https://freelance-ou-cdi.fr/tjm-freelance-data-scientist/) : TJM data scientist freelance : exemple à 645 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM data engineer](https://freelance-ou-cdi.fr/tjm-freelance-data-engineer/) : TJM data engineer freelance : exemple à 600 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM product manager](https://freelance-ou-cdi.fr/tjm-freelance-product-manager/) : TJM product manager freelance : exemple à 595 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM consultant stratégie](https://freelance-ou-cdi.fr/tjm-freelance-consultant-strategie/) : TJM consultant stratégie freelance : exemple à 650 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM consultant marketing](https://freelance-ou-cdi.fr/tjm-freelance-consultant-marketing/) : TJM consultant marketing freelance : exemple à 590 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM consultant SEO](https://freelance-ou-cdi.fr/tjm-freelance-consultant-seo/) : TJM consultant SEO freelance : exemple à 450 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM designer UX/UI](https://freelance-ou-cdi.fr/tjm-freelance-designer-ux-ui/) : TJM designer UX/UI freelance : exemple à 450 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
+- [TJM expert cybersécurité](https://freelance-ou-cdi.fr/tjm-freelance-expert-cybersecurite/) : TJM expert cybersécurité freelance : exemple à 650 €/jour, net après cotisations et impôt statut par statut, et ce qui fait varier le tarif. Moteur open source.
 
 ## Données et hypothèses
 
@@ -95,4 +95,4 @@ Taux et barèmes vérifiés le 2026-07-03. Contenu intégral : https://freelance
 
 ## Citation et reproduction
 
-Le contenu est diffusé sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : il peut être cité, reproduit et adapté librement, y compris à des fins commerciales, à condition de citer la source — « freelance-ou-cdi.fr (Ali El Mufti) », avec un lien vers la page. Les TJM de marché issus de baromètres tiers (Malt, Blog du Modérateur, tjmetre.fr) restent la propriété de leurs auteurs. Le site est indépendant : il n'a aucune affiliation avec l'URSSAF ou une autre administration, et ses calculs ne sont ni validés ni approuvés par elles.
+Le contenu est diffusé sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : il peut être cité, reproduit et adapté librement, y compris à des fins commerciales, à condition de citer la source — « freelance-ou-cdi.fr (Ali El Mufti) », avec un lien vers la page. Le site est indépendant : il n'a aucune affiliation avec l'URSSAF ou une autre administration, et ses calculs ne sont ni validés ni approuvés par elles.

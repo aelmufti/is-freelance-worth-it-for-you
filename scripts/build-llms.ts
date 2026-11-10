@@ -55,7 +55,7 @@ const FOOTER = `## Données et hypothèses
 
 ## Citation et reproduction
 
-Le contenu est diffusé sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : il peut être cité, reproduit et adapté librement, y compris à des fins commerciales, à condition de citer la source — « freelance-ou-cdi.fr (Ali El Mufti) », avec un lien vers la page. Les TJM de marché issus de baromètres tiers (Malt, Blog du Modérateur, tjmetre.fr) restent la propriété de leurs auteurs. Le site est indépendant : il n'a aucune affiliation avec l'URSSAF ou une autre administration, et ses calculs ne sont ni validés ni approuvés par elles.`;
+Le contenu est diffusé sous licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) : il peut être cité, reproduit et adapté librement, y compris à des fins commerciales, à condition de citer la source — « freelance-ou-cdi.fr (Ali El Mufti) », avec un lien vers la page. Le site est indépendant : il n'a aucune affiliation avec l'URSSAF ou une autre administration, et ses calculs ne sont ni validés ni approuvés par elles.`;
 
 // ------------------------------------------------------------------ llms.txt
 const index = PAGES.map((p) => {

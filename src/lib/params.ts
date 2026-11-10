@@ -109,7 +109,7 @@ export const DEFAULT_PARAMS: FiscalParams = {
   isTauxNormal: 0.25,
 
   microCotisations: { bnc: 0.256, "bic-service": 0.212, "bic-vente": 0.123 },
-  microCotisationsCipav: 0.231,
+  microCotisationsCipav: 0.232,
   microCfp: { bnc: 0.002, "bic-service": 0.001, "bic-vente": 0.001 },
   microAbattement: { bnc: 0.34, "bic-service": 0.5, "bic-vente": 0.71 },
   microVfl: { bnc: 0.022, "bic-service": 0.017, "bic-vente": 0.01 },
@@ -118,7 +118,9 @@ export const DEFAULT_PARAMS: FiscalParams = {
   microSeuilTvaService: 37500,
   microSeuilTvaVente: 85000,
   vflPlafondRfrParPart: 29315,
-  acreReduction: 0.5,
+  // ACRE micro : réduction de 25 % pour les créations à compter du 1er juillet 2026
+  // (50 % auparavant) — cf. modele-social, règle dirigeant . auto-entrepreneur . Acre
+  acreReduction: 0.25,
 
   tnsAbattementAssiette: 0.26,
   tnsRetraiteBaseT1: 0.1787,
