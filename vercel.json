@@ -6,9 +6,9 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "is-freelance-worth-it-for-you.vercel.app" }],
-      "destination": "https://freelance-ou-cdi.fr/:path*",
+      "destination": "https://freelance-ou-cdi.fr/$1",
       "permanent": true
     }
   ],
