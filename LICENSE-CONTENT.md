@@ -14,8 +14,6 @@ des fins commerciales, à condition d'indiquer la source :
 
 avec un lien vers la page utilisée et la mention des modifications éventuelles.
 
-**Exclusions.** Les TJM de marché cités dans l'observatoire et les pages
-métier, issus de baromètres tiers (Malt, Blog du Modérateur, tjmetre.fr),
-restent la propriété de leurs auteurs et ne sont couverts par aucune de ces
-licences. Les noms et marques cités appartiennent à leurs titulaires. La
+**Exclusions.** Les noms et marques cités appartiennent à leurs titulaires
+et ne sont couverts par aucune de ces licences. La
 police JetBrains Mono est distribuée sous SIL Open Font License 1.1.

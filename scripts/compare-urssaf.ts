@@ -141,7 +141,7 @@ for (const cadre of [true, false]) {
 }
 
 console.log(
-  "\n=== POURQUOI on diffère des convertisseurs forfaitaires (ex. salaire-brut-en-net.fr : non-cadre -22 %, cadre -25 %, fonction publique -17 %) ===",
+  "\n=== POURQUOI on diffère des convertisseurs forfaitaires (non-cadre -22 %, cadre -25 %, fonction publique -17 %) ===",
 );
 for (const brut of [40000, 55000, 80000]) {
   const situation = {

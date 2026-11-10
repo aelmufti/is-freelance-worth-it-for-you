@@ -69,7 +69,7 @@ const MICRO_OU_EURL: StatutPage = {
     {
       heading: "Deux logiques : forfait contre frais réels",
       paragraphs: [
-        `En micro-entreprise, tout est forfaitaire : les cotisations sont un pourcentage du chiffre d'affaires encaissé (environ 24,6 % en BNC) et l'impôt se calcule après un abattement de 34 % censé couvrir vos frais. Rien de tout cela ne demande de comptabilité. En EURL, on inverse la logique : vous tenez des comptes, déduisez vos frais réels à l'euro près, et payez l'impôt sur les sociétés sur le bénéfice restant.`,
+        `En micro-entreprise, tout est forfaitaire : les cotisations sont un pourcentage du chiffre d'affaires encaissé (environ 25,6 % en BNC) et l'impôt se calcule après un abattement de 34 % censé couvrir vos frais. Rien de tout cela ne demande de comptabilité. En EURL, on inverse la logique : vous tenez des comptes, déduisez vos frais réels à l'euro près, et payez l'impôt sur les sociétés sur le bénéfice restant.`,
         `Conséquence directe : tant que vos frais professionnels sont faibles, la micro convertit mieux chaque euro facturé. À 400 €/jour, elle laisse environ ${fmt(MICRO_400)} €/mois net contre ${fmt(EURL_400)} € en EURL sur le même scénario. L'EURL ne reprend l'avantage que lorsque les frais réels dépassent l'abattement forfaitaire, ou quand le chiffre d'affaires franchit le plafond de la micro.`,
       ],
     },
@@ -112,6 +112,7 @@ const MICRO_OU_EURL: StatutPage = {
 // -------------------------------------------------- MICRO OU EI
 const MICRO_OU_EI: StatutPage = {
   slug: "micro-entreprise-ou-ei",
+  updated: "2026-11-10",
   statuts: ["micro", "ei"],
   breadcrumb: "Micro-entreprise ou EI au réel",
   metaTitle: "Micro-entreprise ou EI au réel 2026 : que choisir ?",
@@ -221,6 +222,7 @@ const EI_OU_EURL: StatutPage = {
 // -------------------------------------------------- EI OU SASU
 const EI_OU_SASU: StatutPage = {
   slug: "ei-ou-sasu",
+  updated: "2026-11-10",
   statuts: ["ei", "sasu"],
   breadcrumb: "EI au réel ou SASU",
   metaTitle: "EI au réel ou SASU en 2026 : TNS ou assimilé salarié ?",
@@ -258,7 +260,7 @@ const EI_OU_SASU: StatutPage = {
     },
     {
       question: "Peut-on cumuler l'ARE avec une EI ou une SASU ?",
-      answer: `La SASU permet le cumul le plus favorable : un président sans salaire garde 100 % de son ARE et peut se verser des dividendes, qui ne sont pas déduits de l'allocation. En EI, le bénéfice est un revenu d'activité qui réduit l'ARE dès qu'il est dégagé. Pour maximiser le filet chômage en sortie de CDI, la SASU est le meilleur montage.`,
+      answer: `La SASU permet le cumul le plus favorable : un président sans salaire garde 100 % de son ARE et peut se verser des dividendes, qui ne sont pas déduits de l'allocation. En EI, le bénéfice est un revenu d'activité qui réduit l'ARE dès qu'il est dégagé. Pour maximiser le filet chômage en sortie de CDI, la SASU est le meilleur montage. Ces règles relèvent de France Travail et peuvent évoluer : vérifiez-les avant de bâtir votre projet dessus.`,
     },
     {
       question: "La SASU protège-t-elle mieux que l'EI au réel ?",
@@ -275,6 +277,7 @@ const EI_OU_SASU: StatutPage = {
 // -------------------------------------------------- PORTAGE OU SASU
 const PORTAGE_OU_SASU: StatutPage = {
   slug: "portage-salarial-ou-sasu",
+  updated: "2026-11-10",
   statuts: ["portage", "sasu"],
   breadcrumb: "Portage salarial ou SASU",
   metaTitle: "Portage salarial ou SASU : sécurité ou optimisation ?",
@@ -316,7 +319,7 @@ const PORTAGE_OU_SASU: StatutPage = {
     },
     {
       question: "Peut-on cumuler l'ARE avec le portage ou la SASU ?",
-      answer: `La SASU permet le cumul le plus favorable : un président sans salaire conserve 100 % de son ARE et se rémunère en dividendes. En portage, votre salaire vient en déduction de l'allocation, mais vos missions génèrent de nouveaux droits. Pour maximiser un reliquat d'ARE existant, la SASU l'emporte ; pour reconstituer des droits, le portage.`,
+      answer: `La SASU permet le cumul le plus favorable : un président sans salaire conserve 100 % de son ARE et se rémunère en dividendes. En portage, votre salaire vient en déduction de l'allocation, mais vos missions génèrent de nouveaux droits. Pour maximiser un reliquat d'ARE existant, la SASU l'emporte ; pour reconstituer des droits, le portage. Ces règles relèvent de France Travail et peuvent évoluer : vérifiez-les avant de bâtir votre projet dessus.`,
     },
     {
       question: "Portage ou SASU en sortie de CDI ?",
@@ -329,6 +332,7 @@ const PORTAGE_OU_SASU: StatutPage = {
 // -------------------------------------------------- PORTAGE OU EURL
 const PORTAGE_OU_EURL: StatutPage = {
   slug: "portage-salarial-ou-eurl",
+  updated: "2026-11-10",
   statuts: ["portage", "eurl"],
   breadcrumb: "Portage salarial ou EURL",
   metaTitle: "Portage salarial ou EURL en 2026 : salariat ou société ?",
@@ -374,7 +378,7 @@ const PORTAGE_OU_EURL: StatutPage = {
     },
     {
       question: "Peut-on passer du portage à l'EURL ?",
-      answer: `Oui, et c'est un parcours fréquent : on démarre en portage pour tester l'activité sans risque, puis on crée une EURL quand le chiffre d'affaires est stable et qu'on veut optimiser son net. La transition suppose de créer la société et de transférer les contrats clients — quelques semaines de formalités, sans continuité juridique entre les deux.`,
+      answer: `Oui, et c'est un parcours fréquent : on démarre en portage pour tester l'activité à moindre risque, puis on crée une EURL quand le chiffre d'affaires est stable et qu'on veut optimiser son net. La transition suppose de créer la société et de transférer les contrats clients — quelques semaines de formalités, sans continuité juridique entre les deux.`,
     },
   ],
   related: ["simulateur-portage-salarial", "simulateur-eurl", "portage-salarial-ou-micro-entreprise", "portage-salarial-ou-sasu"],
@@ -383,6 +387,7 @@ const PORTAGE_OU_EURL: StatutPage = {
 // -------------------------------------------------- MICRO OU CDI
 const MICRO_OU_CDI: StatutPage = {
   slug: "micro-entreprise-ou-cdi",
+  updated: "2026-11-10",
   statuts: ["micro", "cdi"],
   breadcrumb: "Micro-entreprise ou CDI",
   metaTitle: "Micro-entreprise ou CDI : à quel TJM ça vaut le coup ?",
@@ -394,7 +399,7 @@ const MICRO_OU_CDI: StatutPage = {
     {
       heading: "Le TJM qui remplace votre salaire",
       paragraphs: [
-        `La micro affiche le seuil de TJM le plus bas de tous les statuts pour égaler un salaire donné, grâce à ses cotisations légères (environ 24,6 % du CA en BNC) et à l'abattement forfaitaire de 34 %. Pour un CDI cadre à ${fmt(ref.cdiBrutAnnuel)} € brut, comptez environ ${fmt(T_MICRO)} €/jour, à 18 jours facturés par mois sur 11 mois. Le tableau des seuils plus bas décline ce chiffre pour chaque niveau de salaire.`,
+        `La micro affiche le seuil de TJM le plus bas de tous les statuts pour égaler un salaire donné, grâce à ses cotisations légères (environ 25,6 % du CA en BNC) et à l'abattement forfaitaire de 34 %. Pour un CDI cadre à ${fmt(ref.cdiBrutAnnuel)} € brut, comptez environ ${fmt(T_MICRO)} €/jour, à 18 jours facturés par mois sur 11 mois. Le tableau des seuils plus bas décline ce chiffre pour chaque niveau de salaire.`,
         `Attention au piège des jours facturés : 18 par mois est déjà un bon taux d'occupation, car prospection, intermission et congés ne se facturent pas. À 15 jours par mois, le TJM nécessaire grimpe d'environ 20 %. Réglez le simulateur sur votre rythme réel avant de vous fixer un objectif.`,
       ],
     },
@@ -409,7 +414,7 @@ const MICRO_OU_CDI: StatutPage = {
       heading: "Comment décider sereinement",
       paragraphs: [
         `La bonne méthode : repérez votre net mensuel actuel après impôt, trouvez le TJM qui le reproduit en micro dans le tableau des seuils, puis ajoutez une marge de sécurité pour les intermissions et l'absence de chômage. Si votre TJM cible est nettement au-dessus du seuil, la micro est une évidence financière ; s'il est juste au-dessus, pesez la perte de sécurité.`,
-        `Beaucoup profitent d'une rupture conventionnelle pour lancer leur micro avec l'ARE comme filet : le chômage cumule alors partiellement avec les premiers revenus, ce qui adoucit la transition. Le simulateur compare micro et CDI sur vos chiffres exacts — le point de départ le plus fiable avant de vous décider.`,
+        `Beaucoup profitent d'une rupture conventionnelle pour lancer leur micro avec l'ARE comme filet : le chômage cumule alors partiellement avec les premiers revenus, ce qui adoucit la transition. Le simulateur compare micro et CDI sur vos propres chiffres — un bon point de départ avant de vous décider.`,
       ],
     },
   ],
@@ -479,7 +484,7 @@ const SASU_OU_CDI: StatutPage = {
     },
     {
       question: "Pourquoi la SASU est-elle si prisée en sortie de CDI ?",
-      answer: `Parce qu'elle permet de cumuler l'ARE issue du CDI rompu avec une activité : président sans salaire, l'allocation est maintenue à 100 %, et l'on se rémunère en dividendes une fois les résultats là. Ce montage transforme le reliquat de chômage en trésorerie de lancement, tout en gardant la couverture du régime général.`,
+      answer: `Parce qu'elle permet de cumuler l'ARE issue du CDI rompu avec une activité : président sans salaire, l'allocation est maintenue à 100 %, et l'on se rémunère en dividendes une fois les résultats là. Ce montage transforme le reliquat de chômage en trésorerie de lancement, tout en gardant la couverture du régime général. Ces règles relèvent de France Travail et peuvent évoluer : vérifiez-les avant de bâtir votre projet dessus.`,
     },
     {
       question: "SASU ou CDI : lequel protège le mieux ?",

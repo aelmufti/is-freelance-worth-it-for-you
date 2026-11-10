@@ -19,7 +19,7 @@ export const STATUTS_INFO: StatutInfo[] = [
       "Création gratuite et en ligne en quelques minutes",
       "Comptabilité réduite à un livre de recettes",
       "Cotisations proportionnelles au CA : pas de CA = pas de charges",
-      "ACRE : cotisations réduites la première année",
+      "ACRE : cotisations réduites la première année, sous conditions",
       "Versement libératoire possible (IR payé au fil de l'eau, taux fixe)",
       "Franchise de TVA sous 37 500 € (services) / 85 000 € (vente)",
     ],
@@ -125,7 +125,7 @@ export const STATUTS_INFO: StatutInfo[] = [
       "Pas de déduction d'investissements lourds",
     ],
     pourQui:
-      "Pour sécuriser une transition vers le freelancing ou des missions ponctuelles sans risque.",
+      "Pour sécuriser une transition vers le freelancing ou des missions ponctuelles à moindre risque.",
   },
   {
     id: "cdi",

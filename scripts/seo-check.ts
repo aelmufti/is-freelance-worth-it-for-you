@@ -47,7 +47,7 @@ const KEYWORDS: Record<string, string> = {
   "guides/acre-premiere-annee": "ACRE exonération",
   "guides/franchise-tva-freelance": "franchise de TVA freelance",
   "guides/passer-de-salarie-a-freelance": "passer de salarié à freelance",
-  "observatoire-tjm-2026": "observatoire TJM freelance",
+  "observatoire-tjm-2026": "TJM freelance par métier",
   methodologie: "méthodologie",
   "a-propos": "à propos",
   glossaire: "glossaire freelance",

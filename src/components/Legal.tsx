@@ -100,12 +100,9 @@ export function MentionsLegalesContenu() {
           </span>
         </li>
         <li>
-          — Ne sont pas couverts par ces licences : les TJM de marché cités dans
-          l'observatoire et les pages métier, issus de baromètres tiers (Malt,
-          Blog du Modérateur, tjmetre.fr), qui restent la propriété de leurs
-          auteurs ; les noms et marques cités, qui appartiennent à leurs
-          titulaires ; la police JetBrains Mono, distribuée sous SIL Open Font
-          License 1.1.
+          — Ne sont pas couverts par ces licences : les noms et marques cités,
+          qui appartiennent à leurs titulaires ; la police JetBrains Mono,
+          distribuée sous SIL Open Font License 1.1.
         </li>
       </ul>
 
@@ -119,9 +116,8 @@ export function MentionsLegalesContenu() {
         partenariat ni une certification.
       </p>
       <p>
-        Les plateformes citées le sont comme sources. Aucun lien n'est affilié
-        ou rémunéré : le site ne perçoit aucune commission et ne diffuse aucune
-        publicité.
+        Aucun lien n'est affilié ou rémunéré : le site ne perçoit aucune
+        commission et ne diffuse aucune publicité.
       </p>
 
       <H>5. Nature des informations</H>

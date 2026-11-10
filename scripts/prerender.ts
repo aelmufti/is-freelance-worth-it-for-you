@@ -25,7 +25,6 @@ import {
   SITE,
   type StatutPage,
 } from "../src/lib/pages";
-import { OBSERVATOIRE_TJM } from "../src/data/tjmMetiers";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dir, "..");
@@ -117,7 +116,7 @@ function rewriteHead(html: string, page: StatutPage): string {
     url: "https://aelm.dev",
   };
 
-  // Pages éditoriales (institutionnelles, guides, observatoire, pages métier) :
+  // Pages éditoriales (institutionnelles, guides, hub TJM par métier, pages métier) :
   // un schema Article daté + auteur/éditeur renforce l'E-E-A-T sur un sujet YMYL
   // et donne aux moteurs génératifs une entité datée à citer.
   const isEditorial =
@@ -165,41 +164,6 @@ function rewriteHead(html: string, page: StatutPage): string {
     );
   }
 
-  // L'observatoire est un jeu de données : le schema Dataset est celui que les
-  // moteurs génératifs privilégient pour citer une étude chiffrée.
-  if (page.slug === OBSERVATOIRE_TJM.slug) {
-    jsonLd.push(
-      JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Dataset",
-        name: "Observatoire du TJM freelance 2026",
-        description:
-          "TJM médians indicatifs par métier chez les freelances français en 2026 (synthèse de baromètres publics), croisés avec le revenu net après cotisations et impôt calculé pour chaque statut juridique.",
-        url,
-        inLanguage: "fr-FR",
-        // CC BY 4.0 couvre les nets calculés ; les TJM de marché restent la
-        // propriété des baromètres sources, déclarés en isBasedOn.
-        license: CONTENT_LICENSE,
-        isAccessibleForFree: true,
-        creator: AUTHOR,
-        isBasedOn: [
-          { "@type": "CreativeWork", name: "Baromètre des tarifs freelance 2026", publisher: { "@type": "Organization", name: "Malt" } },
-          { "@type": "CreativeWork", name: "Baromètre TJM freelance 2026", publisher: { "@type": "Organization", name: "Blog du Modérateur" } },
-          { "@type": "CreativeWork", name: "Baromètre TJM freelance 2026", publisher: { "@type": "Organization", name: "tjmetre.fr" } },
-        ],
-        datePublished: pagePublished(page),
-        dateModified: pageUpdated(page),
-        temporalCoverage: "2026",
-        spatialCoverage: { "@type": "Place", name: "France" },
-        keywords: ["TJM", "freelance", "tarif journalier", "revenu net", "France"],
-        variableMeasured: [
-          { "@type": "PropertyValue", name: "TJM médian", unitText: "EUR/jour" },
-          { "@type": "PropertyValue", name: "Net mensuel après impôt", unitText: "EUR/mois" },
-          { "@type": "PropertyValue", name: "Salaire CDI équivalent", unitText: "EUR brut/an" },
-        ],
-      }),
-    );
-  }
   return h.replace(
     "</head>",
     jsonLd
