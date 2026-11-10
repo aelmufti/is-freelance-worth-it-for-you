@@ -1,5 +1,5 @@
-// Validation du moteur contre le calculateur officiel URSSAF (modele-social,
-// le moteur de mon-entreprise.urssaf.fr). Tolérance : 2 % en régime courant,
+// Comparaison du moteur avec modele-social (moteur open source de
+// mon-entreprise.urssaf.fr). Tolérance : 2 % en régime courant,
 // 4 % sur les cas extrêmes (réduction générale de charges et hauts revenus
 // TNS non modélisés finement).
 import { describe, expect, it } from "vitest";

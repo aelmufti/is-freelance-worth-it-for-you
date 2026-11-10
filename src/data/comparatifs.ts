@@ -57,6 +57,7 @@ const T_SASU = round5(tjmEquivalentCdi(ref, p, calcSasu));
 // -------------------------------------------------- MICRO OU EURL
 const MICRO_OU_EURL: StatutPage = {
   slug: "micro-entreprise-ou-eurl",
+  updated: "2026-11-10",
   statuts: ["micro", "eurl"],
   breadcrumb: "Micro-entreprise ou EURL",
   metaTitle: "Micro-entreprise ou EURL en 2026 : quel statut choisir ?",
@@ -105,7 +106,7 @@ const MICRO_OU_EURL: StatutPage = {
       answer: `Oui, ce sont deux structures juridiques distinctes et rien n'interdit de cumuler une activité en micro et une EURL, à condition qu'elles ne servent pas à contourner artificiellement le plafond de la micro pour une même activité. En pratique, la transition se fait plutôt en série : on teste en micro, puis on bascule en EURL quand les chiffres l'imposent, en radiant la micro.`,
     },
   ],
-  related: ["simulateur-micro-entreprise", "simulateur-eurl", "micro-entreprise-ou-sasu"],
+  related: ["simulateur-micro-entreprise", "simulateur-eurl", "micro-entreprise-ou-sasu", "micro-entreprise-ou-ei", "ei-ou-eurl"],
 };
 
 // -------------------------------------------------- MICRO OU EI
@@ -165,6 +166,7 @@ const MICRO_OU_EI: StatutPage = {
 // -------------------------------------------------- EI OU EURL
 const EI_OU_EURL: StatutPage = {
   slug: "ei-ou-eurl",
+  updated: "2026-11-10",
   statuts: ["ei", "eurl"],
   breadcrumb: "EI au réel ou EURL",
   metaTitle: "EI au réel ou EURL en 2026 : nom propre ou société ?",
@@ -213,7 +215,7 @@ const EI_OU_EURL: StatutPage = {
       answer: `Cela dépend de ce que vous prélevez. Si vous vous versez tout votre bénéfice, l'EI à l'IR et l'EURL à l'IS aboutissent à une imposition proche. Si vous laissez une partie du bénéfice dans la société, l'EURL à l'IS permet de ne payer que 15 à 25 % d'IS sur cette part au lieu de votre tranche marginale d'IR — un avantage qui grandit avec le niveau de revenu.`,
     },
   ],
-  related: ["simulateur-ei", "simulateur-eurl", "sasu-ou-eurl", "ei-ou-sasu"],
+  related: ["simulateur-ei", "simulateur-eurl", "sasu-ou-eurl", "ei-ou-sasu", "micro-entreprise-ou-eurl"],
 };
 
 // -------------------------------------------------- EI OU SASU
@@ -435,6 +437,7 @@ const MICRO_OU_CDI: StatutPage = {
 // -------------------------------------------------- SASU OU CDI
 const SASU_OU_CDI: StatutPage = {
   slug: "sasu-ou-cdi",
+  updated: "2026-11-10",
   statuts: ["sasu", "cdi"],
   breadcrumb: "SASU ou CDI",
   metaTitle: "SASU ou CDI en 2026 : à partir de quel TJM ça vaut le coup ?",
@@ -483,12 +486,13 @@ const SASU_OU_CDI: StatutPage = {
       answer: `Le CDI, grâce à l'assurance chômage et au revenu garanti. La SASU offre la même couverture maladie et retraite qu'un cadre, mais sans chômage et sans salaire garanti. Elle compense par la liberté (tarif, missions, dividendes) et un potentiel de revenu supérieur au-delà du seuil d'équivalence d'environ ${fmt(T_SASU)} €/jour.`,
     },
   ],
-  related: ["simulateur-sasu", "portage-salarial-ou-cdi", "micro-entreprise-ou-cdi"],
+  related: ["simulateur-sasu", "portage-salarial-ou-cdi", "micro-entreprise-ou-cdi", "ei-ou-cdi"],
 };
 
 // -------------------------------------------------- EURL OU CDI
 const EURL_OU_CDI: StatutPage = {
   slug: "eurl-ou-cdi",
+  updated: "2026-11-10",
   statuts: ["eurl", "cdi"],
   breadcrumb: "EURL ou CDI",
   metaTitle: "EURL ou CDI en 2026 : à partir de quel TJM ça vaut le coup ?",
@@ -537,7 +541,7 @@ const EURL_OU_CDI: StatutPage = {
       answer: `L'EURL demande de créer et gérer une société, ce qui est un vrai engagement pour un premier pas. Beaucoup préfèrent tester d'abord en micro-entreprise ou en portage salarial (qui garde le chômage), puis créer une EURL une fois l'activité confirmée. Le simulateur compare ces options pour éclairer le premier choix.`,
     },
   ],
-  related: ["simulateur-eurl", "sasu-ou-cdi", "micro-entreprise-ou-cdi"],
+  related: ["simulateur-eurl", "sasu-ou-cdi", "micro-entreprise-ou-cdi", "ei-ou-cdi"],
 };
 
 // -------------------------------------------------- EI OU CDI

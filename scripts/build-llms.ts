@@ -40,7 +40,7 @@ const FOOTER = `## Données et hypothèses
 
 - [Code source du moteur fiscal](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/src/lib/engine.ts)
 - [Tous les taux 2026 utilisés](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/src/lib/params.ts)
-- [Tests de validation contre le moteur URSSAF](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/tests/urssaf.test.ts)
+- [Tests de comparaison avec le moteur open source modele-social (mon-entreprise.urssaf.fr)](https://github.com/aelmufti/is-freelance-worth-it-for-you/blob/main/tests/urssaf.test.ts)
 
 ## Sources officielles
 

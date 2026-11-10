@@ -109,8 +109,10 @@ function rewriteHead(html: string, page: StatutPage): string {
       })),
     }),
   ];
+  // Même entité que le nœud Person du @graph (injectGraph) : @id partagé.
   const AUTHOR = {
     "@type": "Person",
+    "@id": `${SITE}/#person`,
     name: "Ali El Mufti",
     url: "https://aelm.dev",
   };
@@ -138,6 +140,7 @@ function rewriteHead(html: string, page: StatutPage): string {
         dateModified: pageUpdated(page),
         author: AUTHOR,
         publisher: AUTHOR,
+        mainEntityOfPage: { "@id": `${url}#webpage` },
         isPartOf: { "@type": "WebSite", name: "freelance-ou-cdi.fr", url: `${SITE}/` },
       }),
     );

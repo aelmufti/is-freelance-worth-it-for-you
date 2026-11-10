@@ -1,4 +1,4 @@
-// Compare notre moteur au moteur officiel URSSAF (modele-social / mon-entreprise).
+// Compare notre moteur avec modele-social (moteur open source de mon-entreprise.urssaf.fr).
 // Usage : npx tsx scripts/compare-urssaf.ts
 import Engine from "publicodes";
 import rules from "modele-social";

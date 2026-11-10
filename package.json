@@ -29,7 +29,8 @@
     "compare": "tsx scripts/compare-urssaf.ts",
     "prerender:capture": "tsc -b && tsx scripts/build-sitemap.ts && tsx scripts/build-llms.ts && vite build && tsx scripts/ensure-chromium.ts && tsx scripts/og-image.ts && tsx scripts/apple-icon.ts && tsx scripts/prerender.ts",
     "indexnow": "tsx scripts/indexnow.ts",
-    "perf": "tsx scripts/perf.ts"
+    "perf": "tsx scripts/perf.ts",
+    "seo:check": "tsx scripts/seo-check.ts"
   },
   "name": "freelance-vs-cdi",
   "private": true,

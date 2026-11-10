@@ -197,6 +197,7 @@ const CA_PORTAGE_CDI = _fmt(
 // --------------------------------------------------------------------- HOME
 const HOME: StatutPage = {
   slug: "",
+  updated: "2026-11-10",
   metaTitle: "Freelance ou CDI 2026 : simulateur de revenu net",
   metaDescription:
     "Comparez votre net en micro-entreprise, EURL, SASU, portage et CDI. Cotisations, impôt, flat tax et seuil de TJM. Gratuit et open source.",
@@ -528,6 +529,7 @@ const EURL: StatutPage = {
 // ------------------------------------------------------------- SASU OU EURL
 const SASU_OU_EURL: StatutPage = {
   slug: "sasu-ou-eurl",
+  updated: "2026-11-10",
   statuts: ["sasu", "eurl"],
   breadcrumb: "SASU ou EURL",
   metaTitle: "SASU ou EURL en 2026 : quel statut laisse le plus de net ?",
@@ -581,12 +583,13 @@ const SASU_OU_EURL: StatutPage = {
         "Oui, c'est une transformation de société (EURL → SASU ou SASU → EURL) : décision de l'associé unique, intervention d'un commissaire à la transformation dans certains cas, mise à jour des statuts et formalités au guichet unique. Comptez quelques centaines à quelques milliers d'euros de frais. C'est un choix réversible — mais assez coûteux pour mériter de bien simuler avant de créer.",
     },
   ],
-  related: ["simulateur-sasu", "simulateur-eurl", "micro-entreprise-ou-sasu"],
+  related: ["simulateur-sasu", "simulateur-eurl", "micro-entreprise-ou-sasu", "ei-ou-eurl", "portage-salarial-ou-eurl"],
 };
 
 // --------------------------------------------------------- MICRO OU SASU
 const MICRO_OU_SASU: StatutPage = {
   slug: "micro-entreprise-ou-sasu",
+  updated: "2026-11-10",
   statuts: ["micro", "sasu"],
   breadcrumb: "Micro-entreprise ou SASU",
   metaTitle: "Micro-entreprise ou SASU en 2026 : le comparatif chiffré",
@@ -644,12 +647,14 @@ const MICRO_OU_SASU: StatutPage = {
     "simulateur-micro-entreprise",
     "simulateur-sasu",
     "sasu-ou-eurl",
+    "ei-ou-sasu",
   ],
 };
 
 // ----------------------------------------------- PORTAGE OU MICRO-ENTREPRISE
 const PORTAGE_OU_MICRO: StatutPage = {
   slug: "portage-salarial-ou-micro-entreprise",
+  updated: "2026-11-10",
   statuts: ["portage", "micro"],
   breadcrumb: "Portage ou micro-entreprise",
   metaTitle: "Portage salarial ou micro-entreprise : comparatif 2026",
@@ -705,6 +710,8 @@ const PORTAGE_OU_MICRO: StatutPage = {
     "simulateur-portage-salarial",
     "simulateur-micro-entreprise",
     "portage-salarial-ou-cdi",
+    "portage-salarial-ou-sasu",
+    "portage-salarial-ou-eurl",
   ],
 };
 
